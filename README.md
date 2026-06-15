@@ -78,9 +78,9 @@ This repository **IS**:
 
 **The objective is continuity and accumulation readiness. Not runtime delivery.**
 
-## The 12-Folder Structure (refined per ADR 0002)
+## The 13-Folder Structure (revised per ADR 0003, [REVISED — 2026-06-15])
 
-This foundation is organized into 12 top-level folders, each with a specific role:
+This foundation is organized into 13 top-level folders, each with a specific role:
 
 | # | Folder | Role | Implementation status |
 |---|---|---|---|
@@ -95,13 +95,15 @@ This foundation is organized into 12 top-level folders, each with a specific rol
 | 9 | `08-observability/` | Future observability stack: governance events, traces, dashboards | **SCAFFOLDED, NOT IMPLEMENTED** |
 | 10 | `09-cadences/` | Daily snapshots, weekly reviews, monthly reviews, lessons learned, idea backlog, **fleet-arc-intake** | Templates-only |
 | 11 | `10-tools/` | Scripts and utilities (e.g., `push-to-remote.sh`) | Tools-only |
-| 12 | **`11-fleet-arc-intake/`** *(new per ADR 0002)* | **The canonical intake point for validated Fleet ARC discoveries** (10 subdirectories, one per intake type) | **Active as accumulation layer** |
+| 12 | `10-lessons-learned/` *(new per ADR 0003, 2026-06-15)* | Lessons learned INDEX for this repository (the operational layer; sibling to the canonical lessons in `ryzen-continuity`) | Lessons-only |
+| 13 | **`11-fleet-arc-intake/`** *(new per ADR 0002, 2026-06-15)* | **The canonical intake point for validated Fleet ARC discoveries** (10 subdirectories, one per intake type) | **Active as accumulation layer** |
 
-**Why 12 folders (and not 11)?** The first 11 folders were created in the initial foundation (ADR 0001). The 12th folder (`11-fleet-arc-intake/`) was added in ADR 0002 to provide the *active accumulation layer* that the founder's clarification requires. The numbering is *historical* (the 0X-10X pattern is preserved); the 12th is added *additively*. The numbering inconsistency is *honest* — it reflects the additive evolution and the founder's strategic-posture clarification.
+**Why 13 folders (and not 12)?** The first 11 folders were created in the initial foundation (ADR 0001). The 12th folder (`11-fleet-arc-intake/`) was added in ADR 0002 to provide the *active accumulation layer* that the founder's clarification requires. The 13th folder (`10-lessons-learned/`) was added in ADR 0003 to provide the *operational* lessons learned cadence (sibling to the canonical lessons in `ryzen-continuity`). The numbering is *historical* (the 0X-10X pattern is preserved); the 13th is added *additively*. The numbering inconsistency is *honest* — it reflects the additive evolution and the founder's doctrine refinements.
 
-**The 0X-1X-2X-3X-4X-5X-6X-7X-8X-9X-10X-11X pattern is the *integration then operation then accumulation* pattern:**
+**The 0X-1X-2X-3X-4X-5X-6X-7X-8X-9X-10X-10X-11X pattern is the *integration then operation then accumulation then lessons* pattern:**
 - 0X-5X: Self-integration (foundation, founder, ryzen, recovery, rebuild, ADRs)
-- 6X-10X: Operational (roadmap, scaffolding, observability, cadences, tools)
+- 6X-9X: Operational (roadmap, scaffolding, observability, cadences)
+- 10X: Tools + Lessons (operational support)
 - 11X: **Accumulation (the active deliverable, per ADR 0002)**
 
 ## The Constitutional Constraints (in force from the first commit)
