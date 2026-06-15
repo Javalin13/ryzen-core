@@ -109,7 +109,7 @@ The doctrine has 4 rules:
 
 1. **One canonical location per discovery type.** The 10 subdirectories are the canonical locations for the 10 intake types. No duplication, no fragmentation.
 2. **One intake template per discovery.** Every intake follows the template. The template is the *contract* between the FleetConnect repo (the source) and this folder (the accumulation).
-3. **Founder acceptance is required.** A discovery is not a foundation asset until the founder accepts it. Raw and validated discoveries are *candidates*; accepted discoveries are *assets*.
+3. **Agent acceptance is the default; founder acceptance is available for high-trust assets.** Per ADR 0003 (autonomous-acceptance doctrine, [REVISED — 2026-06-15]), a discovery becomes a *foundation asset* when the agent accepts it. The founder may deprecate, override, or promote any agent-accepted intake at any time. Founder-accepted intakes are a higher-trust sub-class of foundation assets. Raw and validated discoveries are *candidates*; agent-accepted discoveries are *foundation assets*; founder-accepted discoveries are *promoted foundation assets*.
 4. **Additive only.** Intakes are never deleted, never overwritten. Deprecated intakes are preserved for continuity.
 
 ## Cross-References

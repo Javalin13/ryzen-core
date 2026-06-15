@@ -112,13 +112,14 @@ founder_acceptance:
   9. `09-runtime-requirements` — performance, integration, concurrency, state, recovery
   10. `10-arc-coordination-requirements` — cross-ARC intelligence, memory, governance, workflows
 
-- **Status lifecycle:** `raw → validated → accepted → promoted | deprecated`
+- **Status lifecycle (revised per ADR 0003, [REVISED — 2026-06-15]):** `raw → validated → agent-accepted → founder-accepted → promoted | deprecated`
   - `raw` — captured but not yet validated.
-  - `validated` — supported by evidence; founder not yet accepted.
-  - `accepted` — founder has accepted the discovery for accumulation. The discovery is now a foundation asset.
+  - `validated` — supported by evidence; intake-acceptance not yet recorded.
+  - `agent-accepted` — the agent has accepted the discovery for accumulation. The intake is a foundation asset. The founder may deprecate, override, or promote at any time. **This is the new default state per the autonomous-acceptance doctrine.**
+  - `founder-accepted` — the founder has explicitly accepted the discovery. The intake is a promoted foundation asset (higher trust than agent-accepted).
   - `promoted` — the accepted discovery has been promoted to a design, a runtime requirement, or a governance rule.
   - `deprecated` — the accepted discovery is no longer valid; preserved but not authoritative.
 
-- **Founder acceptance is required for accumulation.** Raw and validated intakes are *candidates*; accepted intakes are *assets*. Promoted intakes have crossed into the rebuild spec, the runtime roadmap, or the foundation governance. Deprecated intakes are preserved for continuity.
+- **Agent acceptance is the new default per ADR 0003 (autonomous-acceptance doctrine).** Raw and validated intakes are *candidates*; agent-accepted intakes are *foundation assets*; founder-accepted intakes are *promoted foundation assets*; promoted intakes have crossed into the rebuild spec, the runtime roadmap, or the foundation governance; deprecated intakes are preserved for continuity. **The agent accepts by default; the founder pauses for crucial changes.**
 
 - **Additive only.** Intakes are never deleted, never overwritten. Deprecated intakes are preserved (with the deprecation reason documented in section 8).
