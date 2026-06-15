@@ -146,16 +146,41 @@ The folders 7X, 8X, 9X, 10X correspond to the **operational layers**:
 
 This 0X-1X-2X-3X-4X-5X-6X-7X-8X-9X-10X pattern is the **integration then operation** pattern. Foundation first, integration second, operation third.
 
+## Strategic Posture (per founder clarification 2026-06-15)
+
+The foundation's **strategic posture** is *deferred* and *accumulation-first*. Per the founder's clarification 2026-06-15:
+
+> A Ryzen Core Foundation Repository is authorized. This authorization is not based on immediate Ryzen runtime implementation. This authorization exists for **continuity, accumulation, and future implementation readiness**.
+
+The clarification refines the foundation's purpose:
+
+- **Active purpose:** accumulate validated Fleet ARC discoveries in a canonical location (`11-fleet-arc-intake/`). The foundation *receives* validated intelligence from FleetConnect and future ARCs.
+- **Latent purpose:** the implementation successor role to the lost runtime is *preserved* but *deferred*. The 10 scaffolding placeholders in `07-runtime-scaffolding/` remain `status: NOT-IMPLEMENTED`. The 3 open founder decisions (D1, D2, D3) remain open. R1 is *not* imminent.
+- **Operational priority:** FleetConnect remains execution priority #1. The foundation is the *companion* to FleetConnect, not a replacement.
+
+This posture is captured in **ADR 0002** (`05-adrs/0002-clarify-strategic-posture-deferred-accumulation-first.md`). The posture is **additive**: it refines the foundation's purpose, it does not replace the foundation's design.
+
+The doctrine of **accumulation** (per the clarification):
+
+1. **One canonical location per discovery type.** The 10 subdirectories in `11-fleet-arc-intake/` are the canonical locations.
+2. **Founder acceptance is required for accumulation.** Raw and validated discoveries are *candidates*; accepted discoveries are *assets*.
+3. **Additive only.** Intakes are never deleted, never overwritten. Deprecated intakes are preserved for continuity.
+4. **Cross-ARC future-proofing.** The 10th intake type (`10-arc-coordination-requirements/`) captures Fleet ARC's intelligence about how it will interact with future ARCs (Earth, FamilieKompas).
+
+The foundation is *not* an active runtime development project. It is the *continuity and implementation foundation* that *receives* validated intelligence from FleetConnect.
+
 ## What Comes Next
 
-Per the founder's direction, this is **foundation only**. The next deliverables (after founder authorization) will be:
+Per the founder's direction, this is **foundation only**. The runtime is not built. The next deliverables (after founder authorization) will be:
 
-1. **Phase R1** — stand up the substrate in `07-runtime-scaffolding/` per the rebuild spec.
-2. **Phase R2** — production governance hardening per the rebuild spec.
-3. **Phase R3** — real execution & adaptive cognition per the rebuild spec.
-4. **Phase R4** — multi-ARC foundations per the rebuild spec.
+1. **Phase R1** — stand up the substrate in `07-runtime-scaffolding/` per the rebuild spec. *(Deferred, not imminent.)*
+2. **Phase R2** — production governance hardening per the rebuild spec. *(Deferred, not imminent.)*
+3. **Phase R3** — real execution & adaptive cognition per the rebuild spec. *(Deferred, not imminent.)*
+4. **Phase R4** — multi-ARC foundations per the rebuild spec. *(Deferred, not imminent.)*
 
-**No implementation begins today.** The foundation is the prerequisite. The foundation is doctrine-aligned. The foundation is the durable home. The runtime is the future.
+**The active deliverable for the foundation is the accumulation layer** (`11-fleet-arc-intake/`). The 10 intake subdirectories are the canonical intake point for validated Fleet ARC discoveries. New intake files are added *event-driven* (when a discovery is validated and founder-accepted), not on a daily/weekly/monthly cadence.
+
+**No implementation begins today.** The foundation is the prerequisite. The foundation is doctrine-aligned. The foundation is the durable home. The accumulation is the present; the runtime is the future.
 
 ## Cross-References
 
