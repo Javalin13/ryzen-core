@@ -17,18 +17,25 @@ The format follows the continuity repo's pattern: sequentially numbered (NNNN), 
 
 ## Accepted
 
-*No accepted ADRs at this time.* The foundation establishment ADR (0001) is the first ADR; it is in `proposed` state and will move to `accepted` when the founder approves it.
+*No ADRs were accepted before this turn.*
+
+[ADDITIVE — 2026-06-15] 0001 — Establish the Ryzen Core Repository Foundation
+  Status: **accepted** (founder-authorized 2026-06-15)
+  File: `05-adrs/0001-establish-ryzen-core-repository-foundation.md`
+  Tags: #foundation #architecture #integration
+  Supersedes: none
+  Superseded by: 0002 (refines the strategic posture; does not supersede the foundation itself)
+
+[ADDITIVE — 2026-06-15] 0002 — Clarify the Ryzen Core Foundation's Strategic Posture
+  Status: **accepted** (founder-clarified 2026-06-15)
+  File: `05-adrs/0002-clarify-strategic-posture-deferred-accumulation-first.md`
+  Tags: #foundation #strategic-posture #fleet-arc-intake #accumulation
+  Supersedes: none (refines the posture of 0001)
+  Superseded by: none
 
 ## Proposed
 
-0001 — Establish the Ryzen Core Repository Foundation
-  Tags: #foundation #architecture #integration
-  Date: 2026-06-15
-  Supersedes: none
-  Superseded by: none
-  File: `05-adrs/0001-establish-ryzen-core-repository-foundation.md`
-  Status: proposed (awaiting founder approval of the foundation)
-  Summary: Establishes the 11-folder foundation structure, the 10 foundation governance rules, the 5-tier classification discipline, and the 4-phase rebuild roadmap integration. Authorizes the repository as the *implementation successor* to the lost original Ryzen runtime. The runtime itself is *not* implemented.
+*No proposed ADRs at this time.*
 
 ## Superseded
 
