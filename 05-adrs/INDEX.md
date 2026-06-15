@@ -30,7 +30,14 @@ The format follows the continuity repo's pattern: sequentially numbered (NNNN), 
   Status: **accepted** (founder-clarified 2026-06-15)
   File: `05-adrs/0002-clarify-strategic-posture-deferred-accumulation-first.md`
   Tags: #foundation #strategic-posture #fleet-arc-intake #accumulation
-  Supersedes: none (refines the posture of 0001)
+  Supersedes: none (refines the strategic posture of 0001)
+  Superseded by: 0003 (further refines the operational doctrine)
+
+[ADDITIVE — 2026-06-15] 0003 — Shift to Autonomous-Acceptance Doctrine (Accept by Default, Pause for Crucial)
+  Status: **accepted** (founder-clarified 2026-06-15)
+  File: `05-adrs/0003-shift-to-autonomous-acceptance-doctrine.md`
+  Tags: #foundation #operational-doctrine #autonomy #accumulation
+  Supersedes: none (refines the operational doctrine; does not invalidate 0001 or 0002)
   Superseded by: none
 
 ## Proposed

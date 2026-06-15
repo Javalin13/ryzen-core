@@ -64,11 +64,37 @@ Every change to this repository MUST be additive. No change may delete, modify, 
 
 **Mapped to continuity rule:** `Rule 1: Additive-only evolution`.
 
-### Rule F-GOV-5 — Founder Authority Preserved
+### Rule F-GOV-5 — Founder Authority Preserved (and Agent-Autonomy Defined)
 
-Every change to this repository requires founder direction. The 7 execution risks from the Founder Capability Model apply in full. The Founder Reality Check Protocol's 7-dimension scorecard MUST be executed before any new idea is pursued.
+**Founder authority** governs the following categories of change (these require founder direction or explicit delegation):
+- Modifying governing documents in this repository (`GOVERNANCE.md`, `FOUNDATION.md`, `INTERPRETATION-PROTOCOL.md`)
+- Modifying canonicals in `ryzen-continuity` (Founder Identity, Capability Model, Interpretation Protocol canonical, anything in `00-governance/`)
+- Authoring a new ADR
+- Promoting an intake to design / runtime / governance
+- Creating a new repository or remote
+- Going off-strategy (starting the kernel, modifying runtime roadmap to start R1)
+- Risking data (committing a real token, leaking PII)
+- Large-scope rework (renaming the foundation, merging repos)
+- Uncertain changes
 
-**Mapped to continuity rule:** `Rule 4: Founder authority`.
+**Agent autonomy** governs the following categories of change (the agent acts by default, commits, pushes, and moves forward; the founder may override at any time):
+- Adding new intake files (validated Fleet ARC discoveries, inferred or observed)
+- Updating the intake log (`11-fleet-arc-intake/INDEX.md`)
+- Adding new lessons learned (`10-lessons-learned/`)
+- Adding new cadences, templates, scaffolding placeholders
+- Cross-references between the two repos
+- Fixes (typos, broken links, missing files)
+- Refactors (file renames, content reorganizations within the additive-only constraint)
+- Commits, tags, and pushes (when the remote is configured)
+- Updates to non-canonical, non-governing files
+
+**The 7 execution risks** from the Founder Capability Model apply in full to agent-autonomous actions. The Founder Reality Check Protocol's 7-dimension scorecard is *available* (not required) for any change the agent is uncertain about.
+
+**The bright line:** *Doctrine change* (governance, canonicals, ADRs, runtime roadmap strategy) requires founder signoff. *Accumulation* (intakes, lessons, scaffolding, cadences, tools) is the agent's default mode.
+
+**Mapped to continuity rule:** `Rule 4: Founder authority` *and* `Rule 1: Additive-only evolution` *and* `Rule 2: Continuity before scaling` (autonomy is bounded by the additive-only and continuity-before-scaling principles).
+
+**[REVISED — 2026-06-15]** Per ADR 0003 (autonomous-acceptance doctrine), this rule is updated to define both the founder's reserved authority and the agent's autonomous action space. The previous text ("Every change to this repository requires founder direction") is replaced by the bright-line distinction above.
 
 ### Rule F-GOV-6 — Interpretation Protocol in Force
 
@@ -140,7 +166,7 @@ The continuity repo's `00-governance/GOVERNANCE.md` codifies 7 access roles. Thi
 | Role | Authority in this repository |
 |---|---|
 | Founder (Jan Blommaert) | Full read/write/push. Sole authority on all decisions. |
-| Hermes (agent) | Read/write local; push requires founder approval. |
+| Hermes (agent) | Read/write local; **autonomous** for accumulation (intakes, lessons, scaffolding, cadences, tools, fixes, refactors); **founder approval** for canonical/governing-doc changes, ADRs, intake promotion, new repos, off-strategy actions, data risk, large-scope rework, uncertain changes. Push to remote is autonomous once the remote is configured (GCM/credential.helper supplies the credential). |
 | ARC implementation agents | Read; write to feature branches only; no push to main. |
 | External collaborators | Read-only (when remote is configured). |
 | Public | Read-only (when remote is configured as public). |
@@ -157,7 +183,12 @@ The 3 open founder decisions are *re-stated* in `00-foundation/FOUNDATION.md` §
 
 ## What Comes Next
 
-Per the founder's direction, this is **foundation only**. The runtime is not built. The next deliverables (after founder authorization) will be:
+Per the founder's direction, this is **foundation only**. The runtime is not built. **Per the autonomous-acceptance doctrine (ADR 0003, 2026-06-15), the agent's next action is determined by the bright-line distinction in Rule F-GOV-5:**
+
+- For **crucial changes** (governing docs, canonicals, ADRs, intake promotion, new repos, off-strategy, data risk, large-scope rework, uncertain changes), the agent pauses and asks the founder.
+- For **accumulation changes** (intakes, lessons, scaffolding, cadences, tools, fixes, refactors, commits, tags, pushes), the agent acts, commits, and pushes autonomously.
+
+The 3 open founder decisions (D1, D2, D3) remain **open** and do **not** block the accumulation phase (per ADR 0002). They will be resolved when the runtime phase is separately authorized.
 
 1. **Phase R1** — stand up the substrate in `07-runtime-scaffolding/` per the rebuild spec.
 2. **Phase R2** — production governance hardening per the rebuild spec.

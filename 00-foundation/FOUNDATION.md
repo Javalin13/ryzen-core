@@ -38,7 +38,7 @@ The continuity repo's `00-governance/GOVERNANCE.md` §3 codifies 8 doctrine rule
 | 2 | **Recovery-informed scaffolding.** Every empty directory in `07-runtime-scaffolding/` references the recovered concept(s) it will eventually implement. | Rule 1: Additive-only evolution | `00-governance/GOVERNANCE.md` §3 |
 | 3 | **No implementation at this stage.** The runtime is *not* built in this foundation. | Rule 2: Continuity before scaling | `00-governance/GOVERNANCE.md` §3 |
 | 4 | **Additive evolution.** Every change is additive, never destructive. | Rule 1: Additive-only evolution | `00-governance/GOVERNANCE.md` §3 |
-| 5 | **Founder authority preserved.** Every change requires founder direction. | Rule 4: Founder authority | `00-governance/GOVERNANCE.md` §3 |
+| 5 | **Founder authority preserved.** Founder direction governs doctrine, canonicals, ADRs, runtime roadmap strategy, and new repositories. *For other changes (intakes, lessons, scaffolding, cadences, tools, fixes, refactors), the agent acts autonomously per the autonomous-acceptance doctrine (ADR 0003, [REVISED — 2026-06-15]).* | Rule 4: Founder authority | `00-governance/GOVERNANCE.md` §3 |
 | 6 | **Interpretation Protocol in force.** Every claim is classified against the 5-tier reality hierarchy. | Rule 6: Interpretation Protocol | `00-governance/GOVERNANCE.md` §3 |
 | 7 | **Token hygiene.** No credentials in the repository. | Rule 5: Operational realism | `00-governance/GOVERNANCE.md` §3 |
 | 8 | **Naming discipline.** Files use kebab-case (per `AGENTS.md` pattern in continuity); folders use `NN-purpose` (zero-padded two-digit prefix). | Rule 7: Naming & structure | `00-governance/GOVERNANCE.md` §3 |
@@ -160,14 +160,68 @@ The clarification refines the foundation's purpose:
 
 This posture is captured in **ADR 0002** (`05-adrs/0002-clarify-strategic-posture-deferred-accumulation-first.md`). The posture is **additive**: it refines the foundation's purpose, it does not replace the foundation's design.
 
-The doctrine of **accumulation** (per the clarification):
+The doctrine of **accumulation** (per the clarification, [REVISED — 2026-06-15]):
 
 1. **One canonical location per discovery type.** The 10 subdirectories in `11-fleet-arc-intake/` are the canonical locations.
-2. **Founder acceptance is required for accumulation.** Raw and validated discoveries are *candidates*; accepted discoveries are *assets*.
+2. **Agent-accepted by default; founder-accepted for crucial changes.** Raw and validated discoveries are *candidates*; agent-accepted discoveries are *foundation assets*; founder-accepted discoveries are *promoted assets*. The agent acts by default; the founder pauses for crucial changes (per ADR 0003).
 3. **Additive only.** Intakes are never deleted, never overwritten. Deprecated intakes are preserved for continuity.
 4. **Cross-ARC future-proofing.** The 10th intake type (`10-arc-coordination-requirements/`) captures Fleet ARC's intelligence about how it will interact with future ARCs (Earth, FamilieKompas).
 
 The foundation is *not* an active runtime development project. It is the *continuity and implementation foundation* that *receives* validated intelligence from FleetConnect.
+
+## The Autonomous-Acceptance Doctrine (per ADR 0003, 2026-06-15)
+
+The founder clarified the foundation's **operational doctrine** on 2026-06-15:
+
+> Change the doctrine to not wait for github changes and discoveries accept if you plan to change something crucial.
+
+The clarification inverts the default mode of the agent:
+
+- **Previous default:** wait for founder input; ask before doing; "awaiting your X" messages.
+- **New default:** act, accept, commit, push, move forward; only pause for **crucial** changes.
+
+### The Bright Line
+
+| Category of change | Mode | Why |
+|---|---|---|
+| New intake files, intake log updates, lessons learned, cadences, scaffolding, fixes, refactors, commits, tags, pushes | **Autonomous** (act by default) | Accumulation; reversible; in scope |
+| Modifying `GOVERNANCE.md`, `FOUNDATION.md`, `INTERPRETATION-PROTOCOL.md` (governing docs) | **Pause (crucial)** | Doctrine change; founder signoff |
+| Modifying canonicals in `ryzen-continuity` (Founder Identity, Capability Model, Interpretation Protocol canonical, anything in `00-governance/`) | **Pause (crucial)** | Reality change; founder signoff |
+| Authoring a new ADR | **Pause (crucial)** | Governance artifact; founder's name |
+| Promoting an intake to design/runtime/governance | **Pause (crucial)** | Design commitment; founder signoff |
+| Creating a new repository or remote | **Pause (crucial)** | Founder creates; agent does not auto-create |
+| Going off-strategy (starting the kernel, modifying runtime roadmap to start R1) | **Pause (crucial)** | Strategy is founder's call |
+| Risking data (committing a real token, leaking PII) | **Pause (crucial)** | Safety rail |
+| Large-scope rework (renaming the foundation, merging repos) | **Pause (crucial)** | Scope of work crosses a "doctrine change" threshold |
+| Uncertain changes | **Pause (crucial)** | When in doubt, pause |
+
+### The 5-State Intake Lifecycle (revised)
+
+| State | Description | Authority |
+|---|---|---|
+| `raw` | Captured but not yet validated | Agent |
+| `validated` | Supported by evidence | Agent |
+| `agent-accepted` | Agent has accepted for accumulation; founder may override | **Agent (default)** |
+| `founder-accepted` | Founder has accepted; the intake is a foundation asset | Founder |
+| `promoted` | Promoted to design, runtime requirement, or governance rule | Founder (crucial change) |
+| `deprecated` | No longer authoritative; preserved for continuity | Either |
+
+### The 4 Intake Criteria (revised)
+
+| # | Criterion | Description |
+|---|---|---|
+| 1 | **Validated** | Supported by evidence (data, observation, simulation, comparison) |
+| 2 | **Reusable** | Expected to recur; informs future ARC design; load-bearing insight |
+| 3 | **Documented** | The intake file follows the template; cross-references are complete |
+| 4 | **Agent-accepted** *(was: Founder-accepted)* | The agent has accepted for accumulation; the founder may override |
+
+The agent may still ask the founder for acceptance on any change, especially when the change is inferred (not observed) or has a high cost of reversal. The default is to *act*, not to *ask*.
+
+### The "What Comes Next" Anti-Pattern
+
+The agent will no longer produce "awaiting your X" messages. The agent will produce "what was just done" reports. The accumulation is the present deliverable; the runtime is the future; the agent's job is to keep the accumulation going.
+
+**The agent accumulates. The agent does not implement. The agent does not wait.**
 
 ## What Comes Next
 
