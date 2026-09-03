@@ -17,8 +17,6 @@ The format follows the continuity repo's pattern: sequentially numbered (NNNN), 
 
 ## Accepted
 
-*No ADRs were accepted before this turn.*
-
 [ADDITIVE — 2026-06-15] 0001 — Establish the Ryzen Core Repository Foundation
   Status: **accepted** (founder-authorized 2026-06-15)
   File: `05-adrs/0001-establish-ryzen-core-repository-foundation.md`
@@ -38,6 +36,13 @@ The format follows the continuity repo's pattern: sequentially numbered (NNNN), 
   File: `05-adrs/0003-shift-to-autonomous-acceptance-doctrine.md`
   Tags: #foundation #operational-doctrine #autonomy #accumulation
   Supersedes: none (refines the operational doctrine; does not invalidate 0001 or 0002)
+  Superseded by: none
+
+[ADDITIVE — 2026-09-03] 0004 — Establish ARC Productization Accumulation Layer
+  Status: **accepted** (founder-directed 2026-09-03)
+  File: `05-adrs/0004-establish-arc-productization-accumulation-layer.md`
+  Tags: #arc #productization #pricing #cost-model #pilots #provisioning
+  Supersedes: none
   Superseded by: none
 
 ## Proposed
@@ -73,3 +78,4 @@ Each ADR has:
 - Foundation Doctrine: `00-foundation/FOUNDATION.md`
 - Foundation Governance: `00-foundation/GOVERNANCE.md`
 - Foundation Interpretation Protocol: `00-foundation/INTERPRETATION-PROTOCOL.md`
+- ARC Productization: `12-arc-productization/README.md`
