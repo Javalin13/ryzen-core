@@ -10,6 +10,8 @@ client_name: Laetitia
 business_name: VONKA (spelling to be confirmed by client if needed)
 arc_tier_target: Standard
 pilot_duration: 6 months free
+prototype_experience_capture: required
+final_ux_feed: required
 amendable: true-additively
 ---
 ```
@@ -19,6 +21,8 @@ amendable: true-additively
 VONKA is the first external business pilot intended to validate whether a PRIME-derived ARC pattern can create useful day-to-day value for a real entrepreneur outside the Founder's own operating environment.
 
 VONKA focuses first on football teams and clubs, with a wider corporate/team-performance ambition around mindset, cohesion, leadership and collective performance.
+
+The pilot must validate both **technical/product operation** and **real user experience**. Every reusable experience from Laetitia's use of the ARC should feed `../prototype-experience/EXPERIENCE-BACKLOG.md` so the final ARC UX/system can be shaped by lived evidence.
 
 ## Commercial promise / current offer
 
@@ -81,8 +85,32 @@ The free site is a basic first version. Significant future custom work is not im
 6. Measure support minutes and intervention frequency.
 7. Identify repeatable onboarding questions/configuration.
 8. Identify which requested features belong in Standard vs higher tiers.
-9. Build a first case study/testimonial only with client permission.
-10. Determine whether the client sees enough value to convert after 6 months.
+9. Capture confusion, trust moments, language needs, notification preferences, memory expectations and successful interaction patterns.
+10. Record every material user-experience event as a generalized `EXP-*` item when it meets the capture rule.
+11. Build a first case study/testimonial only with client permission.
+12. Determine whether the client sees enough value to convert after 6 months.
+
+## Experience-to-product rule
+
+The pilot is not complete merely because the ARC works technically.
+
+For each meaningful experience:
+
+`VONKA usage → observation → generalized EXP record → cross-pilot backlog → validation → final ARC UX/system candidate`.
+
+Customer-confidential content must never be copied into the general product backlog. Only the reusable pattern is promoted.
+
+## Pilot review checkpoints
+
+At minimum review:
+
+- after initial onboarding;
+- after first week of real use;
+- after first meaningful business workflow;
+- monthly during the pilot;
+- at conversion/stop decision.
+
+Each review should ask what was useful, confusing, missing, unnecessary, unreliable or support-heavy.
 
 ## Guardrails
 
@@ -98,5 +126,7 @@ The free site is a basic first version. Significant future custom work is not im
 The success criterion is bigger than the first €500 subscription. The pilot should prove whether the architecture can move from:
 
 `PRIME (Founder operator) → repeatable ARC node → external entrepreneur → real recurring business value`.
+
+It should also prove that Ryzen can accumulate the **experience of its ARCs**, so future UX/system design is built from what prototype users actually encountered rather than from theoretical assumptions.
 
 If successful, the pilot becomes evidence for ARC productization rather than merely a one-off free project.
