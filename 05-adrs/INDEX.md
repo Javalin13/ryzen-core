@@ -45,6 +45,13 @@ The format follows the continuity repo's pattern: sequentially numbered (NNNN), 
   Supersedes: none
   Superseded by: none
 
+[ADDITIVE — 2026-09-03] 0005 — Establish Prototype Experience → Final ARC UX/System Feedback Loop
+  Status: **accepted** (founder-directed 2026-09-03)
+  File: `05-adrs/0005-establish-prototype-experience-to-final-ux-feedback-loop.md`
+  Tags: #arc #prototype #ux #experience #backlog #product-learning #reality-overlay
+  Supersedes: none
+  Superseded by: none
+
 ## Proposed
 
 *No proposed ADRs at this time.*
@@ -79,3 +86,5 @@ Each ADR has:
 - Foundation Governance: `00-foundation/GOVERNANCE.md`
 - Foundation Interpretation Protocol: `00-foundation/INTERPRETATION-PROTOCOL.md`
 - ARC Productization: `12-arc-productization/README.md`
+- Current Reality Overlay: `CURRENT-REALITY-2026-09.md`
+- Current Repository Map: `REPOSITORY-MAP.md`
