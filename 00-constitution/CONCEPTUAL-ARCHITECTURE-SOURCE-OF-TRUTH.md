@@ -6,23 +6,53 @@ Authority: Founder decision
 
 ## Constitutional decision
 
-The documents in the Google Drive folder `Agentic Engineered Brains / 1. Conceptual Architecture` are the constitutional conceptual-architecture source of truth for RYZ3N/ARCs.
+The **canonical documents** inside Google Drive folder `Agentic Engineered Brains / 1. Conceptual Architecture` are the constitutional conceptual-architecture source of truth for RYZ3N/ARCs.
 
-They are not merely historical inspiration, recovery notes, or optional strategy. They are the governing constitutional corpus to which RYZ3N, PRIME/Hermes runtime implementations, ARCs, Brains, Agents, interconnection mechanisms, memory, governance, verification and execution flows must be aligned.
+**Important correction:** the folder also contains explanatory, visualization, prompt, essay and supporting material. Presence in the folder does **not** make a document canonical.
 
-Where a derivative map, runtime note, scaffold, audit, ADR, productization standard or implementation disagrees with this constitutional corpus, the disagreement must be surfaced as drift. No silent reinterpretation or replacement is allowed.
+The canonical corpus governs RYZ3N, PRIME/Hermes runtime implementations, ARCs, Brains, Agents, interconnection mechanisms, memory, governance, verification and execution flows.
 
-Existing immutable canonicals in `ryzen-continuity` remain preserved as constitutional history. This Founder decision establishes the Drive conceptual-architecture corpus as an additional controlling constitutional source. Conflicts must be reconciled explicitly and additively by Founder decision; they must never be normalized silently.
+Where a derivative map, runtime note, scaffold, audit, ADR, productization standard or implementation disagrees with a constitutional invariant, the disagreement must be surfaced as drift. No silent reinterpretation or replacement is allowed.
+
+Existing immutable canonicals in `ryzen-continuity` remain preserved as constitutional history. Conflicts or evolution must be reconciled explicitly and additively by Founder decision; they must never be normalized silently.
+
+## Canonical corpus classification
+
+The following Drive documents are treated as constitutional/canonical because the documents themselves identify their role as canonical architecture, constitutional roadmap, canonical ARC principle, canonical alignment or canonical extension:
+
+1. `1. RYZEN — Roadmap Sequence`
+2. `2. Canonical Recursive Reflective Cognitive Operational Ecosystem`
+3. `3. Ryzen — First Master Recursive Ecosystem Architect`
+4. `4. ARCs — Autonomous Recursive Cognition systems`
+5. `5. ARC - Owner-Intent Centric - Principle & Operational Example`
+6. `6. Ryzen / ARC — Multi-Year Master Execution Plan`
+7. `7. LLM ALIGNMENT WITH THE CANONS`
+8. `8. Ryzen Log Extension PRACTICAL EXAMPLES`
+
+### Non-canonical / supporting material
+
+These may be preserved in GitHub for history, design context, visualization or implementation inspiration, but **must not be used as constitutional authority**:
+
+- `0. RYZ3N TL;DR` — explanatory summary
+- `9. Ryzen Nexus Civilization Visualization & Interface Specification v1.0.0` — interface/visualization specification
+- `10. Nexus v1.0 Prompt` — design prompt/draft; it explicitly describes itself as not yet final canonical
+- `When Desire Becomes Architecture` — conceptual essay
+- `ARC - FEATURE ESSAY - MAY 2026 - ISSUE 01.pdf` — feature essay/publication form of the concept
+- images, visual references, demonstrations and other contextual media unless Founder explicitly reclassifies them
+
+Nexus is therefore **not canonical** unless the Founder later explicitly promotes a specific Nexus document/version into the constitution.
 
 ## Required interpretation discipline
 
 Every implementation or architecture claim must distinguish:
 
-- CONSTITUTIONAL REQUIREMENT — explicitly present in this corpus;
+- CONSTITUTIONAL REQUIREMENT — explicitly normative in canonical corpus;
+- FOUNDER-APPROVED EVOLUTION — later explicit Founder refinement that preserves/evolves the constitution additively;
 - IMPLEMENTED — actually exists/runs;
 - PARTIAL — materially present but incomplete;
 - DESIGNED — specified but not runtime-proven;
-- PLANNED / ENVISIONED — future state only.
+- PLANNED / ENVISIONED — future state only;
+- ILLUSTRATIVE EXAMPLE — an example inside a canonical document, not automatically a permanent ontology rule.
 
 The constitutional three-pass gate remains mandatory:
 
@@ -32,28 +62,26 @@ The constitutional three-pass gate remains mandatory:
 
 If any pass fails, do not claim COMPLIANT, PROVEN or LIVE for the affected capability.
 
-## Canonical corpus inventory
+## Evolution-preservation rule — DO NOT ROLL BACK VALIDATED MATURATION
 
-Primary numbered documents:
+The constitution defines enduring laws, authorities, boundaries, sequencing and architecture invariants. It must **not** be misused as a reason to mechanically roll a mature implementation back to an older example or earlier implementation sketch.
 
-0. `0. RYZ3N TL;DR`
-1. `1. RYZEN — Roadmap Sequence`
-2. `2. Canonical Recursive Reflective Cognitive Operational Ecosystem`
-3. `3. Ryzen — First Master Recursive Ecosystem Architect`
-4. `4. ARCs — Autonomous Recursive Cognition systems`
-5. `5. ARC - Owner-Intent Centric - Principle & Operational Example`
-6. `6. Ryzen / ARC — Multi-Year Master Execution Plan`
-7. `7. LLM ALIGNMENT WITH THE CANONS`
-8. `8. Ryzen Log Extension PRACTICAL EXAMPLES`
-9. `9. Ryzen Nexus Civilization Visualization & Interface Specification v1.0.0`
-10. `10. Nexus v1.0 Prompt`
+When current RYZ3N/ARC evolution is newer than an older canonical example, evaluate it as follows:
 
-Supporting conceptual documents in the same folder:
+1. Identify the underlying constitutional invariant.
+2. Separate normative law from illustrative example, old product naming, old topology sketch or historical implementation assumption.
+3. Preserve the newer Founder-approved implementation when it satisfies the invariant more faithfully.
+4. Surface a genuine contradiction to the Founder instead of silently choosing either side.
+5. Evolve additively; preserve history and evidence.
 
-- `When Desire Becomes Architecture`
-- `ARC - FEATURE ESSAY - MAY 2026 - ISSUE 01.pdf`
+Therefore **current validated evolution is retained by default** unless it demonstrably violates a constitutional invariant or the Founder explicitly supersedes it.
 
-Non-text media and demonstrations in the same folder are preserved as contextual material but do not automatically override the constitutional text corpus unless the Founder explicitly classifies them as constitutional.
+Examples:
+
+- `ARC instance → Domain/Project → Intent → Activity → Corresponding Brain → Agents → Execution` is a Founder-approved runtime refinement that operationalizes the canonical owner-intent-centric ARC principle. It is retained; it does not create a competing constitutional tier.
+- One person/owner = one ARC with multiple Domains/Projects is retained where it better realizes the canonical principle that an ARC is not a fixed-domain AI system and dynamically develops specialization around evolving owner intent.
+- Brains remain the specialization structures. The ARC self-provisions/stabilizes Brains according to real need; no fixed Brain catalog is required merely because an old example listed one.
+- Cross-ARC Brain interaction remains allowed when bounded, selective, governance-supervised and non-contaminating. PRIME BRAIN STEWARD is a current implementation mechanism, not a new canonical tier.
 
 ## Key constitutional hierarchy from Canonical Genesis Architecture
 
@@ -86,20 +114,22 @@ The complete hierarchy contains Layers 0–25:
 24. Worker Brain Layers
 25. Execution Systems Layer
 
-This layer model must now be used in constitutional audits against actual RYZ3N/PRIME/ARC runtime state.
+This exact Layer 0–25 model is the audit basis. A layer may be constitutionally future/experimental and therefore need not be implemented prematurely. Audit status must distinguish `IMPLEMENTED`, `PARTIAL`, `DESIGNED`, `PLANNED/FUTURE`, and `NOT YET DUE` rather than treating every future layer as a present defect.
 
 ## ARC constitutional interpretation
 
-The corpus explicitly defines an ARC as an adaptive recursive executive cognitive ecosystem rather than a fixed-domain AI system. An ARC develops and stabilizes specialized Brains in response to owner/creator intent and operational necessity. Brains are specialization organs; the ARC is the governed adaptive cognition organism.
+The corpus explicitly defines an ARC as an adaptive recursive executive cognitive ecosystem rather than a fixed-domain AI system. An ARC develops and stabilizes specialized Brains in response to owner/creator intent, operational demands, environmental complexity and evolving real-world objectives.
 
-The Founder-approved runtime refinement `ARC instance → Domain/Project → Intent → Activity → Corresponding Brain → Agents → Execution` must be interpreted as an implementation expression of this constitutional owner-intent-centric ARC principle, not as a replacement for the constitutional hierarchy.
+The ARC itself remains the governed executive cognition organism and adaptive specialization framework. Brains are specialized cognition structures created/stabilized by the ARC in pursuit of creator-aligned objectives.
 
 ## Inter-ARC / inter-Brain constitutional interpretation
 
-Cross-ARC and cross-Brain intelligence exchange is constitutionally permitted where strategically valuable, operationally justified, creator-aligned, governance-safe, coherence-preserving and constitutionally compliant. Synchronization is bounded and selective; uncontrolled cognition blending, governance leakage and specialization contamination are prohibited.
+Cross-ARC and cross-Brain intelligence exchange is constitutionally permitted where strategically valuable, operationally justified, creator-aligned, governance-safe, coherence-preserving and constitutionally compliant. Synchronization must remain bounded and selective; uncontrolled cognition blending, governance leakage and specialization contamination are prohibited.
 
-PRIME BRAIN STEWARD is the current operational stewardship implementation pattern for this future RYZ3N-native interconnection/convergence responsibility. It is not a new canonical tier.
+PRIME BRAIN STEWARD is the current operational stewardship implementation pattern for this future RYZ3N-native interconnection/convergence responsibility. It is not a new canonical tier and must never replace RYZ3N's ultimate constitutional convergence role.
 
 ## Preservation rule
 
-The source documents are mirrored into `00-constitution/conceptual-architecture/` as source-preservation snapshots. They must be treated as add-only constitutional history. Corrections or later Founder-approved versions must be added as new versions or supersession records rather than silently rewriting historical source snapshots.
+Canonical Drive sources are mirrored as source-preservation snapshots and remain add-only constitutional history. Non-canonical/supporting Drive sources may also be mirrored, but must be explicitly labeled non-canonical.
+
+Corrections, later Founder-approved versions and supersession decisions must be added explicitly rather than silently rewriting historical source meaning.
