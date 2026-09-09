@@ -3,9 +3,9 @@
 ```yaml
 ---
 type: founding-pilot
-status: favorable-in-principle / document-adjustments-requested
+status: favorable-in-principle / revised-agreement-prepared / alignment-call-confirmed
 created: 2026-09-03
-updated: 2026-09-08
+updated: 2026-09-09
 classification: active-commercial-experiment
 client_name: Laetitia
 business_name: VONDA Corporation
@@ -23,7 +23,13 @@ On 2026-09-08 Laetitia stated that she is **favorable in principle to the Foundi
 
 This is a material advancement from proposal review, but not yet final contractual acceptance.
 
-Requested adjustments:
+Laetitia subsequently confirmed an alignment call for **Thursday 2026-09-10 at 10:30 Europe/Brussels** to discuss the adjustments and move toward final validation.
+
+Current status:
+
+**FAVORABLE IN PRINCIPLE — REVISED AGREEMENT PREPARED — ALIGNMENT CALL CONFIRMED 2026-09-10 10:30**
+
+## Requested adjustments from Laetitia
 
 1. Replace **VONKA** with **VONDA Corporation** everywhere.
 2. Present VONDA Corporation as the full corporate structure rather than defining it only through football/team performance.
@@ -33,6 +39,43 @@ Requested adjustments:
 6. Clarify hosting, third-party/subprocessor use, confidentiality, backups, and data return/deletion where professional or prospect data may be processed.
 7. Preserve **Systeme.io** for sales funnels, payments and commercial automations unless a later reason emerges to change it.
 8. Position the VONDA Corporation website primarily as the corporate/B2B showcase and the ARC primarily as an internal operational assistant.
+
+## Revised agreement direction — 2026-09-09
+
+The revised proposal keeps the original commercial offer unchanged and changes only the points requested above.
+
+### Commercial terms preserved
+
+- ARC installation/configuration: **0 € during the Founding Pilot**.
+- First **6 months** ARC Standard usage: **0 €**.
+- Basic VONDA Corporation website: **0 €**, indicative value **250 €**.
+- After the 6-month pilot, if VONDA Corporation chooses to continue:
+  - **500 €/year**, or
+  - **50 €/month**.
+- Full onboarding/explanation session, if requested: **100 €**.
+- FR ↔ NL interpretation at a requested appointment: **100 € all-in per appointment**.
+- No automatic obligation to continue after the pilot.
+- Any other service or specific external cost must be discussed before commitment.
+
+### Corporate / website positioning
+
+VONDA Corporation is the umbrella corporate structure. Football / collective performance is one B2B development axis and must not define the entire company.
+
+The future VONDA Corporation website is intended as a **corporate / B2B showcase** presenting the broader structure, its axes, positioning, story, method, contact pathways and the football/performance axis as one part of the whole.
+
+The website has not yet been built. Its visual direction, style, colors, atmosphere, structure, pages and content will be aligned with Laetitia before build execution.
+
+### Systeme.io boundary
+
+Current intended boundary:
+
+`VONDA corporate website = corporate/B2B presence`
+
+`Systeme.io = funnels + payments + commercial automations`
+
+`ARC = internal operational assistant / intelligence layer`
+
+There is no product reason to replace a functioning Systeme.io setup merely for architectural purity. Integration should preserve existing working systems unless measurable value justifies replacement.
 
 ## Purpose
 
@@ -62,7 +105,7 @@ No automatic obligation to continue after the pilot.
 
 ### Separate personal services
 
-- Full onboarding/explanation session: **€100**.
+- Full onboarding/explanation session, if requested: **€100**.
 - Founder attendance as FR ↔ NL interpreter for a requested Dutch-language prospect/client appointment: **€100 all-in per appointment**.
 - The interpretation role is language facilitation; Laetitia retains her own sales presentation, commercial responsibility, negotiation and client relationship.
 
@@ -112,19 +155,13 @@ There is no product reason to replace a functioning Systeme.io setup merely for 
 
 ## Ownership, access and portability principles
 
-The final pilot agreement should explicitly define:
+The revised agreement direction is:
 
-- who owns the domain registration;
-- who holds registrar/admin access;
-- ownership of website content and client-supplied assets;
-- ownership of custom implementation artefacts versus reusable ARC platform components;
-- ownership and control of VONDA Corporation business data;
-- access rights during the pilot;
-- what is exported or transferred if the pilot ends;
-- reasonable portability format and timing;
-- what cannot be transferred because it is shared platform infrastructure or reusable product IP.
-
-Default product principle: **VONDA Corporation retains ownership of its business data and client-specific content; reusable ARC platform/IP remains with the provider unless explicitly agreed otherwise.**
+- VONDA Corporation retains ownership/control of its domain, brand, client-specific content and business data.
+- Laetitia receives the necessary access to the domain and future site.
+- VONDA-specific content and reasonably exportable data should be recoverable if the pilot stops.
+- RYZEN retains ownership of generic tools, methods, reusable technical components, templates, ARC architecture, reusable automations and non-client-specific know-how.
+- Client-owned data/content portability does not automatically transfer the underlying shared ARC platform or reusable provider IP.
 
 ## Data protection / operational safeguards to specify
 
@@ -143,6 +180,26 @@ Because the ARC may process professional information and prospect data, the agre
 - minimization of unnecessary sensitive data.
 
 Do not promise legal/compliance guarantees beyond the implemented technical and contractual reality. Where GDPR processor/controller terms are required, use an appropriate data-processing agreement rather than relying on marketing language.
+
+## Alignment call — Thursday 2026-09-10 10:30
+
+Confirmed by Laetitia.
+
+Primary discussion points:
+
+1. VONDA Corporation overall positioning and business axes.
+2. What Laetitia wants the future corporate/B2B website to communicate.
+3. Website direction: style, colors, atmosphere, structure, reference sites, pages and content.
+4. Role of football / collective performance within the broader VONDA Corporation structure.
+5. Systeme.io scope for funnels, payments and commercial automations.
+6. ARC role as internal operational assistant.
+7. Domain/site/content/data ownership and access.
+8. Hosting, services/subprocessors, confidentiality, backups, portability, restitution and deletion.
+9. Final validation of the Founding Pilot mechanics and launch sequence.
+
+Meeting objective:
+
+`align requested changes → confirm website direction → confirm governance/data boundaries → finalize agreement → launch pilot`
 
 ## Pilot learning goals
 
@@ -196,7 +253,7 @@ Each review should ask what was useful, confusing, missing, unnecessary, unrelia
 
 ## Next milestone
 
-`Discuss requested adjustments → revise agreement → client validates final wording → pilot launch / onboarding`
+`2026-09-10 10:30 alignment call → finalize wording and website direction → client validates final agreement → pilot launch / onboarding`
 
 ## Why this pilot matters
 
