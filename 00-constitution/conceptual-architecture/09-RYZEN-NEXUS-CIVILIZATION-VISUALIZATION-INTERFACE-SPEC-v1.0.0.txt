@@ -1,3 +1,6 @@
+NON-CANONICAL SUPPORTING MATERIAL
+Classification: interface / visualization specification only. This file is preserved for design context and does NOT carry constitutional authority unless the Founder explicitly promotes a later version.
+
 Ryzen Nexus
 Civilization Visualization & Interface Specification
 v1.0.0
