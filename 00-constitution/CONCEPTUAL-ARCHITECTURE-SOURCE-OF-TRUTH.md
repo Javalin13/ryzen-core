@@ -8,7 +8,7 @@ Authority: Founder decision
 
 The **canonical documents** inside Google Drive folder `Agentic Engineered Brains / 1. Conceptual Architecture` are the constitutional conceptual-architecture source of truth for RYZ3N/ARCs.
 
-**Important correction:** the folder also contains explanatory, visualization, prompt, essay and supporting material. Presence in the folder does **not** make a document canonical.
+**Important correction:** the folder also contains explanatory, roadmap, visualization, prompt, essay and supporting material. Presence in the folder does **not** make a document canonical.
 
 The canonical corpus governs RYZ3N, PRIME/Hermes runtime implementations, ARCs, Brains, Agents, interconnection mechanisms, memory, governance, verification and execution flows.
 
@@ -18,9 +18,8 @@ Existing immutable canonicals in `ryzen-continuity` remain preserved as constitu
 
 ## Canonical corpus classification
 
-The following Drive documents are treated as constitutional/canonical because the documents themselves identify their role as canonical architecture, constitutional roadmap, canonical ARC principle, canonical alignment or canonical extension:
+The following Drive documents are treated as constitutional/canonical:
 
-1. `1. RYZEN — Roadmap Sequence`
 2. `2. Canonical Recursive Reflective Cognitive Operational Ecosystem`
 3. `3. Ryzen — First Master Recursive Ecosystem Architect`
 4. `4. ARCs — Autonomous Recursive Cognition systems`
@@ -31,9 +30,10 @@ The following Drive documents are treated as constitutional/canonical because th
 
 ### Non-canonical / supporting material
 
-These may be preserved in GitHub for history, design context, visualization or implementation inspiration, but **must not be used as constitutional authority**:
+These may be preserved in GitHub for history, design context, roadmap context, visualization or implementation inspiration, but **must not be used as constitutional authority**:
 
 - `0. RYZ3N TL;DR` — explanatory summary
+- `1. RYZEN — Roadmap Sequence` — roadmap/planning document; explicitly classified non-canonical by Founder on 2026-09-09
 - `9. Ryzen Nexus Civilization Visualization & Interface Specification v1.0.0` — interface/visualization specification
 - `10. Nexus v1.0 Prompt` — design prompt/draft; it explicitly describes itself as not yet final canonical
 - `When Desire Becomes Architecture` — conceptual essay
