@@ -12,6 +12,8 @@ canonical_refs:
   - Javalin13/ryzen-continuity/02-ryzen/architecture/HIERARCHY.md
   - Javalin13/ryzen-continuity/02-ryzen/architecture/CONVERGENCE-LAYER.md
   - Javalin13/ryzen-continuity/03-hermes/RELATIONSHIP-TO-RYZEN.md
+related_standard:
+  - 12-arc-productization/ARC-SELF-PROVISIONING-BRAIN-LIFECYCLE.md
 ---
 ```
 
@@ -28,6 +30,8 @@ ARC Definition / Framing
   ↓
 ARC Runtime Instance
   ↓
+ARC self-provisions needed specialist Brains from real Owner/Founder need
+  ↓
 BRAINS/
   ├── specialist Brain A
   ├── specialist Brain B
@@ -38,6 +42,8 @@ BRAINS/
      Execution
 ```
 
+Brains are **not** pre-seeded as a mandatory fixed taxonomy. The ARC creates them when reality requires a stable reasoning specialization.
+
 Brain cooperation inside one ARC occurs through a bounded ARC-local interconnect contract. Cross-ARC interaction is promoted upward as generalized evidence/signals and stewarded by PRIME today, later by native RYZ3N convergence.
 
 ## Source-of-truth placement
@@ -46,7 +52,7 @@ Each client/project ARC owns the canonical implementation record of its speciali
 
 `VONDA-Corporation/arc/BRAINS/COACHING/`
 
-A Brain folder represents a stable reasoning specialization, not merely a workflow or prompt.
+A Brain folder represents a stable reasoning specialization created/developed by that ARC to fulfil real Owner/Founder intent, not merely a workflow or prompt.
 
 PRIME keeps a **supervision mirror**, not a full private fork:
 
@@ -73,8 +79,10 @@ The supervision mirror may contain source commit pointers, Brain identities/stat
 
 It must:
 
+- observe/register self-provisioned Brain creation and lifecycle changes;
 - keep ARC/Brain registry coherence;
 - verify every Brain has one owning ARC and bounded reasoning scope;
+- verify creation is justified by real Owner/Founder need rather than speculative architecture;
 - prevent Brain-to-Brain circular authority or silent ARC reframing;
 - validate Agent ownership and external side-effect authority;
 - track dependencies and conflict between Brains;
@@ -130,7 +138,7 @@ Use PRIME ↔ Luxcalibur bridge for:
 - material architecture review;
 - constitutional compliance audits;
 - unresolved drift/contradiction;
-- review-worthy Brain creation or role changes;
+- material Brain creation or role changes that affect architecture/security/scope;
 - evidence disputes;
 - significant security/isolation changes;
 - Founder-directed review.
@@ -141,7 +149,10 @@ Do not use it for:
 - routine runtime context exchange;
 - task delegation inside one ARC;
 - high-frequency event transport;
-- private client data movement.
+- private client data movement;
+- every ordinary self-provisioned Brain creation that remains safely inside delegated ARC scope.
+
+Routine Brain lifecycle events are logged locally and mirrored to BRAIN STEWARD. Only material/review-worthy changes escalate through the bridge.
 
 ## Constitutional mapping
 
@@ -151,7 +162,7 @@ The architecture preserves:
 
 Current runtime mirror:
 
-`Founder intent → PRIME supervision → autonomous ARC instance → Brains → Agents → Execution`
+`Founder/Owner intent → PRIME supervision → autonomous ARC instance → self-provisioned Brains → Agents → Execution`
 
 PRIME stewardship is implementation infrastructure around the hierarchy, not an inserted ontology layer.
 
@@ -160,11 +171,11 @@ PRIME stewardship is implementation infrastructure around the hierarchy, not an 
 After a material Brain creation, interconnect change, Agent delegation change, cross-ARC integration, or stewardship change:
 
 1. **Reality** — verify what actually exists/runs.
-2. **Implementation** — compare against Founder intent + canonical hierarchy + approved scope.
+2. **Implementation** — compare against Founder/Owner intent + canonical hierarchy + approved scope.
 3. **Evidence** — prove material claims with current evidence.
 
 After correction, rerun all three on the final state.
 
 ## Founder rule
 
-> Specialist Brains live with their ARC. PRIME keeps a bounded supervision mirror. BRAIN STEWARD guards coherence. The PRIME↔Lux bridge reviews the architecture; it does not carry the architecture's everyday nervous-system traffic.
+> Specialist Brains are created by their ARC when real Owner/Founder need demands a stable reasoning specialization. They live with their ARC. PRIME keeps a bounded supervision mirror. BRAIN STEWARD guards coherence. The PRIME↔Lux bridge reviews material architecture; it does not carry the architecture's everyday nervous-system traffic.
