@@ -42,7 +42,7 @@ Current status:
 
 ## Revised agreement direction — 2026-09-09
 
-The revised proposal keeps the original commercial offer unchanged and changes only the points requested above.
+The revised proposal keeps the original commercial offer unchanged and changes only the points requested above plus the clarified RYZ3N hosting/IP/data boundaries agreed by the Founder.
 
 ### Commercial terms preserved
 
@@ -76,6 +76,58 @@ Current intended boundary:
 `ARC = internal operational assistant / intelligence layer`
 
 There is no product reason to replace a functioning Systeme.io setup merely for architectural purity. Integration should preserve existing working systems unless measurable value justifies replacement.
+
+## Hosting, domain, ownership and portability
+
+Founder-approved operating position:
+
+- The domain and website hosting remain technically managed in the hosting environment used by **RYZ3N**, unless both parties later agree otherwise.
+- If VONDA Corporation later chooses its own hosting account or another provider, the external costs are for VONDA Corporation.
+- Any domain-holder change, domain transfer or hosting migration is subject to the technical and administrative possibilities of the registrar, TLD/extension and provider involved.
+- RYZ3N will cooperate reasonably with an eligible transfer or migration, but does not guarantee that every domain transfer, holder change or requested naming arrangement will always be possible.
+- VONDA Corporation retains ownership/control of its brand, client-specific content, data and elements it supplies.
+- Laetitia receives the accesses reasonably necessary to use the future site and the relevant client-facing elements.
+- VONDA-specific content and reasonably exportable data should be recoverable if the pilot stops, where technically possible.
+- Portability of client-owned content/data does **not** automatically transfer the underlying shared ARC platform, provider infrastructure or reusable RYZ3N IP.
+
+## RYZ3N proprietary technology boundary
+
+RYZ3N retains its proprietary know-how and is not required to disclose its complete internal technical stack.
+
+This includes, where applicable:
+
+- internal AI tools and model choices;
+- prompts and prompt systems;
+- routing / orchestration logic;
+- configurations;
+- reusable templates;
+- ARC architecture;
+- reusable automations;
+- internal workflows;
+- generic technical components;
+- methods and non-client-specific know-how.
+
+Client transparency does not imply disclosure of the complete RYZ3N technology stack.
+
+Where a third-party service actually processes VONDA Corporation personal or professional data and disclosure is required under applicable obligations, the relevant category/provider information will be communicated at the appropriate level.
+
+## Data use, continuity and retention
+
+VONDA Corporation business information will not be used by RYZ3N for unrelated commercial purposes.
+
+However, certain operational information may be retained where necessary for ARC operation, continuity, personalization, security and product improvement, including where appropriate:
+
+- usage history;
+- preferences;
+- system/configuration state;
+- technical metadata and logs;
+- security records;
+- generalized product learnings;
+- residual backups during their normal retention cycle.
+
+Where possible and appropriate, learnings used to improve the ARC product should be generalized or separated from directly identifying prospect/client data and confidential VONDA-specific content.
+
+On pilot termination, VONDA Corporation may request restitution/export of reasonably exportable client-owned content/data. Direct client-specific data may be deleted subject to legal, technical, security, backup and continuity constraints. Generalized/non-identifying product learnings and necessary technical/security records may remain where justified.
 
 ## Purpose
 
@@ -141,46 +193,6 @@ It should present:
 
 The free site is a basic first version. Significant future custom work is not implicitly included in the free ARC pilot.
 
-## Systeme.io coexistence
-
-Current recommended product boundary:
-
-`VONDA corporate website = corporate/B2B presence`
-
-`Systeme.io = funnels + payments + commercial automations`
-
-`ARC = internal operational assistant / intelligence layer`
-
-There is no product reason to replace a functioning Systeme.io setup merely for architectural purity. Integration should preserve existing working systems unless measurable value justifies replacement.
-
-## Ownership, access and portability principles
-
-The revised agreement direction is:
-
-- VONDA Corporation retains ownership/control of its domain, brand, client-specific content and business data.
-- Laetitia receives the necessary access to the domain and future site.
-- VONDA-specific content and reasonably exportable data should be recoverable if the pilot stops.
-- RYZ3N retains ownership of generic tools, methods, reusable technical components, templates, ARC architecture, reusable automations and non-client-specific know-how.
-- Client-owned data/content portability does not automatically transfer the underlying shared ARC platform or reusable provider IP.
-
-## Data protection / operational safeguards to specify
-
-Because the ARC may process professional information and prospect data, the agreement and implementation should specify, at an appropriate level:
-
-- hosting location / provider;
-- relevant third-party AI/model or infrastructure services;
-- subprocessors where applicable;
-- confidentiality obligations;
-- access controls and tenant isolation;
-- backup approach and limits;
-- retention periods where relevant;
-- data return / export process;
-- deletion process after pilot termination where applicable;
-- incident handling / communication expectations;
-- minimization of unnecessary sensitive data.
-
-Do not promise legal/compliance guarantees beyond the implemented technical and contractual reality. Where GDPR processor/controller terms are required, use an appropriate data-processing agreement rather than relying on marketing language.
-
 ## Alignment call — Thursday 2026-09-10 10:30
 
 Confirmed by Laetitia.
@@ -245,11 +257,12 @@ Each review should ask what was useful, confusing, missing, unnecessary, unrelia
 - No promise of unlimited custom development.
 - No unlimited AI/model usage guarantee.
 - Customer-specific paid third-party services are discussed before purchase.
-- VONDA Corporation business data remains VONDA Corporation's data.
+- VONDA Corporation business data remains VONDA Corporation's data, subject to the retention/continuity rules above.
 - Sporting/business outcomes are not guaranteed by the ARC or website.
-- Pilot learnings may be generalized into RYZ3N product design; customer-specific confidential data must not be reused.
+- Pilot learnings may be generalized into RYZ3N product design; customer-specific confidential data must not be reused unnecessarily.
 - Existing working systems should not be replaced without a clear value case.
 - Portability applies to client-owned data/content, not automatically to the underlying shared ARC platform or reusable provider IP.
+- RYZ3N proprietary tooling, prompts, routing and internal methods remain confidential/provider IP unless explicitly agreed otherwise.
 
 ## Next milestone
 
