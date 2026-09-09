@@ -3,7 +3,7 @@
 ```yaml
 ---
 type: founding-pilot
-status: favorable-in-principle / revised-agreement-prepared / alignment-call-confirmed
+status: revised-proposal-sent / alignment-call-confirmed
 created: 2026-09-03
 updated: 2026-09-09
 classification: active-commercial-experiment
@@ -25,9 +25,11 @@ This is a material advancement from proposal review, but not yet final contractu
 
 Laetitia subsequently confirmed an alignment call for **Thursday 2026-09-10 at 10:30 Europe/Brussels** to discuss the adjustments and move toward final validation.
 
+On **2026-09-09**, the Founder sent Laetitia the revised VONDA Corporation × RYZ3N proposal incorporating the requested changes and the final clarified RYZ3N hosting/access/data/IP boundaries.
+
 Current status:
 
-**FAVORABLE IN PRINCIPLE — REVISED AGREEMENT PREPARED — ALIGNMENT CALL CONFIRMED 2026-09-10 10:30**
+**REVISED PROPOSAL SENT — ALIGNMENT CALL CONFIRMED 2026-09-10 10:30 — WAITING FOR FINAL ALIGNMENT**
 
 ## Requested adjustments from Laetitia
 
@@ -84,7 +86,8 @@ Founder-approved operating position:
 - The domain and website hosting remain technically managed in the hosting environment used by **RYZ3N**, unless both parties later agree otherwise.
 - The hosting environment, backend services and databases are shared RYZ3N infrastructure and may also serve other projects.
 - **Master credentials, API keys, secrets, administrator passwords and technical access to shared RYZ3N infrastructure are not shared with VONDA Corporation.** This includes credentials that could expose hosting accounts, databases, backend services, Supabase environments or other RYZ3N/client projects.
-- VONDA Corporation receives only the client-facing or scoped access reasonably necessary to use and administer its own website, content and designated functions, without access to unrelated RYZ3N environments, data or projects.
+- If the infrastructure/provider supports scoped client access, VONDA receives only the isolated functional access reasonably needed for its own website/content/functions.
+- If scoped access does **not** exist, the relevant admin/master access remains exclusively under RYZ3N control; this does not remove VONDA Corporation's rights over its own content/data or reasonable export/migration where technically possible.
 - If VONDA Corporation later chooses its own hosting account or another provider, the external costs are for VONDA Corporation.
 - Any domain-holder change, domain transfer or hosting migration is subject to the technical and administrative possibilities of the registrar, TLD/extension and provider involved.
 - RYZ3N will cooperate reasonably with an eligible transfer or migration, but does not guarantee that every domain transfer, holder change or requested naming arrangement will always be possible.
@@ -216,6 +219,88 @@ Meeting objective:
 
 `align requested changes → confirm website direction → confirm governance/data boundaries → finalize agreement → launch pilot`
 
+## Founder-approved implementation sequence
+
+Do **not** build the website first in isolation.
+
+The correct sequence is:
+
+### Phase 0 — Final alignment
+
+`Thursday call → confirm final scope, website direction, Systeme.io boundary, data/access expectations, launch approval`
+
+No irreversible customer build before this gate.
+
+### Phase 1 — Establish the VONDA ARC foundation with PRIME
+
+PRIME first prepares the **isolated VONDA ARC node** and its operating baseline before the public website is treated as the primary build target.
+
+Initial ARC foundation should cover:
+
+- isolated VONDA workspace / tenant boundary;
+- VONDA Corporation identity/context seed;
+- Telegram access path if retained after the call;
+- permissions and secrets boundary;
+- memory/context structure;
+- basic task / meeting / document-support capabilities;
+- logging/observability needed for the pilot;
+- usage and experience-capture hooks;
+- no exposure of shared RYZ3N master credentials.
+
+Goal: prove that the internal assistant exists as a stable, isolated pilot node.
+
+### Phase 2 — Website discovery/specification
+
+Immediately after or in parallel with ARC foundation, translate Laetitia's Thursday answers into a compact website brief:
+
+- corporate positioning;
+- visual style;
+- colors / atmosphere;
+- reference sites;
+- required pages;
+- content/assets still needed;
+- CTA/contact flow;
+- how Systeme.io links into funnels/payments;
+- domain/hosting implementation choice.
+
+Do not invent the design before this input exists.
+
+### Phase 3 — Build Website V1
+
+Build the simple corporate/B2B website on top of the confirmed brief.
+
+V1 remains intentionally narrow:
+
+`corporate presence → positioning → B2B axes → football/performance axis → credibility → contact / Systeme.io handoff`
+
+The website should not become a replacement CRM, funnel engine or automation suite.
+
+### Phase 4 — Connect website, Systeme.io and ARC boundaries
+
+Connect only what produces real value:
+
+- website → Systeme.io where a funnel/payment/commercial automation already belongs there;
+- website → contact/intake signals where useful;
+- ARC → internal operational follow-up for information Laetitia is authorized to use;
+- no unnecessary duplication of Systeme.io functions.
+
+### Phase 5 — Founder onboarding and live pilot start
+
+After both ARC foundation and Website V1 are working:
+
+- Founder runs the agreed onboarding/explanation session if requested;
+- Laetitia begins real ARC usage;
+- start the six-month pilot clock from the agreed activation point;
+- record initial configuration and baseline.
+
+### Phase 6 — Experience-driven iteration
+
+Use real behavior rather than imagined features:
+
+`usage → observation → EXP record → classify → improve → validate`
+
+The ARC should evolve based on Laetitia's real work. Website changes follow actual corporate/commercial needs rather than speculative feature expansion.
+
 ## Pilot learning goals
 
 1. Measure setup time for the second PRIME-derived node.
@@ -269,7 +354,7 @@ Each review should ask what was useful, confusing, missing, unnecessary, unrelia
 
 ## Next milestone
 
-`2026-09-10 10:30 alignment call → finalize wording and website direction → client validates final agreement → pilot launch / onboarding`
+`2026-09-10 10:30 alignment call → final go/no-go → PRIME establishes VONDA ARC foundation → website brief → Website V1 → connect boundaries → onboarding → live pilot`
 
 ## Why this pilot matters
 
