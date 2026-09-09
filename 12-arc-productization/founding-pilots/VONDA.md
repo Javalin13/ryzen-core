@@ -160,7 +160,7 @@ The revised agreement direction is:
 - VONDA Corporation retains ownership/control of its domain, brand, client-specific content and business data.
 - Laetitia receives the necessary access to the domain and future site.
 - VONDA-specific content and reasonably exportable data should be recoverable if the pilot stops.
-- RYZEN retains ownership of generic tools, methods, reusable technical components, templates, ARC architecture, reusable automations and non-client-specific know-how.
+- RYZ3N retains ownership of generic tools, methods, reusable technical components, templates, ARC architecture, reusable automations and non-client-specific know-how.
 - Client-owned data/content portability does not automatically transfer the underlying shared ARC platform or reusable provider IP.
 
 ## Data protection / operational safeguards to specify
@@ -247,7 +247,7 @@ Each review should ask what was useful, confusing, missing, unnecessary, unrelia
 - Customer-specific paid third-party services are discussed before purchase.
 - VONDA Corporation business data remains VONDA Corporation's data.
 - Sporting/business outcomes are not guaranteed by the ARC or website.
-- Pilot learnings may be generalized into Ryzen product design; customer-specific confidential data must not be reused.
+- Pilot learnings may be generalized into RYZ3N product design; customer-specific confidential data must not be reused.
 - Existing working systems should not be replaced without a clear value case.
 - Portability applies to client-owned data/content, not automatically to the underlying shared ARC platform or reusable provider IP.
 
@@ -261,6 +261,6 @@ The success criterion is bigger than the first €500 subscription. The pilot sh
 
 `PRIME (Founder operator) → repeatable ARC node → external entrepreneur → real recurring business value`.
 
-It should also prove that Ryzen can accumulate the **experience of its ARCs**, so future UX/system design is built from what prototype users actually encountered rather than from theoretical assumptions.
+It should also prove that RYZ3N can accumulate the **experience of its ARCs**, so future UX/system design is built from what prototype users actually encountered rather than from theoretical assumptions.
 
 If successful, the pilot becomes evidence for ARC productization rather than merely a one-off free project.
