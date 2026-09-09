@@ -22,10 +22,14 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 
 - PRIME remains the Founder's execution/operator node and is not itself the commercial ARC product.
 - ARC nodes are intended to become personal/business operator nodes derived from repeatable infrastructure patterns proven through PRIME.
-- The current PRIME + isolated ARC runtime model is a **bounded prototype of the future RYZ3N ↔ ARC operating model**, not a competing ecosystem hierarchy.
+- A client ARC is an **autonomous runtime node under PRIME supervision**, not merely another chat/session inside PRIME's own client runtime.
+- For early pilots, PRIME and client ARC nodes may share one physical VPS host, but each ARC should have its **own Hermes runtime/service identity, gateway lifecycle, channel adapter, workspace, memory, secrets, logs, checkpoints and restart boundary**.
+- The current PRIME + autonomous ARC runtime model is a **bounded prototype of the future RYZ3N ↔ ARC operating model**, not a competing ecosystem hierarchy.
 - PRIME currently bootstraps/supervises the runtime patterns; mature RYZ3N is intended to inherit native orchestration, governance, provisioning, continuity and cross-ARC coordination while PRIME becomes supervisor/mentor/execution steward.
 - Telegram is the initial interface for pilots; the own-platform/final UX layer remains future work. ARC identity and state must remain channel-independent.
 - ARC runtime contracts should become replicable: shared template + isolated client configuration/state, not bespoke architectural forks.
+- Same VPS is allowed for proven early isolation; **same runtime identity is not**.
+- ARC nodes should be portable later to dedicated VPS infrastructure without conceptual redesign.
 - The commercial floor for a Standard ARC is currently **€500/year**.
 - Monthly Standard is **€50/month** (€600/year), intentionally more expensive than annual billing.
 - Founding pilots may receive a limited free period in exchange for real-world validation and feedback; free access must be time-bounded unless the Founder explicitly decides otherwise.
@@ -39,6 +43,7 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 - `COST-CAPACITY-MODEL.md` — known shared infrastructure costs, direct-vs-overhead distinction, capacity assumptions and margin guardrails.
 - `PROVISIONING-BACKLOG.md` — what must be standardized/automated so ARC #10 costs much less Founder time than ARC #1.
 - `PRIME-RYZ3N-ARC-PROTOTYPE-DOCTRINE.md` — additive doctrine aligning today's PRIME-mediated ARC prototypes with the canonical RYZ3N hierarchy, convergence model, future native orchestration, replication contracts, operational logs/checkpoints and PRIME knowledge-transfer role.
+- `AUTONOMOUS-ARC-NODE-RUNTIME.md` — Founder runtime standard: each client ARC is an autonomous Hermes-based child runtime under PRIME supervision, with independent gateway/service, channel adapter, state, secrets, logs, checkpoints and future dedicated-VPS portability.
 - `founding-pilots/` — external Founding Pilot commercial structure and learning goals; VONDA is the current first external proving node.
 - `prototype-experience/README.md` — doctrine for accumulating lived ARC prototype experience.
 - `prototype-experience/EXPERIENCE-BACKLOG.md` — canonical cross-pilot experience backlog.
@@ -75,8 +80,10 @@ The core productization rule is:
 
 > **Standard ARC should become ~80–90% repeatable platform and ~10–20% customer configuration.**
 
-The core architecture rule is:
+The core architecture rules are:
 
 > **Build once, instantiate many. Customize by configuration, not by architectural fork.**
+
+> **An ARC is an autonomous runtime node under supervision, not a chat branch pretending to be autonomous.**
 
 Higher tiers may intentionally include more custom work because they carry higher commercial value.
