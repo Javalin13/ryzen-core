@@ -82,11 +82,13 @@ There is no product reason to replace a functioning Systeme.io setup merely for 
 Founder-approved operating position:
 
 - The domain and website hosting remain technically managed in the hosting environment used by **RYZ3N**, unless both parties later agree otherwise.
+- The hosting environment, backend services and databases are shared RYZ3N infrastructure and may also serve other projects.
+- **Master credentials, API keys, secrets, administrator passwords and technical access to shared RYZ3N infrastructure are not shared with VONDA Corporation.** This includes credentials that could expose hosting accounts, databases, backend services, Supabase environments or other RYZ3N/client projects.
+- VONDA Corporation receives only the client-facing or scoped access reasonably necessary to use and administer its own website, content and designated functions, without access to unrelated RYZ3N environments, data or projects.
 - If VONDA Corporation later chooses its own hosting account or another provider, the external costs are for VONDA Corporation.
 - Any domain-holder change, domain transfer or hosting migration is subject to the technical and administrative possibilities of the registrar, TLD/extension and provider involved.
 - RYZ3N will cooperate reasonably with an eligible transfer or migration, but does not guarantee that every domain transfer, holder change or requested naming arrangement will always be possible.
 - VONDA Corporation retains ownership/control of its brand, client-specific content, data and elements it supplies.
-- Laetitia receives the accesses reasonably necessary to use the future site and the relevant client-facing elements.
 - VONDA-specific content and reasonably exportable data should be recoverable if the pilot stops, where technically possible.
 - Portability of client-owned content/data does **not** automatically transfer the underlying shared ARC platform, provider infrastructure or reusable RYZ3N IP.
 
@@ -105,11 +107,12 @@ This includes, where applicable:
 - reusable automations;
 - internal workflows;
 - generic technical components;
-- methods and non-client-specific know-how.
+- methods and non-client-specific know-how;
+- master/API credentials and infrastructure secrets.
 
-Client transparency does not imply disclosure of the complete RYZ3N technology stack.
+Client transparency does not imply disclosure of the complete RYZ3N technology stack or shared-infrastructure credentials.
 
-Where a third-party service actually processes VONDA Corporation personal or professional data and disclosure is required under applicable obligations, the relevant category/provider information will be communicated at the appropriate level.
+Where a third-party service actually processes VONDA Corporation personal or professional data and disclosure is required under applicable obligations, the relevant category/provider information will be communicated at the appropriate level without exposing unrelated RYZ3N secrets or credentials.
 
 ## Data use, continuity and retention
 
@@ -205,7 +208,7 @@ Primary discussion points:
 4. Role of football / collective performance within the broader VONDA Corporation structure.
 5. Systeme.io scope for funnels, payments and commercial automations.
 6. ARC role as internal operational assistant.
-7. Domain/site/content/data ownership and access.
+7. Domain/site/content/data ownership and scoped client access versus protected shared RYZ3N credentials.
 8. Hosting, services/subprocessors, confidentiality, backups, portability, restitution and deletion.
 9. Final validation of the Founding Pilot mechanics and launch sequence.
 
@@ -262,7 +265,7 @@ Each review should ask what was useful, confusing, missing, unnecessary, unrelia
 - Pilot learnings may be generalized into RYZ3N product design; customer-specific confidential data must not be reused unnecessarily.
 - Existing working systems should not be replaced without a clear value case.
 - Portability applies to client-owned data/content, not automatically to the underlying shared ARC platform or reusable provider IP.
-- RYZ3N proprietary tooling, prompts, routing and internal methods remain confidential/provider IP unless explicitly agreed otherwise.
+- RYZ3N proprietary tooling, prompts, routing, internal methods, master credentials, API keys and infrastructure secrets remain confidential/provider IP unless explicitly agreed otherwise.
 
 ## Next milestone
 
