@@ -8,76 +8,112 @@ Status: PREPARATION AUTHORIZED / CLIENT ACTIVATION PENDING
 
 Founder decision: the client-facing ARC is named **VONDA ARC**.
 
-Use this name for the VONDA Corporation internal operational assistant going forward.
+## Founder runtime target — autonomous ARC node
 
-## Current preparation state
+VONDA ARC is **not** merely another chat/session inside PRIME's own Hermes runtime.
 
-The VONDA Corporation website prototype is being prepared ahead of the 2026-09-10 alignment meeting as a visual discussion tool. This does not supersede the alignment gate: visual style, colors, tone, content and CTA details remain amendable after Laetitia's feedback.
+VONDA is the first external **autonomous Hermes-based ARC node under PRIME supervision**.
 
-The visual direction should be deliberately VONDA-specific and should not merely reproduce a generic AI-generated SaaS aesthetic. The current design language is built around **mindset → movement → collective performance**, using an editorial, kinetic identity rather than a generic card/dashboard pattern.
+Initial topology:
 
-The website includes a first-visit VONDA brand reveal inspired by the quality bar of Cargo Connect but not copied from Cargo Connect's logistics visual language.
+```text
+prime-vps-01
+├── PRIME Hermes runtime/service
+│   └── Founder/operator control + supervision plane
+└── VONDA ARC Hermes runtime/service
+    ├── own runtime identity
+    ├── own gateway/service lifecycle
+    ├── own Telegram bot/gateway adapter
+    ├── own workspace + memory
+    ├── own secrets + permissions
+    ├── own logs + checkpoints
+    ├── own commercial/access/security policies
+    └── own client workflows/state
+```
 
-## System boundary remains
+**Same physical VPS is allowed; same runtime identity is not.**
+
+VONDA must be independently startable/stoppable/restartable. PRIME supervises health, isolation, recovery and escalation, but does not become the VONDA client runtime and does not merge Laetitia's private memory into PRIME memory.
+
+Future target: move the same VONDA ARC node to a dedicated VPS without changing its conceptual identity, client-facing behavior, memory contracts, permissions or workflows.
+
+Runtime standard:
+`12-arc-productization/AUTONOMOUS-ARC-NODE-RUNTIME.md`
+
+## System boundary
 
 `VONDA website = corporate / B2B presence`
 
 `Systeme.io = funnels + payments + commercial automations`
 
-`VONDA ARC = internal operational assistant / intelligence layer`
+`VONDA ARC = autonomous internal operational assistant / intelligence node`
 
-## ARC preparation authorized
+## Preparation sequence
 
-PRIME may prepare the isolated VONDA ARC foundation before final client activation.
-
-Preparation must follow:
-
-`prepare → verify isolation → report → client alignment → Founder final GO → activate`
+`prepare autonomous node → verify runtime + isolation → report → client alignment → Founder final GO → bind Telegram → activate`
 
 The six-month pilot clock does not start during technical preparation.
 
 ## Required VONDA ARC baseline
 
-- isolated workspace / tenant namespace;
-- isolated memory and business context;
+- independent VONDA Hermes runtime/service identity;
+- independent gateway/service lifecycle under PRIME supervision;
+- VONDA-specific Telegram bot/gateway adapter;
+- authorized-user/chat binding with fail-closed unknown-user behavior;
+- isolated workspace and memory;
+- isolated secrets/env and permissions;
 - VONDA Corporation identity seed;
-- Telegram path prepared, subject to final confirmation;
-- task and next-action support;
-- meeting preparation;
-- drafting support;
+- VONDA-specific logs, health checks, checkpoints and recovery;
+- task, priority, reminder, drafting and meeting-prep support;
+- first-run onboarding/workflow discovery;
 - operational context persistence;
-- observability suitable for a Founding Pilot;
-- experience capture for generalized product learning;
+- bounded security/contract escalation path VONDA → PRIME → Founder where material;
+- experience capture for generalized RYZ3N product learning;
 - strict no-cross-client context boundary;
-- no exposure of shared RYZ3N master/API/service credentials.
+- no exposure of shared RYZ3N/PRIME credentials or other-project data;
+- structural portability from shared host to dedicated VPS.
 
-## Known identity seed
+## Client-facing bootstrap
 
-Safe known context:
+After Telegram activation, VONDA ARC asks Laetitia for the **3–5 recurring things she most wants VONDA to assist with**, plus language/tone, reminders, memory/retention preferences, permissions, success criteria and what not to store.
 
-- VONDA Corporation is the umbrella business structure.
-- Football / collective performance is one B2B axis, not the entire definition of the company.
-- Mindset, leadership, cohesion, communication, motivation, development and collective performance are current working themes.
-- The website is the corporate/B2B showcase.
-- Systeme.io remains the functioning commercial funnel/payment/automation layer.
-- VONDA ARC is the internal operational assistant.
+Internal PRIME/RYZ3N hierarchy is not a client onboarding topic.
 
-Do not invent client facts beyond confirmed information.
+## Commercial / access / security bootstrap
+
+VONDA runtime policy/config must contain the approved proposal/pilot boundaries separately from personal memory, including:
+
+- six-month free Founding Pilot period; thereafter current Standard terms €500/year or €50/month if continued;
+- current website pilot inclusion and indicative standalone value;
+- Founder onboarding/explanation and FR↔NL support as separately priced Founder-delivered services when requested;
+- no unlimited custom work;
+- custom integrations/dedicated infrastructure require separate scope/price/Founder decision;
+- no disclosure of master/shared credentials, provider secrets or other-project access;
+- client data/ownership/portability rights do not imply root/shared-platform access;
+- RYZ3N retains reusable platform/IP/orchestration/templates/methods/know-how;
+- transfer/access-key/credential requests outside approved scope are referred to the applicable proposal boundary and escalated to the Founder;
+- security, isolation or material contractual breaches fail closed and signal PRIME through a bounded escalation path.
+
+VONDA may prepare a request for the Founder; it may not silently waive scope, change prices, expose secrets or promise transfer.
 
 ## Product-learning rule
 
-VONDA ARC is both a real client tool and a product-learning pilot.
-
 `real VONDA use → observation → generalized EXP record → cross-pilot learning → ARC product improvement`
 
-Client-confidential content does not become generalized RYZ3N product content. Promote the reusable interaction/design pattern, not the confidential payload.
+Client-confidential content does not become generalized RYZ3N product content. Promote reusable patterns, not confidential payloads.
 
-## Related execution packet
+## Readiness definition
 
-PRIME execution request published to:
+`READY` requires proof that:
 
-`Javalin13/prime-vps-migration/prime-lux-bridge/requests/2026-09-09-vonda-arc-foundation.md`
+- VONDA has its own Hermes runtime/service, not merely a namespaced block in PRIME's gateway;
+- VONDA can stop/restart without restarting PRIME;
+- VONDA Telegram route binds only the authorized Laetitia identity;
+- memory/secrets/logs/checkpoints remain VONDA-scoped;
+- PRIME/FleetConnect/other-client context is not retrievable;
+- onboarding and commercial/access/security policies are loaded;
+- bounded escalation reaches PRIME;
+- rollback/recovery is tested;
+- future dedicated-VPS migration is structurally possible.
 
-Client-project implementation specification:
-
-`Javalin13/VONDA-Corporation/arc/VONDA-ARC-FOUNDATION.md`
+Until those are proven, a prior `READY` based on a shared PRIME gateway is superseded by this Founder runtime correction.
