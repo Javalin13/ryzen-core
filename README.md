@@ -73,7 +73,7 @@ Domain / Project → Intent → Activity → Brain → Agents / Tools → Execut
 
 This is an implementation/steward view, not a competing ecosystem ontology.
 
-**VONDA ARC is ARC #1 and the reference/tutorial proving node.** The VONDA repository now contains a frozen v1.0 `arc/GOLDEN-ARC-BLUEPRINT.md` capturing the reusable implementation contracts proven through the reference work.
+**VONDA ARC is ARC #1 and the reference/tutorial proving node.** The VONDA repository now contains the frozen current **v1.1** `arc/GOLDEN-ARC-BLUEPRINT.md`, capturing the reusable implementation contracts proven through the reference work and aligned to canonical RYZ3N maturity doctrine.
 
 `VONDA_CAPACITY_TELEMETRY = GREEN` is evidence-backed. The full VONDA reference completion gate still depends on the real primary-user cycle and must not be faked through additional Founder simulations.
 
@@ -181,7 +181,7 @@ Use the following reading order when files appear to conflict:
 1. Founder decisions + canonical doctrine/history in `Javalin13/ryzen-continuity`.
 2. `CURRENT-REALITY-2026-09.md` and `12-arc-productization/ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md` for current interpretation.
 3. Current Founder-directed standards under `12-arc-productization/`.
-4. `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` for the frozen reference implementation contract.
+4. `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` **v1.1 or later** for the frozen current reference implementation contract.
 5. Active VONDA bridge evidence/directives for the current reference-ARC execution round.
 6. PRIME current SOUL/comms/ARCS documents for prototype execution/stewardship behavior.
 7. Historical June foundation/rebuild/migration material as provenance.
@@ -236,7 +236,7 @@ The duplicated numeric prefixes are historical/additive and should not be “cle
 
 ## Current mission
 
-Keep VONDA reference-ready while awaiting its real primary-user cycle; prepare repeatable commercial provisioning/onboarding from the Golden Blueprint; recruit real Founding customers deliberately; measure everything that matters; automate repeated work; scale distribution only when evidence says the machine is healthy; continuously promote generalized proof back into RYZ3N Core.
+Keep VONDA reference-ready while awaiting its real primary-user cycle; prepare repeatable commercial provisioning/onboarding from the current Golden Blueprint; recruit real Founding customers deliberately; measure everything that matters; automate repeated work; scale distribution only when evidence says the machine is healthy; continuously promote generalized proof back into RYZ3N Core.
 
 Do not spawn 20 empty ARCs merely because the commercial cohort is named Founding 20.
 
