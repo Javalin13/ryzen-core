@@ -83,6 +83,63 @@ It must be validated with live measurements of:
 
 At 10 ARCs per €6/month VPS, the raw VPS allocation would be approximately **€7.20 per ARC/year**. That number is useful only as an infrastructure illustration; it excludes AI usage, labor, third-party services, support, tax, admin and risk.
 
+## Founder model-capacity safety rule — 2026-09-10
+
+Customer experience takes priority over maximizing density on a single AI/model provider capacity pool.
+
+The working operational ceiling is:
+
+> **Maximum 10 Standard ARCs per Ollama/Hermes model-capacity pool until production telemetry proves a different ceiling can preserve the required service quality.**
+
+This is a **service-quality safety ceiling, not a claim that 10 ARCs is the technical limit of Ollama Cloud or Hermes**.
+
+The system must be able to provision additional model-capacity pools/accounts/subscriptions/credentials, where commercially and technically permitted, before the current pool becomes a user-experience bottleneck. Capacity may be split earlier than ARC #10 when real telemetry shows pressure from heavy usage, concurrency, provider throttling, rate limits, latency, errors, retry storms, or disproportionate consumption from one ARC.
+
+Do not assume that one ~€25/month Ollama Cloud capacity source can serve an unlimited ARC population. Financial planning must reserve for model-capacity expansion in blocks and must treat this capacity reserve as part of ARC economics even when the current invoice is still shared.
+
+Initial planning illustration:
+
+| Standard ARC population | Minimum model-capacity reserve assumption |
+|---:|---:|
+| 1–10 | 1 pool (~€25/month at current Founder-reported baseline) |
+| 11–20 | 2 pools (~€50/month) |
+| 21–30 | 3 pools (~€75/month) |
+| 31–40 | 4 pools (~€100/month) |
+| 41–50 | 5 pools (~€125/month) |
+
+These amounts are planning reserves based on the current reported Ollama cost, not guaranteed future provider pricing.
+
+### Required per-ARC model-consumption telemetry
+
+Every operational ARC, beginning with VONDA ARC, must produce enough non-sensitive telemetry to attribute and protect model capacity. At minimum track, where the provider/runtime exposes the signal safely:
+
+- request count by ARC and time window;
+- successful vs failed model calls;
+- provider throttling/rate-limit events;
+- retry count and retry bursts;
+- response latency and high-latency events;
+- concurrency / overlapping active requests;
+- token or usage units when available;
+- estimated/actual provider cost attribution when available;
+- unusually heavy ARC consumption;
+- provider/model outages or capacity incidents affecting service.
+
+PRIME/RYZ3N should maintain a steward-level capacity view that exposes aggregate health/cost signals without merging client conversation payloads or private memory.
+
+### Capacity expansion trigger
+
+A new model-capacity pool must be planned/provisioned **before** users experience recurring degradation. Trigger review when any of the following appears structurally rather than as a one-off transient incident:
+
+- meaningful increase in throttling/rate-limit errors;
+- latency materially worsens during concurrent ARC use;
+- retry behavior becomes frequent;
+- one ARC consumes a disproportionate share of capacity;
+- provider quota/usage headroom becomes too small;
+- expected onboarding of additional ARCs would put the current pool too close to its safety ceiling;
+- the 10-Standard-ARC ceiling is reached.
+
+The 10-ARC ceiling may only be raised later from production evidence. It may always be lowered earlier for reliability.
+
 ## Standard ARC margin guardrail
 
 Current Standard annual revenue floor: **€500/year**.
