@@ -34,6 +34,8 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 - Monthly Standard is **€50/month** (€600/year), intentionally more expensive than annual billing.
 - Founding pilots may receive a limited free period in exchange for real-world validation and feedback; free access must be time-bounded unless the Founder explicitly decides otherwise.
 - Heavy customization, dedicated infrastructure, higher usage and business-critical integrations must move to higher tiers or separate implementation fees.
+- ARC commercialization now uses a Founder-directed **V1→V6 maturity journey**: Foundation → Operations → Specialist → Golden Recursive ARC → Platinum/JARVIS Presence → Sovereign Gamified Ecosystem.
+- Every ARC may reuse validated capability modules, Brain contracts, Agent patterns and generalized lessons from the wider ARC network without inheriting another owner's private memory/data/secrets.
 - **Every meaningful prototype experience must be captured and made available to the final ARC UX/system design.**
 - **No critical reusable operating knowledge should remain only in PRIME runtime memory; reusable patterns must become structured RYZ3N-readable knowledge.**
 
@@ -42,6 +44,9 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 - `PRICING.md` — current ARC tier model and pricing principles.
 - `COST-CAPACITY-MODEL.md` — known shared infrastructure costs, direct-vs-overhead distinction, capacity assumptions and margin guardrails.
 - `PROVISIONING-BACKLOG.md` — what must be standardized/automated so ARC #10 costs much less Founder time than ARC #1.
+- `ARC-V1-V6-COMMERCIAL-MATURITY-TUTORIAL.md` — customer/commercial maturity journey, visual shine progression, V4 recursive-cognition threshold, V5 JARVIS-style presence, V6 gamified ecosystem, and privacy-safe reuse of validated modules/Brains across the ARC legion.
+- `ARC-BRAIN-INTERCONNECT-AND-PRIME-STEWARDSHIP.md` — bounded Brain interconnect and stewarded cross-ARC convergence rules.
+- `ARC-BRAIN-SPECIALIZATION-REGISTRY.md` — evidence-driven Brain specialization and reusable Brain contract rules.
 - `PRIME-RYZ3N-ARC-PROTOTYPE-DOCTRINE.md` — additive doctrine aligning today's PRIME-mediated ARC prototypes with the canonical RYZ3N hierarchy, convergence model, future native orchestration, replication contracts, operational logs/checkpoints and PRIME knowledge-transfer role.
 - `AUTONOMOUS-ARC-NODE-RUNTIME.md` — Founder runtime standard: each client ARC is an autonomous Hermes-based child runtime under PRIME supervision, with independent gateway/service, channel adapter, state, secrets, logs, checkpoints and future dedicated-VPS portability.
 - `founding-pilots/` — external Founding Pilot commercial structure and learning goals; VONDA is the current first external proving node.
@@ -56,7 +61,7 @@ The files in this folder separate:
 
 1. **Known current facts** — e.g. prices the Founder currently pays and commercial terms explicitly chosen.
 2. **Working assumptions** — e.g. how many light ARCs may fit on one VPS; these require measurement.
-3. **Commercial decisions** — current offer/pricing direction, amendable by Founder.
+3. **Commercial decisions** — current offer/pricing direction and maturity packaging, amendable by Founder.
 4. **Future design** — provisioning automation, tier isolation and dedicated infrastructure patterns not yet production-proven.
 5. **Prototype evidence** — real user/operator experience that may become a reusable product requirement after validation.
 
@@ -72,6 +77,16 @@ A useful experience must not disappear into chat history or anecdotal memory. Cu
 
 The current runtime prototype must also preserve the canonical convergence discipline through local mission state, checkpoints, decisions, lessons, drift evidence, verification and continuation state so that future RYZ3N ingestion/migration does not require architectural reinvention.
 
+## Commercial maturity doctrine
+
+The ARC product should be understandable as an evolution path rather than a feature dump:
+
+`V1 Blue/Foundation → V2 Cyan/Operations → V3 Violet/Specialist → V4 Gold/Recursive Cognition → V5 Platinum/JARVIS Presence → V6 Sovereign/Prismatic Gamified Ecosystem`.
+
+The shine is a visible maturity indicator and must follow verified capability, not marketing alone.
+
+A new ARC is not built from zero. It receives the proven shared platform and can adopt reusable validated modules from the ARC network. Cross-ARC reuse is capability federation, not private-memory federation: **share capability, not private payload**.
+
 ## Current strategic goal
 
 Turn the PRIME-derived architecture into a repeatable ARC product and a transferable prototype of the future RYZ3N ↔ ARC operating model, without allowing support or customization effort to scale linearly with customer count.
@@ -85,5 +100,7 @@ The core architecture rules are:
 > **Build once, instantiate many. Customize by configuration, not by architectural fork.**
 
 > **An ARC is an autonomous runtime node under supervision, not a chat branch pretending to be autonomous.**
+
+> **Every ARC grows individually, while the legion learns collectively through reusable, privacy-safe modules and validated Brains.**
 
 Higher tiers may intentionally include more custom work because they carry higher commercial value.
