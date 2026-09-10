@@ -111,7 +111,7 @@ The free period must have an explicit end date/duration. At the end, the custome
 
 A free Founding Pilot is distinct from the **paid Founding 20 commercial cohort**.
 
-## Current Founding Pilot example — VONKA
+## Current Founding Pilot example — VONDA
 
 - ARC setup: free.
 - ARC usage: first **6 months free**.
@@ -120,7 +120,7 @@ A free Founding Pilot is distinct from the **paid Founding 20 commercial cohort*
 - Personal onboarding session: **€100**.
 - FR ↔ NL interpretation attendance: **€100 all-in per requested appointment**.
 
-See `founding-pilots/VONKA.md` for the pilot boundary and learning goals.
+See `founding-pilots/VONDA.md` for the pilot boundary and learning goals.
 
 ## Market-pricing context — snapshot 2026-09-10
 
