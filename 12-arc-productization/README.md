@@ -5,8 +5,9 @@
 type: arc-productization-index
 status: active-accumulation
 created: 2026-09-03
+updated: 2026-09-10
 classification: strategic-vision + research-and-exploration
-founder_direction: structure ARC pricing, costs, pilots, provisioning, capacity assumptions and prototype experience in Ryzen Core
+founder_direction: structure ARC pricing, costs, pilots, provisioning, capacity assumptions, commercialization and prototype experience in Ryzen Core
 runtime_implementation_authorized: false
 amendable: true-additively
 ---
@@ -14,7 +15,7 @@ amendable: true-additively
 
 ## Purpose
 
-This folder is the canonical accumulation point in `ryzen-core` for the **productization of ARC nodes**: commercial packaging, pricing, cost model, pilot structure, provisioning requirements, capacity assumptions, prototype experience and lessons needed before ARC becomes a repeatable product.
+This folder is the canonical accumulation point in `ryzen-core` for the **productization of ARC nodes**: commercial packaging, pricing, cost model, pilot structure, provisioning requirements, capacity assumptions, go-to-market, operating responsibilities, prototype experience and lessons needed before ARC becomes a repeatable product.
 
 It does **not** declare the RYZ3N runtime implemented. It documents the business/product layer learned from the PRIME architecture and external ARC pilots.
 
@@ -32,9 +33,14 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 - ARC nodes should be portable later to dedicated VPS infrastructure without conceptual redesign.
 - The commercial floor for a Standard ARC is currently **€500/year**.
 - Monthly Standard is **€50/month** (€600/year), intentionally more expensive than annual billing.
+- The current first paid validation strategy is **Founding 20**: up to 20 paying entrepreneurs recruited primarily through trusted/direct channels, with a working €49/month founding rate locked while continuously subscribed.
+- The Founding-20 price is a launch-cohort offer; it does not replace the normal Standard €50/month or €500/year pricing.
+- Standard should promise predictable included normal usage under fair use, **not unlimited AI** and not silent pass-through API/model bills.
+- Broad paid advertising should be scaled only after early customers prove repeatable onboarding, usage, retention, support burden and unit economics.
 - Founding pilots may receive a limited free period in exchange for real-world validation and feedback; free access must be time-bounded unless the Founder explicitly decides otherwise.
 - Heavy customization, dedicated infrastructure, higher usage and business-critical integrations must move to higher tiers or separate implementation fees.
 - ARC commercialization now uses a Founder-directed **V1→V6 maturity journey**: Foundation → Operations → Specialist → Golden Recursive ARC → Platinum/JARVIS Presence → Sovereign Gamified Ecosystem.
+- Billing tier and maturity tier are distinct: paying more may unlock resources/scope, but it may never buy a false maturity aura.
 - Every ARC may reuse validated capability modules, Brain contracts, Agent patterns and generalized lessons from the wider ARC network without inheriting another owner's private memory/data/secrets.
 - ARC **form/look** is owner-selectable and factory-resettable, but the **aura/shine is maturity-derived and cannot be manually changed by a cosmetic reset**.
 - If a sale/transfer includes a real capacity/competence/owner-state reset that leaves the ARC effectively empty, the ARC returns to **V1 Foundation with the V1 Blue aura**.
@@ -43,8 +49,9 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 
 ## Folder map
 
-- `PRICING.md` — current ARC tier model and pricing principles.
-- `COST-CAPACITY-MODEL.md` — known shared infrastructure costs, direct-vs-overhead distinction, capacity assumptions and margin guardrails.
+- `ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md` — canonical actionable go-to-market: positioning, benchmark snapshot, Founding 20, usage/fair-use policy, capacity/commercial triggers, team responsibilities, KPIs, paid-ad scale gates and immediate execution sequence.
+- `PRICING.md` — current ARC tier model, Founding-20 launch price, usage promise and pricing principles.
+- `COST-CAPACITY-MODEL.md` — known shared infrastructure costs, direct-vs-overhead distinction, capacity assumptions, telemetry requirements and margin guardrails.
 - `PROVISIONING-BACKLOG.md` — what must be standardized/automated so ARC #10 costs much less Founder time than ARC #1.
 - `ARC-V1-V6-COMMERCIAL-MATURITY-TUTORIAL.md` — customer/commercial maturity journey, visual shine progression, V4 recursive-cognition threshold, V5 JARVIS-style presence, V6 gamified ecosystem, and privacy-safe reuse of validated modules/Brains across the ARC legion.
 - `ARC-FORM-AURA-AND-TRANSFER-RESET-STANDARD.md` — Founder-directed separation of ARC form/look from maturity aura, factory-form reset invariance, transfer-reset semantics, and the rule that an emptied transferred ARC returns to V1/Blue.
@@ -67,6 +74,7 @@ The files in this folder separate:
 3. **Commercial decisions** — current offer/pricing direction and maturity packaging, amendable by Founder.
 4. **Future design** — provisioning automation, tier isolation and dedicated infrastructure patterns not yet production-proven.
 5. **Prototype evidence** — real user/operator experience that may become a reusable product requirement after validation.
+6. **Launch experiments** — commercial hypotheses such as Founding-20 acquisition, which must be judged by conversion, retention, support burden and unit economics rather than enthusiasm alone.
 
 ## Prototype learning doctrine
 
@@ -90,6 +98,26 @@ The shine/aura is a visible maturity indicator and must follow verified capabili
 
 A new ARC is not built from zero. It receives the proven shared platform and can adopt reusable validated modules from the ARC network. Cross-ARC reuse is capability federation, not private-memory federation: **share capability, not private payload**.
 
+## Commercialization doctrine
+
+The current go-to-market rule is:
+
+> **Do not sell the infrastructure. Sell the operating partner.**
+
+The launch sequence is:
+
+`VONDA real proof → Founding 20 direct/referral customers → measurable usage/retention/support/unit economics → proof assets + organic demos → small paid acquisition tests → scale only retained-customer acquisition`.
+
+The first buyer is deliberately narrow: AI-aware solo entrepreneurs and very small business owners who value an AI operating partner but do not want to manage servers, Hermes installation, Telegram bot plumbing, API keys, model/provider accounts or technical failure modes themselves.
+
+## Current operating roles
+
+- **Founder** — final product/commercial authority, early sales/customer discovery, pricing exceptions, strategic approvals and scale decisions.
+- **PRIME** — implementation/provisioning/runtime/capacity/isolation steward; no authority to invent prices or commercial promises.
+- **Luxcalibur** — independent strategy/benchmarking/productization reviewer and Founder→GitHub doctrine bridge; not a canonical ARC parent or customer product.
+- **Customer ARC** — isolated customer-facing runtime operating only inside its authorized scope.
+- **Future human functions** — onboarding/customer success, support/ops, sales/growth, finance/admin, legal/privacy and infrastructure/security; no named assignment without explicit Founder confirmation.
+
 ## Current strategic goal
 
 Turn the PRIME-derived architecture into a repeatable ARC product and a transferable prototype of the future RYZ3N ↔ ARC operating model, without allowing support or customization effort to scale linearly with customer count.
@@ -98,12 +126,14 @@ The core productization rule is:
 
 > **Standard ARC should become ~80–90% repeatable platform and ~10–20% customer configuration.**
 
-The core architecture rules are:
+The core architecture and business rules are:
 
 > **Build once, instantiate many. Customize by configuration, not by architectural fork.**
 
 > **An ARC is an autonomous runtime node under supervision, not a chat branch pretending to be autonomous.**
 
 > **Every ARC grows individually, while the legion learns collectively through reusable, privacy-safe modules and validated Brains.**
+
+> **Predictable subscription for normal use; telemetry protects both customer experience and unit economics.**
 
 Higher tiers may intentionally include more custom work because they carry higher commercial value.
