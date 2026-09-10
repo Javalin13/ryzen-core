@@ -36,6 +36,8 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 - Heavy customization, dedicated infrastructure, higher usage and business-critical integrations must move to higher tiers or separate implementation fees.
 - ARC commercialization now uses a Founder-directed **V1→V6 maturity journey**: Foundation → Operations → Specialist → Golden Recursive ARC → Platinum/JARVIS Presence → Sovereign Gamified Ecosystem.
 - Every ARC may reuse validated capability modules, Brain contracts, Agent patterns and generalized lessons from the wider ARC network without inheriting another owner's private memory/data/secrets.
+- ARC **form/look** is owner-selectable and factory-resettable, but the **aura/shine is maturity-derived and cannot be manually changed by a cosmetic reset**.
+- If a sale/transfer includes a real capacity/competence/owner-state reset that leaves the ARC effectively empty, the ARC returns to **V1 Foundation with the V1 Blue aura**.
 - **Every meaningful prototype experience must be captured and made available to the final ARC UX/system design.**
 - **No critical reusable operating knowledge should remain only in PRIME runtime memory; reusable patterns must become structured RYZ3N-readable knowledge.**
 
@@ -45,6 +47,7 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 - `COST-CAPACITY-MODEL.md` — known shared infrastructure costs, direct-vs-overhead distinction, capacity assumptions and margin guardrails.
 - `PROVISIONING-BACKLOG.md` — what must be standardized/automated so ARC #10 costs much less Founder time than ARC #1.
 - `ARC-V1-V6-COMMERCIAL-MATURITY-TUTORIAL.md` — customer/commercial maturity journey, visual shine progression, V4 recursive-cognition threshold, V5 JARVIS-style presence, V6 gamified ecosystem, and privacy-safe reuse of validated modules/Brains across the ARC legion.
+- `ARC-FORM-AURA-AND-TRANSFER-RESET-STANDARD.md` — Founder-directed separation of ARC form/look from maturity aura, factory-form reset invariance, transfer-reset semantics, and the rule that an emptied transferred ARC returns to V1/Blue.
 - `ARC-BRAIN-INTERCONNECT-AND-PRIME-STEWARDSHIP.md` — bounded Brain interconnect and stewarded cross-ARC convergence rules.
 - `ARC-BRAIN-SPECIALIZATION-REGISTRY.md` — evidence-driven Brain specialization and reusable Brain contract rules.
 - `PRIME-RYZ3N-ARC-PROTOTYPE-DOCTRINE.md` — additive doctrine aligning today's PRIME-mediated ARC prototypes with the canonical RYZ3N hierarchy, convergence model, future native orchestration, replication contracts, operational logs/checkpoints and PRIME knowledge-transfer role.
@@ -83,7 +86,7 @@ The ARC product should be understandable as an evolution path rather than a feat
 
 `V1 Blue/Foundation → V2 Cyan/Operations → V3 Violet/Specialist → V4 Gold/Recursive Cognition → V5 Platinum/JARVIS Presence → V6 Sovereign/Prismatic Gamified Ecosystem`.
 
-The shine is a visible maturity indicator and must follow verified capability, not marketing alone.
+The shine/aura is a visible maturity indicator and must follow verified capability, not marketing alone. The Owner may reset or change the ARC's visual form without changing that aura. Only a real lifecycle maturity change may alter the aura; an ARC that is transferred and genuinely emptied of the state/competence supporting its prior maturity returns to V1/Blue.
 
 A new ARC is not built from zero. It receives the proven shared platform and can adopt reusable validated modules from the ARC network. Cross-ARC reuse is capability federation, not private-memory federation: **share capability, not private payload**.
 
