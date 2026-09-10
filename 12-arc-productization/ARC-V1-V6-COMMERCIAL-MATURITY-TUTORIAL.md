@@ -34,7 +34,7 @@ Commercial shorthand:
 | **V5** | **Platinum ARC — JARVIS Presence** | **You work with your ARC naturally, continuously and in real time.** | Persistent voice/audio interaction, conversational presence, multimodal inputs, proactive authorized assistance, cross-device/channel continuity and natural command/response without changing the ARC's identity, memory or governance boundaries. | **Platinum shine** — high-maturity personal operating presence. |
 | **V6** | **Sovereign ARC — Gamified Ecosystem** | **Your ARC, work and connected ecosystem become an interactive world.** | RYZ3N gamified ecosystem layer: rooms/worlds, avatars, missions/quests, XP, streaks, levels, visible Brains/Agents, business rooms, multi-ARC collaboration, progression and verified outcomes mapped into a living operational environment. | **Sovereign / prismatic shine** — top-tier ecosystem expression above platinum. Final naming/visual treatment remains Founder-amendable. |
 
-The shine is not cosmetic only. It is a visible shorthand for verified ARC maturity. An ARC should not receive a higher shine merely because a UI switch changed; the underlying maturity gate must be proven.
+The shine/aura is not cosmetic only. It is a visible shorthand for verified ARC maturity. An ARC should not receive a higher or lower aura merely because a UI switch, skin or form changed; the underlying maturity gate must be proven.
 
 ## 3. The V4 threshold — what “complete ARC” means
 
@@ -153,3 +153,23 @@ Each later maturity step should be implemented only when the prior layer is suff
 > **Blue → Cyan → Violet → Gold → Platinum → Sovereign/Prismatic.**
 
 > **Every ARC grows individually, but the legion learns collectively through reusable, privacy-safe modules and validated Brains.**
+
+## 10. Form reset, aura invariance and ownership transfer
+
+The ARC's **form/look** and its **aura** are separate concepts.
+
+The Owner may reset the ARC's visual form, body, shell, skin or layout back to its factory presentation. That cosmetic reset does **not** change the ARC's maturity state and therefore does **not** change its aura.
+
+Example:
+
+`V4 ARC + factory-form reset → still V4 → still Gold aura`
+
+The aura is not an owner-selectable color. It is a deterministic visual expression of verified maturity.
+
+A different rule applies when an ARC is sold or transferred and the transfer includes an actual reset of owner-specific capacity, competence, evidence or state. If the ARC becomes effectively empty for the new Owner, it must return to the Foundation state:
+
+`Transferred + emptied/reset ARC → V1 Foundation → Blue aura`
+
+Transfer alone does not automatically force V1. The decisive question is whether the competence/evidence needed to truthfully support the previous maturity survives and remains valid after the transfer.
+
+The detailed lifecycle contract is defined in `ARC-FORM-AURA-AND-TRANSFER-RESET-STANDARD.md`.
