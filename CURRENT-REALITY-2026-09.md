@@ -57,8 +57,8 @@ This is an implementation view, not a replacement ontology.
 - Live VONDA telemetry has captured real gateway model request, success, latency and token/usage observations without storing client message payload in steward telemetry.
 - Simulated telemetry evidence is explicitly separated from real production telemetry.
 - `VONDA_CAPACITY_TELEMETRY = GREEN` is closed.
-- `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` is frozen as the reusable v1.0 engineering contract for future ARC replication.
-- The Golden Blueprint includes identity/isolation, fail-closed access, onboarding, memory/Brain boundaries, ARC↔PRIME stewardship, scoped credentials, recovery, capacity telemetry, the 10-Standard-ARC model-pool safety ceiling, V1→V6 maturity/aura, form/aura separation, ownership-transfer reset semantics and real-vs-simulated evidence distinction.
+- `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` is frozen as the current reusable **v1.1** engineering contract for future ARC replication; v1.1 aligns the inherited maturity gates to canonical RYZ3N V1→V6 doctrine and generalizes VONDA-specific identifiers.
+- The Golden Blueprint includes identity/isolation, fail-closed access, onboarding, memory/Brain boundaries, ARC↔stewardship, scoped credentials, recovery, capacity telemetry, the 10-Standard-ARC model-pool safety ceiling, V1→V6 maturity/aura, form/aura separation, ownership-transfer reset semantics and real-vs-simulated evidence distinction.
 
 ## Active commercial validation
 
@@ -135,7 +135,7 @@ The Golden Blueprint is a major reusable engineering milestone. It is **not** ev
 ## Current execution priority
 
 1. Keep VONDA ready and await the real primary-user cycle without manufacturing new gates.
-2. Prepare repeatable commercial onboarding/provisioning from the Golden Blueprint.
+2. Prepare repeatable commercial onboarding/provisioning from the current Golden Blueprint.
 3. Recruit real Founding customers deliberately; do not pre-create 20 empty ARCs.
 4. Measure provisioning time, support time, usage, latency, incidents, retention and direct/allocated costs from the first customer onward.
 5. Promote only generalized, privacy-safe lessons into shared RYZ3N productization.
@@ -147,7 +147,7 @@ The Golden Blueprint is a major reusable engineering milestone. It is **not** ev
 1. Founder decisions + canonical doctrine in `Javalin13/ryzen-continuity`.
 2. This current-reality overlay and `12-arc-productization/ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md`.
 3. Current Founder-directed standards inside `12-arc-productization/`.
-4. `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` for the frozen reusable reference implementation contract.
+4. `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` **v1.1 or later** for the frozen reusable reference implementation contract.
 5. Active VONDA bridge files for the current reference-ARC execution round.
 6. PRIME current SOUL/comms/ARCS stewardship files for prototype execution behavior.
 7. Historical June roadmap/migration/foundation files as provenance, interpreted through the current overlays.
