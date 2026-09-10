@@ -27,6 +27,8 @@ Target end-state for Standard:
 - Target mature Standard setup time: **1–2 founder/operator hours maximum**, excluding unusual migrations or custom integrations.
 - Ongoing Standard support should be bounded and predictable.
 - Each prototype must produce an auditable learning trail, not only a technical deployment.
+- Every production ARC must expose privacy-safe **model-capacity telemetry** so RYZ3N/PRIME can protect user experience and attribute capacity/cost.
+- Founder safety ceiling: **do not plan more than 10 Standard ARCs on one Ollama/Hermes model-capacity pool until production evidence proves another limit is safe; provision earlier when telemetry requires it.**
 
 ## Provisioning backlog
 
@@ -48,14 +50,16 @@ Target end-state for Standard:
 - [ ] Bounded escalation signal path ARC → PRIME for security, contractual, isolation and operational incidents.
 - [ ] Prove one ARC can be stopped without taking PRIME or another ARC down.
 - [ ] Resource measurement: idle RAM, peak RAM, CPU, storage/log growth.
+- [ ] Model-capacity measurement for VONDA ARC: request volume, failures, throttling/rate limits, retries, latency, concurrency, provider usage units/tokens when available, and attributable cost estimate where available.
 - [ ] Record every meaningful onboarding friction, reliability issue, confusion, support intervention and successful usage pattern in `prototype-experience/EXPERIENCE-BACKLOG.md`.
 
 ### P1 — Repeatable autonomous-node template
 
 - [ ] Canonical ARC template derived from proven PRIME patterns, not raw copy-paste drift.
-- [ ] Config schema: `arc_id`, owner, tier, language, channels, workspace, permissions, model route, support policy, runtime/service identity, gateway identity, checkpoint/version.
+- [ ] Config schema: `arc_id`, owner, tier, language, channels, workspace, permissions, model route, model-capacity-pool id, support policy, runtime/service identity, gateway identity, checkpoint/version.
 - [ ] Standard directory naming and service naming.
 - [ ] Standard Hermes runtime/service unit per ARC.
+- [ ] Standard model-capacity telemetry contract inherited by every ARC.
 - [ ] Standard channel-adapter package; Telegram first, channel-independent core.
 - [ ] Idempotent install/provision command.
 - [ ] Idempotent update/upgrade mechanism.
@@ -70,6 +74,9 @@ Target end-state for Standard:
 - [ ] Pilot start/end date field.
 - [ ] Tier and billing-cycle field.
 - [ ] Fair-use / usage counters.
+- [ ] Per-ARC provider/model consumption counters.
+- [ ] Model-capacity-pool assignment and pool population counter.
+- [ ] Capacity headroom state: healthy / watch / provision-next-pool / constrained.
 - [ ] Shared-host vs dedicated-VPS deployment flag.
 - [ ] Dedicated-resource flag.
 - [ ] Support entitlement.
@@ -82,11 +89,16 @@ Target end-state for Standard:
 
 - [ ] PRIME/R​YZ3N-facing per-ARC health overview without merging client memory.
 - [ ] Resource usage dashboard.
+- [ ] Model-capacity dashboard by ARC and by capacity pool.
+- [ ] Alerts/review triggers for provider throttling, rate limits, retry bursts, latency degradation, quota headroom and disproportionate ARC consumption.
 - [ ] Central error surfacing without merging customer data.
 - [ ] Backup policy.
 - [ ] Update rollout order/canary path.
 - [ ] Incident isolation.
 - [ ] Usage/cost attribution.
+- [ ] Reserved capacity allocation in commercial margin reporting, not only historical invoice allocation.
+- [ ] Enforce maximum 10 Standard ARCs per model-capacity pool unless Founder-approved production evidence changes the ceiling.
+- [ ] Provision the next model-capacity pool before recurring user degradation; permit earlier split for heavy ARC usage.
 - [ ] Support-time tracking.
 - [ ] Independent restart/status controls per ARC.
 - [ ] Cross-pilot experience review: identify recurring UX/system patterns across ARCs.
@@ -96,6 +108,7 @@ Target end-state for Standard:
 
 - [ ] Dedicated VPS template using the same ARC runtime contract proven on shared host.
 - [ ] Migration procedure from shared host → dedicated VPS preserving ARC identity/config/state contracts.
+- [ ] Dedicated or reserved model-capacity pattern for heavy/business-critical customers when shared provider capacity is not appropriate.
 - [ ] Stronger tenant isolation controls.
 - [ ] Multiple authorized users/team permissions.
 - [ ] External integrations governance.
@@ -124,6 +137,8 @@ Before the final ARC UX/system is frozen:
 Do not build a full ARC Factory before the first pilots prove the repeatable requirements. The first external pilots are meant to reveal the minimum stable provisioning contract and the real user experience contract.
 
 Automate only patterns that have repeated or are clearly safety-critical.
+
+The model-capacity telemetry contract is considered safety-critical for scale because service degradation from shared provider limits directly affects every ARC using that pool.
 
 ## Success metric
 
