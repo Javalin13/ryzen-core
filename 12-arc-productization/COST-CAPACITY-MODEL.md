@@ -5,6 +5,7 @@
 type: cost-capacity-model
 status: working-model
 created: 2026-09-03
+updated: 2026-09-10
 classification: reality + research-and-exploration
 amendable: true-additively
 ---
@@ -140,6 +141,70 @@ A new model-capacity pool must be planned/provisioned **before** users experienc
 
 The 10-ARC ceiling may only be raised later from production evidence. It may always be lowered earlier for reliability.
 
+## Founding 20 measurement contract — 2026-09-10
+
+The paid Founding-20 cohort is not only a sales exercise. It is the first unit-economics and usage dataset for Standard ARC commercialization.
+
+For every paid Founding ARC, capture privacy-safe operational/commercial measurements sufficient to answer:
+
+- how quickly the ARC can be provisioned;
+- how long onboarding takes;
+- whether the owner reaches a useful outcome quickly;
+- request/token/model consumption pattern;
+- latency/retry/throttle/error behavior;
+- whether the ARC becomes a disproportionate capacity consumer;
+- support minutes and technical interventions per month;
+- additional integration/third-party costs;
+- whether usage stays inside Standard scope;
+- whether the customer remains active/paid after 30/60/90 days.
+
+Do not put private customer conversation payload into steward/business telemetry.
+
+### Per-customer economics record
+
+At minimum be able to calculate for each paid ARC/month:
+
+```text
+subscription_revenue
+- attributable_model_provider_cost
+- attributable_third_party_cost
+- attributable_payment_cost
+- dedicated_infrastructure_cost_if_any
+= incremental_technical_contribution
+
+Then separately estimate:
+- support_time_cost
+- onboarding/provisioning_time_cost
+- fair_shared_platform/admin allocation
+= fully_loaded_contribution
+```
+
+The goal is not to create fake precision before costs are known. The goal is to ensure the data needed for a real decision is collected from the beginning.
+
+### Standard fair-use commercial behavior
+
+The default customer experience must remain predictable:
+
+> **standard usage is included in the subscription; customers are not silently exposed to provider/API overages.**
+
+If an ARC becomes structurally heavy, first determine whether the cause is inefficient implementation, legitimate business workload or abuse/misuse. Then optimize, reassign capacity, or move the customer to a suitable commercial tier/explicit capacity arrangement.
+
+Do not publish hard numerical fair-use limits until real Founding-20 data supports them.
+
+### Paid-growth readiness evidence
+
+Before material paid-ad scale, the Founding-20 dataset should show enough evidence to understand:
+
+- typical and high-end model cost per Standard ARC;
+- support burden distribution;
+- provisioning/onboarding time;
+- retention/churn pattern;
+- capacity-pool pressure at multiple simultaneous ARCs;
+- contribution margin range;
+- which use cases create recurring value rather than one-off curiosity.
+
+If these are unknown, paid acquisition is still a learning experiment, not a scalable growth engine.
+
 ## Standard ARC margin guardrail
 
 Current Standard annual revenue floor: **€500/year**.
@@ -176,6 +241,8 @@ The trigger should become metric-based before commercial scale.
 8. Failure rate and intervention burden.
 9. Whether additional database/vector/memory infrastructure becomes necessary.
 10. Backup/recovery and privacy costs at paid-customer scale.
+11. Founding-20 30/60/90-day retention and actual recurring usage distribution.
+12. Which Standard workflows create the strongest willingness to remain subscribed.
 
 ## Business objective
 
@@ -184,3 +251,5 @@ The economic design target is not merely cheap hosting. It is:
 > **recurring revenue grows faster than infrastructure + support + founder-time obligations.**
 
 That requires measurement, automation, tenant isolation and disciplined tier boundaries.
+
+See `ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md` for the commercial launch sequence and paid-growth gate.
