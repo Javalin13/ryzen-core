@@ -7,7 +7,7 @@ status: active-accumulation
 created: 2026-09-03
 updated: 2026-09-10
 classification: strategic-vision + research-and-exploration
-founder_direction: structure ARC pricing, costs, pilots, provisioning, capacity assumptions, commercialization and prototype experience in Ryzen Core
+founder_direction: structure ARC pricing, costs, pilots, provisioning, capacity assumptions, commercialization and prototype experience in RYZ3N Core
 runtime_implementation_authorized: false
 amendable: true-additively
 ---
@@ -49,6 +49,7 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 
 ## Folder map
 
+- `ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md` — current cross-repo authority map aligning RYZ3N canon, PRIME stewardship, VONDA/Golden Blueprint, commercialization, pricing, usage, maturity, capacity, team roles, communication and scale gates.
 - `ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md` — canonical actionable go-to-market: positioning, benchmark snapshot, Founding 20, usage/fair-use policy, capacity/commercial triggers, team responsibilities, KPIs, paid-ad scale gates and immediate execution sequence.
 - `PRICING.md` — current ARC tier model, Founding-20 launch price, usage promise and pricing principles.
 - `COST-CAPACITY-MODEL.md` — known shared infrastructure costs, direct-vs-overhead distinction, capacity assumptions, telemetry requirements and margin guardrails.
