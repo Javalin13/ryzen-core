@@ -1,139 +1,245 @@
-# Ryzen Core Repository — Continuity & Accumulation Foundation
+# RYZ3N Core — Continuity, ARC Productization & Future Runtime Foundation
 
 ```yaml
 ---
-type: foundation
-status: foundation-only, accumulation-active
-created: 2026-06-15
-doctrine: ryzen-continuity repo is canonical; this repo is the accumulation layer for validated Fleet ARC discoveries
-strategic_posture: deferred, accumulation-first (per ADR 0002)
-classification:
-  foundation: approved-architecture
-  continuity-repo: reality
-  recovered-package: approved-architecture-with-historical-evidence
-  original-runtime: lost (implementation successor role preserved but deferred)
-  rebuild-spec: planning-artifact
-  intake-folder: research-and-exploration (active as accumulation layer)
+type: repository-entrypoint
+status: current-reading-layer
+foundation_created: 2026-06-15
+current_overlay: 2026-09-10
+canonical_doctrine_repo: Javalin13/ryzen-continuity
+current_reference_arc: Javalin13/VONDA-Corporation
+current_prototype_steward: PRIME
+historical_foundation_preserved_in_git: true
 amendable: true-additively
-replaced_runtime: original Ryzen implementation repository (lost)
-related_repo_canonical: Javalin13/ryzen-continuity
-related_arc: FleetConnect (primary execution priority #1)
-related_artifact: 2. Implementation-20260615T111401Z-3-001.zip
+---
 ```
 
-## What this repository is
+## Read this first
 
-This is the **Ryzen Core Repository — Continuity & Accumulation Foundation** — the *long-term accumulation layer* that receives validated intelligence from Fleet ARC (the first operational ARC domain) and future ARC domains.
+This repository began in June 2026 as a **continuity + accumulation foundation** for a future RYZ3N runtime. That historical foundation remains valid provenance, but the project has materially advanced since then.
 
-Per the founder's clarification 2026-06-15 (ADR 0002):
+As of **2026-09-10**, this repository is also the active accumulation/productization layer for the ARC system being proven through PRIME and the VONDA reference ARC.
 
-> A Ryzen Core Foundation Repository is authorized. This authorization is not based on immediate Ryzen runtime implementation. This authorization exists for **continuity, accumulation, and future implementation readiness**.
->
-> The objective is not to build Ryzen today. The objective is to ensure that every future Fleet ARC discovery has a canonical location where it can accumulate and compound.
->
-> The repository should therefore be designed as: A continuity and implementation foundation. Not as an active runtime development project.
->
-> FleetConnect remains execution priority #1.
-> Ryzen Core acts as the long-term accumulation layer that receives validated intelligence from Fleet ARC and future ARC domains.
+Do not interpret the original June statement “no implementation begins today” as the current operational state. It described the June foundation milestone. The present reality is recorded in:
 
-This repository is **NOT** the runtime itself. It is the **foundation that will hold the future runtime** *and* the **accumulation layer** for validated Fleet ARC discoveries.
+- `CURRENT-REALITY-2026-09.md`
+- `12-arc-productization/README.md`
+- `12-arc-productization/ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md`
 
-## What this repository is NOT
+The old foundation/rebuild assumptions remain historical evidence and are interpreted through these current overlays rather than silently deleted.
 
-- ❌ **NOT** the kernel runtime. The CognitionLoop, the Governance Middleware, the Recursive Verification Engine, the Memory Federation, the Brain contracts, the ARC Factory, the Fleet ARC, the Kernel API — **none of these are implemented here.** They are *scaffolded as empty directories with explicit "NOT IMPLEMENTED" placeholders* that point to the rebuild specification and the recovered evidence.
-- ❌ **NOT** the canonical doctrine. The canonical doctrine (Founder Identity, Capability Model, Interpretation Protocol) lives in `ryzen-continuity/01-founder/` and `ryzen-continuity/00-governance/`. This repository contains *maps* to those canonicals, not the canonicals themselves.
-- ❌ **NOT** a clone of the recovery archive. The recovery archive lives in `ryzen-continuity/04-recovery-archive/`. This repository contains *integration points* that reference the archive, not the archive itself.
+---
 
-## What this repository IS
+## Canonical architecture
 
-This repository **IS**:
-- ✅ The **continuity and implementation foundation** for future Ryzen runtime development. *(Per ADR 0002: deferred, not imminent.)*
-- ✅ The **active accumulation layer** for validated Fleet ARC discoveries (`11-fleet-arc-intake/`). *(Per ADR 0002: this is the present deliverable.)*
-- ✅ The **integration point** for the canonical doctrine (in continuity), the recovery archive (in continuity), the rebuild specification (in continuity), the ADRs (this repo), and the runtime roadmap (this repo).
-- ✅ The **structural successor** to the lost runtime repository. *(Latent purpose, preserved but deferred.)* When the future runtime is built, the source code will live here.
-- ✅ **Doctrine-aligned.** Every file in this repository is consistent with the Founder Identity, the Founder Capability Model, and the Interpretation Protocol.
-- ✅ **Recovery-informed.** The 8 reusable concepts, the 19-step build sequence, the 5 design decisions, and the 7 lessons (all in the recovery archive) inform the scaffolding here.
-- ✅ **Rebuild-aligned.** The 4-phase rebuild sequence (R1 → R2 → R3 → R4) in the Rebuild Specification v1.0 (in continuity) is the runtime roadmap for this repository — *deferred* per ADR 0002.
+Canonical doctrine/history remains in `Javalin13/ryzen-continuity`.
 
-## Scope (per founder direction 2026-06-15, refined by ADR 0002)
+The RYZ3N hierarchy is:
 
-**Scope:**
-- Repository structure
-- Governance integration
-- Recovery archive integration
-- Rebuild specification integration
-- ADR integration
-- Runtime roadmap integration
-- Implementation scaffolding only
-- **Fleet ARC Intake accumulation** *(added per ADR 0002)*
+```text
+Creator
+  ↓
+RYZ3N
+  ↓
+ARCs
+  ↓
+Brains
+  ↓
+Agents
+  ↓
+Execution
+```
 
-**Do NOT implement (at this stage):**
-- ❌ Kernel runtime
-- ❌ Memory Federation
-- ❌ ARC Runtime
-- ❌ Governance Middleware
-- ❌ Agent Runtime
+Legacy canonical documents may use the spelling `Ryzen`; current project representation is **RYZ3N**.
 
-**Strategic posture (per ADR 0002):** The runtime implementation is *deferred* and *not imminent*. The foundation's active deliverable is the **accumulation layer** (`11-fleet-arc-intake/`) for validated Fleet ARC discoveries. The runtime phase will be *separately* authorized by the founder when the time comes.
+PRIME is **not** inserted into this canonical hierarchy. PRIME currently acts as the Founder-facing execution/operator/steward layer that prototypes capabilities RYZ3N is intended to inherit natively later.
 
-**The objective is continuity and accumulation readiness. Not runtime delivery.**
+---
 
-## The 13-Folder Structure (revised per ADR 0003, [REVISED — 2026-06-15])
+## Current operational reality — September 2026
 
-This foundation is organized into 13 top-level folders, each with a specific role:
+The current prototype path is:
 
-| # | Folder | Role | Implementation status |
-|---|---|---|---|
-| 1 | `00-foundation/` | The foundation doctrine that grounds this repository (FOUNDATION.md, GOVERNANCE.md, INTERPRETATION-PROTOCOL.md) | Foundation-only |
-| 2 | `01-founder/` | Maps to the canonical Founder Identity and Capability Model in `ryzen-continuity` | Maps only (no canonical) |
-| 3 | `02-ryzen/` | Maps to the canonical Ryzen definition and architecture in `ryzen-continuity` | Maps only (no canonical) |
-| 4 | `03-recovery-integration/` | Integration points for the recovery archive (in `ryzen-continuity/04-recovery-archive/`) | Cross-references only |
-| 5 | `04-rebuild-integration/` | Integration of the Rebuild Specification v1.0 (in `ryzen-continuity/RYZEN-REBUILD-SPECIFICATION-v1.0.md`) | Cross-references only |
-| 6 | `05-adrs/` | Architectural Decision Records for this repository's implementation decisions | Foundation-only |
-| 7 | `06-runtime-roadmap/` | The runtime roadmap for this repository (mapped to the 4-phase rebuild sequence, **deferred** per ADR 0002) | Roadmap-only |
-| 8 | `07-runtime-scaffolding/` | Future implementation directories: `apps/`, `packages/`, `infrastructure/`, `docs/` | **SCAFFOLDED, NOT IMPLEMENTED** |
-| 9 | `08-observability/` | Future observability stack: governance events, traces, dashboards | **SCAFFOLDED, NOT IMPLEMENTED** |
-| 10 | `09-cadences/` | Daily snapshots, weekly reviews, monthly reviews, lessons learned, idea backlog, **fleet-arc-intake** | Templates-only |
-| 11 | `10-tools/` | Scripts and utilities (e.g., `push-to-remote.sh`) | Tools-only |
-| 12 | `10-lessons-learned/` *(new per ADR 0003, 2026-06-15)* | Lessons learned INDEX for this repository (the operational layer; sibling to the canonical lessons in `ryzen-continuity`) | Lessons-only |
-| 13 | **`11-fleet-arc-intake/`** *(new per ADR 0002, 2026-06-15)* | **The canonical intake point for validated Fleet ARC discoveries** (10 subdirectories, one per intake type) | **Active as accumulation layer** |
+```text
+Founder / Owner intent
+  ↓
+PRIME current steward / operator
+  ↓
+ARC runtime instance
+  ↓
+Domain / Project → Intent → Activity → Brain → Agents / Tools → Execution
+  ↑ evidence / continuation
+```
 
-**Why 13 folders (and not 12)?** The first 11 folders were created in the initial foundation (ADR 0001). The 12th folder (`11-fleet-arc-intake/`) was added in ADR 0002 to provide the *active accumulation layer* that the founder's clarification requires. The 13th folder (`10-lessons-learned/`) was added in ADR 0003 to provide the *operational* lessons learned cadence (sibling to the canonical lessons in `ryzen-continuity`). The numbering is *historical* (the 0X-10X pattern is preserved); the 13th is added *additively*. The numbering inconsistency is *honest* — it reflects the additive evolution and the founder's doctrine refinements.
+This is an implementation/steward view, not a competing ecosystem ontology.
 
-**The 0X-1X-2X-3X-4X-5X-6X-7X-8X-9X-10X-10X-11X pattern is the *integration then operation then accumulation then lessons* pattern:**
-- 0X-5X: Self-integration (foundation, founder, ryzen, recovery, rebuild, ADRs)
-- 6X-9X: Operational (roadmap, scaffolding, observability, cadences)
-- 10X: Tools + Lessons (operational support)
-- 11X: **Accumulation (the active deliverable, per ADR 0002)**
+**VONDA ARC is ARC #1 and the reference/tutorial proving node.** The VONDA repository now contains a frozen v1.0 `arc/GOLDEN-ARC-BLUEPRINT.md` capturing the reusable implementation contracts proven through the reference work.
 
-## The Constitutional Constraints (in force from the first commit)
+`VONDA_CAPACITY_TELEMETRY = GREEN` is evidence-backed. The full VONDA reference completion gate still depends on the real primary-user cycle and must not be faked through additional Founder simulations.
 
-1. **Doctrine-continuity alignment.** This repository references the canonical doctrine in `ryzen-continuity`. The doctrine is *not* duplicated here; it is *referenced*.
-2. **Recovery-informed scaffolding.** Every empty directory in `07-runtime-scaffolding/` has a `README.md` that names which recovered concept (C1–C8) and which rebuild phase (R1–R4) the directory will eventually implement.
-3. **No implementation at this stage.** The runtime is *not* built in this foundation. The runtime is *planned* in `06-runtime-roadmap/` and *scaffolded* in `07-runtime-scaffolding/`.
-4. **Additive evolution.** Every change to this repository is additive, never destructive. The 7 doctrine rules from continuity apply.
-5. **Founder authority preserved.** Every change requires founder direction. The 7 execution risks from the Capability Model apply.
-6. **Interpretation Protocol in force.** Every claim in this repository is classified against the 5-tier reality hierarchy (Reality / Active Execution / Approved Architecture / Strategic Vision / Research & Exploration). The runtime index will live at `00-foundation/CLASSIFICATION-INDEX.md`.
-7. **Token hygiene.** No credentials, tokens, or secrets are committed to this repository. All credentials are stored in the OS credential store and used transiently.
+RYZ3N native orchestration/runtime is **not** thereby declared complete. The present PRIME + ARC system is a bounded operational prototype whose proven patterns are being converted into RYZ3N-readable standards.
 
-## Cross-References
+---
 
-- **Canonical doctrine:** `Javalin13/ryzen-continuity` (this repo's older sibling; the canonical)
-- **Recovery archive:** `Javalin13/ryzen-continuity/tree/main/04-recovery-archive` (the durable home for recovered knowledge)
-- **Rebuild specification:** `Javalin13/ryzen-continuity/blob/main/RYZEN-REBUILD-SPECIFICATION-v1.0.md` (the 4-phase rebuild plan)
-- **ADR template (continuity):** `Javalin13/ryzen-continuity/blob/main/09-decisions/TEMPLATE.md` (the ADR template this repo follows)
-- **Implementation Package (recovered):** `2. Implementation-20260615T111401Z-3-001.zip` (the historical evidence in the continuity repo's recovery archive)
+## ARC productization
 
-## What Comes Next (per ADR 0002)
+The active ARC business/product work lives in `12-arc-productization/`.
 
-Per the founder's clarification 2026-06-15, this is **foundation + accumulation layer only**. The next deliverables (after founder authorization) will be:
+Current commercial position:
 
-1. **Phase 0 acceptance** (ADR 0001 + ADR 0002 are accepted by the founder).
-2. **Accumulation begins** — Fleet ARC discoveries are validated, founder-accepted, and added to the appropriate subdirectory in `11-fleet-arc-intake/`.
-3. **Runtime phase authorization** *(separately, when the founder decides)* — a new ADR begins R1. The 3 open founder decisions (D1, D2, D3) must be resolved *before* R1 begins.
+> **ARC — Your AI operating partner. It grows with you.**
 
-**No implementation begins today.** The foundation is the prerequisite. The accumulation is the present deliverable. The runtime is the future.
+Initial target customer: solo/starting entrepreneurs and very small business owners who value AI but do not want to install, configure, secure and maintain the underlying agent/model/server stack themselves.
+
+Current launch model:
+
+```text
+VONDA reference proof
+  ↓
+Founding 20 paid validation cohort
+  ↓
+repeatable onboarding + retained usage + measurable economics
+  ↓
+proof assets / organic demos
+  ↓
+small paid acquisition experiments
+  ↓
+scale only when retention, support, capacity and unit economics justify it
+```
+
+Current pricing truth:
+
+- Founding 20: **€49/month**, founding rate locked while continuously subscribed, within Standard scope/fair use.
+- ARC Standard: **€50/month or €500/year**.
+- Higher tiers remain working commercial hypotheses until validated.
+
+Standard promises predictable included normal AI usage, not “unlimited AI” and not surprise pass-through provider bills.
+
+Canonical commercial plan:
+
+`12-arc-productization/ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md`
+
+---
+
+## ARC maturity and lifecycle
+
+ARC billing tier is not the same thing as ARC maturity.
+
+```text
+V1 Foundation        → Blue
+V2 Operations        → Cyan / Electric Blue
+V3 Specialist        → Violet / Amethyst
+V4 Golden ARC        → Gold
+V5 Platinum Presence → Platinum
+V6 Sovereign         → Sovereign / Prismatic
+```
+
+Maturity/aura must be earned from verified capability/evidence; it cannot simply be purchased.
+
+Founder lifecycle rule:
+
+> **Form is Owner-resettable. Aura is maturity-derived.**
+
+A cosmetic factory-form reset does not change maturity/aura. If an ownership transfer genuinely removes the owner-specific competence/evidence supporting a mature ARC and leaves it effectively empty, it returns to **V1 Foundation / Blue** for the new Owner.
+
+---
+
+## Privacy and reuse
+
+A future ARC does not start technologically from zero; it can inherit validated reusable platform/module/Brain/Agent/workflow patterns from the wider ARC network.
+
+But it must not inherit another Owner's private payload.
+
+> **Share capability, not private payload. Reuse intelligence patterns, not another Owner's memory.**
+
+Each ARC requires isolated identity, memory/state, permissions, secrets, runtime/gateway boundaries and auditable evidence.
+
+---
+
+## Capacity and economics
+
+Founder safety rule:
+
+> **Maximum 10 Standard ARCs per Ollama/Hermes model-capacity pool until production telemetry proves another ceiling preserves service quality.**
+
+Split earlier when real telemetry shows recurring throttling, retries, latency degradation, concurrency pressure, provider headroom risk, incidents or disproportionate consumption.
+
+Every paying ARC must become measurable on model usage, runtime health, provisioning time, support burden, direct cost and contribution margin before broad scale.
+
+See:
+
+- `12-arc-productization/COST-CAPACITY-MODEL.md`
+- `12-arc-productization/PRICING.md`
+- `12-arc-productization/PROVISIONING-BACKLOG.md`
+
+---
+
+## Current authority / evidence map
+
+Use the following reading order when files appear to conflict:
+
+1. Founder decisions + canonical doctrine/history in `Javalin13/ryzen-continuity`.
+2. `CURRENT-REALITY-2026-09.md` and `12-arc-productization/ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md` for current interpretation.
+3. Current Founder-directed standards under `12-arc-productization/`.
+4. `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` for the frozen reference implementation contract.
+5. Active VONDA bridge evidence/directives for the current reference-ARC execution round.
+6. PRIME current SOUL/comms/ARCS documents for prototype execution/stewardship behavior.
+7. Historical June foundation/rebuild/migration material as provenance.
+
+A historical file is not automatically wrong. It becomes wrong only if someone treats an explicitly superseded operational statement as present reality.
+
+---
+
+## What is proven vs not yet proven
+
+Proven today includes the reference ARC runtime/isolation patterns, fail-closed user binding, durable operational state patterns, live privacy-safe capacity telemetry and a frozen reusable Golden ARC Blueprint.
+
+Not yet proven includes automated bulk provisioning for ARC #2+, real 5–10 ARC concurrent density, paid-cohort retention/support economics, CAC/payback at scale, broad compliance operations and native RYZ3N orchestration replacing PRIME.
+
+Do not inflate roadmap maturity into implementation evidence.
+
+---
+
+## Core productization rules
+
+> **Build once, instantiate many. Customize by configuration, not by architectural fork.**
+
+> **Standard ARC should become approximately 80–90% repeatable platform and 10–20% customer configuration.**
+
+> **Every ARC grows individually while the legion learns collectively through reusable, privacy-safe capability.**
+
+> **Proof before scale. Product promise must match runtime evidence.**
+
+---
+
+## Repository areas
+
+- `00-foundation/` — foundation/governance interpretation.
+- `01-founder/` — mappings/integration to Founder canon.
+- `02-ryzen/` — RYZ3N canonical mappings.
+- `03-recovery-integration/` — recovery-archive integration.
+- `04-rebuild-integration/` — rebuild-spec integration.
+- `05-adrs/` — architectural decisions.
+- `06-runtime-roadmap/` — historical/future runtime roadmap interpreted through current reality.
+- `07-runtime-scaffolding/` — runtime scaffolding; do not assume scaffold equals implementation.
+- `08-observability/` — observability foundation/scaffolding.
+- `09-cadences/` — cadence/review structures.
+- `10-tools/` — tools/utilities.
+- `10-lessons-learned/` — operational lessons index.
+- `11-fleet-arc-intake/` — Fleet-specific ARC accumulation.
+- `12-arc-productization/` — active ARC product/runtime/commercial accumulation.
+- `13-implementation-heritage/` — implementation heritage/recovered continuity material.
+
+The duplicated numeric prefixes are historical/additive and should not be “cleaned up” in a way that breaks existing references.
+
+---
+
+## Current mission
+
+Keep VONDA reference-ready while awaiting its real primary-user cycle; prepare repeatable commercial provisioning/onboarding from the Golden Blueprint; recruit real Founding customers deliberately; measure everything that matters; automate repeated work; scale distribution only when evidence says the machine is healthy; continuously promote generalized proof back into RYZ3N Core.
+
+Do not spawn 20 empty ARCs merely because the commercial cohort is named Founding 20.
 
 ## License
 
-All Rights Reserved. License terms: same as `Javalin13/ryzen-continuity` (the canonical).
+All Rights Reserved. License terms follow the canonical `Javalin13/ryzen-continuity` project terms.
