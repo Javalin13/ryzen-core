@@ -1,63 +1,180 @@
-# apps/arc-factory/ — NOT IMPLEMENTED
+# apps/arc-factory/ — PLANNED / NOT YET OPERATIONAL
 
 ```yaml
 ---
 type: scaffolding
-status: NOT-IMPLEMENTED
+status: PLANNED-NOT-YET-OPERATIONAL
 created: 2026-06-15
-implements_concept: ARC Factory (the capability that generates ARCs)
-rebuild_phase: R1
-classification: approved-architecture
+updated: 2026-09-11
+implements_concept: ARC Factory (native RYZ3N capability that generates/provisions ARCs)
+classification: approved-architecture + active-productization-target
 amendable: true-additively
+current_execution_mode: manual-evidence-producing-replication-via-PRIME
+---
 ```
 
-## Status: NOT IMPLEMENTED
+## Current status
 
-This directory is **scaffolded, not implemented**. Per the founder's direction 2026-06-15, no runtime code is written at this stage. The ARC Factory will be added in **R1**.
+The native RYZ3N **ARC Factory is not yet an operational runtime capability**.
 
-## What will go here (in R1)
+That statement must now be read together with the September current-reality overlay:
 
-This directory will contain the **ARC Factory** — the capability that generates ARCs from a topology.
+- PRIME currently prototypes bounded ARC provisioning/stewardship;
+- VONDA is ARC #1 and the reference proving node;
+- the Golden ARC Blueprint v1.1 is the current reusable engineering contract;
+- Cargo ARC is ARC #2 and is being instantiated manually/boundedly from that contract;
+- the purpose of the first replications is to discover exactly what is repeatable, configurable and safety-critical before automating the Factory.
 
-In R1, this directory will contain:
+Historical June text that said no ARC runtime implementation should begin immediately was correct for that phase. It does not mean RYZ3N has abandoned the Factory or that current PRIME-mediated ARC prototypes are architectural forks.
 
-- `factory.py` — the `ARCFactory` class with the `create_arc` method
-- `topology.py` — the topology data structure (a Python constant or a YAML config)
-- `constitution.py` — the constitutional validation (the ARC Creation Doctrine's 4 validation triggers)
-- `__init__.py` — the package init
-- `tests/test_factory.py` — the test suite
+## Target responsibility
 
-The ARC Factory is the *first real Ryzen capability* — it is the system that turns a *topology* (a set of brains with roles and specializations) into a *running ARC*.
+The ARC Factory should eventually turn an **authorized ARC creation request + configuration package** into a validated isolated ARC instance without bespoke architectural reconstruction.
 
-## The ARC Creation Doctrine (4 Validation Triggers)
+Target flow:
 
-The canonical ARC Creation Doctrine codifies 4 validation triggers that an ARC must pass *before* it is created:
+```text
+authorized ARC request
+  → creation/governance validation
+  → unique arc_id + instance configuration
+  → isolated runtime/profile/workspace/secrets
+  → identity + approved-user/channel binding
+  → permissions + memory/task/Brain namespaces
+  → model-capacity-pool assignment
+  → telemetry + health + recovery/checkpoint
+  → steward/registry registration
+  → isolation + functional validation
+  → truthful V1 activation/evidence
+```
 
-1. **Operational necessity** — there is a real operational need that no existing ARC can serve.
-2. **Strategic opportunity** — creating the ARC unlocks a strategic opportunity (e.g., a new market, a new domain).
-3. **Knowledge gap** — creating the ARC fills a knowledge gap in the system.
-4. **Long-term specialization need** — the work is *recurring* and *specialized*; it deserves its own ARC.
+The mature Factory should implement the principle:
 
-The first 3 first-generation ARCs (FleetConnect, Earth, FamilieKompas) are *already canonical*. The next ARC creation requires one of the 4 triggers.
+> **Build once, instantiate many. Customize by configuration, not architectural fork.**
 
-## Recovered evidence (in continuity's recovery archive)
+## What the Factory must NOT do
 
-The lost original runtime's ARC Factory is recovered in:
+The Factory must never:
 
-- `Javalin13/ryzen-continuity/blob/main/04-recovery-archive/RECOVERED-CODE-INVENTORY.md` §"ryzen/apps/arc_factory/" — describes the 1 file (`factory.py`, 44 LOC)
-- The recovered factory is the *seed* for R1; R1 will write a *clean-slate implementation* informed by the recovered design.
+- create a new PRIME per ARC;
+- copy another ARC's private memory, credentials, client payload or maturity evidence;
+- prebuild an exhaustive specialist Brain catalogue without necessity evidence;
+- auto-bind the first unknown user as Owner/primary user;
+- grant cross-ARC authority merely because the same Founder/PRIME operates the provisioning layer;
+- hard-code customer/company-specific governance into universal RYZ3N logic;
+- claim an aura/maturity that the new ARC has not earned;
+- provision empty customer ARCs merely to satisfy a commercial cohort count.
 
-## The "DO NOT IMPLEMENT" Reminder
+## Input contract — current candidate
 
-Per the founder's direction 2026-06-15:
+Cargo ARC #2 is helping validate the minimum Factory input/config contract. Current candidate fields include:
 
-> Do not implement: Kernel runtime, Memory Federation, **ARC Runtime**, Governance Middleware, Agent Runtime at this stage.
+- `arc_id`;
+- display identity/domain/purpose;
+- Owner and authorized-user roles;
+- channel bindings;
+- workspace/state namespace;
+- secrets boundary;
+- permission/escalation policy;
+- language/tone where relevant;
+- runtime/service identity;
+- model route and `model_capacity_pool`;
+- telemetry/health/recovery policy;
+- commercial/service tier where applicable;
+- source repository / evidence pointers;
+- migration/export/reassignment contract;
+- initial maturity target (normally truthful V1 Foundation) without pre-awarding evidence.
 
-The ARC Runtime is on the "do not implement" list. The ARC Factory is the *generator* of ARCs; it is part of the ARC Runtime substrate. This scaffolding README is the *placeholder*, not the implementation.
+This remains a **candidate contract until ARC #2+ evidence proves it**.
 
-## Cross-References
+## Creation / necessity doctrine
 
-- `Javalin13/ryzen-continuity/blob/main/04-recovery-archive/RECOVERED-CODE-INVENTORY.md` — the recovered code inventory
-- `Javalin13/ryzen-continuity/blob/main/02-ryzen/RYZEN-CANONICAL.md` §"ARC Creation Doctrine" — the canonical ARC Creation Doctrine
-- `Javalin13/ryzen-continuity/blob/main/RYZEN-REBUILD-SPECIFICATION-v1.0.md` §"R1" — the rebuild spec
-- `04-rebuild-integration/RS-PHASES.md` — the rebuild spec integration map
+Creating a separate ARC still requires a genuine reason under current RYZ3N doctrine: real domain/Owner need, strategic opportunity, durable specialization or another valid creation trigger. A new project or feature does not automatically deserve its own ARC.
+
+Within an ARC, specialist Brains follow a separate necessity/evidence lifecycle and are not pre-populated merely because the Factory can create the ARC shell.
+
+## Relationship to PRIME
+
+Current phase:
+
+```text
+Founder authorization
+  → PRIME bounded provisioning/operator role
+  → ARC instance
+  → evidence/lessons
+  → RYZ3N productization
+```
+
+Target mature phase:
+
+```text
+Founder / authorized RYZ3N governance
+  → RYZ3N ARC Factory + native orchestration
+  → ARC instance
+
+PRIME = supervisor / auditor / mentor / high-trust execution steward
+```
+
+The transition should change who provisions/orchestrates the ARC, not the ARC's identity, privacy or lifecycle contract.
+
+## Evidence-driven automation path
+
+The durable active backlog is:
+
+`12-arc-productization/PROVISIONING-BACKLOG.md`
+
+Current rule:
+
+> **Do not automate speculation. Automate what repeats or what is safety-critical.**
+
+Cargo ARC is intentionally being built manually enough to measure:
+
+- provisioning steps and time;
+- what parameters are truly instance-specific;
+- which isolation/security checks repeat;
+- identity/binding friction;
+- capacity-pool selection;
+- telemetry/recovery setup;
+- Founder/operator intervention;
+- what should become one idempotent Factory action.
+
+After repeated evidence, these steps should move from manual PRIME-mediated execution into native RYZ3N Factory capability.
+
+## Expected future implementation shape
+
+Exact implementation language/files remain an implementation decision, but mature capability should cover equivalents of:
+
+- create/provision ARC;
+- validate creation request/config;
+- instantiate standard isolated runtime surfaces;
+- register ARC and model-capacity attribution;
+- run required isolation/health/functional gates;
+- checkpoint/version deployed ARC;
+- support idempotent update/rollback/migration;
+- output durable evidence and truthful current state.
+
+The old June illustrative names such as `factory.py`, `topology.py` and `constitution.py` are historical scaffolding ideas, not mandatory file names.
+
+## Success condition
+
+The ARC Factory becomes credible when a new real authorized ARC can be created with materially less Founder/operator work than earlier ARCs while preserving:
+
+- identity isolation;
+- privacy and secrets boundaries;
+- correct user binding/access;
+- evidence-derived maturity/aura;
+- independent health/recovery;
+- capacity attribution;
+- channel independence;
+- migration/exportability;
+- canonical RYZ3N alignment.
+
+ARC #10 should require materially less Founder attention than ARC #1 without degrading reliability or user value.
+
+## Current references
+
+- `CURRENT-REALITY-2026-09.md`
+- `12-arc-productization/PROVISIONING-BACKLOG.md`
+- `12-arc-productization/PRIME-RYZ3N-ARC-PROTOTYPE-DOCTRINE.md`
+- `12-arc-productization/ARC-SELF-PROVISIONING-BRAIN-LIFECYCLE.md`
+- `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` v1.1
+- `Javalin13/CargoConnect` Cargo ARC creation/evidence surfaces
