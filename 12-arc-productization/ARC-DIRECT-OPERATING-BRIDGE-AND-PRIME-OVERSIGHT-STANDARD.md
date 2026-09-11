@@ -36,6 +36,7 @@ Recommended bridge files:
 arc/bridge/TO_<ARC>.md
 arc/bridge/FROM_<ARC>.md
 arc/bridge/BRIDGE-ROUTING.md
+arc/bridge/ROUTING.json
 arc/bridge/STATE.json
 ```
 
@@ -119,7 +120,13 @@ Do not mirror whole conversations, private memory or raw customer payload into P
 
 ## 6. Direct ARC bridge protocol
 
-A direct ARC bridge should support a simple consume/report loop.
+A direct ARC bridge supports the same lightweight consume/report discipline proven during PRIME prototyping, but addressed to the ARC itself.
+
+Founder/Lux may write/update `TO_<ARC>.md`, then tell that ARC simply:
+
+`consume`
+
+The ARC reads the current direct bridge, executes everything within its own authority, writes `FROM_<ARC>.md`, commits/pushes its own repository when authorized, and returns a mini report.
 
 Suggested mini report:
 
@@ -128,10 +135,13 @@ STATUS: <GREEN/AMBER/RED + one-line result>
 CHANGED: <important ARC-local changes>
 NEXT: <next ARC-local dependency/action or NONE>
 ESCALATE TO PRIME: YES | NO
+LUX: SYNC NEEDED | NO SYNC NEEDED
 BRIDGE: <latest ARC repo commit short SHA>
 ```
 
-If `ESCALATE TO PRIME: YES`, the ARC must state the exact bounded reason and expected operator/steward action.
+`LUX: SYNC NEEDED` means the ARC changed durable truth that Lux should independently reconcile/accept. `NO SYNC NEEDED` is appropriate for ordinary conversation/work that did not materially change bridge/source/lifecycle truth.
+
+If `ESCALATE TO PRIME: YES`, the ARC must state the exact bounded reason and expected operator/steward action. PRIME then performs only the bounded supervisory work and returns the result to the ARC/Founder flow.
 
 ## 7. Transition from PRIME-primary to ARC-primary
 
