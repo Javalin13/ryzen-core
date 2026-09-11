@@ -3,25 +3,25 @@
 ```yaml
 ---
 type: commercial-pricing-crosscheck
-status: current-assessment
+status: founder-superseded-assessment
 created: 2026-09-11
+updated: 2026-09-11
 classification: commercial-validation + pricing-alignment
 prospect: KMS7 Cars
 contact: Adnan
 accepted_price: false
 arc_creation_authorized: false
+founder_exception_price: 170-eur-month
 ---
 ```
 
-## Question
+## Original pricing question
 
-Does the approximately **€150–€170/month** figure communicated to Adnan on 2026-09-11 match the current canonical ARC pricing ladder?
+Does the approximately **€150–€170/month** figure communicated to Adnan match the canonical ARC tier ladder?
 
-## Canonical answer
+## Canonical tier answer
 
-No. It does not correspond to an existing canonical tier.
-
-Current working tier ladder in `../PRICING.md`:
+No. The canonical ladder remains:
 
 - **ARC Standard** — €50/month or €500/year.
 - **ARC Pro** — €120/month or €1,200/year.
@@ -29,11 +29,21 @@ Current working tier ladder in `../PRICING.md`:
 - **ARC Dedicated** — from €5,000/year.
 - **ARC Enterprise** — custom, working floor approximately €10,000/year.
 
-Therefore **€150–€170/month is an in-between Founder-communicated figure**, above Pro and below Business. It must not become a new tier by accident.
+KMS7's known business requirements map most naturally to **ARC Business**.
 
-## KMS7 scope mapping
+## Founder superseding commercial decision — 2026-09-11
 
-Previously discussed KMS7 needs include, subject to reconfirmation with Adnan:
+The Founder clarified that the earlier communicated price was intentionally meant to cover the **complete currently known KMS7 scope**, not only a reduced introductory Phase 1.
+
+Founder decision:
+
+- final intended recurring price for KMS7 if Adnan accepts: **€170/month**;
+- KMS7 is treated as the **first Business-class client / founding Business exception**;
+- the full currently known KMS7 Business scope is included at that price;
+- future comparable Business clients remain at canonical **€250/month / €2,500/year** unless another explicit exception is approved;
+- this exception does **not** create a €170 tier and does **not** change `PRICING.md`.
+
+The known KMS7 scope includes, subject to final acceptance/freeze:
 
 - car dealer + taxi-company operational support;
 - Telegram assistant/robot interface;
@@ -41,43 +51,45 @@ Previously discussed KMS7 needs include, subject to reconfirmation with Adnan:
 - driver document and expense handling;
 - vehicle/insurance tracking;
 - marketing/business assistance;
-- possible integration with the existing dispatch application;
-- multiple business workflows rather than only personal assistance.
+- multiple business workflows;
+- the previously discussed integration relationship with the existing dispatch application.
 
-That overall shape fits **ARC Business** more closely than ARC Pro because Business is the canonical tier for company/team context, multiple workflows, deeper integrations, reporting, higher usage and stronger governance.
+“Full scope” means the currently discussed/agreed KMS7 requirement set. It does not mean unlimited future feature requests, unlimited support, dedicated infrastructure by default or materially new work added after agreement.
 
-If the dispatch integration becomes custom, technically burdensome, business-critical or requires stronger isolation/dedicated resources, **ARC Dedicated and/or a separate implementation fee** should be considered.
+## Unit economics
 
-## Commercial treatment of the price already communicated
+Founder working assumption:
 
-Do not retract or rewrite the historical voice-message figure. The truthful commercial state is:
+- recurring revenue: **€170/month**;
+- direct operational cost ceiling target: **≤ €50/month**;
+- direct contribution if that ceiling holds: **≥ €120/month** before Founder support time, shared overhead, tax and administrative cost.
 
-- Founder communicated approximately €150–€170/month;
-- Adnan has not accepted it yet;
-- no final scope exists yet;
-- therefore no final tier/contract price exists yet.
+A conservative internal planning figure of approximately €100/month contribution can be used if an additional ~€20/month buffer is reserved, but the direct arithmetic at €170 revenue and €50 direct cost is €120.
 
-If Adnan responds positively, use one of these paths:
+The €50 cost ceiling must be verified from real KMS7 usage. It is not yet evidence.
 
-### Path A — bounded introductory Phase 1
+## Commercial rationale
 
-Keep the approximately €150–€170/month figure as a **Founder-authorized introductory/pilot exception** only if Phase 1 is deliberately bounded, for example Telegram-first assistance plus selected light workflows/Drive support without committing to the entire original bespoke integration burden.
+The exception is commercially coherent as a first Business validation case if it produces real evidence on:
 
-### Path B — full known business scope
+- business-class ARC provisioning;
+- integration/support burden;
+- actual per-client model/infrastructure cost;
+- customer retention and willingness to pay;
+- scope discipline;
+- whether future Business pricing at €250/month has healthy contribution.
 
-If KMS7 wants the broader known scope — multiple operational workflows, deeper Drive/data processes, vehicle/insurance/expense automation, team/business context and meaningful system integration — use **ARC Business €250/month** as the canonical commercial reference.
+The learning value and early reference-client value are part of why the Founder may intentionally price KMS7 below the standard Business rate.
 
-### Path C — heavy/custom integration
+## Guardrails
 
-If KMS7 requires deep integration with the existing dispatch system, dedicated infrastructure, stronger service availability or substantial implementation work, move toward **ARC Dedicated / separate implementation pricing** rather than absorbing the work into a discounted monthly plan.
-
-## Guardrail
-
-The Founder quote is sales history, not pricing canon.
-
-> **Communicated price ≠ canonical tier. Final price follows confirmed scope.**
-
-Do not alter `PRICING.md` merely to make the KMS7 quote fit.
+- Do not change ARC Business from €250/month globally.
+- Do not represent €170 as ARC Pro, Business, Dedicated or a new formal tier.
+- Record it as a **Founder-authorized founding Business exception**.
+- If Adnan never accepts, there is no contract or revenue.
+- If he accepts, freeze the included known scope before ARC creation.
+- Materially new post-agreement scope remains separately reviewable.
+- Measure actual cost/support burden from activation onward.
 
 ## Related sources
 
@@ -86,3 +98,7 @@ Do not alter `PRICING.md` merely to make the KMS7 quote fit.
 - `../ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md`
 - `../ARC-COMMERCIAL-PIPELINE-2026-09-11.md`
 - `Javalin13/prime-vps-migration/ARCS/FOUNDER-DIRECTIVE-2026-09-11-NARC-AND-KMS7-COMMERCIAL-QUEUE.md`
+
+## Current conclusion
+
+> **KMS7 = Business-class scope at a one-off founding Business price of €170/month if accepted. Future comparable Business clients = €250/month. The exception validates the Business model; it does not redefine it.**
