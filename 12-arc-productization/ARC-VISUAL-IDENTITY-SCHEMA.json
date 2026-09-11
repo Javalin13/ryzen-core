@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ryz3n://arc-visual-identity/v1",
+  "title": "RYZ3N ARC Visual Identity Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "arc_id",
+    "family_standard",
+    "archetype",
+    "humanoid_family_required",
+    "form_version",
+    "current_asset",
+    "founder_owner_approved",
+    "maturity_aura"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "arc_id": { "type": "string", "minLength": 1 },
+    "family_standard": { "type": "string", "minLength": 1 },
+    "archetype": { "type": "string", "minLength": 1 },
+    "humanoid_family_required": { "type": "boolean" },
+    "form_version": { "type": "string", "minLength": 1 },
+    "current_asset": { "type": ["string", "null"] },
+    "founder_owner_approved": { "type": "boolean" },
+    "domain_motifs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "form_palette": { "type": "array", "items": { "type": "string" } },
+    "portrait_grammar": { "type": "array", "items": { "type": "string" } },
+    "provenance_feedback_record": { "type": ["string", "null"] },
+    "superseded_assets": { "type": "array", "items": { "type": "string" } },
+    "maturity_aura": {
+      "type": "object",
+      "required": ["verified_maturity", "official_aura", "earned"],
+      "properties": {
+        "verified_maturity": { "type": ["string", "null"] },
+        "official_aura": { "type": ["string", "null"] },
+        "earned": { "type": "boolean" },
+        "target_maturity": { "type": ["string", "null"] },
+        "target_aura": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}
