@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ryz3n://arc-factory-creation-request/v1.0",
+  "title": "RYZ3N ARC Factory Creation Request",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "request_id",
+    "requester_role",
+    "authorization_state",
+    "display_name",
+    "repository_class",
+    "owner",
+    "language",
+    "commercial",
+    "source_intent"
+  ],
+  "properties": {
+    "schema_version": {"const":"1.0"},
+    "request_id": {"type":"string","minLength":1},
+    "requested_at": {"type":["string","null"]},
+    "requester_role": {"enum":["founder","authorized_operator"]},
+    "authorization_state": {"const":"explicit"},
+    "display_name": {"type":"string","minLength":1},
+    "requested_arc_id": {"type":["string","null"],"pattern":"^[a-z0-9][a-z0-9-]*$"},
+    "repository_class": {"enum":["ryz3n_owned_product_domain","customer_standalone_domain"]},
+    "repository": {
+      "type":"object",
+      "properties": {
+        "preferred_name":{"type":["string","null"]},
+        "existing_repository":{"type":["string","null"]},
+        "visibility":{"enum":["private","public",null]},
+        "creation_required":{"type":["boolean","null"]}
+      },
+      "additionalProperties":false
+    },
+    "owner": {
+      "type":"object",
+      "required":["entity_class","display_name","binding_state"],
+      "properties": {
+        "entity_class":{"type":"string","minLength":1},
+        "display_name":{"type":"string","minLength":1},
+        "binding_state":{"enum":["pending","preverified_reference_only","bound"]}
+      },
+      "additionalProperties":false
+    },
+    "language": {
+      "type":"object",
+      "required":["primary"],
+      "properties": {
+        "primary":{"type":"string","minLength":2},
+        "secondary":{"type":"array","items":{"type":"string"},"uniqueItems":true}
+      },
+      "additionalProperties":false
+    },
+    "commercial": {
+      "type":"object",
+      "required":["tier"],
+      "properties": {
+        "tier":{"type":"string","minLength":1},
+        "pilot_free_months":{"type":["integer","null"],"minimum":0},
+        "billing_note":{"type":["string","null"]}
+      },
+      "additionalProperties":true
+    },
+    "source_intent": {
+      "type":"object",
+      "required":["business_or_domain_label"],
+      "properties": {
+        "business_or_domain_label":{"type":"string","minLength":1},
+        "intended_first_use":{"type":["string","null"]},
+        "candidate_hostname":{"type":["string","null"]},
+        "candidate_hostname_verification":{"enum":["verified","unverified","not_applicable",null]}
+      },
+      "additionalProperties":true
+    },
+    "onboarding": {
+      "type":"object",
+      "properties": {
+        "primary_channel_preference":{"type":["string","null"]},
+        "first_contact_configuration":{"type":["string","null"]}
+      },
+      "additionalProperties":true
+    },
+    "side_effect_policy": {
+      "type":"object",
+      "properties": {
+        "repository_creation_authorized":{"type":"boolean"},
+        "paid_provider_purchase_authorized":{"type":"boolean"},
+        "domain_or_dns_change_authorized":{"type":"boolean"}
+      },
+      "additionalProperties":false
+    }
+  },
+  "additionalProperties":false
+}
