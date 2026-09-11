@@ -73,6 +73,8 @@ Authoritative OMEGA/FACTORY standard:
 - `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` is frozen as the current reusable **v1.1** engineering contract for future ARC replication; v1.1 aligns the inherited maturity gates to canonical RYZ3N V1→V6 doctrine and generalizes VONDA-specific identifiers.
 - `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT-OMEGA-FACTORY-AMENDMENT.md` is a mandatory inheritance amendment from 2026-09-11 requiring OMEGA + FACTORY registration during creation for every future ARC instantiated from the blueprint.
 - The Golden Blueprint + mandatory amendment cover identity/isolation, fail-closed access, onboarding, memory/Brain boundaries, ARC↔stewardship, scoped credentials, recovery, capacity telemetry, the 10-Standard-ARC model-pool safety ceiling, V1→V6 maturity/aura, form/aura separation, ownership-transfer reset semantics, OMEGA/FACTORY birth registration and real-vs-simulated evidence distinction.
+- Cargo ARC now has an isolated live Hermes profile/gateway, live privacy-safe telemetry evidence, a recorded model-capacity pool and fail-closed identity behavior; live owner/co-founder binding and V1 maturity verification remain pending.
+- NARC is Founder-authorized as the next ARC after Cargo and is reserved in PRIME/OMEGA/FACTORY as **pre-creation only**, not as a registered/live ARC.
 
 ## OMEGA / FACTORY current stewardship reality
 
@@ -98,7 +100,7 @@ authorized creation
   → truthful lifecycle state
 ```
 
-Registration is not activation. FACTORY/OMEGA presence is evidence of registered lifecycle visibility only.
+Registration is not activation. FACTORY/OMEGA presence is evidence of registered lifecycle visibility only. A pre-creation reservation is even earlier: it preserves explicit Founder intent/sequence without claiming registration or runtime.
 
 ## Cargo ARC — ARC #2 replication round
 
@@ -110,8 +112,8 @@ Current truthful state:
 
 - ARC ID: `cargo`;
 - Cargo domain source: `Javalin13/CargoConnect`;
-- creation/reconciliation PR: `Javalin13/CargoConnect#24`;
-- repository/domain overlay and machine-readable access/instance contracts: **prepared**;
+- creation/reconciliation PR: `Javalin13/CargoConnect#24`, merged;
+- repository/domain overlay and machine-readable access/instance contracts: **prepared/merged**;
 - ARC-side OMEGA/FACTORY record: `Javalin13/CargoConnect/arc/OMEGA-FACTORY-REGISTRATION.md`;
 - OMEGA registration: **active**;
 - PRIME FACTORY entry: **active**;
@@ -124,12 +126,50 @@ Current truthful state:
 - Maria: Cargo Connect-scoped co-founder strategic/executive/operational scope, without automatic Jan-private, unrelated-ARC, cross-ARC-admin or Owner-only RYZ3N control access;
 - Cargo Connect governance: Jan and Maria remain equal co-founders; system access does not alter corporate founder standing;
 - specialist Cargo Brains: **none prebuilt**; canonical necessity/evidence lifecycle applies;
-- target maturity: **V1 Foundation / Blue aura**;
-- runtime, live identity binding, capacity-pool assignment, Cargo telemetry, health/recovery and V1 evidence: **pending PRIME's bounded provisioning/evidence round**.
+- isolated Hermes profile/runtime: **live** at `~/.hermes/profiles/cargo/`;
+- Cargo gateway: **live** with Cargo identity/task-store/capacity-telemetry/onboarding plugins loaded;
+- Cargo runtime provisioning: **GREEN** per bridge evidence;
+- model-capacity pool: **`ollama-cloud/minimax-m3-shared`** under the 10-Standard-ARC safety ceiling;
+- Cargo telemetry/health/recovery: **live evidence present**;
+- isolation verification: **GREEN** against VONDA/PRIME boundaries recorded in PRIME evidence;
+- unknown identity behavior: **fail-closed live-verified**;
+- live Jan/Maria Telegram identity binding: **pending explicit validated operator approval**;
+- maturity: **V1 Foundation target / Blue aura target, not yet maturity-verified**; live runtime evidence does not itself equal earned V1/aura until the validation gate closes.
 
-Cargo ARC is therefore **registered + repository-prepared but not yet runtime-GREEN**. It must not be represented as an operational V1 until the real runtime/access/isolation/evidence gate closes.
+Cargo ARC is therefore **registered + runtime-provisioned with live evidence, but still binding/maturity-verification pending**. It must not be represented as an earned operational V1/Blue until the remaining evidence gate closes.
 
 Cargo ARC is also the first real post-VONDA test of how much of the Golden Blueprint + OMEGA/FACTORY birth contract is repeatable without copying VONDA private state or creating an architectural fork.
+
+## NARC — next authorized ARC / planned ARC #3
+
+Founder authorized **NARC** on 2026-09-11 as the next ARC to be created after Cargo.
+
+Current truthful state:
+
+- intended ARC ID: `narc`;
+- display name: **NARC**;
+- intended owner/customer: Narek, fitness coach;
+- initial intended role: support Narek's business and reconstruct/revamp his website/interface through the ARC operating model;
+- creation sequence: **next after Cargo ARC**;
+- PRIME pre-creation mirror: `Javalin13/prime-vps-migration/ARCS/NARC/README.md`;
+- FACTORY: **pre-creation queue only**, not active instance registry;
+- OMEGA: **pre-creation queue only**, not active registration;
+- source repository/path: **not yet prepared/evidenced**;
+- runtime/capacity/binding: **not yet provisioned/assigned/bound**;
+- maturity/aura: **not yet claimed**.
+
+Commercial pilot structure offered to Narek:
+
+- first **6 months free**;
+- then **€50/month** or **€500/year** under Standard scope/fair-use rules;
+- Narek indicated he would be willing to pay even before the free period ends;
+- that willingness is positive willingness-to-pay evidence but does not automatically alter the offered free period unless Founder and Narek explicitly revise the agreement.
+
+This is a Founder-authorized pilot exception, not a replacement for canonical Standard pricing or V1→V6 maturity rules.
+
+Authoritative current commercial/queue note:
+
+`12-arc-productization/ARC-COMMERCIAL-PIPELINE-2026-09-11.md`
 
 ## Manual now → automated later
 
@@ -159,7 +199,7 @@ authorized ARC request
 
 The current durable automation backlog is `12-arc-productization/PROVISIONING-BACKLOG.md`, and the future native generator remains the RYZ3N **ARC Factory** concept under `07-runtime-scaffolding/apps/arc-factory/`.
 
-Cargo ARC #2 is being used as real replication evidence to determine the minimum stable automated factory contract before full automation. This preserves the existing rule: automate repeated/safety-critical patterns, not speculation.
+Cargo ARC #2 is being used as real replication evidence to determine the minimum stable automated factory contract before full automation. NARC is the next planned manual/evidence-producing replication unless the Founder changes sequence. This preserves the existing rule: automate repeated/safety-critical patterns, not speculation.
 
 ## Active commercial validation
 
@@ -172,16 +212,37 @@ Current customer-facing position:
 Initial launch model:
 
 - VONDA remains the reference/tutorial ARC and exceptional founding pilot.
-- The next commercial validation cohort is **Founding 20**: recruit 10–20 real paying entrepreneurs primarily through trusted/direct channels before broad paid acquisition.
+- NARC is an additional Founder-authorized pilot/validation case with a six-month-free introduction before canonical Standard pricing.
+- The next broader commercial validation cohort is **Founding 20**: recruit 10–20 real paying entrepreneurs primarily through trusted/direct channels before broad paid acquisition.
 - Founding-20 working offer: **€49/month**, rate locked while continuously subscribed, within Standard scope/fair-use rules.
 - Normal ARC Standard pricing remains **€50/month or €500/year**.
 - Standard includes predictable normal AI usage; customers should not need to manage their own API keys or receive surprise pass-through model bills.
 - Standard is **not unlimited AI** and does not include structurally heavy autonomous/bulk workloads, unlimited custom integration work, dedicated model capacity or unlimited human support.
 - Paid acquisition should scale only after repeatable onboarding, retained usage, support burden, model capacity and unit economics are evidenced.
 
+### KMS7 Cars / Adnan — open ARC-based commercial follow-up
+
+Founder sent Adnan a voice-message follow-up on 2026-09-11 after the prior bespoke proposal did not receive a response.
+
+Current offer direction:
+
+- earlier bespoke proposal referenced by Founder: approximately **€17,000**;
+- new concept: substantially cheaper **Telegram-first ARC/robot system** to handle the necessary business-support/automation scope;
+- working recurring price communicated: approximately **€150–€170/month**;
+- current status: **outreach sent / awaiting reply**;
+- KMS7 is **not** a closed customer, accepted subscription, booked revenue, registered ARC or authorized runtime yet.
+
+The Founder's “100 times cheaper” wording is treated as qualitative sales framing, not literal accounting equivalence between a one-time bespoke project and a recurring subscription.
+
+If Adnan responds positively, define exact scope, integrations, support burden, privacy/access boundaries and commercial tier/exception before ARC creation authorization. The higher recurring price versus Standard may reflect heavier integration/support requirements and must not silently redefine Standard.
+
 Canonical commercial operating plan:
 
 `12-arc-productization/ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md`
+
+Current pipeline note:
+
+`12-arc-productization/ARC-COMMERCIAL-PIPELINE-2026-09-11.md`
 
 Cross-repo A→Z map:
 
@@ -234,8 +295,10 @@ When any such ARC is actually instantiated/migrated into the autonomous ARC runt
 The following remain open evidence gates:
 
 - full `VONDA_REFERENCE_ARC_COMPLETE = GREEN`, because it still requires Laetitia's real primary-user cycle;
-- Cargo ARC runtime replication and V1 evidence until PRIME closes the current provisioning round;
-- automated/bulk native RYZ3N ARC Factory provisioning for future ARC #3+;
+- Cargo ARC live owner/co-founder binding and V1 maturity evidence until the remaining validation closes;
+- NARC ARC-side source preparation, OMEGA/FACTORY active registration, runtime provisioning and V1 evidence;
+- KMS7 commercial acceptance/conversion and any resulting ARC authorization;
+- automated/bulk native RYZ3N ARC Factory provisioning for future ARCs;
 - operational replication of Fleet ARC from the Golden Blueprint;
 - safe real multi-ARC VPS density under meaningful concurrent use;
 - real capacity behavior with 5–10 simultaneously active Standard ARCs;
@@ -251,22 +314,24 @@ The Golden Blueprint, OMEGA and FACTORY are major reusable operating milestones.
 ## Current execution priority
 
 1. Keep VONDA ready and await the real primary-user cycle without manufacturing new gates; maintain OMEGA + FACTORY registration coherently.
-2. Complete Cargo ARC's bounded provisioning/evidence round as ARC #2 with OMEGA + FACTORY already present from birth, without architectural fork or cross-ARC data leakage.
+2. Close Cargo ARC's remaining validated identity-binding/V1 evidence work without architectural fork or cross-ARC data leakage.
 3. Measure what Cargo replication required manually: provisioning steps, time, intervention, OMEGA/FACTORY registration, isolation checks, access binding, telemetry and recovery.
-4. Convert repeated/safety-critical replication work into the provisioning template/automated ARC Factory backlog.
-5. Recruit real Founding customers deliberately; do not pre-create 20 empty ARCs.
-6. Register every future authorized ARC with OMEGA + FACTORY during creation.
-7. Measure provisioning time, support time, usage, latency, incidents, retention and direct/allocated costs from the first customer onward.
-8. Promote only generalized, privacy-safe lessons into shared RYZ3N productization.
-9. Scale distribution only when evidence supports it.
+4. Create **NARC next** through the Golden Blueprint + mandatory OMEGA/FACTORY birth contract; move it from pre-creation queue to active registration only when the required source/evidence exists.
+5. Convert repeated/safety-critical replication work into the provisioning template/automated ARC Factory backlog.
+6. Keep KMS7 as an open commercial lead until Adnan responds; if positive, scope and authorize before creating/registering anything.
+7. Recruit real Founding customers deliberately; do not pre-create 20 empty ARCs.
+8. Register every future authorized ARC with OMEGA + FACTORY during creation.
+9. Measure provisioning time, support time, usage, latency, incidents, retention and direct/allocated costs from the first customer onward.
+10. Promote only generalized, privacy-safe lessons into shared RYZ3N productization.
+11. Scale distribution only when evidence supports it.
 
 ## Source-of-truth order for current work
 
 1. Founder decisions + canonical doctrine in `Javalin13/ryzen-continuity`.
 2. This current-reality overlay and `12-arc-productization/ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md`.
-3. Current Founder-directed standards inside `12-arc-productization/`, including `OMEGA-ARC-FACTORY-STEWARDSHIP-STANDARD.md`.
+3. Current Founder-directed standards inside `12-arc-productization/`, including `OMEGA-ARC-FACTORY-STEWARDSHIP-STANDARD.md` and `ARC-COMMERCIAL-PIPELINE-2026-09-11.md`.
 4. `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` **v1.1 + mandatory OMEGA/FACTORY amendment or later Founder-approved version** for the reusable reference implementation contract.
-5. Active ARC domain repositories/bridges for the current execution round (`VONDA-Corporation`, `CargoConnect`).
+5. Active ARC domain repositories/bridges for the current execution round (`VONDA-Corporation`, `CargoConnect`); NARC receives its own source pointer when creation begins.
 6. PRIME current `SOUL.md`, `FACTORY.md`, OMEGA registry, comms and per-ARC stewardship files for prototype execution behavior.
 7. Historical June roadmap/migration/foundation files as provenance, interpreted through the current overlays.
 
