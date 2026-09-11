@@ -5,7 +5,7 @@
 type: current-reality-overlay
 status: active-reference
 created: 2026-09-03
-last_verified: 2026-09-10
+last_verified: 2026-09-11
 classification: reality + active-execution + approved-architecture + commercial-validation
 historical_docs_preserved: true
 amendable: true-additively
@@ -44,7 +44,7 @@ Domain / Project → Intent → Activity → Brain → Agents / Tools → Execut
 
 This is an implementation view, not a replacement ontology.
 
-## Proven / operational as of 2026-09-10
+## Proven / operational as of 2026-09-11
 
 - PRIME operates as the Founder's execution/operator node on the VPS and is reachable through Telegram.
 - PRIME uses durable repository/state/checkpoint patterns rather than relying only on transient chat context.
@@ -59,6 +59,52 @@ This is an implementation view, not a replacement ontology.
 - `VONDA_CAPACITY_TELEMETRY = GREEN` is closed.
 - `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` is frozen as the current reusable **v1.1** engineering contract for future ARC replication; v1.1 aligns the inherited maturity gates to canonical RYZ3N V1→V6 doctrine and generalizes VONDA-specific identifiers.
 - The Golden Blueprint includes identity/isolation, fail-closed access, onboarding, memory/Brain boundaries, ARC↔stewardship, scoped credentials, recovery, capacity telemetry, the 10-Standard-ARC model-pool safety ceiling, V1→V6 maturity/aura, form/aura separation, ownership-transfer reset semantics and real-vs-simulated evidence distinction.
+
+## Cargo ARC — ARC #2 replication round
+
+Founder authorized **Cargo ARC** on 2026-09-11 as the ARC serving the Cargo Connect domain.
+
+Current truthful state:
+
+- ARC ID: `cargo`;
+- Cargo domain source: `Javalin13/CargoConnect`;
+- creation/reconciliation PR: `Javalin13/CargoConnect#24`;
+- repository/domain overlay and machine-readable access/instance contracts: **prepared**;
+- preliminary Cargo-specific PRIME interpretation: **rejected/superseded**;
+- PRIME relationship: **same existing PRIME**, current prototype operator/steward only;
+- Jan: Cargo Owner/full scope plus route to already-authorized broader RYZ3N/PRIME/Nexus capability;
+- Maria: Cargo Connect-scoped co-founder strategic/executive/operational scope, without automatic Jan-private, unrelated-ARC, cross-ARC-admin or Owner-only RYZ3N control access;
+- Cargo Connect governance: Jan and Maria remain equal co-founders; system access does not alter corporate founder standing;
+- specialist Cargo Brains: **none prebuilt**; canonical necessity/evidence lifecycle applies;
+- target maturity: **V1 Foundation / Blue aura**;
+- runtime, live identity binding, capacity-pool assignment, Cargo telemetry, health/recovery and V1 evidence: **pending PRIME's bounded provisioning/evidence round**.
+
+Cargo ARC is therefore **repository-prepared but not yet runtime-GREEN**. It must not be represented as an operational V1 until the real runtime/access/isolation/evidence gate closes.
+
+Cargo ARC is also the first real post-VONDA test of how much of the Golden Blueprint is repeatable without copying VONDA private state or creating an architectural fork.
+
+## Manual now → automated later
+
+ARC creation is currently being executed deliberately and manually between Founder/Lux/PRIME for the first replications so the system can observe what genuinely repeats and what must remain configurable.
+
+The planned mature direction remains automatic/repeatable ARC provisioning:
+
+```text
+authorized ARC request
+  → validate creation/governance/access
+  → instantiate isolated ARC identity/runtime/config
+  → bind approved users/channels
+  → establish memory/secrets/permissions
+  → assign model-capacity pool
+  → activate telemetry/health/recovery
+  → validate isolation + functional path
+  → register under RYZ3N/PRIME stewardship
+  → live V1 evidence
+```
+
+The current durable automation backlog is `12-arc-productization/PROVISIONING-BACKLOG.md`, and the future native generator remains the RYZ3N **ARC Factory** concept under `07-runtime-scaffolding/apps/arc-factory/`.
+
+**Automatic ARC Factory provisioning is not yet operational.** Cargo ARC #2 is being used as real replication evidence to determine the minimum stable factory contract before full automation. This preserves the existing rule: automate repeated/safety-critical patterns, not speculation.
 
 ## Active commercial validation
 
@@ -114,13 +160,16 @@ Founder lifecycle rule:
 
 A cosmetic factory-form reset does not change maturity/aura. Ownership transfer alone does not automatically force V1; however, a transfer that genuinely empties/removes the owner-specific competence/evidence supporting the mature state returns that ARC to **V1 Foundation / Blue** for the new Owner.
 
+A future Telegram/profile robot image or visual form may be designed for a target maturity, but the product/runtime must not claim an earned aura until the corresponding maturity evidence is valid.
+
 ## Still not proven — do not overclaim
 
 The following remain open evidence gates:
 
 - full `VONDA_REFERENCE_ARC_COMPLETE = GREEN`, because it still requires Laetitia's real primary-user cycle;
-- automated bulk ARC provisioning for ARC #2+;
-- operational replication of Fleet ARC and Cargo ARC from the Golden Blueprint;
+- Cargo ARC runtime replication and V1 evidence until PRIME closes the current provisioning round;
+- automated/bulk ARC Factory provisioning for future ARC #3+;
+- operational replication of Fleet ARC from the Golden Blueprint;
 - safe real multi-ARC VPS density under meaningful concurrent use;
 - real capacity behavior with 5–10 simultaneously active Standard ARCs;
 - 30/60/90-day retention for a paid external entrepreneur cohort;
@@ -135,12 +184,13 @@ The Golden Blueprint is a major reusable engineering milestone. It is **not** ev
 ## Current execution priority
 
 1. Keep VONDA ready and await the real primary-user cycle without manufacturing new gates.
-2. Prepare repeatable commercial onboarding/provisioning from the current Golden Blueprint.
-3. Recruit real Founding customers deliberately; do not pre-create 20 empty ARCs.
-4. Measure provisioning time, support time, usage, latency, incidents, retention and direct/allocated costs from the first customer onward.
-5. Promote only generalized, privacy-safe lessons into shared RYZ3N productization.
-6. Automate repeated work before adding avoidable human operations.
-7. Scale distribution only when evidence supports it.
+2. Complete Cargo ARC's bounded provisioning/evidence round as ARC #2 without architectural fork or cross-ARC data leakage.
+3. Measure what Cargo replication required manually: provisioning steps, time, intervention, isolation checks, access binding, telemetry and recovery.
+4. Convert repeated/safety-critical replication work into the provisioning template/ARC Factory backlog.
+5. Recruit real Founding customers deliberately; do not pre-create 20 empty ARCs.
+6. Measure provisioning time, support time, usage, latency, incidents, retention and direct/allocated costs from the first customer onward.
+7. Promote only generalized, privacy-safe lessons into shared RYZ3N productization.
+8. Scale distribution only when evidence supports it.
 
 ## Source-of-truth order for current work
 
@@ -148,10 +198,10 @@ The Golden Blueprint is a major reusable engineering milestone. It is **not** ev
 2. This current-reality overlay and `12-arc-productization/ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md`.
 3. Current Founder-directed standards inside `12-arc-productization/`.
 4. `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` **v1.1 or later** for the frozen reusable reference implementation contract.
-5. Active VONDA bridge files for the current reference-ARC execution round.
+5. Active ARC domain repositories/bridges for the current execution round (`VONDA-Corporation`, `CargoConnect`).
 6. PRIME current SOUL/comms/ARCS stewardship files for prototype execution behavior.
 7. Historical June roadmap/migration/foundation files as provenance, interpreted through the current overlays.
 
 ## Core guardrail
 
-> **Proof before scale. Canon before prototype hierarchy. Product promise must match runtime evidence. Share capability, not private payload. Founder receives the command view; PRIME and Lux exchange the engineering view through the bridge.**
+> **Proof before scale. Canon before prototype hierarchy. Product promise must match runtime evidence. Share capability, not private payload. Founder receives the command view; PRIME and Lux exchange the engineering view through the bridge. Build manually to learn; automate what proves repeatable.**
