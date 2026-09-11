@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ryz3n://arc-factory-birth-manifest/v1.1",
+  "$id": "ryz3n://arc-factory-birth-manifest/v1.2",
   "title": "RYZ3N ARC Factory Birth Manifest",
   "type": "object",
   "required": [
@@ -14,6 +14,7 @@
     "language",
     "commercial",
     "runtime",
+    "hermetic_seal",
     "visual",
     "registries",
     "maturity",
@@ -59,7 +60,43 @@
       "additionalProperties":false
     },
     "commercial": {"type":"object"},
-    "runtime": {"type":"object"},
+    "runtime": {
+      "type":"object",
+      "properties": {
+        "status":{"type":"string"},
+        "isolation_required":{"type":"boolean"},
+        "secrets_outside_git":{"type":"boolean"},
+        "unknown_identity_behavior":{"type":"string"},
+        "pending_candidate_model":{"type":["string","null"]},
+        "model_capacity_pool":{},
+        "primary_channel":{},
+        "repository_autonomy":{"type":["string","boolean", "null"]},
+        "client_installs_prime":{"type":["boolean","null"]}
+      },
+      "additionalProperties":true
+    },
+    "hermetic_seal": {
+      "type":"object",
+      "required":[
+        "status",
+        "canonical_standard",
+        "required_before_runtime_ready",
+        "autonomy_rule",
+        "safe_shared_writer_required_if_autonomy_granted",
+        "maturity_promotion_implied"
+      ],
+      "properties": {
+        "status":{"enum":["inherited_pre_runtime","hardening_in_progress","GREEN","DRIFT","RED"]},
+        "contract":{"type":["string","null"]},
+        "canonical_standard":{"type":"string","minLength":1},
+        "golden_blueprint_amendment":{"type":["string","null"]},
+        "required_before_runtime_ready":{"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+        "autonomy_rule":{"type":"string","minLength":1},
+        "safe_shared_writer_required_if_autonomy_granted":{"type":"boolean"},
+        "maturity_promotion_implied":{"const":false}
+      },
+      "additionalProperties":true
+    },
     "visual": {"type":"object"},
     "registries": {"type":"object"},
     "maturity": {"type":"object"},
