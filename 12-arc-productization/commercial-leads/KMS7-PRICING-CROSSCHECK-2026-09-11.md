@@ -16,58 +16,52 @@ entitlement_if_accepted: arc-business
 ---
 ```
 
-## Original pricing question
+## Current conclusion
 
-Does the approximately **€150–€170/month** figure communicated to Adnan match the canonical ARC tier ladder?
+KMS7 is Business-class in scope. If Adnan accepts, the Founder-authorized exception is **€170/month**, while normal future Business remains **€250/month / €2,500/year**.
 
-## Canonical tier answer
+The €170 exception does not create a new public tier.
 
-No. The canonical ladder remains:
+## Corrected Business entitlement
 
-- **ARC Standard** — €50/month or €500/year.
-- **ARC Pro** — €120/month or €1,200/year.
-- **ARC Business** — €250/month or €2,500/year.
-- **ARC Dedicated** — from €5,000/year.
-- **ARC Enterprise** — custom, working floor approximately €10,000/year.
-
-KMS7's known business requirements map most naturally to **ARC Business**.
-
-## Founder superseding commercial decision — 2026-09-11
-
-The Founder clarified that the earlier communicated price was intentionally meant to cover the **complete currently known KMS7 scope**, not only a reduced introductory Phase 1.
-
-Founder decision:
-
-- final intended recurring price for KMS7 if Adnan accepts: **€170/month**;
-- KMS7 is treated as the **first Business-class client / Founding Business exception**;
-- KMS7 receives **ARC Business entitlements** at that exception price;
-- the full currently known KMS7 Business scope is included at that price;
-- future comparable Business clients remain at canonical **€250/month / €2,500/year** unless another explicit exception is approved;
-- this exception does **not** create a €170 tier and does **not** change `PRICING.md`.
-
-## Business entitlement attached to the KMS7 exception
-
-If accepted and authorized, KMS7 receives:
+KMS7 receives, if accepted and authorized:
 
 - **15 GB managed ARC storage**;
-- **15,000 ARC Usage Units (AU) / month** (~15M model-token-equivalent);
-- up to **10 authorized users**;
-- up to **3 primary channels**;
-- up to **10 external integrations**;
+- **30,000 AU/month**;
+- current AU normalization: **1 AU = €0.001 provider-list-price-equivalent AI consumption**;
+- therefore Business AI envelope = **€30 normalized AI capacity/month**;
+- up to **10 users**;
+- up to **3 channels**;
+- up to **10 integrations**;
 - up to **40 active automations**;
-- Business-class shared infrastructure/capacity placement, with dedicated/isolation treatment only when technically required or separately agreed.
+- **6 weighted shared-capacity slots**.
 
-AI allowance resets monthly. Storage persists. Warn around 80%. At 100%, do not silently bill overage; use reset, agreed capacity add-on or a later tier/infrastructure decision.
+AU is not a fixed token count. Efficient models can provide substantially more raw tokens; premium models consume AU faster.
 
-External Google Drive/dispatch/SaaS data does not count against the 15 GB while it stays external. Persistent ARC-side copies/mirrors do count.
+## Why this is economically coherent
 
-The authoritative entitlement standard is:
+Current public Ollama new-plan pricing checked 2026-09-11 shows Pro at $20/month with $60 monthly usage credits and 3 concurrent requests. The shared-pool model assigns 10 Standard-equivalent slots per pool. KMS7 Business consumes 6 of those slots.
 
-`../ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+The Founder direct-operational-cost target remains **≤€50/month**. Current VPS/model-subscription allocation can fit below that target if concurrency and third-party variable spend remain controlled, but this must be verified from real telemetry.
+
+## API / platform-cost boundary
+
+KMS7's 10 integration slots do **not** include unlimited third-party vendor spend.
+
+Default rule:
+
+- paid provider subscriptions/API/message/transaction costs are customer-funded;
+- RYZ3N-funded variable third-party spend is **€0 by default** unless a specific capped allowance is explicitly agreed;
+- free-tier/free-call integrations may operate normally;
+- no Agent/Brain/ARC can autonomously buy credits, seats, phone numbers, message packs, storage or provider capacity;
+- any RYZ3N-funded provider allowance warns at 80% and hard-stops at 100%;
+- recurring automations must have retry/concurrency/runaway-spend controls.
+
+A customer preference for a more expensive platform does not automatically transfer its cost to RYZ3N.
 
 ## Known KMS7 scope
 
-The known KMS7 scope includes, subject to final acceptance/freeze:
+Subject to final acceptance/freeze:
 
 - car dealer + taxi-company operational support;
 - Telegram assistant/robot interface;
@@ -75,57 +69,32 @@ The known KMS7 scope includes, subject to final acceptance/freeze:
 - driver document and expense handling;
 - vehicle/insurance tracking;
 - marketing/business assistance;
-- multiple business workflows;
-- the previously discussed integration relationship with the existing dispatch application.
+- multiple workflows;
+- discussed integration relationship with the existing dispatch application.
 
-“Full scope” means the currently discussed/agreed KMS7 requirement set. It does not mean unlimited future feature requests, unlimited support, unlimited usage, dedicated infrastructure by default or materially new work added after agreement.
+“Full scope” does not mean unlimited future feature requests, unlimited support, unlimited AI consumption, unlimited third-party API spend or automatic Dedicated infrastructure.
 
 ## Unit economics
 
-Founder working assumption:
+Founder working target:
 
-- recurring revenue: **€170/month**;
-- direct operational cost ceiling target: **≤ €50/month**;
-- direct contribution if that ceiling holds: **≥ €120/month** before Founder support time, shared overhead, tax and administrative cost.
-
-A conservative internal planning figure of approximately €100/month contribution can be used if an additional ~€20/month buffer is reserved, but the direct arithmetic at €170 revenue and €50 direct cost is €120.
-
-The €50 cost ceiling must be verified from real KMS7 usage. It is not yet evidence.
-
-## Commercial rationale
-
-The exception is commercially coherent as a first Business validation case if it produces real evidence on:
-
-- business-class ARC provisioning;
-- integration/support burden;
-- actual per-client model/infrastructure cost;
-- real consumption against the 15,000 AU / 15 GB Business envelope;
-- customer retention and willingness to pay;
-- scope discipline;
-- whether future Business pricing at €250/month has healthy contribution.
-
-The learning value and early reference-client value are part of why the Founder may intentionally price KMS7 below the standard Business rate.
+- revenue: **€170/month**;
+- direct operational cost ceiling: **≤€50/month**;
+- direct contribution if ceiling holds: **≥€120/month** before Founder support time, shared overhead, tax/admin.
 
 ## Guardrails
 
-- Do not change ARC Business from €250/month globally.
-- Do not represent €170 as ARC Pro, Business public pricing, Dedicated or a new formal tier.
-- Record it as a **Founder-authorized Founding Business exception with Business entitlements**.
+- Business public price remains €250/month.
+- KMS7 exception is customer-specific.
 - If Adnan never accepts, there is no contract or revenue.
-- If he accepts, freeze the included known scope before ARC creation.
-- Business entitlement still has numeric usage limits; “full scope” does not mean unlimited consumption.
-- Materially new post-agreement scope remains separately reviewable.
-- Measure actual cost/support burden from activation onward.
+- If he accepts, freeze included scope and integration billing ownership before ARC creation.
+- Measure AU, pool allocation, VPS, any RYZ3N-funded vendor spend, support and incidents from activation.
 
 ## Related sources
 
 - `KMS7-CARS-ARC-PROPOSAL-2026-09-11.md`
 - `../ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+- `../ARC-VARIABLE-COST-AND-API-BOUNDARY.md`
+- `../COST-CAPACITY-MODEL.md`
 - `../PRICING.md`
-- `../ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md`
-- `../ARC-COMMERCIAL-PIPELINE-2026-09-11.md`
 - `Javalin13/prime-vps-migration/ARCS/FOUNDER-DIRECTIVE-2026-09-11-NARC-AND-KMS7-COMMERCIAL-QUEUE.md`
-
-## Current conclusion
-
-> **KMS7 = Business-class scope + Business entitlement at a one-off founding price of €170/month if accepted. Future comparable Business clients = €250/month. The exception validates the Business model; it does not redefine it.**
