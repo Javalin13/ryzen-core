@@ -5,8 +5,9 @@
 type: arc-brain-lifecycle-standard
 status: founder-directed-additive-architecture
 created: 2026-09-09
+updated: 2026-09-11
 classification: approved-architecture + runtime-governance
-scope: autonomous ARC nodes, specialist Brain creation, GitHub continuity, PRIME stewardship, future RYZ3N inheritance
+scope: autonomous ARC nodes, specialist Brain creation, GitHub continuity, PRIME stewardship, OMEGA ARC stewardship, future RYZ3N inheritance
 canonical_refs:
   - Javalin13/ryzen-continuity/00-governance/INTERPRETATION-PROTOCOL.md
   - Javalin13/ryzen-continuity/02-ryzen/RYZEN-CANONICAL.md
@@ -16,6 +17,7 @@ canonical_refs:
   - Javalin13/ryzen-continuity/03-hermes/RELATIONSHIP-TO-RYZEN.md
 runtime_refinement:
   - Javalin13/ryzen-core/12-arc-productization/ARC-OWNER-DOMAIN-INTENT-ACTIVITY-HIERARCHY.md
+  - Javalin13/ryzen-core/12-arc-productization/OMEGA-ARC-FACTORY-STEWARDSHIP-STANDARD.md
 ---
 ```
 
@@ -34,6 +36,13 @@ The canonical ontology remains:
 `Creator → RYZ3N → ARCs → Brains → Agents → Execution`
 
 The Domain/Project → Intent → Activity chain is an instance-level runtime refinement beneath the ARC layer, not a replacement canonical tier.
+
+PRIME stewardship is now separated operationally into:
+
+- **OMEGA** for ARC-level lifecycle/population stewardship;
+- **BRAIN STEWARD** for Brain-level lifecycle/interconnection stewardship.
+
+Neither is a new canonical tier.
 
 ## Context-resolution rule
 
@@ -70,7 +79,9 @@ A one-off prompt, document, reminder, tool call or simple workflow is not enough
 
 The ARC follows:
 
-`Domain/Project resolved → Owner Intent resolved → Activity identified → reasoning need observed → existing Brain match OR candidate Brain → scope/authority check → GitHub Brain folder/contract → PRIME BRAIN STEWARD bounded registration → runtime routing if needed → Agent delegation → Execution → evidence returns upward → three-pass validation → status promotion`
+`Domain/Project resolved → Owner Intent resolved → Activity identified → reasoning need observed → existing Brain match OR candidate Brain → scope/authority check → GitHub Brain folder/contract → PRIME BRAIN STEWARD bounded registration → OMEGA owning-ARC coherence check → runtime routing if needed → Agent delegation → Execution → evidence returns upward → three-pass validation → status promotion`
+
+OMEGA does not approve the Brain's reasoning. Its role in this sequence is only to verify that the owning ARC identity/lifecycle record remains coherent with BRAIN STEWARD's Brain registration.
 
 ## GitHub source-of-truth requirement
 
@@ -142,21 +153,36 @@ PRIME does not create client Brains as their owner and does not become their rea
 PRIME BRAIN STEWARD:
 
 - observes Brain lifecycle registrations;
-- keeps a bounded supervision mirror;
+- keeps bounded Brain supervision metadata;
 - verifies Domain/Project → Intent → Activity → Brain mapping without ingesting private payloads;
-- verifies ownership, scope, Agent authority and interconnect coherence;
+- verifies Brain ownership, scope, Agent authority and interconnect coherence;
 - detects duplicate/conflicting Brain scopes;
 - checks that Brain creation serves real Owner intent/activity;
 - triggers constitutional checks after material change;
 - preserves upward evidence/convergence without copying private client memory;
-- records drift;
+- records Brain-level drift;
+- coordinates the owning ARC identity/lifecycle facts with OMEGA;
 - keeps the pattern transferable to future native RYZ3N stewardship.
+
+## OMEGA relationship
+
+OMEGA is PRIME's separate ARC-population steward.
+
+OMEGA does **not** own or reason for specialist ARC Brains. It:
+
+- confirms the Brain belongs to a registered ARC;
+- confirms the ARC appears in PRIME's `FACTORY.md` and OMEGA ARC registry;
+- receives only the bounded ARC-level lifecycle implications of material Brain changes;
+- coordinates ARC-level health/maturity/drift facts with BRAIN STEWARD;
+- escalates ARC-level contradictions or orphaned Brain ownership to PRIME.
+
+BRAIN STEWARD remains authoritative for Brain lifecycle supervision; OMEGA remains authoritative for ARC lifecycle supervision.
 
 ## Upward evidence flow
 
 Evidence must be able to return:
 
-`Execution → Agent → Brain → Activity result → Intent progress → Domain/Project state → ARC → PRIME/RYZ3N-readable convergence → Owner/Founder`
+`Execution → Agent → Brain → Activity result → Intent progress → Domain/Project state → ARC → OMEGA/BRAIN STEWARD bounded stewardship → PRIME/RYZ3N-readable convergence → Owner/Founder`
 
 Private payloads remain ARC-scoped; only authorized/generalized metadata and reusable lessons converge upward.
 
@@ -182,6 +208,7 @@ If any pass fails, surface drift, correct it, and rerun all three from PASS 1. A
 Mature RYZ3N should eventually provide native support for:
 
 - Owner/ARC context registry;
+- ARC Factory/identity/lifecycle registry;
 - Domain/Project state;
 - Intent/Activity routing;
 - Brain registration/lifecycle/versioning;
@@ -189,11 +216,12 @@ Mature RYZ3N should eventually provide native support for:
 - interconnect routing;
 - Agent ownership validation;
 - evidence convergence;
-- drift detection;
+- ARC + Brain drift detection;
+- OMEGA-equivalent ARC stewardship;
 - Brain Steward functionality.
 
 The ARC must not need redesign when responsibility moves from PRIME-mediated stewardship to native RYZ3N orchestration.
 
 ## Founder principle
 
-> One Owner is served by one coherent personal ARC instance. Domains and Projects give context. Intent states what the Owner wants. Activity states what must be done. The corresponding Brain provides specialized reasoning. Agents execute. Reality and evidence determine what deserves to exist.
+> One Owner is served by one coherent personal ARC instance. Domains and Projects give context. Intent states what the Owner wants. Activity states what must be done. The corresponding Brain provides specialized reasoning. Agents execute. OMEGA safeguards ARC lifecycle coherence, BRAIN STEWARD safeguards Brain coherence, and reality/evidence determine what deserves to exist.
