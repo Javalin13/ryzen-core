@@ -5,7 +5,7 @@
 type: arc-productization-index
 status: active-accumulation
 created: 2026-09-03
-updated: 2026-09-10
+updated: 2026-09-11
 classification: strategic-vision + research-and-exploration
 founder_direction: structure ARC pricing, costs, pilots, provisioning, capacity assumptions, commercialization and prototype experience in RYZ3N Core
 runtime_implementation_authorized: false
@@ -19,11 +19,18 @@ This folder is the canonical accumulation point in `ryzen-core` for the **produc
 
 It does **not** declare the RYZ3N runtime implemented. It documents the business/product layer learned from the PRIME architecture and external ARC pilots.
 
+There is no separate Horizon/Horizon Core platform layer. **RYZ3N is the sole canonical platform identity above ARCs.**
+
 ## Current product thesis
 
 - PRIME remains the Founder's execution/operator node and is not itself the commercial ARC product.
 - ARC nodes are intended to become personal/business operator nodes derived from repeatable infrastructure patterns proven through PRIME.
 - A client ARC is an **autonomous runtime node under PRIME supervision**, not merely another chat/session inside PRIME's own client runtime.
+- Every ARC has one authoritative source boundary, but **one ARC does not automatically require one standalone GitHub repository**.
+- RYZ3N-owned product/domain ARCs live with the product repository they serve: Cargo ARC → `CargoConnect/arc/`; future Fleet ARC → `FleetConnect/arc/`.
+- Customer/standalone-domain ARCs live in one appropriate private customer/domain repository: VONDA → `VONDA-Corporation/arc/`; future NARC → a Narek/customer-domain repo designated at birth.
+- `ryzen-core` owns reusable canon/schemas/standards and must not become a customer/product ARC payload dump.
+- PRIME/OMEGA/FACTORY keep bounded lifecycle/discovery pointers rather than becoming duplicate detailed ARC source repositories.
 - For early pilots, PRIME and client ARC nodes may share one physical VPS host, but each ARC should have its **own Hermes runtime/service identity, gateway lifecycle, channel adapter, workspace, memory, secrets, logs, checkpoints and restart boundary**.
 - The current PRIME + autonomous ARC runtime model is a **bounded prototype of the future RYZ3N ↔ ARC operating model**, not a competing ecosystem hierarchy.
 - PRIME currently bootstraps/supervises the runtime patterns; mature RYZ3N is intended to inherit native orchestration, governance, provisioning, continuity and cross-ARC coordination while PRIME becomes supervisor/mentor/execution steward.
@@ -50,6 +57,8 @@ It does **not** declare the RYZ3N runtime implemented. It documents the business
 ## Folder map
 
 - `ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md` — current cross-repo authority map aligning RYZ3N canon, PRIME stewardship, VONDA/Golden Blueprint, commercialization, pricing, usage, maturity, capacity, team roles, communication and scale gates.
+- `ARC-REPOSITORY-OWNERSHIP-AND-SOURCE-BOUNDARY-STANDARD.md` — canonical rule for where each ARC lives: product ARCs stay with their product repo, customer/standalone ARCs live in one customer/domain repo, RYZ3N Core stays universal, PRIME stays a bounded supervision plane, and no Horizon layer exists.
+- `OMEGA-ARC-FACTORY-STEWARDSHIP-STANDARD.md` — ARC-population stewardship, Factory lifecycle registry, repository/source-boundary classification, birth gate and PRIME mirror rules.
 - `ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md` — canonical actionable go-to-market: positioning, benchmark snapshot, Founding 20, usage/fair-use policy, capacity/commercial triggers, team responsibilities, KPIs, paid-ad scale gates and immediate execution sequence.
 - `PRICING.md` — current ARC tier model, Founding-20 launch price, usage promise and pricing principles.
 - `COST-CAPACITY-MODEL.md` — known shared infrastructure costs, direct-vs-overhead distinction, capacity assumptions, telemetry requirements and margin guardrails.
@@ -88,6 +97,27 @@ The feedback loop is:
 A useful experience must not disappear into chat history or anecdotal memory. Customer-specific confidential data stays private; only the generalized reusable lesson is promoted.
 
 The current runtime prototype must also preserve the canonical convergence discipline through local mission state, checkpoints, decisions, lessons, drift evidence, verification and continuation state so that future RYZ3N ingestion/migration does not require architectural reinvention.
+
+## Repository/source-boundary doctrine
+
+Before ARC birth registration, Factory/OMEGA classify where the ARC's authoritative source belongs:
+
+```text
+Does an appropriate authoritative domain repository already exist?
+  ├─ yes → use it and initialize the bounded arc/ package there
+  └─ no
+      ├─ RYZ3N-owned product/domain → create/use the product repo, then arc/
+      └─ customer/standalone domain → create/designate one private customer/domain repo, then arc/
+```
+
+Examples:
+
+- Cargo ARC → `Javalin13/CargoConnect/arc/`
+- future Fleet ARC → `Javalin13/FleetConnect/arc/`
+- VONDA ARC → `Javalin13/VONDA-Corporation/arc/`
+- future NARC → one Narek/customer-domain repository, then `arc/`
+
+One ARC must not have two simultaneously authoritative source repositories. Repository placement and runtime isolation are separate concerns.
 
 ## Commercial maturity doctrine
 
