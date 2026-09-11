@@ -5,8 +5,9 @@
 type: arc-brain-interconnect-standard
 status: founder-directed-additive-architecture
 created: 2026-09-09
+updated: 2026-09-11
 classification: approved-architecture + runtime-governance
-scope: autonomous ARC nodes, Brain registries, PRIME stewardship, future RYZ3N convergence
+scope: autonomous ARC nodes, Brain registries, PRIME stewardship, OMEGA ARC stewardship, future RYZ3N convergence
 canonical_refs:
   - Javalin13/ryzen-continuity/02-ryzen/RYZEN-CANONICAL.md
   - Javalin13/ryzen-continuity/02-ryzen/architecture/HIERARCHY.md
@@ -15,6 +16,7 @@ canonical_refs:
 related_standards:
   - 12-arc-productization/ARC-OWNER-DOMAIN-INTENT-ACTIVITY-HIERARCHY.md
   - 12-arc-productization/ARC-SELF-PROVISIONING-BRAIN-LIFECYCLE.md
+  - 12-arc-productization/OMEGA-ARC-FACTORY-STEWARDSHIP-STANDARD.md
 ---
 ```
 
@@ -52,6 +54,17 @@ Brains are **not** pre-seeded as a mandatory fixed taxonomy. The ARC selects an 
 
 Brain cooperation inside one ARC occurs through a bounded ARC-local interconnect contract. Cross-ARC interaction is promoted upward as generalized evidence/signals and stewarded by PRIME today, later by native RYZ3N convergence.
 
+## PRIME stewardship separation
+
+PRIME now uses two distinct stewardship functions:
+
+- **OMEGA** — ARC-population lifecycle stewardship: creation registration, identity, ownership, runtime/lifecycle state, health, drift, transfer/reset state, maturity/aura truth and portfolio reporting.
+- **BRAIN STEWARD** — Brain lifecycle/interconnect stewardship inside registered ARCs: Brain scope, ownership, Activity mapping, Agent authority, dependency and evidence coherence.
+
+`FACTORY.md` in PRIME is the master ARC creation/lifecycle register maintained through OMEGA.
+
+OMEGA is not an ARC. BRAIN STEWARD is not a canonical Brain above other Brains. Neither creates a new canonical tier.
+
 ## Source-of-truth placement
 
 Each client/personal ARC owns the implementation record of its specialist Brains in its own repository, for example:
@@ -64,7 +77,10 @@ PRIME keeps a **supervision mirror**, not a full private fork:
 
 ```text
 prime-vps-migration/
+├── FACTORY.md
 ├── BRAINS/
+│   ├── OMEGA/
+│   │   └── ARC-REGISTRY.md
 │   └── BRAIN-STEWARD/
 └── ARCS/
     └── <ARC-ID>/
@@ -79,16 +95,32 @@ prime-vps-migration/
 
 The supervision mirror may contain source commit pointers, non-sensitive Domain/Project identifiers/status, Brain identities/statuses, Activity classes, health, dependency metadata, generalized evidence, checkpoints and drift. It must not duplicate client-private memory, live secrets, raw confidential payloads or unrestricted client documents.
 
+## OMEGA
+
+`PRIME/BRAINS/OMEGA` is PRIME's operational ARC-population stewardship function.
+
+OMEGA must:
+
+- register every autonomous ARC during creation;
+- keep ARC identity/source/ownership/lifecycle records coherent;
+- ensure every ARC appears in PRIME `FACTORY.md` and the bounded `ARCS/<ARC-ID>/` supervision mirror;
+- track ARC-level health, maturity/aura truth, form/reset/transfer state and drift;
+- coordinate ARC-level facts with BRAIN STEWARD without ingesting private client payload;
+- report material ARC exceptions to PRIME;
+- keep PRIME as supervisor, not hidden RYZ3N replacement.
+
+OMEGA does not own client Brain reasoning and does not replace BRAIN STEWARD.
+
 ## BRAIN STEWARD
 
-`PRIME/BRAINS/BRAIN-STEWARD` is an operational stewardship function, not a new canonical tier and not a canonical Brain above other Brains.
+`PRIME/BRAINS/BRAIN-STEWARD` is an operational Brain-lifecycle/interconnect stewardship function, not a new canonical tier and not a canonical Brain above other Brains.
 
 It must:
 
 - observe/register self-provisioned Brain lifecycle changes;
 - verify every Brain maps to a real Owner Intent and Activity inside an ARC Domain/Project;
 - verify Domain/Project state is truthfully classified;
-- keep ARC/Brain registry coherence;
+- coordinate Brain registry facts with OMEGA's owning-ARC registry;
 - verify every Brain has one owning ARC and bounded reasoning scope;
 - prevent Brain-to-Brain circular authority or silent ARC reframing;
 - validate Agent ownership and external side-effect authority;
@@ -138,7 +170,9 @@ Activity result / Intent progress / Domain-Project state
   ↑
 ARC
   ↑
-PRIME BRAIN STEWARD / generalized evidence envelope
+OMEGA (ARC lifecycle/state) ↔ BRAIN STEWARD (Brain lifecycle/interconnect)
+  ↑
+PRIME / generalized evidence envelope
   ↑
 RYZ3N-readable convergence
 ```
@@ -147,11 +181,11 @@ Only generalized, authorized, non-confidential patterns move into shared intelli
 
 ## Bridge boundary
 
-Use PRIME ↔ Luxcalibur bridge for material architecture review, constitutional audits, unresolved drift/contradiction, material Brain role changes, evidence disputes, significant security/isolation changes, or Founder-directed review.
+Use PRIME ↔ Luxcalibur bridge for material architecture review, constitutional audits, unresolved drift/contradiction, material ARC or Brain role changes, evidence disputes, significant security/isolation changes, or Founder-directed review.
 
 Do not use it for normal Brain-to-Brain messages, routine runtime context exchange, task delegation inside one ARC, high-frequency event transport, private client data movement, or every ordinary self-provisioned Brain creation that remains safely inside delegated ARC scope.
 
-Routine lifecycle events are logged locally and mirrored to BRAIN STEWARD. Only material/review-worthy changes escalate through the bridge.
+Routine Brain lifecycle events are logged locally and mirrored to BRAIN STEWARD. Routine ARC lifecycle events are mirrored to OMEGA/FACTORY. Only material/review-worthy changes escalate through the bridge.
 
 ## Constitutional mapping
 
@@ -161,13 +195,13 @@ The architecture preserves:
 
 Current runtime mirror:
 
-`Founder/Owner → PRIME supervision → autonomous ARC instance → Domain/Project → Intent → Activity → corresponding Brain → Agents → Execution`
+`Founder/Owner → PRIME supervision [OMEGA ARC stewardship + BRAIN STEWARD Brain stewardship] → autonomous ARC instance → Domain/Project → Intent → Activity → corresponding Brain → Agents → Execution`
 
 PRIME stewardship is implementation infrastructure around the hierarchy, not an inserted ontology layer.
 
 ## Three-pass requirement
 
-After a material Brain creation, context-routing/interconnect change, Agent delegation change, cross-ARC integration or stewardship change:
+After a material ARC lifecycle change, Brain creation, context-routing/interconnect change, Agent delegation change, cross-ARC integration or stewardship change:
 
 1. **Canon / Reality** — read the relevant canons and verify what actually exists/runs.
 2. **Implementation alignment** — compare reality against canonical hierarchy and the Founder-approved runtime refinement.
@@ -177,4 +211,4 @@ After correction, rerun all three from Pass 1.
 
 ## Founder rule
 
-> One personal ARC instance serves one Owner coherently across Domains and Projects. Intent defines what the Owner wants. Activity defines what must be done. The corresponding Brain provides specialized reasoning. Agents execute. PRIME safeguards coherence without becoming the ARC or the Brain.
+> One personal ARC instance serves one Owner coherently across Domains and Projects. Intent defines what the Owner wants. Activity defines what must be done. The corresponding Brain provides specialized reasoning. Agents execute. OMEGA safeguards ARC-population lifecycle coherence, BRAIN STEWARD safeguards Brain coherence, and PRIME supervises without becoming the ARC or the Brain.
