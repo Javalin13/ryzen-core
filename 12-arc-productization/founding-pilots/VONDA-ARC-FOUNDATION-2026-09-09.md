@@ -1,6 +1,7 @@
 # VONDA ARC — Founding Pilot Foundation Addendum
 
 Date: 2026-09-09
+Updated: 2026-09-11
 Parent pilot: `VONDA.md`
 Status: PREPARATION AUTHORIZED / CLIENT ACTIVATION PENDING
 
@@ -83,7 +84,9 @@ Internal PRIME/RYZ3N hierarchy is not a client onboarding topic.
 
 VONDA runtime policy/config must contain the approved proposal/pilot boundaries separately from personal memory, including:
 
-- six-month free Founding Pilot period; thereafter current Standard terms €500/year or €50/month if continued;
+- six-month free Founding Pilot period;
+- assigned commercial entitlement during the pilot: **ARC Standard**;
+- thereafter current Standard terms €500/year or €50/month if continued;
 - current website pilot inclusion and indicative standalone value;
 - Founder onboarding/explanation and FR↔NL support as separately priced Founder-delivered services when requested;
 - no unlimited custom work;
@@ -93,6 +96,38 @@ VONDA runtime policy/config must contain the approved proposal/pilot boundaries 
 - RYZ3N retains reusable platform/IP/orchestration/templates/methods/know-how;
 - transfer/access-key/credential requests outside approved scope are referred to the applicable proposal boundary and escalated to the Founder;
 - security, isolation or material contractual breaches fail closed and signal PRIME through a bounded escalation path.
+
+### VONDA Standard entitlement during the free pilot
+
+The free pilot is not unlimited. VONDA receives the current Standard launch entitlement:
+
+- **2 GB managed ARC storage**;
+- **2,000 ARC Usage Units (AU) / month** (~2M model-token-equivalent);
+- **1 authorized user**;
+- **1 primary channel**;
+- **2 external integrations**;
+- **5 active automations**;
+- shared infrastructure under the current model-capacity safety rules.
+
+AI allowance resets monthly. Managed storage persists. At ~80% usage VONDA should warn Laetitia. At 100%, there is no silent overage billing: wait for reset, add agreed capacity or upgrade tier.
+
+Connected Systeme.io/Drive/other SaaS data does not count against ARC storage while it stays in the external system; persistent ARC-side copies do count.
+
+### Upgrade ladder visible to VONDA
+
+VONDA/Laetitia should know from onboarding that Standard is the pilot package, not the whole product family:
+
+- **Standard — €50/month or €500/year:** 2 GB, 2,000 AU/month, 1 user, 1 channel, 2 integrations, 5 automations.
+- **Pro — €120/month or €1,200/year:** 5 GB, 6,000 AU/month, up to 3 users, 2 channels, 5 integrations, 15 automations.
+- **Business — €250/month or €2,500/year:** 15 GB, 15,000 AU/month, up to 10 users, 3 channels, 10 integrations, 40 automations.
+- **Dedicated — from €5,000/year:** 50 GB baseline, 40,000 AU/month, up to 25 users, 5 channels, 20 integrations, 100 automations plus dedicated resources where required.
+- **Enterprise — custom.**
+
+Commercial tier changes do not buy or alter V1→V6 maturity/aura.
+
+Authoritative entitlement standard:
+
+`12-arc-productization/ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
 
 VONDA may prepare a request for the Founder; it may not silently waive scope, change prices, expose secrets or promise transfer.
 
