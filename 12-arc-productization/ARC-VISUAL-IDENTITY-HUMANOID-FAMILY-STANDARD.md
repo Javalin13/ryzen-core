@@ -5,11 +5,15 @@
 type: arc-visual-identity-standard
 status: founder-directed-current-model
 created: 2026-09-11
+updated: 2026-09-11
 classification: approved-product-semantics + visual-governance
 scope: ARC profile imagery, humanoid family alignment, per-ARC visual provenance, PRIME/OMEGA discovery
+manifest_schema: 12-arc-productization/ARC-VISUAL-IDENTITY-SCHEMA.json
+manifest_schema_version: 1.1
 related:
   - 12-arc-productization/ARC-FORM-AURA-AND-TRANSFER-RESET-STANDARD.md
   - 12-arc-productization/OMEGA-ARC-FACTORY-STEWARDSHIP-STANDARD.md
+  - 12-arc-productization/OMEGA-FACTORY-VISUAL-IDENTITY-DISCOVERY-AMENDMENT.md
 ---
 ```
 
@@ -104,24 +108,36 @@ Must record at minimum:
 
 ### `visual-identity.json`
 
-Must expose machine-readable safe metadata including:
+The machine-readable manifest must validate against:
 
+`12-arc-productization/ARC-VISUAL-IDENTITY-SCHEMA.json` **v1.1**.
+
+Canonical required keys are:
+
+- `schema_version` = `1.1`;
 - `arc_id`;
+- `display_name`;
+- `family_standard`;
 - `family_standard_version`;
 - `archetype`;
-- `presentation`;
+- `humanoid_family_required`;
 - `form_version`;
-- `canonical_profile_asset`;
+- `current_asset` — canonical/current profile asset pointer or `null` when truthfully unavailable;
 - `founder_owner_approved`;
-- `maturity_aura_rendering_status`;
-- `last_updated`;
-- `source_decision_pointer` where available.
+- `maturity_aura` — separate evidence-derived maturity/aura state;
+- `last_updated`.
+
+Use optional schema fields for `presentation`, `face_treatment`, `domain`, `profile_crop`, domain/form language, repository asset integrity, provenance feedback, source decision pointers and PRIME discovery behavior.
+
+Do not invent alternate top-level names for the canonical required fields. In particular, use `family_standard`, `current_asset`, and `maturity_aura` rather than parallel aliases. This keeps Factory-generated manifests interchangeable across ARCs.
 
 Do not store private user payload, secrets, biometric identity or unnecessary personal information in this metadata.
 
 ### Canonical asset
 
-The accepted primary profile image must be committed to the ARC repository. Derivative crops/compressions may be stored separately, but one asset must be marked canonical.
+The accepted primary profile image must be committed to the ARC repository. Derivative crops/compressions may be stored separately, but one asset must be marked canonical/current.
+
+Repository identity is authoritative for the committed asset. Local/source render hashes may be retained as provenance but must not be mistaken for the current Git asset identity after optimization or replacement.
 
 ## 5. Visual feedback is durable product data
 
@@ -161,13 +177,17 @@ PRIME may fetch/read these ARC-owned artifacts when supervising, provisioning ch
 
 OMEGA owns ARC-level coherence of these pointers. FACTORY preserves material form-version/lifecycle events. BRAIN STEWARD has no special visual-identity authority unless a Brain-specific visual representation is separately created.
 
+The authoritative discovery amendment is:
+
+`12-arc-productization/OMEGA-FACTORY-VISUAL-IDENTITY-DISCOVERY-AMENDMENT.md`
+
 ## 7. Factory creation rule
 
 Future ARC creation should initialize the visual package as part of the ARC birth workflow rather than inventing imagery after the fact.
 
 Factory-assisted visual creation should follow:
 
-`ARC identity/domain → canonical humanoid family → ARC-specific archetype/presentation → domain cues → form candidate → Founder/Owner review → accepted canonical asset → ARC repository record → PRIME/OMEGA pointer update`
+`ARC identity/domain → canonical humanoid family → ARC-specific archetype/presentation → domain cues → form candidate → Founder/Owner review → accepted canonical asset → ARC repository record + schema-valid manifest → PRIME/OMEGA pointer update`
 
 Automation may generate candidates from the canonical family contract, but Founder/Owner approval controls the accepted form.
 
@@ -199,6 +219,7 @@ Before accepting a new ARC profile image, ask:
 5. Would it work as a clean Telegram/profile portrait?
 6. Does it avoid falsely claiming maturity/aura?
 7. Is the accepted asset and feedback now durably stored in the ARC repo and discoverable through PRIME/OMEGA?
+8. Does `visual-identity.json` validate against the current canonical schema?
 
 If not, the visual round is not complete.
 
