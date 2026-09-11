@@ -37,22 +37,36 @@ Founder offered Narek the same introductory structure used for the VONDA foundin
 NARC's six-month free period is not unlimited. Unless the Founder later changes the arrangement, NARC receives the current Standard launch entitlement:
 
 - **2 GB** managed ARC storage;
-- **2,000 ARC Usage Units (AU) / month** (~2M model-token-equivalent);
+- **5,000 ARC Usage Units (AU) / month**;
+- AU is cost-normalized: current internal Standard envelope = **€5 provider-list-price-equivalent AI capacity**, not a fixed raw-token promise;
 - **1** authorized user;
 - **1** primary channel;
 - **2** external integrations;
 - **5** active automations;
+- capacity weight: **1 shared slot**;
 - shared infrastructure under the current capacity/safety rules.
 
 AI allowance resets monthly. Managed storage persists. At ~80% of allowance the Owner should be warned; at 100% there is no silent overage billing. Narek may wait for reset, add capacity or upgrade tier.
 
+Efficient models can provide substantially more raw token volume than premium models within the same AU envelope. Premium-model use consumes AU faster.
+
 External data such as Google Drive content does not count against ARC storage while it remains in the external system; persistent ARC-side copies do count.
+
+### Third-party API/provider boundary
+
+NARC's two integration slots do **not** mean RYZ3N pays unlimited third-party API/vendor charges.
+
+- paid external subscriptions/API/message/transaction fees are customer-funded by default;
+- RYZ3N-funded variable third-party spend is €0 by default unless an explicit capped allowance is approved;
+- free-tier/free-call integrations may operate normally;
+- NARC/its Agents may never autonomously buy credits, seats, message packs, storage or provider capacity;
+- any RYZ3N-funded external allowance warns at 80% and hard-stops at 100% unless a higher approved cap exists.
+
+Authoritative rule: `../ARC-VARIABLE-COST-AND-API-BOUNDARY.md`.
 
 Narek indicated that he is willing to pay even before the free period ends and does not expect the Founder to build indefinitely for free.
 
 That statement is useful willingness-to-pay evidence. It does **not** automatically cancel or shorten the offered six-month-free period. Any change to the commercial arrangement requires an explicit later agreement/Founder decision.
-
-This pilot exception does not rewrite canonical Standard pricing, Founding-20 pricing, higher commercial tiers or ARC maturity rules.
 
 ## Upgrade visibility from onboarding
 
@@ -60,32 +74,22 @@ Narek should be made aware that the free Founding Pilot is a Standard entitlemen
 
 Current upgrade ladder:
 
-- **Standard — €50/month or €500/year:** 2 GB, 2,000 AU/month, 1 user, 1 channel, 2 integrations, 5 automations.
-- **Pro — €120/month or €1,200/year:** 5 GB, 6,000 AU/month, up to 3 users, 2 channels, 5 integrations, 15 automations.
-- **Business — €250/month or €2,500/year:** 15 GB, 15,000 AU/month, up to 10 users, 3 channels, 10 integrations, 40 automations.
-- **Dedicated — from €5,000/year:** 50 GB baseline, 40,000 AU/month, up to 25 users, 5 channels, 20 integrations, 100 automations plus dedicated-resource capability where required.
+- **Standard — €50/month or €500/year:** 2 GB, 5,000 AU/month, 1 user, 1 channel, 2 integrations, 5 automations, 1 capacity slot.
+- **Pro — €120/month or €1,200/year:** 5 GB, 15,000 AU/month, up to 3 users, 2 channels, 5 integrations, 15 automations, 3 slots.
+- **Business — €250/month or €2,500/year:** 15 GB, 30,000 AU/month, up to 10 users, 3 channels, 10 integrations, 40 automations, 6 slots.
+- **Dedicated — from €5,000/year:** 50 GB baseline, 100,000 AU/month baseline, up to 25 users, 5 channels, 20 integrations, 100 automations plus dedicated-resource capability where required.
 - **Enterprise — custom.**
 
 Commercial upgrade does not buy maturity/aura. NARC still earns V1→V6 through evidence.
 
-Authoritative entitlement standard:
+Authoritative sources:
 
-`../ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+- `../ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+- `../ARC-VARIABLE-COST-AND-API-BOUNDARY.md`
 
 ## Product-validation purpose
 
-NARC should test whether an ARC can create visible business value for a service entrepreneur through a combination of:
-
-- practical business assistance;
-- automation;
-- customer/business communication interfaces;
-- website/interface reconstruction or evolution;
-- real owner feedback;
-- repeatable onboarding/provisioning patterns;
-- bounded support effort;
-- privacy-safe reuse of generalized lessons.
-
-NARC is therefore both a customer-value case and a replication-learning case after Cargo ARC.
+NARC should test whether an ARC can create visible business value for a service entrepreneur through practical assistance, automation, customer/business communication interfaces, website/interface reconstruction/evolution, real owner feedback, repeatable onboarding/provisioning, bounded support effort and privacy-safe reuse of generalized lessons.
 
 ## Mandatory birth flow
 
@@ -120,12 +124,11 @@ Current maturity ladder remains:
 
 `V1 Blue → V2 Cyan → V3 Violet → V4 Gold → V5 Platinum → V6 Sovereign/Prismatic`
 
-NARC must earn maturity through evidence under the same rules as other ARCs.
-
 ## Source links
 
 - `../ARC-COMMERCIAL-PIPELINE-2026-09-11.md`
 - `../ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+- `../ARC-VARIABLE-COST-AND-API-BOUNDARY.md`
 - `../OMEGA-ARC-FACTORY-STEWARDSHIP-STANDARD.md`
 - `../ARC-V1-V6-COMMERCIAL-MATURITY-TUTORIAL.md`
 - `../PRICING.md`
@@ -134,4 +137,4 @@ NARC must earn maturity through evidence under the same rules as other ARCs.
 
 ## Founder shorthand
 
-> **NARC is next after Cargo. It gets the six-month free Founding Pilot on Standard limits, sees the full upgrade ladder from onboarding, and still earns maturity separately through evidence.**
+> **NARC gets six months free on a real Standard entitlement: 2 GB + 5,000 cost-normalized AU. It sees the full upgrade ladder, but no integration gives it an open third-party wallet and maturity remains evidence-derived.**
