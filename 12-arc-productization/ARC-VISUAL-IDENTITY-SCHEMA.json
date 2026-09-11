@@ -1,45 +1,84 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ryz3n://arc-visual-identity/v1",
+  "$id": "ryz3n://arc-visual-identity/v1.1",
   "title": "RYZ3N ARC Visual Identity Manifest",
   "type": "object",
   "required": [
     "schema_version",
     "arc_id",
+    "display_name",
     "family_standard",
+    "family_standard_version",
     "archetype",
     "humanoid_family_required",
     "form_version",
     "current_asset",
     "founder_owner_approved",
-    "maturity_aura"
+    "maturity_aura",
+    "last_updated"
   ],
   "properties": {
-    "schema_version": { "const": "1.0" },
+    "schema_version": { "const": "1.1" },
     "arc_id": { "type": "string", "minLength": 1 },
+    "display_name": { "type": "string", "minLength": 1 },
+    "domain": { "type": ["string", "null"] },
     "family_standard": { "type": "string", "minLength": 1 },
+    "family_standard_version": { "type": "string", "minLength": 1 },
     "archetype": { "type": "string", "minLength": 1 },
+    "presentation": { "type": ["string", "null"] },
+    "face_treatment": { "type": ["string", "null"] },
     "humanoid_family_required": { "type": "boolean" },
     "form_version": { "type": "string", "minLength": 1 },
     "current_asset": { "type": ["string", "null"] },
+    "current_asset_status": { "type": ["string", "null"] },
     "founder_owner_approved": { "type": "boolean" },
+    "approved_on": { "type": ["string", "null"] },
+    "profile_crop": { "type": ["string", "null"] },
     "domain_motifs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
     "form_palette": { "type": "array", "items": { "type": "string" } },
-    "portrait_grammar": { "type": "array", "items": { "type": "string" } },
+    "material_language": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "portrait_grammar": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "disallowed_traits": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "asset_integrity": {
+      "type": "object",
+      "properties": {
+        "git_blob_sha": { "type": ["string", "null"] },
+        "bytes": { "type": ["integer", "null"], "minimum": 0 },
+        "dimensions": { "type": ["string", "null"] },
+        "local_derivative_sha256": { "type": ["string", "null"] },
+        "source_render_sha256": { "type": ["string", "null"] },
+        "source_render_dimensions": { "type": ["string", "null"] },
+        "status": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
     "provenance_feedback_record": { "type": ["string", "null"] },
-    "superseded_assets": { "type": "array", "items": { "type": "string" } },
+    "source_decision_pointer": { "type": ["string", "null"] },
+    "superseded_assets": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
     "maturity_aura": {
       "type": "object",
-      "required": ["verified_maturity", "official_aura", "earned"],
+      "required": ["verified_maturity", "official_aura", "earned", "target_maturity", "target_aura", "rendering_status"],
       "properties": {
         "verified_maturity": { "type": ["string", "null"] },
         "official_aura": { "type": ["string", "null"] },
         "earned": { "type": "boolean" },
         "target_maturity": { "type": ["string", "null"] },
-        "target_aura": { "type": ["string", "null"] }
+        "target_aura": { "type": ["string", "null"] },
+        "rendering_status": { "type": "string", "minLength": 1 }
       },
       "additionalProperties": false
-    }
+    },
+    "prime_discovery": {
+      "type": "object",
+      "properties": {
+        "omega_should_track_pointer": { "type": "boolean" },
+        "factory_should_track_form_version_and_asset_pointer": { "type": "boolean" },
+        "prime_should_fetch_from_arc_repo": { "type": "boolean" },
+        "duplicate_full_asset_into_prime": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "last_updated": { "type": "string", "minLength": 1 }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }
