@@ -126,7 +126,30 @@ Founder/Lux may write/update `TO_<ARC>.md`, then tell that ARC simply:
 
 `consume`
 
-The ARC reads the current direct bridge, executes everything within its own authority, writes `FROM_<ARC>.md`, commits/pushes its own repository when authorized, and returns a mini report.
+### Mandatory consume preflight — authoritative source freshness
+
+Before reading or executing the bridge directive, the ARC must make sure its **local view of its own authoritative repository is not stale**.
+
+Required preflight:
+
+1. identify the ARC's authoritative local worktree and expected branch;
+2. inspect current branch, local HEAD, worktree dirtiness and unpushed/local commits;
+3. perform a read-only `git fetch origin`;
+4. compare local HEAD with current `origin/main` (or the ARC's declared authoritative branch);
+5. if the worktree is clean, has no unpublished local commits, and is only behind, fast-forward safely to the current remote head;
+6. if local work is dirty, ahead, divergent, conflicted, or otherwise unsafe to advance automatically, **do not discard or overwrite it** — stop and return `ESCALATE TO PRIME: YES` with the exact synchronization/concurrency reason;
+7. only after the local source view is current should the ARC read `TO_<ARC>.md` and execute it.
+
+The ARC must never treat a missing bridge file in a stale local checkout as proof that the file does not exist remotely. It should distinguish:
+
+- `not present in current synchronized authoritative source`, from
+- `not visible because local source is stale or divergent`.
+
+This preflight is ordinary ARC self-source hygiene, not a request for PRIME permission. PRIME is only needed when synchronization cannot be completed safely within the ARC's own repository boundary.
+
+### Execution + report
+
+After source freshness is established, the ARC reads the current direct bridge, executes everything within its own authority, writes `FROM_<ARC>.md`, commits/pushes its own repository when authorized, and returns a mini report.
 
 Suggested mini report:
 
@@ -156,7 +179,8 @@ The bridge transitions to ARC-primary when evidence shows at minimum:
 - ARC can execute its normal domain workflow;
 - ARC-local bridge files exist;
 - permissions are explicit;
-- escalation path to PRIME exists.
+- escalation path to PRIME exists;
+- ARC consume flow can perform the authoritative-source freshness preflight above.
 
 The transition does not remove PRIME supervision. It changes the default routing endpoint.
 
@@ -170,8 +194,11 @@ Factory/OMEGA should track:
 - ARC bridge paths;
 - PRIME supervisory mirror/pointer;
 - escalation boundary;
+- source-freshness preflight capability;
 - last bridge sync evidence.
 
 ## Founder invariant
 
 > **The ARC runs its own domain. PRIME oversees the system of ARCs. Detailed work stays with the ARC; portfolio supervision stays with PRIME.**
+
+> **Before an ARC consumes its direct bridge, it synchronizes its own source view safely. Stale local source must never masquerade as authoritative truth.**
