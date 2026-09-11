@@ -5,6 +5,7 @@
 type: commercial-lead-record
 status: outreach-sent-awaiting-reply
 created: 2026-09-11
+updated: 2026-09-11
 classification: commercial-validation
 prospect: KMS7 Cars
 contact: Adnan
@@ -44,11 +45,42 @@ KMS7 is not currently:
 
 Do not infer any of these from the outreach message.
 
+## Canonical pricing cross-check — 2026-09-11
+
+The communicated **€150–€170/month** is **not a canonical ARC tier price**. It is a Founder-communicated provisional commercial figure and must remain recorded as such unless a later agreement formalizes it as an exception.
+
+Current canonical price ladder from `../PRICING.md`:
+
+| Tier | Canonical current price direction | Scope shorthand |
+|---|---:|---|
+| ARC Standard | €50/month or €500/year | light solo/small-operator assistance, shared infrastructure, fair-use |
+| ARC Pro | €120/month or €1,200/year | deeper memory/workflows, CRM/calendar-light, more automation/support |
+| ARC Business | €250/month or €2,500/year | company/team context, multiple workflows, deeper integrations, reporting, higher governance/usage |
+| ARC Dedicated | from €5,000/year | dedicated resources, custom integrations, stronger isolation/monitoring/business-critical automation |
+| ARC Enterprise | custom, working floor ~€10,000/year | larger/multi-ARC/API/SLA/bespoke infrastructure |
+
+### KMS7 likely tier fit
+
+Based on the previously discussed KMS7 needs — car dealer + taxi operation, multiple operational workflows, Google Drive/document handling, driver expenses, vehicle/insurance tracking, marketing support and potential integration with the existing dispatch application — the **full original business scope maps most naturally to ARC Business at €250/month**, with ARC Dedicated becoming appropriate if custom dispatch integration, isolation, availability or infrastructure burden becomes materially heavier.
+
+The communicated **€150–€170/month** sits between canonical Pro (€120) and Business (€250). Therefore:
+
+- do **not** silently redefine ARC Pro or ARC Business around €150–€170;
+- do **not** promise the entire original bespoke scope at €150–€170 before the exact workload/integrations are bounded;
+- if Adnan accepts the communicated price direction, it may be treated as a **Founder-authorized introductory/pilot exception** for a deliberately bounded first phase;
+- a bounded Telegram-first + lighter workflow/Drive phase can reasonably sit near the communicated figure as a commercial exception;
+- if KMS7 expects the full multi-workflow/deeper-integration scope, the canonical reference point is **ARC Business €250/month**;
+- if custom dispatch integration or dedicated resources become necessary, quote the appropriate implementation/dedicated scope separately rather than burying it inside a discounted recurring price.
+
+The communicated price must not be retrospectively rewritten: it remains historical sales truth. The final accepted commercial contract should be set only after Adnan responds and scope is confirmed.
+
+Detailed assessment: `KMS7-PRICING-CROSSCHECK-2026-09-11.md`.
+
 ## Pricing interpretation
 
 The Founder's sales framing that the ARC route can be dramatically cheaper than the earlier bespoke proposal communicates the commercial contrast. It must not be treated as a literal accounting comparison between a one-time project fee and a recurring subscription.
 
-The proposed €150–€170/month is above current Standard pricing and may reflect heavier business requirements, integrations, support or custom operating scope. It must be mapped to the actual required work before final commitment rather than silently changing Standard pricing.
+The proposed €150–€170/month is above current Standard and Pro pricing but below canonical Business pricing. It can only be finalized after the required work is mapped to the canonical tier ladder or explicitly approved as a Founder exception.
 
 ## If Adnan responds positively
 
@@ -75,6 +107,7 @@ If creation is later authorized, use the same mandatory flow:
 
 ## Related sources
 
+- `KMS7-PRICING-CROSSCHECK-2026-09-11.md`
 - `../ARC-COMMERCIAL-PIPELINE-2026-09-11.md`
 - `../ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md`
 - `../PRICING.md`
@@ -82,4 +115,4 @@ If creation is later authorized, use the same mandatory flow:
 
 ## Current shorthand
 
-> **KMS7 is a lead, not an ARC yet. Await Adnan. If he accepts the direction, scope first, authorize second, register/provision third.**
+> **KMS7 is a lead, not an ARC yet. €150–€170/month is the communicated provisional figure, not a canonical tier. Full known KMS7 scope points to Business €250/month; scope first, finalize price second, authorize third, register/provision fourth.**
