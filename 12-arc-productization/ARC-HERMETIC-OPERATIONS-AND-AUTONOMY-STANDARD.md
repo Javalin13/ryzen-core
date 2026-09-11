@@ -132,9 +132,17 @@ Rules:
 
 ## 5. ARC own-repository autonomy
 
-An ARC may autonomously write to its **own authoritative repository** only when the Founder/Owner has granted that authority.
+An ARC may autonomously read and write its **own authoritative repository** when the Founder/Owner has granted that authority.
 
-That grant does not permit writes to:
+Once granted, that authority is **continuous**. It does not require per-read, per-edit, per-commit or per-push approval from PRIME. Within its own authoritative repository, the ARC may inspect, create, edit, move and delete repository content and may commit/push those changes as part of normal domain operation, subject to the repository's integrity/concurrency controls below.
+
+The distinction is critical:
+
+> **Autonomy is the permission boundary. The safe-writer is integrity plumbing, not an approval gate.**
+
+A hermetic-seal audit may report defects and block a claim of `hermetic_seal = GREEN`, but a known red/in-progress seal must **not** revoke an already granted ARC's own-repository read/write authority or prevent the ARC from committing the fixes required to become GREEN.
+
+The autonomy grant does not permit writes to:
 
 - `ryzen-core`;
 - PRIME/OMEGA/FACTORY repositories;
@@ -155,20 +163,20 @@ Every autonomous ARC write must be transparent to its authorized user/operator i
 
 ## 6. Safe shared-writer Git transaction
 
-When an ARC and PRIME/operator can both write the ARC's repository, direct `main` writes must use optimistic-concurrency safety.
+When an ARC and PRIME/operator can both write the ARC's repository, direct `main` writes use optimistic-concurrency safety to protect both writers **without suspending ARC ownership of its own repository**.
 
 Required transaction:
 
-1. **Start synchronized.** Before editing, fetch `origin/main`. Local HEAD must equal the fetched remote HEAD. If not, stop and surface divergence.
+1. **Start synchronized.** Before a commit/push transaction, fetch `origin/main`. Local HEAD must equal the fetched remote HEAD. If not, stop and surface divergence.
 2. **Record base SHA.** Treat that remote HEAD as the write transaction base.
-3. **Bound the change.** Modify only the intended ARC-owned files. Do not silently absorb unrelated dirty-tree changes.
-4. **Run required audit/tests before commit.** A failed audit aborts the write.
+3. **Bound the change.** Commit only the intended ARC-owned files. Do not silently absorb unrelated dirty-tree changes.
+4. **Run applicable integrity/audit/tests before commit.** Checks relevant to the intended change should run. A known, separately tracked hermetic-seal blocker does not automatically prohibit an ARC from committing a change intended to repair that blocker.
 5. **Re-fetch before commit/push.** If remote `main` changed from the recorded base, abort autonomous push and hand off to operator coordination. Do not silently rebase/merge concurrent operator work.
 6. **Commit locally.** Record the resulting SHA.
 7. **Re-fetch immediately before push.** Remote must still equal the transaction base/expected parent.
 8. **Push without force.** Force push, `--force-with-lease`, destructive reset of remote history, or history rewrite is forbidden for autonomous ARC writes.
 9. **Verify remote.** Fetch again and confirm `origin/main` resolves to the new commit.
-10. **Verify CI.** Required ARC coherence checks must become GREEN. If CI is red, report immediately and treat the write as unresolved.
+10. **Verify CI.** Required coherence/integrity checks run after the push. A red hermetic-seal check means the seal remains unresolved; it does not retroactively invalidate the ARC's authority to its own repository. Newly introduced regressions must be reported and repaired.
 11. **Report transparently.** Return the commit receipt to the user/operator.
 
 Race protection is layered: even if remote changes between the last fetch and push, the normal non-force Git push must reject the non-fast-forward update.
@@ -256,8 +264,10 @@ At birth, Factory must determine:
 - recovery drill path;
 - OMEGA/FACTORY hermetic-seal status.
 
+Once autonomy is granted, Factory/OMEGA record it as an active standing authority until explicitly revoked or changed by the Founder/Owner; ordinary audit state does not silently revoke it.
+
 Do not retrofit these after commercial launch if they can be initialized during birth.
 
 ## Founder shorthand
 
-> **The ARC owns its domain and its own runtime boundary. It may write its own home only when authorized, never another ARC's home. Shared Git writers coordinate through fail-safe optimistic concurrency. PRIME stays behind the curtain. Recovery comes from source, not from hidden VPS history.**
+> **The ARC owns its domain and, when granted autonomy, continuously owns read/write operation of its own repository. It never gains another ARC's home by implication. Shared Git writers coordinate through fail-safe optimistic concurrency; that safety mechanism protects autonomy rather than replacing it. PRIME stays behind the curtain. Recovery comes from source, not from hidden VPS history.**
