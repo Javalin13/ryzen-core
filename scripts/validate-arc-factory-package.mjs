@@ -54,6 +54,14 @@ const access = exists('access-policy.json') ? parseJson('access-policy.json') : 
 const visual = exists('visual/visual-identity.json') ? parseJson('visual/visual-identity.json') : null;
 const bridge = exists('bridge/STATE.json') ? parseJson('bridge/STATE.json') : null;
 
+const safeControlKeys = new Set([
+  'secrets_outside_git',
+  'secrets_in_git_allowed',
+  'credentials_in_repository_allowed',
+  'credentials_in_git_allowed',
+  'personal_numeric_identifiers_in_repository_allowed'
+]);
+
 function walk(value, keyPath = '$') {
   if (typeof value === 'string') {
     if (/\{\{[^}]+\}\}/.test(value)) fail(`${keyPath}: unresolved template placeholder`);
@@ -67,7 +75,7 @@ function walk(value, keyPath = '$') {
 
   const forbiddenKey = /(token|secret|password|api[_-]?key|private[_-]?key|credential)/i;
   for (const [key, val] of Object.entries(value)) {
-    if (forbiddenKey.test(key) && val !== null && val !== false && val !== 'outside_git' && val !== 'secrets_outside_git') {
+    if (forbiddenKey.test(key) && !safeControlKeys.has(key) && val !== null && val !== false) {
       fail(`${keyPath}.${key}: secret/credential-like field must not contain repository payload`);
     }
     walk(val, `${keyPath}.${key}`);
@@ -143,6 +151,7 @@ if (manifest && bridge) {
 
 if (access) {
   if (access.secrets_in_git_allowed === true) fail('access-policy: secrets_in_git_allowed must not be true');
+  if (access.credentials_in_repository_allowed === true) fail('access-policy: credentials_in_repository_allowed must not be true');
   if (access.cross_arc_private_state_access === true) fail('access-policy: cross_arc_private_state_access must not be true');
   if (access.default_policy && !String(access.default_policy).includes('deny')) {
     warn('access-policy: default policy is not explicitly deny/fail-closed');
