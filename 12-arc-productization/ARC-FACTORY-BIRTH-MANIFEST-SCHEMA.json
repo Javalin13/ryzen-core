@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ryz3n://arc-factory-birth-manifest/v1.0",
+  "title": "RYZ3N ARC Factory Birth Manifest",
+  "type": "object",
+  "required": [
+    "factory_contract_version",
+    "arc_id",
+    "display_name",
+    "production_state",
+    "source_boundary",
+    "owner",
+    "language",
+    "commercial",
+    "runtime",
+    "visual",
+    "registries",
+    "maturity",
+    "provenance",
+    "stages"
+  ],
+  "properties": {
+    "factory_contract_version": {"type":"string","minLength":1},
+    "arc_id": {"type":"string","pattern":"^[a-z0-9][a-z0-9-]*$"},
+    "display_name": {"type":"string","minLength":1},
+    "production_state": {"type":"string","minLength":1},
+    "source_boundary": {
+      "type":"object",
+      "required":["class","authoritative_repository","arc_root","repository_creation_mode"],
+      "properties": {
+        "class":{"enum":["ryz3n_owned_product_domain","customer_standalone_domain"]},
+        "authoritative_repository":{"type":"string","minLength":1},
+        "arc_root":{"type":"string","minLength":1},
+        "repository_creation_mode":{"enum":["factory_created","preexisting_designated","manual_gap_then_adopted"]},
+        "domain_or_hostname":{"type":["string","null"]},
+        "domain_verification":{"type":["string","null"]}
+      },
+      "additionalProperties":true
+    },
+    "owner": {
+      "type":"object",
+      "required":["entity_class","binding_status"],
+      "properties": {
+        "entity_class":{"type":"string"},
+        "display_name":{"type":["string","null"]},
+        "binding_status":{"type":"string"}
+      },
+      "additionalProperties":true
+    },
+    "language": {
+      "type":"object",
+      "required":["primary"],
+      "properties": {
+        "primary":{"type":"string","minLength":2},
+        "secondary":{"type":"array","items":{"type":"string"},"uniqueItems":true}
+      },
+      "additionalProperties":false
+    },
+    "commercial": {"type":"object"},
+    "runtime": {"type":"object"},
+    "visual": {"type":"object"},
+    "registries": {"type":"object"},
+    "maturity": {"type":"object"},
+    "provenance": {"type":"object"},
+    "stages": {
+      "type":"object",
+      "required":["F0_authorization","F1_source_boundary","F2_instance_package","F3_stewardship_registration","F4_runtime_provisioning","F5_owner_binding_first_run","F6_evidence_closeout"],
+      "properties": {
+        "F0_authorization":{"type":"string"},
+        "F1_source_boundary":{"type":"string"},
+        "F2_instance_package":{"type":"string"},
+        "F3_stewardship_registration":{"type":"string"},
+        "F4_runtime_provisioning":{"type":"string"},
+        "F5_owner_binding_first_run":{"type":"string"},
+        "F6_evidence_closeout":{"type":"string"}
+      },
+      "additionalProperties":false
+    }
+  },
+  "additionalProperties":true
+}
