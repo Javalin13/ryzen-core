@@ -5,7 +5,7 @@
 type: commercial-model
 status: founder-directed-current-working-model
 created: 2026-09-03
-updated: 2026-09-10
+updated: 2026-09-11
 classification: strategic-vision + launch-pricing
 currency: EUR
 amendable: true-additively
@@ -20,17 +20,36 @@ Monthly billing is deliberately priced above annual billing to reward commitment
 
 The customer buys a managed ARC service, not raw model tokens or a Hermes installation.
 
+Authoritative entitlement/usage standard:
+
+`ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+
 ## Current tier ladder
 
-| Tier | Target customer | Current price direction | Scope principle |
-|---|---|---:|---|
-| **ARC Standard** | Solo entrepreneur / small operator | **€500/year** or **€50/month** | Telegram ARC, base identity/context, tasks/reminders, light business assistance, normal shared infrastructure, fair-use support/AI usage |
-| **ARC Pro** | Growing entrepreneur / small team | **€1,200/year** or **€120/month** | Standard + deeper memory/workflows, calendar/CRM-light, more automation and support |
-| **ARC Business** | Company / operational team | **€2,500/year** or **€250/month** | Multiple workflows, business/team context, deeper integrations, reporting, higher usage and governance |
-| **ARC Dedicated** | Higher-isolation / heavier operational use | **from €5,000/year** | Dedicated resources/VPS where required, custom integrations, stronger isolation, monitoring and business-critical automation |
-| **ARC Enterprise** | Larger organization / multi-ARC deployment | **custom, working floor ~€10,000/year** | Multiple ARCs, API/integrations, governance, dedicated infrastructure, SLA/support and bespoke implementation |
+| Tier | Target customer | Current price | Managed storage | Monthly AI allowance | Users | Integrations | Active automations |
+|---|---|---:|---:|---:|---:|---:|---:|
+| **ARC Standard** | Solo entrepreneur / small operator | **€500/year** or **€50/month** | **2 GB** | **2,000 AU** (~2M token-equivalent) | **1** | **2** | **5** |
+| **ARC Pro** | Growing entrepreneur / small team | **€1,200/year** or **€120/month** | **5 GB** | **6,000 AU** (~6M token-equivalent) | **3** | **5** | **15** |
+| **ARC Business** | Company / operational team | **€2,500/year** or **€250/month** | **15 GB** | **15,000 AU** (~15M token-equivalent) | **10** | **10** | **40** |
+| **ARC Dedicated** | Higher-isolation / heavier operational use | **from €5,000/year** | **50 GB baseline** | **40,000 AU** (~40M token-equivalent) | **25** | **20** | **100** |
+| **ARC Enterprise** | Larger organization / multi-ARC deployment | **custom, working floor ~€10,000/year** | custom | custom | custom | custom | custom |
 
-The tiers above Pro are **commercial working hypotheses**, not yet market-validated price points. Standard's €500/year floor and €50/month option are current Founder decisions.
+Channels are additionally capped at 1 / 2 / 3 / 5 respectively for Standard / Pro / Business / Dedicated unless a Founder-approved exception applies.
+
+**AU = ARC Usage Unit**, approximately 1,000 model tokens-equivalent of combined attributable model usage. Multi-step Agent/Brain work may consume multiple units. Exact metering rules are defined in `ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`.
+
+The tiers above Pro remain commercial working hypotheses until broader market validation, but these usage entitlements are the current Founder-directed launch limits.
+
+## Usage behavior
+
+The service must show customers what their tier includes instead of relying on vague “fair use”.
+
+- AI allowance resets monthly; unused allowance does not roll over by default.
+- Managed storage persists until files/data are deleted or moved.
+- At ~80% usage, warn the customer.
+- At 100%, do not silently bill overage. The customer may wait for reset, upgrade, or agree a separately priced capacity add-on.
+- External Google Drive/CRM/dispatch/SaaS data does not count as ARC storage while it stays in the external system; persistent copies mirrored into ARC storage do count.
+- Commercial caps do not override security, provider, latency, isolation or infrastructure-safety limits.
 
 ## Founding 20 launch cohort — 2026-09-10
 
@@ -44,77 +63,94 @@ Rules:
 
 - maximum initial cohort: 20 paying Founding ARCs;
 - free setup for Standard-scope onboarding;
+- Founding ARC receives **Standard entitlements** unless another tier is explicitly purchased/authorized;
 - the €49 founding rate is a launch-cohort privilege, not the permanent public Standard price;
 - after the Founding 20, normal Standard pricing remains €50/month or €500/year unless the Founder changes it;
 - continuity of the founding price may end if the subscription is cancelled and later restarted;
-- bespoke integrations, dedicated resources, unusually heavy usage or high-touch support remain outside Standard scope;
+- bespoke integrations, dedicated resources, usage beyond Standard entitlement or high-touch support remain outside Standard scope;
 - the Founder may pause the cohort before 20 if service quality, support burden, provisioning or model-capacity evidence requires it.
 
 The purpose of Founding 20 is to validate willingness to pay, retention, onboarding repeatability, real usage, support effort and unit economics before scaling advertising.
 
-## Standard customer-facing usage promise
+## Founding Pilot rule
 
-The preferred external promise is:
+A free Founding Pilot may receive:
 
-> **One predictable subscription with standard AI usage included. No API keys to manage and no surprise pass-through model bill.**
+- free setup;
+- a time-limited free ARC usage period;
+- basic adaptations needed to validate the product;
+- the commercial entitlements of its assigned tier.
 
-Do **not** advertise Standard as unlimited AI/model consumption.
+A free period does **not** mean unlimited storage, AI consumption, integrations, users or automations.
 
-Standard should include normal entrepreneur/personal-business usage on monitored shared infrastructure under fair use.
+Current Founder direction:
 
-If a customer's usage structurally exceeds Standard economics or creates service-quality risk, do not silently forward an unexpected provider bill. Instead:
+- **VONDA ARC** — six-month free Founding Pilot on **Standard entitlements**, then €50/month or €500/year if continued on Standard.
+- **NARC** — six-month free Founding Pilot on **Standard entitlements**, then €50/month or €500/year if continued on Standard.
+- Both should be shown the full Standard / Pro / Business / Dedicated / Enterprise ladder during onboarding so they understand upgrade paths.
+- A pilot may upgrade its commercial tier without purchasing or faking ARC maturity/aura.
+
+A free Founding Pilot is distinct from the **paid Founding 20 commercial cohort**.
+
+## KMS7 Founding Business exception
+
+If Adnan accepts and KMS7 ARC creation is authorized:
+
+- customer-specific price: **€170/month**;
+- commercial entitlement: **full ARC Business entitlement** for the currently known/agreed KMS7 scope;
+- included: **15 GB managed ARC storage, 15,000 AU/month, up to 10 authorized users, 3 channels, 10 integrations and 40 active automations**;
+- normal future Business price remains **€250/month or €2,500/year**;
+- the KMS7 discount is a first-business-client / Founding Business exception and does not create a new public tier;
+- materially new future scope beyond the agreed Business implementation may still require a change order, Dedicated resources or another explicit arrangement.
+
+Founder working direct-operational-cost ceiling for KMS7: **≤€50/month**, to be measured rather than assumed as proven.
+
+## Customer-facing usage promise
+
+Preferred external promise:
+
+> **One predictable subscription with a clear included allowance. No API keys to manage and no surprise pass-through model bill.**
+
+Do **not** advertise unlimited AI/model consumption.
+
+If a customer structurally exceeds the included tier allowance or creates service-quality risk:
 
 1. optimize the workflow where possible;
 2. move/reassign model capacity if appropriate;
-3. offer ARC Pro or Dedicated where the workload requires it;
-4. agree a clearly priced capacity/usage arrangement before additional billing applies.
-
-Exact public numerical fair-use thresholds should be set only after enough VONDA + Founding-20 production telemetry exists to support them honestly.
+3. upgrade tier or add capacity;
+4. agree the changed commercial treatment before additional billing applies.
 
 ## Standard guardrails
 
-ARC Standard must not silently become a bespoke IT project. Standard should exclude or cap:
+ARC Standard must not silently become a bespoke IT project. Its current launch entitlements are:
 
-- unlimited custom integrations;
-- dedicated VPS/model capacity by default;
-- unlimited AI/model consumption;
-- unlimited personal support;
-- 24/7 SLA;
-- large multi-user permission models;
-- custom business-critical workflow engineering;
-- continuous bulk-generation or high-frequency autonomous processing.
+- 2 GB managed ARC storage;
+- 2,000 AU/month (~2M token-equivalent);
+- 1 authorized user;
+- 1 primary channel;
+- 2 integrations;
+- 5 active automations;
+- shared infrastructure;
+- no dedicated VPS/model capacity by default;
+- no 24/7 SLA;
+- no unlimited custom workflow engineering or human support.
 
-When those needs appear, move the customer to a higher tier or quote an implementation/capacity fee.
+When needs exceed this shape, move the customer to Pro, Business, Dedicated or a Founder-approved exception.
 
 ## Billing tier ≠ maturity/aura tier
 
 Commercial billing tier and ARC maturity are separate concepts.
 
-- Billing tier defines commercial scope, support, resource allowance, integrations and infrastructure.
+- Billing tier defines commercial scope, support, storage/usage allowance, integrations and infrastructure.
 - V1→V6 defines verified ARC capability maturity.
 
 A customer cannot purchase a false Gold/Platinum/Sovereign aura merely by paying a higher subscription. Higher plans may provide resources that enable additional capabilities, but maturity must remain evidence-derived.
 
-## Founding Pilot rule
-
-A Founding Pilot may receive:
-
-- free setup;
-- a time-limited free ARC usage period;
-- basic adaptations needed to validate the product.
-
-The free period must have an explicit end date/duration. At the end, the customer either:
-
-1. converts to a paid tier;
-2. stops using the ARC; or
-3. receives a Founder-approved exceptional arrangement.
-
-A free Founding Pilot is distinct from the **paid Founding 20 commercial cohort**.
-
 ## Current Founding Pilot example — VONDA
 
 - ARC setup: free.
-- ARC usage: first **6 months free**.
+- ARC usage: first **6 months free** on **Standard entitlement**.
+- Standard entitlement during pilot: **2 GB managed storage, 2,000 AU/month, 1 user, 1 channel, 2 integrations, 5 active automations**.
 - After pilot: **€500/year** or **€50/month** for Standard if continued.
 - Basic website: free, indicative standalone value **€250**.
 - Personal onboarding session: **€100**.
@@ -157,4 +193,4 @@ Every paying ARC should therefore become measurable on both:
 1. incremental gross margin; and
 2. fully loaded contribution after support/admin/platform allocation.
 
-See `ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md` and `COST-CAPACITY-MODEL.md` for the launch gates, usage policy and operating metrics.
+See `ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`, `ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md` and `COST-CAPACITY-MODEL.md` for the usage, capacity and economics rules.
