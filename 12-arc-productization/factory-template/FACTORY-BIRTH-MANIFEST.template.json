@@ -1,0 +1,75 @@
+{
+  "factory_contract_version": "1.0",
+  "factory_template_version": "factory-template-v1.0",
+  "arc_id": "{{arc_id}}",
+  "display_name": "{{display_name}}",
+  "production_state": "source_seeded_stewardship_registration_pending",
+  "source_boundary": {
+    "class": "{{repository_class}}",
+    "authoritative_repository": "{{authoritative_repository}}",
+    "arc_root": "arc/",
+    "repository_creation_mode": "{{repository_creation_mode}}",
+    "domain_or_hostname": "{{candidate_hostname}}",
+    "domain_verification": "{{candidate_hostname_verification}}"
+  },
+  "owner": {
+    "entity_class": "{{owner_entity_class}}",
+    "display_name": "{{owner_display_name}}",
+    "binding_status": "pending_explicit_owner_binding"
+  },
+  "language": {
+    "primary": "{{primary_language}}",
+    "secondary": []
+  },
+  "commercial": {
+    "tier": "{{commercial_tier}}"
+  },
+  "runtime": {
+    "status": "not_provisioned",
+    "isolation_required": true,
+    "secrets_outside_git": true,
+    "unknown_identity_behavior": "fail_closed",
+    "model_capacity_pool": null,
+    "primary_channel": null,
+    "repository_autonomy": "not_granted"
+  },
+  "visual": {
+    "family_standard": "RYZ3N humanoid ARC family",
+    "record": "arc/visual/ARC-VISUAL-IDENTITY.md",
+    "manifest": "arc/visual/visual-identity.json",
+    "form_version": "{{arc_id}}-form-factory-v0",
+    "approval_state": "pending_founder_owner_approval",
+    "maturity_aura_separate": true
+  },
+  "registries": {
+    "omega": "Javalin13/prime-vps-migration/BRAINS/OMEGA/ARC-REGISTRY.md",
+    "omega_status": "pending_registration",
+    "factory": "Javalin13/prime-vps-migration/FACTORY.md",
+    "factory_status": "pending_registration",
+    "prime_mirror": "Javalin13/prime-vps-migration/ARCS/{{arc_id_upper}}/README.md",
+    "brain_registry": "arc/BRAINS/README.md"
+  },
+  "maturity": {
+    "target": "V1 Foundation",
+    "target_aura": "Blue",
+    "verified": false,
+    "earned_aura": null,
+    "evidence_state": "birth_source_only"
+  },
+  "provenance": {
+    "factory_replication_candidate": true,
+    "production_standard": "Javalin13/ryzen-core/12-arc-productization/ARC-REPLICATION-FACTORY-PRODUCTION-STANDARD.md",
+    "prime_orchestration_standard": "Javalin13/ryzen-core/12-arc-productization/PRIME-ORCHESTRATION-AND-INSTANCE-HANDOFF-STANDARD.md",
+    "birth_manifest_schema": "Javalin13/ryzen-core/12-arc-productization/ARC-FACTORY-BIRTH-MANIFEST-SCHEMA.json"
+  },
+  "configuration": {},
+  "stages": {
+    "F0_authorization": "complete",
+    "F1_source_boundary": "complete",
+    "F2_instance_package": "in_progress",
+    "F3_stewardship_registration": "pending",
+    "F4_runtime_provisioning": "pending",
+    "F5_owner_binding_first_run": "pending",
+    "F6_evidence_closeout": "pending"
+  }
+}
