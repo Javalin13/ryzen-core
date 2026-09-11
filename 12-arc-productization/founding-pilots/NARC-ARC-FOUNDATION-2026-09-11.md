@@ -5,6 +5,7 @@
 type: founding-pilot-pre-creation-record
 status: founder-authorized-pre-creation
 created: 2026-09-11
+updated: 2026-09-11
 classification: commercial-validation + planned-arc-instantiation
 arc_id: narc
 display_name: NARC
@@ -29,13 +30,47 @@ Founder offered Narek the same introductory structure used for the VONDA foundin
 
 - first **6 months free**;
 - thereafter **€50/month** or **€500/year**;
-- Standard scope/fair-use boundaries apply unless later explicitly changed.
+- assigned commercial entitlement during the free pilot: **ARC Standard**.
+
+### NARC Standard entitlement during pilot
+
+NARC's six-month free period is not unlimited. Unless the Founder later changes the arrangement, NARC receives the current Standard launch entitlement:
+
+- **2 GB** managed ARC storage;
+- **2,000 ARC Usage Units (AU) / month** (~2M model-token-equivalent);
+- **1** authorized user;
+- **1** primary channel;
+- **2** external integrations;
+- **5** active automations;
+- shared infrastructure under the current capacity/safety rules.
+
+AI allowance resets monthly. Managed storage persists. At ~80% of allowance the Owner should be warned; at 100% there is no silent overage billing. Narek may wait for reset, add capacity or upgrade tier.
+
+External data such as Google Drive content does not count against ARC storage while it remains in the external system; persistent ARC-side copies do count.
 
 Narek indicated that he is willing to pay even before the free period ends and does not expect the Founder to build indefinitely for free.
 
 That statement is useful willingness-to-pay evidence. It does **not** automatically cancel or shorten the offered six-month-free period. Any change to the commercial arrangement requires an explicit later agreement/Founder decision.
 
 This pilot exception does not rewrite canonical Standard pricing, Founding-20 pricing, higher commercial tiers or ARC maturity rules.
+
+## Upgrade visibility from onboarding
+
+Narek should be made aware that the free Founding Pilot is a Standard entitlement, not the entire ARC product family.
+
+Current upgrade ladder:
+
+- **Standard — €50/month or €500/year:** 2 GB, 2,000 AU/month, 1 user, 1 channel, 2 integrations, 5 automations.
+- **Pro — €120/month or €1,200/year:** 5 GB, 6,000 AU/month, up to 3 users, 2 channels, 5 integrations, 15 automations.
+- **Business — €250/month or €2,500/year:** 15 GB, 15,000 AU/month, up to 10 users, 3 channels, 10 integrations, 40 automations.
+- **Dedicated — from €5,000/year:** 50 GB baseline, 40,000 AU/month, up to 25 users, 5 channels, 20 integrations, 100 automations plus dedicated-resource capability where required.
+- **Enterprise — custom.**
+
+Commercial upgrade does not buy maturity/aura. NARC still earns V1→V6 through evidence.
+
+Authoritative entitlement standard:
+
+`../ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
 
 ## Product-validation purpose
 
@@ -90,6 +125,7 @@ NARC must earn maturity through evidence under the same rules as other ARCs.
 ## Source links
 
 - `../ARC-COMMERCIAL-PIPELINE-2026-09-11.md`
+- `../ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
 - `../OMEGA-ARC-FACTORY-STEWARDSHIP-STANDARD.md`
 - `../ARC-V1-V6-COMMERCIAL-MATURITY-TUTORIAL.md`
 - `../PRICING.md`
@@ -98,4 +134,4 @@ NARC must earn maturity through evidence under the same rules as other ARCs.
 
 ## Founder shorthand
 
-> **NARC is next after Cargo. Give Narek the ARC, let the ARC create business value — including rebuilding/evolving the website where appropriate — and use the real experience to improve the repeatable ARC product.**
+> **NARC is next after Cargo. It gets the six-month free Founding Pilot on Standard limits, sees the full upgrade ladder from onboarding, and still earns maturity separately through evidence.**
