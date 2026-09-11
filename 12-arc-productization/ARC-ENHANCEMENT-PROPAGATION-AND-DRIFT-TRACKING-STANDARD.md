@@ -40,7 +40,11 @@ Treat a change as material when it changes one or more of:
 - OMEGA/FACTORY stewardship expectations;
 - maturity/lifecycle evidence rules;
 - cross-ARC interaction or source boundaries;
-- reusable CI/audit invariants.
+- reusable CI/audit invariants;
+- client-facing implementation-abstraction/release behavior;
+- ARC system-prompt depth that controls public identity/role behavior;
+- capacity-telemetry/privacy architecture;
+- clean-room reconstruction or loaded-module certification gates.
 
 Routine content edits, normal domain work and one-off business records do not require portfolio propagation unless they reveal a reusable architectural lesson.
 
@@ -70,6 +74,8 @@ Use truthful states such as:
 - `DRIFT` — required propagation or implementation has diverged;
 - `superseded` — replaced by a newer approved operational rule.
 
+A working local/VPS implementation that has not been committed/pushed into the authoritative ARC source remains `implemented_unverified` for canonical source purposes even if a live test passes.
+
 ## 5. Drift rule
 
 A material enhancement is not considered fully propagated until the authoritative reusable standard and all applicable current-instance/portfolio surfaces agree.
@@ -82,7 +88,10 @@ OMEGA should flag drift when, for example:
 - an operational ARC is still routed through PRIME after ARC-primary transition;
 - `consume` can read a stale local checkout without a source-freshness preflight;
 - autonomy, hermetic seal or maturity are conflated;
-- future ARC birth templates do not inherit a proven reusable control.
+- future ARC birth templates do not inherit a proven reusable control;
+- a shared platform persona/pairing mechanism is visible on a client-facing ARC channel;
+- a depth-enhancement works in the live profile but the new config/plugins are missing from the authoritative runtime-source manifest;
+- capacity telemetry stores customer/private content rather than privacy-safe signals.
 
 ## 6. Source-freshness and concurrent work
 
@@ -93,6 +102,8 @@ Concurrent workstreams must not be blindly overwritten. The applicable rule is:
 `newest authoritative truth → reconcile surgically → preserve unrelated newer state → record propagation evidence`
 
 This is especially important while PRIME is actively building another ARC (for example NARC) while Lux/Cargo are evolving Cargo-specific architecture.
+
+Local unpushed commits and remote newer commits must be reconciled explicitly; neither may be silently discarded or force-pushed over the other.
 
 ## 7. No false background guarantee
 
@@ -111,7 +122,36 @@ The current ledger should track at minimum:
 - versioned runtime source + clean-room recovery;
 - ARC-primary direct bridge with PRIME portfolio oversight;
 - source-freshness preflight before `consume`;
-- separation of autonomy, hermetic seal and maturity/aura.
+- separation of autonomy, hermetic seal and maturity/aura;
+- **VONDA-class four-boundary ARC depth baseline**: identity + task store + Owner onboarding + capacity telemetry;
+- **deep ARC-specific system prompt** rather than generic platform fallback;
+- **client-facing ARC-only release gate** that explicitly rejects platform pairing/persona leakage;
+- **three-plane privacy-safe capacity telemetry**: raw ARC-local events → protected rollups → steward aggregate;
+- **clean-room module/config/audit proof + live loaded-module proof** after material runtime-depth changes.
+
+Canonical depth template:
+
+`12-arc-productization/ARC-DEPTH-ENHANCEMENT-VONDA-CLASS-TEMPLATE.md`
+
+Reusable NARC incident/reference lesson:
+
+`12-arc-productization/NARC-DEPTH-ENHANCEMENT-REFERENCE-2026-09-11.md`
+
+## 9. VONDA-class depth propagation rule
+
+When a new ARC or an existing ARC adopts the VONDA-class depth baseline, propagation is not complete until all applicable layers agree on:
+
+1. the intended four runtime boundaries/plugins/modules;
+2. ARC-specific deep configuration/system prompt;
+3. runtime-source manifest coverage;
+4. hermetic/source audit state;
+5. clean-room reconstruction result;
+6. live loaded-module state;
+7. clean unbound client-facing result;
+8. capacity-telemetry privacy contract;
+9. PRIME/OMEGA/FACTORY adoption classification.
+
+A local/VPS-only enhancement may be reported as a successful engineering checkpoint, but it does not become canonical `GREEN_applied` until the authoritative ARC repository has the exact source/manifest and the portfolio mirrors reconcile to that committed evidence.
 
 ## Founder invariant
 
