@@ -9,37 +9,13 @@ Status: PREPARATION AUTHORIZED / CLIENT ACTIVATION PENDING
 
 Founder decision: the client-facing ARC is named **VONDA ARC**.
 
-## Founder runtime target — autonomous ARC node
+## Runtime target
 
-VONDA ARC is **not** merely another chat/session inside PRIME's own Hermes runtime.
-
-VONDA is the first external **autonomous Hermes-based ARC node under PRIME supervision**.
-
-Initial topology:
-
-```text
-prime-vps-01
-├── PRIME Hermes runtime/service
-│   └── Founder/operator control + supervision plane
-└── VONDA ARC Hermes runtime/service
-    ├── own runtime identity
-    ├── own gateway/service lifecycle
-    ├── own Telegram bot/gateway adapter
-    ├── own workspace + memory
-    ├── own secrets + permissions
-    ├── own logs + checkpoints
-    ├── own commercial/access/security policies
-    └── own client workflows/state
-```
+VONDA ARC is the first external autonomous Hermes-based ARC node under PRIME supervision. It must retain its own runtime identity, gateway/service lifecycle, workspace/memory, secrets/permissions, logs/checkpoints, customer workflows/state and independent restartability.
 
 **Same physical VPS is allowed; same runtime identity is not.**
 
-VONDA must be independently startable/stoppable/restartable. PRIME supervises health, isolation, recovery and escalation, but does not become the VONDA client runtime and does not merge Laetitia's private memory into PRIME memory.
-
-Future target: move the same VONDA ARC node to a dedicated VPS without changing its conceptual identity, client-facing behavior, memory contracts, permissions or workflows.
-
-Runtime standard:
-`12-arc-productization/AUTONOMOUS-ARC-NODE-RUNTIME.md`
+PRIME supervises health, isolation, recovery and escalation without merging VONDA private memory into PRIME memory.
 
 ## System boundary
 
@@ -49,106 +25,92 @@ Runtime standard:
 
 `VONDA ARC = autonomous internal operational assistant / intelligence node`
 
-## Preparation sequence
+## Commercial bootstrap
 
-`prepare autonomous node → verify runtime + isolation → report → client alignment → Founder final GO → bind Telegram → activate`
+VONDA receives:
 
-The six-month pilot clock does not start during technical preparation.
-
-## Required VONDA ARC baseline
-
-- independent VONDA Hermes runtime/service identity;
-- independent gateway/service lifecycle under PRIME supervision;
-- VONDA-specific Telegram bot/gateway adapter;
-- authorized-user/chat binding with fail-closed unknown-user behavior;
-- isolated workspace and memory;
-- isolated secrets/env and permissions;
-- VONDA Corporation identity seed;
-- VONDA-specific logs, health checks, checkpoints and recovery;
-- task, priority, reminder, drafting and meeting-prep support;
-- first-run onboarding/workflow discovery;
-- operational context persistence;
-- bounded security/contract escalation path VONDA → PRIME → Founder where material;
-- experience capture for generalized RYZ3N product learning;
-- strict no-cross-client context boundary;
-- no exposure of shared RYZ3N/PRIME credentials or other-project data;
-- structural portability from shared host to dedicated VPS.
-
-## Client-facing bootstrap
-
-After Telegram activation, VONDA ARC asks Laetitia for the **3–5 recurring things she most wants VONDA to assist with**, plus language/tone, reminders, memory/retention preferences, permissions, success criteria and what not to store.
-
-Internal PRIME/RYZ3N hierarchy is not a client onboarding topic.
-
-## Commercial / access / security bootstrap
-
-VONDA runtime policy/config must contain the approved proposal/pilot boundaries separately from personal memory, including:
-
-- six-month free Founding Pilot period;
-- assigned commercial entitlement during the pilot: **ARC Standard**;
-- thereafter current Standard terms €500/year or €50/month if continued;
-- current website pilot inclusion and indicative standalone value;
-- Founder onboarding/explanation and FR↔NL support as separately priced Founder-delivered services when requested;
+- six-month free Founding Pilot;
+- assigned commercial tier: **ARC Standard**;
+- after the pilot: €500/year or €50/month if continued on Standard;
 - no unlimited custom work;
-- custom integrations/dedicated infrastructure require separate scope/price/Founder decision;
-- no disclosure of master/shared credentials, provider secrets or other-project access;
-- client data/ownership/portability rights do not imply root/shared-platform access;
-- RYZ3N retains reusable platform/IP/orchestration/templates/methods/know-how;
-- transfer/access-key/credential requests outside approved scope are referred to the applicable proposal boundary and escalated to the Founder;
-- security, isolation or material contractual breaches fail closed and signal PRIME through a bounded escalation path.
+- no unlimited provider/API spend;
+- custom integrations/dedicated infrastructure remain separately scoped where required.
 
-### VONDA Standard entitlement during the free pilot
+### Corrected VONDA Standard entitlement
 
-The free pilot is not unlimited. VONDA receives the current Standard launch entitlement:
+The free pilot is not unlimited. Current Standard entitlement:
 
 - **2 GB managed ARC storage**;
-- **2,000 ARC Usage Units (AU) / month** (~2M model-token-equivalent);
+- **5,000 AU/month**;
+- AU is cost-normalized: the current Standard envelope equals **€5 provider-list-price-equivalent AI capacity**, not a fixed token count;
 - **1 authorized user**;
 - **1 primary channel**;
-- **2 external integrations**;
+- **2 integrations**;
 - **5 active automations**;
-- shared infrastructure under the current model-capacity safety rules.
+- **1 shared capacity slot**.
 
-AI allowance resets monthly. Managed storage persists. At ~80% usage VONDA should warn Laetitia. At 100%, there is no silent overage billing: wait for reset, add agreed capacity or upgrade tier.
+Efficient models can provide far more raw token volume than premium models inside the same AU envelope. Premium model use consumes AU faster.
 
-Connected Systeme.io/Drive/other SaaS data does not count against ARC storage while it stays in the external system; persistent ARC-side copies do count.
+AI allowance resets monthly. Storage persists. Warn at ~80%; at 100% do not silently bill overage. The customer can wait for reset, add agreed capacity or upgrade.
 
-### Upgrade ladder visible to VONDA
+Connected Systeme.io/Drive/SaaS data does not count against ARC storage while it remains external; persistent ARC-side copies do count.
+
+### Third-party API/provider boundary
+
+VONDA's two integration slots do **not** mean RYZ3N pays unlimited vendor/API charges.
+
+- paid external subscriptions/API/message/transaction costs are customer-funded by default;
+- RYZ3N-funded variable third-party spend is €0 by default unless an explicit capped allowance is approved;
+- free-tier/free-call connections can operate normally;
+- VONDA/Agents may never autonomously purchase provider credits, seats, message packs, storage or other capacity;
+- any RYZ3N-funded external allowance warns at 80% and hard-stops at 100% unless a higher approved cap already exists.
+
+Authoritative rule:
+
+`../ARC-VARIABLE-COST-AND-API-BOUNDARY.md`
+
+## Upgrade ladder visible to VONDA
 
 VONDA/Laetitia should know from onboarding that Standard is the pilot package, not the whole product family:
 
-- **Standard — €50/month or €500/year:** 2 GB, 2,000 AU/month, 1 user, 1 channel, 2 integrations, 5 automations.
-- **Pro — €120/month or €1,200/year:** 5 GB, 6,000 AU/month, up to 3 users, 2 channels, 5 integrations, 15 automations.
-- **Business — €250/month or €2,500/year:** 15 GB, 15,000 AU/month, up to 10 users, 3 channels, 10 integrations, 40 automations.
-- **Dedicated — from €5,000/year:** 50 GB baseline, 40,000 AU/month, up to 25 users, 5 channels, 20 integrations, 100 automations plus dedicated resources where required.
+- **Standard — €50/month or €500/year:** 2 GB, 5,000 AU, 1 user, 1 channel, 2 integrations, 5 automations, 1 slot.
+- **Pro — €120/month or €1,200/year:** 5 GB, 15,000 AU, up to 3 users, 2 channels, 5 integrations, 15 automations, 3 slots.
+- **Business — €250/month or €2,500/year:** 15 GB, 30,000 AU, up to 10 users, 3 channels, 10 integrations, 40 automations, 6 slots.
+- **Dedicated — from €5,000/year:** 50 GB baseline, 100,000 AU baseline, up to 25 users, 5 channels, 20 integrations, 100 automations, dedicated resources where required.
 - **Enterprise — custom.**
 
 Commercial tier changes do not buy or alter V1→V6 maturity/aura.
 
-Authoritative entitlement standard:
+Authoritative sources:
 
-`12-arc-productization/ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+- `../ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+- `../ARC-VARIABLE-COST-AND-API-BOUNDARY.md`
+- `../PRICING.md`
 
-VONDA may prepare a request for the Founder; it may not silently waive scope, change prices, expose secrets or promise transfer.
+## Required VONDA ARC baseline
+
+VONDA must preserve:
+
+- independent runtime/service identity and lifecycle;
+- authorized-user binding with fail-closed unknown-user behavior;
+- isolated workspace, memory, secrets and logs;
+- task/reminder/drafting/meeting support;
+- first-run onboarding/workflow discovery;
+- experience capture for generalized RYZ3N learning;
+- no cross-client context exposure;
+- no shared/master credential disclosure;
+- structural portability to dedicated infrastructure later.
 
 ## Product-learning rule
 
 `real VONDA use → observation → generalized EXP record → cross-pilot learning → ARC product improvement`
 
-Client-confidential content does not become generalized RYZ3N product content. Promote reusable patterns, not confidential payloads.
+Client-confidential content does not become generalized product content.
 
 ## Readiness definition
 
-`READY` requires proof that:
+READY requires proof of isolated runtime identity, independent restartability, authorized Telegram/user binding, VONDA-scoped memory/secrets/logs/checkpoints, bounded escalation to PRIME, tested recovery and no cross-project retrieval.
 
-- VONDA has its own Hermes runtime/service, not merely a namespaced block in PRIME's gateway;
-- VONDA can stop/restart without restarting PRIME;
-- VONDA Telegram route binds only the authorized Laetitia identity;
-- memory/secrets/logs/checkpoints remain VONDA-scoped;
-- PRIME/FleetConnect/other-client context is not retrievable;
-- onboarding and commercial/access/security policies are loaded;
-- bounded escalation reaches PRIME;
-- rollback/recovery is tested;
-- future dedicated-VPS migration is structurally possible.
+## Founder shorthand
 
-Until those are proven, a prior `READY` based on a shared PRIME gateway is superseded by this Founder runtime correction.
+> **VONDA gets six months free on real Standard limits: 2 GB + 5,000 cost-normalized AU. It sees the full package ladder, but neither AI nor integrations create an open wallet.**
