@@ -17,145 +17,134 @@ amendable: true-additively
 
 Preserve the Founder-directed direction for the later reconstruction of the public RYZ3N website without interrupting the current Cargo ARC → NARC execution sequence.
 
-This is a **later project**. It is not authorization to start rebuilding the public website now.
+This remains a **later project**, not authorization to rebuild now.
 
 ## Founder direction
 
-The current public RYZ3N website is considered too messy/internal for the intended customer audience and will require reconstruction.
+The future website must be outcome-led. Prospective customers should understand what an ARC can do without being exposed to PRIME, OMEGA, FACTORY or other internal machinery.
 
-The future website must be **outcome-led**. A prospective customer does not need to understand PRIME, OMEGA, FACTORY, Canon mechanics, ARC internal stewardship, Brain registries, runtime topology or other internal operating architecture in order to understand and buy the product.
-
-Public positioning should focus on what the customer can achieve, including as applicable:
-
-- business automation;
-- AI operating assistance;
-- customer or employee bots/assistants;
-- Telegram and later additional interfaces/channels;
-- workflow execution;
-- integrations;
-- knowledge-supported business operations;
-- website/interface reconstruction and operation through the customer's ARC;
-- progressively greater ARC capability according to the actual commercial scope and maturity model.
-
-## Website / interface delivery principle
-
-RYZ3N should **not** be positioned as a traditional agency manually building every customer's website.
-
-The intended product direction is that the **customer's ARC itself can reconstruct, evolve and help operate the customer's website/interface** within its authorized tools, permissions and capability level.
-
-Customer-facing explanation should therefore be framed around the result:
-
-> The customer receives an ARC operating partner that can automate work, communicate through suitable interfaces and, where included in scope, create/reconstruct and evolve the customer's digital interface/website.
-
-The ARC is the operating system/delivery engine. RYZ3N provides the platform, governance, provisioning and commercial service around it.
-
-## Internal architecture disclosure boundary
-
-The public website should not expose internal implementation detail merely because it exists in RYZ3N Core or PRIME.
-
-Keep internal unless there is a concrete customer/trust reason to surface it:
-
-- PRIME internal stewardship;
-- OMEGA;
-- FACTORY;
-- Brain Steward;
-- internal canon/load-order mechanics;
-- supervision mirrors;
-- internal runtime/provisioning topology;
-- internal evidence/checkpoint machinery.
-
-Customer-facing material may explain security, privacy, autonomy, continuity, ownership, portability or maturity when useful, but should translate those concepts into understandable benefits rather than dumping internal architecture.
+Public positioning should focus on business automation, AI operating assistance, customer/employee interfaces, workflow execution, integrations, business knowledge execution and website/interface reconstruction/evolution through the customer's ARC.
 
 ## Public package clarity requirement
 
-When the website is rebuilt, commercial packages must not rely on vague words such as “fair use” without showing what customers actually receive.
+When the website is rebuilt, packages must show concrete limits rather than vague “fair use”.
 
-The pricing/package section must display, for the then-current Standard / Pro / Business / Dedicated / Enterprise tiers:
+The package section must display:
 
-- price and billing cadence;
-- managed ARC storage in GB;
-- monthly AI allowance / ARC Usage Units;
-- authorized-user allowance;
-- channel allowance;
-- integration allowance;
-- active-automation allowance;
-- shared vs dedicated infrastructure positioning where relevant;
+- price/billing cadence;
+- managed storage in GB;
+- monthly AI allowance in AU;
+- users;
+- channels;
+- integrations;
+- active automations;
+- shared vs dedicated resource positioning;
 - upgrade path;
-- clear statement that there are no surprise provider/API overage bills.
+- what happens at 80%/100% usage;
+- clear separation between included ARC capacity and third-party vendor/API fees.
 
-Current v1.0 launch entitlements are defined in:
+Current launch shorthand at 2026-09-11:
 
-`ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+- **Standard:** 2 GB / **5,000 cost-normalized AU** / 1 user / 1 channel / 2 integrations / 5 automations / 1 capacity slot;
+- **Pro:** 5 GB / **15,000 AU** / 3 users / 2 channels / 5 integrations / 15 automations / 3 slots;
+- **Business:** 15 GB / **30,000 AU** / 10 users / 3 channels / 10 integrations / 40 automations / 6 slots;
+- **Dedicated:** 50 GB baseline / **100,000 AU baseline** / 25 users / 5 channels / 20 integrations / 100 automations / dedicated resources;
+- **Enterprise:** custom.
 
-Current shorthand at 2026-09-11:
+AU is a monthly **AI-capacity** allowance. Do not market it as a fixed raw-token count because model costs vary substantially.
 
-- Standard: 2 GB / 2,000 AU / 1 user / 1 channel / 2 integrations / 5 automations;
-- Pro: 5 GB / 6,000 AU / 3 users / 2 channels / 5 integrations / 15 automations;
-- Business: 15 GB / 15,000 AU / 10 users / 3 channels / 10 integrations / 40 automations;
-- Dedicated: 50 GB baseline / 40,000 AU / 25 users / 5 channels / 20 integrations / 100 automations;
-- Enterprise: custom.
+## Third-party platform/API disclosure
 
-The future website must re-read the latest entitlement standard before publishing because these launch limits may evolve from production evidence.
+The future public site must make this boundary understandable without sounding punitive:
+
+> **Your ARC package includes a defined number of integrations. Third-party platforms may have their own subscription or usage fees. Paid external services normally use your own provider account/billing or a clearly agreed capped allowance. Your ARC cannot create open-ended third-party charges.**
+
+Important distinctions:
+
+- integration slot ≠ unlimited API spend;
+- a customer's preferred WhatsApp/SMS/maps/search/CRM/dispatch/other provider may have its own fees;
+- free-tier/free-call connections may operate normally;
+- RYZ3N-funded external variable spend is not assumed merely because a connector is available;
+- no Agent/Brain/ARC gets autonomous purchasing authority;
+- no surprise API/provider overage bill is silently created or passed through.
+
+Authoritative source:
+
+`ARC-VARIABLE-COST-AND-API-BOUNDARY.md`
 
 ## Founding Pilot visibility
 
-Founding Pilot customers should understand from onboarding that a free pilot is an assigned commercial tier, not unlimited use.
+Founding Pilot customers should understand that free pilot access is assigned to a real commercial tier, not unlimited use.
 
-Current Founder direction:
+Current direction:
 
 - VONDA ARC: six-month free Founding Pilot on Standard entitlement;
 - NARC: six-month free Founding Pilot on Standard entitlement;
-- both may see Pro, Business, Dedicated and Enterprise upgrade options during the pilot;
+- both may see Pro, Business, Dedicated and Enterprise upgrade paths during the pilot;
 - KMS7, if accepted and authorized, is a Founding Business exception at €170/month with Business entitlements, while normal future Business remains €250/month / €2,500/year.
 
-These customer-specific exceptions do not replace the public canonical tier prices.
+Customer-specific exceptions do not replace canonical public pricing.
+
+## Website / interface delivery principle
+
+RYZ3N should not be positioned as a traditional agency manually building every customer's site.
+
+The customer's ARC itself should be positioned as capable of reconstructing, evolving and helping operate the customer's website/interface within authorized tools, permissions and capability.
+
+## Internal architecture disclosure boundary
+
+Keep internal unless customer trust/compliance genuinely requires translation:
+
+- PRIME;
+- OMEGA;
+- FACTORY;
+- Brain Steward;
+- canon/load-order mechanics;
+- supervision mirrors;
+- runtime/provisioning topology;
+- internal evidence/checkpoint machinery.
+
+Translate privacy, isolation, ownership, continuity and maturity into customer benefits rather than architecture dumps.
 
 ## Mandatory pre-rebuild cross-check
 
-Before reconstructing the public website, perform a fresh cross-check of the then-current canonical commercial/product documents. Do **not** invent a new tier model from scratch.
-
-At minimum review:
+Before rebuilding the public website, re-read the then-current:
 
 - `ARC-V1-V6-COMMERCIAL-MATURITY-TUTORIAL.md`;
 - `PRICING.md`;
 - `ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`;
-- `ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md`;
+- `ARC-VARIABLE-COST-AND-API-BOUNDARY.md`;
 - `COST-CAPACITY-MODEL.md`;
-- `ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md` or its latest successor;
-- `ARC-COMMERCIAL-PIPELINE-2026-09-11.md` or its latest successor;
-- all later Founder decisions concerning tiers, V1/V2/V3/V4/V5/V6 maturity, usage, support, dedicated capacity, integrations, website/interface capability and commercial exceptions.
+- `ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md`;
+- latest commercial pipeline and Founder directives.
 
-The public commercial tiers must reflect the **current real product** at rebuild time, while the V1→V6 maturity model remains evidence-derived and distinct from billing tier unless a later Founder decision explicitly changes that doctrine.
+Do not invent a parallel package ladder.
 
 ## Current maturity guardrail
 
-Current canonical maturity shorthand remains:
-
 `V1 Blue → V2 Cyan → V3 Violet → V4 Gold → V5 Platinum → V6 Sovereign/Prismatic`
 
-This maturity path must not be turned into a misleading pay-to-win price ladder. Commercial scope/resources and ARC maturity are distinct unless future Founder direction changes the model.
+Commercial package and maturity remain separate. Higher spend does not purchase a false aura.
 
 ## Customer message direction
 
-Future copy should answer, in plain language:
+Future copy should answer:
 
-1. What can my ARC do for my business?
-2. What work can it automate or execute?
-3. How can I talk to it or let customers/employees interact with it?
-4. Can it improve/reconstruct my current website or digital interface?
-5. What integrations and permissions can I give it?
-6. What does each commercial tier include — including storage, AI allowance, users, channels, integrations and automations?
-7. What happens when I approach or reach my usage allowance?
-8. What changes as the ARC matures from V1 onward?
-9. What remains under my ownership/control?
-10. What happens to my data, access and continuity if I upgrade, downgrade or leave?
+1. What can my ARC do?
+2. What can it automate/execute?
+3. Which channels/users can access it?
+4. What website/interface work can it perform?
+5. Which systems can it connect to?
+6. What exactly does each package include?
+7. What happens near/at usage limits?
+8. Who pays third-party platform/API fees?
+9. How does maturity differ from package level?
+10. What remains under customer ownership/control if they upgrade, downgrade or leave?
 
 ## Execution timing
 
-Deferred until the Founder explicitly prioritizes the RYZ3N public website reconstruction.
-
-Current execution priority remains the live ARC productization sequence, including Cargo ARC completion/evidence and NARC as the next authorized ARC.
+Deferred until the Founder explicitly prioritizes the public RYZ3N website reconstruction.
 
 ## Founder shorthand
 
-> **Sell the outcome, not the machinery. Make the packages concrete: price, GB, AI allowance, users, integrations and automations. Founding pilots get real limits and visible upgrade paths. Before rebuilding ryz3n.com, re-read the actual tiers, entitlements and V1→V6 canon and make the site match reality.**
+> **Sell the outcome, not the machinery. Make limits concrete. AU is cost-normalized AI capacity, not a fake fixed-token promise. Integrations are included; third-party provider wallets are not.**
