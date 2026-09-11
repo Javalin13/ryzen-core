@@ -5,11 +5,33 @@
 type: productization-backlog
 status: active
 created: 2026-09-03
-classification: planned-design-candidates
-runtime_implementation_authorized: false
+updated: 2026-09-11
+classification: active-factory-productization
+runtime_implementation_authorized: true
 amendable: true-additively
 ---
 ```
+
+## Founder direction update — 2026-09-11
+
+The ARC program has moved from bespoke pilot copying toward a **PRIME-orchestrated, state-of-the-art replication Factory**.
+
+The prior caution against prematurely automating unproven UX remains valid, but it must not block automation of repeatable/safety-critical production mechanics that are now explicitly defined: identity reservation, source-boundary classification, repository provisioning, deterministic package manufacture, schema/policy validation, OMEGA/FACTORY registration, isolation checks, runtime provisioning, recovery and telemetry.
+
+PRIME remains the supervisor/director/orchestrator of the whole cycle. OMEGA, FACTORY and BRAIN STEWARD perform bounded specialist responsibilities under PRIME.
+
+Current Factory contract artifacts:
+
+- `PRIME-ORCHESTRATION-AND-INSTANCE-HANDOFF-STANDARD.md`
+- `ARC-REPLICATION-FACTORY-PRODUCTION-STANDARD.md`
+- `ARC-FACTORY-FOUNDER-TRIGGER-AND-REPOSITORY-PROVISIONING.md`
+- `ARC-FACTORY-CREATION-REQUEST-SCHEMA.json`
+- `ARC-FACTORY-BIRTH-MANIFEST-SCHEMA.json`
+- `factory-template/`
+- `../scripts/validate-arc-factory-package.mjs` (repository root `scripts/`)
+- `ARC-FACTORY-READINESS-AUDIT-2026-09-11.md`
+
+NARC is Factory replication candidate #1 and is currently `registered_pre_runtime` with F0–F3 complete.
 
 ## Objective
 
@@ -17,47 +39,76 @@ Reduce ARC onboarding from a bespoke technical project to a repeatable provision
 
 Target end-state for Standard:
 
-> New customer → choose tier → provision autonomous ARC node → create isolated ARC identity/config → start ARC-specific Hermes runtime/service → bind ARC-specific Telegram bot/gateway → workspace/memory → secrets/permissions → health/isolation/restart test → live → capture real usage experience → feed validated patterns into the final ARC UX/system.
+> Founder/authorized intent → PRIME opens production cycle → OMEGA identity/source classification → FACTORY genesis → repository create/designate → deterministic ARC source manufacture → validation → OMEGA/FACTORY/PRIME registration → isolated runtime/service → model-capacity assignment → channel binding → Owner binding → health/isolation/restart test → live useful work → evidence → truthful maturity/lifecycle state.
 
 ## Productization target
 
 - Standard ARC: ~80–90% identical platform, ~10–20% customer configuration.
-- Each client ARC is an **autonomous runtime node under supervision**, not another chat inside PRIME's own runtime.
+- Each client ARC is an **autonomous runtime node under PRIME supervision/orchestration**, not another chat inside PRIME's own runtime.
 - Early Standard/Founding Pilot ARCs may share a physical VPS with PRIME only if runtime/service, memory, secrets, logs and restart boundaries remain isolated and proven.
-- Target mature Standard setup time: **1–2 founder/operator hours maximum**, excluding unusual migrations or custom integrations.
+- Mature Standard setup target: **one Founder intent with minimal intervention**, with operator handling ideally below 1 hour once the Factory is proven; unusual migrations/custom integrations excluded.
 - Ongoing Standard support should be bounded and predictable.
-- Each prototype must produce an auditable learning trail, not only a technical deployment.
-- Every production ARC must expose privacy-safe **model-capacity telemetry** so RYZ3N/PRIME can protect user experience and attribute capacity/cost.
-- Founder safety ceiling: **do not plan more than 10 Standard ARCs on one Ollama/Hermes model-capacity pool until production evidence proves another limit is safe; provision earlier when telemetry requires it.**
+- Each prototype must produce an auditable learning trail.
+- Every production ARC must expose privacy-safe model-capacity telemetry.
+- Founder safety ceiling: do not plan more than 10 Standard ARCs on one Ollama/Hermes model-capacity pool until production evidence proves another limit is safe; provision earlier when telemetry requires it.
 
 ## Provisioning backlog
 
+### P0A — Factory control plane / production automation
+
+Already established:
+
+- [x] PRIME full-cycle orchestration authority standard.
+- [x] OMEGA / FACTORY / BRAIN STEWARD responsibility split.
+- [x] repository/source-boundary classification standard.
+- [x] machine-readable Founder/authorized creation request schema.
+- [x] machine-readable ARC Factory birth manifest schema.
+- [x] customer-neutral Factory source template v1.
+- [x] source-package invariant validator v1.
+- [x] NARC used as replication candidate #1 with truthful manual-repo gap provenance.
+
+Still required:
+
+- [ ] PRIME-controlled least-privilege GitHub App/service capable of creating private customer ARC repositories.
+- [ ] Authenticated Founder control-channel command path (Telegram if selected) with replay/idempotency protection and audit pointer.
+- [ ] Idempotent Factory renderer: validated creation request → deterministic full ARC package.
+- [ ] Factory transaction ID spanning creation request, ARC source, OMEGA, FACTORY, PRIME mirror and runtime checkpoint.
+- [ ] Reconciliation state/repair workflow for partial cross-repository failures.
+- [ ] CI invocation of Factory validation on generated/modified ARC packages.
+- [ ] Automated secret scanning and newly-created repository policy/ruleset application.
+- [ ] Runtime provisioner for isolated Hermes/service profile, state, logs, secrets and restart identity.
+- [ ] Model-capacity pool allocator with population/headroom rules.
+- [ ] Channel provisioner/binder with fail-closed unknown identity tests.
+- [ ] Automated known-good checkpoint and rollback around material provisioning stages.
+- [ ] Founder-facing production status report generated by PRIME after each material stage/blocker.
+
 ### P0 — Pilot safety before scale
 
-- [ ] Prove a second PRIME-derived ARC can coexist on the same physical VPS without cross-talk.
-- [ ] Prove the ARC has an independent Hermes runtime/service identity rather than sharing PRIME's client session.
-- [ ] Prove ARC service/gateway can start, stop and restart independently from PRIME.
-- [ ] Unique Telegram bot token and allowed-user/chat scope per ARC.
-- [ ] Unique Telegram gateway/channel binding per ARC with fail-closed unknown-chat behavior.
-- [ ] Unique ARC identity/persona/config.
-- [ ] Separate workspace/memory boundaries.
-- [ ] Separate secrets/env boundaries.
-- [ ] Explicit tenant/user permissions.
-- [ ] Restart/recovery behavior per ARC.
-- [ ] ARC-specific checkpoint / known-good recovery reference.
+- [ ] Prove NARC as the next isolated ARC can coexist on the same physical VPS without cross-talk.
+- [ ] Prove NARC has an independent Hermes runtime/service identity rather than sharing PRIME's client session.
+- [ ] Prove NARC service/gateway can start, stop and restart independently from PRIME/Cargo/VONDA.
+- [ ] Unique primary-channel credential and allowed-user/chat scope per ARC.
+- [ ] Unique channel binding per ARC with fail-closed unknown-chat/user behavior.
+- [x] Unique ARC identity/config source package for NARC.
+- [ ] Separate workspace/memory boundaries verified at runtime.
+- [ ] Separate secrets/env boundaries verified at runtime.
+- [x] Explicit tenant/user access policy exists in NARC source.
+- [ ] Restart/recovery behavior proven for NARC.
+- [ ] ARC-specific checkpoint / known-good recovery reference generated.
 - [ ] Health check per ARC.
 - [ ] Logs identify ARC/tenant without exposing secrets or merging client payloads into PRIME memory.
 - [ ] Bounded escalation signal path ARC → PRIME for security, contractual, isolation and operational incidents.
 - [ ] Prove one ARC can be stopped without taking PRIME or another ARC down.
 - [ ] Resource measurement: idle RAM, peak RAM, CPU, storage/log growth.
-- [ ] Model-capacity measurement for VONDA ARC: request volume, failures, throttling/rate limits, retries, latency, concurrency, provider usage units/tokens when available, and attributable cost estimate where available.
-- [ ] Record every meaningful onboarding friction, reliability issue, confusion, support intervention and successful usage pattern in `prototype-experience/EXPERIENCE-BACKLOG.md`.
+- [ ] Model-capacity measurement: request volume, failures, throttling/rate limits, retries, latency, concurrency, provider usage units/tokens where available, attributable cost estimate where available.
+- [ ] Record meaningful onboarding friction, reliability issues, confusion, support intervention and successful usage patterns in prototype experience evidence.
 
 ### P1 — Repeatable autonomous-node template
 
-- [ ] Canonical ARC template derived from proven PRIME patterns, not raw copy-paste drift.
-- [ ] Config schema: `arc_id`, owner, tier, language, channels, workspace, permissions, model route, model-capacity-pool id, support policy, runtime/service identity, gateway identity, checkpoint/version.
-- [ ] Standard directory naming and service naming.
+- [x] Canonical Factory source template derived from proven patterns, not raw copy-paste drift.
+- [x] Creation request and birth-manifest config schemas cover identity, owner, tier, language, source boundary and production state.
+- [x] Standard ARC source directory contract defined.
+- [ ] Standard runtime/service naming convention made executable.
 - [ ] Standard Hermes runtime/service unit per ARC.
 - [ ] Standard model-capacity telemetry contract inherited by every ARC.
 - [ ] Standard channel-adapter package; Telegram first, channel-independent core.
@@ -71,8 +122,8 @@ Target end-state for Standard:
 
 ### P2 — Commercial controls
 
-- [ ] Pilot start/end date field.
-- [ ] Tier and billing-cycle field.
+- [ ] Pilot start/end date field enforced operationally.
+- [x] Tier and billing terms can be represented in Factory/ARC source.
 - [ ] Fair-use / usage counters.
 - [ ] Per-ARC provider/model consumption counters.
 - [ ] Model-capacity-pool assignment and pool population counter.
@@ -80,17 +131,17 @@ Target end-state for Standard:
 - [ ] Shared-host vs dedicated-VPS deployment flag.
 - [ ] Dedicated-resource flag.
 - [ ] Support entitlement.
-- [ ] Feature entitlement per tier.
+- [ ] Feature entitlement per tier enforced by runtime.
 - [ ] Upgrade/downgrade path.
 - [ ] Offboarding/data-export/deletion process.
 - [ ] Track which requests are Standard product needs versus higher-tier/custom needs.
 
 ### P3 — Operations at 5–10 ARCs
 
-- [ ] PRIME/R​YZ3N-facing per-ARC health overview without merging client memory.
+- [ ] PRIME/RYZ3N-facing per-ARC health overview without merging client memory.
 - [ ] Resource usage dashboard.
 - [ ] Model-capacity dashboard by ARC and by capacity pool.
-- [ ] Alerts/review triggers for provider throttling, rate limits, retry bursts, latency degradation, quota headroom and disproportionate ARC consumption.
+- [ ] Alerts/review triggers for throttling, rate limits, retry bursts, latency degradation, quota headroom and disproportionate ARC consumption.
 - [ ] Central error surfacing without merging customer data.
 - [ ] Backup policy.
 - [ ] Update rollout order/canary path.
@@ -101,14 +152,14 @@ Target end-state for Standard:
 - [ ] Provision the next model-capacity pool before recurring user degradation; permit earlier split for heavy ARC usage.
 - [ ] Support-time tracking.
 - [ ] Independent restart/status controls per ARC.
-- [ ] Cross-pilot experience review: identify recurring UX/system patterns across ARCs.
-- [ ] Trace promoted UX requirements back to `EXP-*` evidence records.
+- [ ] Cross-pilot experience review and promotion of repeated patterns into Factory template/contracts.
+- [ ] Trace promoted UX/system requirements back to evidence records.
 
 ### P4 — Dedicated / Business / Enterprise
 
 - [ ] Dedicated VPS template using the same ARC runtime contract proven on shared host.
 - [ ] Migration procedure from shared host → dedicated VPS preserving ARC identity/config/state contracts.
-- [ ] Dedicated or reserved model-capacity pattern for heavy/business-critical customers when shared provider capacity is not appropriate.
+- [ ] Dedicated/reserved model-capacity pattern for heavy/business-critical customers.
 - [ ] Stronger tenant isolation controls.
 - [ ] Multiple authorized users/team permissions.
 - [ ] External integrations governance.
@@ -119,31 +170,31 @@ Target end-state for Standard:
 
 ### P5 — Final ARC UX/system synthesis gate
 
-Before the final ARC UX/system is frozen:
+Before final ARC UX/system is frozen:
 
-- [ ] Review the full prototype experience backlog.
-- [ ] Group duplicate/recurrent friction patterns without deleting source history.
-- [ ] Preserve successful interaction patterns that users naturally adopt.
+- [ ] Review full prototype experience backlog.
+- [ ] Group recurrent friction patterns without deleting source history.
+- [ ] Preserve successful interaction patterns users naturally adopt.
 - [ ] Convert validated patterns into explicit UX/system requirements and acceptance criteria.
 - [ ] Map support-heavy manual actions to automation/simplification candidates.
 - [ ] Confirm privacy, trust, memory, notification and recovery expectations from real users.
 - [ ] Separate universal ARC UX from tier-specific/custom behavior.
 - [ ] Document deliberately rejected requests and why.
 - [ ] Identify remaining unvalidated assumptions.
-- [ ] Re-test the final candidate UX with later pilots before declaring it stable.
+- [ ] Re-test final candidate UX with later pilots before declaring it stable.
 
-## What NOT to automate prematurely
+## What not to automate blindly
 
-Do not build a full ARC Factory before the first pilots prove the repeatable requirements. The first external pilots are meant to reveal the minimum stable provisioning contract and the real user experience contract.
+Do not automate **unproven customer behavior or consent assumptions** merely to chase one-click setup.
 
-Automate only patterns that have repeated or are clearly safety-critical.
+Do automate production mechanics that are repeatable or safety-critical once their contract is explicit, including validation, source-boundary checks, deterministic package generation, isolation tests, recovery checkpoints and telemetry.
 
-The model-capacity telemetry contract is considered safety-critical for scale because service degradation from shared provider limits directly affects every ARC using that pool.
+No automation may infer Owner consent, fabricate domain ownership, buy paid capacity, silently overrun commercial caps, claim maturity/aura, or bypass explicit identity binding.
 
 ## Success metric
 
-ARC #10 should require materially less Founder attention than ARC #1, while preserving isolation, reliability and user value.
+ARC #10 should require materially less Founder attention than ARC #3 while preserving isolation, reliability, user value and truthful lifecycle state.
 
-A mature ARC should be provisionable as an autonomous node on a shared host or a dedicated VPS using the same conceptual runtime contract.
+A mature ARC should be provisionable as an autonomous node on a shared host or dedicated VPS using the same conceptual runtime contract.
 
-The final ARC UX/system should be explainable from accumulated prototype evidence rather than being a design created in isolation from real users.
+The final ARC UX/system should be explainable from accumulated prototype evidence rather than created in isolation from real users.
