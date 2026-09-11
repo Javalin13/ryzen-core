@@ -5,6 +5,7 @@
 type: arc-commercial-pipeline-current
 status: founder-directed-current-reality
 created: 2026-09-11
+updated: 2026-09-11
 classification: commercial-validation + authorized-creation-queue
 scope: NARC pilot + KMS7 commercial follow-up
 runtime_implementation_authorized: NARC-next-after-Cargo
@@ -64,6 +65,27 @@ Current commercial reality:
 
 Do not encode the phrase “100 times cheaper” as a literal accounting equivalence between the old one-time bespoke proposal and the new recurring subscription. It is the Founder’s qualitative sales framing; the commercial structures differ.
 
+### KMS7 canonical pricing cross-check
+
+The communicated **€150–€170/month is not a canonical tier price**.
+
+Current tier references are:
+
+- Standard: €50/month or €500/year;
+- Pro: €120/month or €1,200/year;
+- Business: €250/month or €2,500/year;
+- Dedicated: from €5,000/year;
+- Enterprise: custom, working floor approximately €10,000/year.
+
+The previously discussed KMS7 scope includes multiple company workflows and potentially deeper integrations: Google Drive/document handling, expenses, vehicle/insurance tracking, marketing/business support and integration with an existing dispatch system. Taken as a whole, that scope maps more naturally to **ARC Business at €250/month**, with Dedicated/separate implementation pricing if custom dispatch integration or stronger operational requirements materially increase burden.
+
+The €150–€170 figure therefore remains the **historical Founder-communicated provisional price**, potentially usable as a bounded introductory/pilot exception. It must not silently redefine Pro/Business or commit full original Business/Dedicated scope before scoping.
+
+Detailed lead and assessment:
+
+- `commercial-leads/KMS7-CARS-ARC-PROPOSAL-2026-09-11.md`;
+- `commercial-leads/KMS7-PRICING-CROSSCHECK-2026-09-11.md`.
+
 If Adnan accepts in principle, the next step is to convert the discussion into a defined ARC scope, commercial tier/exception, access/integration boundaries, privacy/data responsibilities and then an explicit ARC creation authorization before OMEGA/FACTORY birth registration.
 
 ## Commercial interpretation
@@ -82,4 +104,4 @@ This does **not** yet prove retention, scalable onboarding, KMS7 conversion, NAR
 2. Instantiate NARC next through the Golden Blueprint + mandatory OMEGA/FACTORY birth contract.
 3. Keep NARC’s pilot pricing marked as an exception, not global canonical pricing.
 4. Await KMS7 response; do not create a KMS7 ARC or count revenue before explicit acceptance/authorization.
-5. If KMS7 responds positively, scope the Telegram-first ARC offer against Standard vs heavier integration requirements before final commercial commitment.
+5. If KMS7 responds positively, scope the Telegram-first ARC offer against the canonical ladder: bounded introductory exception around the communicated €150–€170 if deliberately limited, **Business €250/month** for the broader known company/integration scope, and Dedicated/separate implementation treatment if technically required.
