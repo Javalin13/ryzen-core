@@ -1,6 +1,8 @@
-# RYZ3N ARC Role Taxonomy & Entitlement-Limit Messaging Standard
+# RYZ3N ARC Role Taxonomy & Owner Experience Standard
 
 Status: **CANONICAL — Founder directive 2026-09-12**
+
+> **Supersession note — 2026-09-12:** Owner-facing AI usage-limit messaging is retired. PRIME is the only runtime authorized to use Ollama Cloud MiniMax M3 as its normal primary route. ARCs are local-model-first. Daily/weekly/monthly model-usage-limit messages must not be shown to ARC Owners.
 
 ## 1. Canonical human roles
 
@@ -9,14 +11,16 @@ RYZ3N uses two canonical human authorization roles across ARCs:
 - `founder` — reserved for the RYZ3N Founder. John / Jan is always Founder in every ARC and ecosystem context.
 - `owner` — every non-Founder human who is granted ownership/use of an ARC is an Owner.
 
-Business/domain titles are metadata and do not replace the authorization role. Examples:
+Business/domain titles are metadata and do not replace the authorization role.
+
+Examples:
 
 - Narek: `owner`
 - Laetitia: `owner`
 - Maria: `owner` with Cargo Connect co-founder retained only as business-title metadata
 - John / Jan: `founder`
 
-Legacy labels such as `founder_operator`, `founder_test`, `primary_user`, `cargo_cofounder`, or similar role names may exist temporarily during migration only. They are not canonical role identities going forward.
+Legacy labels such as `founder_operator`, `founder_test`, `primary_user`, `cargo_cofounder`, or similar role names may exist temporarily during migration only. They are not canonical human role identities going forward.
 
 Founder powers are capability/authority metadata attached to `founder`; they are not a third human role.
 
@@ -40,88 +44,98 @@ For current ARCs:
 - Cargo: Maria -> `owner`; co-founder remains Cargo business-title metadata only
 - Cargo Founder identity: John / Jan -> `founder`
 
-## 4. Commercial entitlement tiers
+## 4. Owner AI service model — no usage-limit UX
 
-Canonical Owner-facing tiers:
+ARC Owners are **not** shown AI model usage-limit counters, daily/weekly/monthly model-limit warnings, provider-credit exhaustion messages, or upgrade prompts caused by model usage.
 
-- `Standard` — included high-performance usage allowance
-- `Pro` — higher high-performance usage allowance
-- `Business` — unlimited Owner usage entitlement
+Current Founder direction:
 
-Exact pricing, reset cadence, rate limits, temporary-reduced-capacity behavior, concurrency rules and service-availability terms belong in commercial configuration/contracts and may evolve without redefining the role taxonomy.
+- PRIME may use Ollama Cloud MiniMax M3 as its primary intelligence route.
+- Cargo, NARC, VONDA and future ARCs are local-model-first after the local model passes the required hardware and Hermes capability gates.
+- ARC Owner interaction is served from shared local inference infrastructure rather than consuming PRIME's Ollama Cloud MiniMax M3 pool.
+- Internal calls/tokens/cost-equivalent usage may still be measured for telemetry and pricing analysis.
+- Internal telemetry is not an Owner-facing quota.
 
-## 5. Cadence-aware Owner usage-limit UX
+Therefore the previous Standard/Pro daily/weekly/monthly AI usage-limit messages are superseded and must not be emitted.
 
-When, and only when, the Owner's own commercial/high-performance entitlement reaches a configured limit, the ARC must identify the correct cadence if known:
+## 5. Commercial tiers remain real but are not model-call counters
 
-- daily;
-- weekly;
-- monthly.
+Standard / Pro / Business / Dedicated / Enterprise remain commercial product tiers.
 
-It must then explain that the ARC has been temporarily downgraded to reduced-capacity mode until the relevant limit resets.
+They may differ by factors such as:
 
-### Standard
+- managed storage;
+- authorized users;
+- channels;
+- integrations;
+- automations;
+- support/service level;
+- queue/concurrency priority;
+- shared vs dedicated compute placement;
+- advanced capabilities and future contracted scope.
 
-**English**
+They do **not** currently require an Owner-facing AI message quota or daily/weekly/monthly model-usage reset message.
 
-> You've reached the [daily/weekly/monthly] usage limit of your Standard plan. Your ARC has been temporarily downgraded until the limit resets. You can continue using your ARC in reduced-capacity mode, wait for the reset, upgrade to Pro for higher limits, or choose Business for unlimited usage.
+Exact prices and tier differentiation remain Founder-approved commercial policy and are refined from Step 17/17B telemetry rather than from provider-session ceilings.
 
-**French**
+## 6. Capacity pressure is infrastructure state, not Owner usage exhaustion
 
-> Tu as atteint la limite d’utilisation [quotidienne/hebdomadaire/mensuelle] de ton forfait Standard. Ton ARC fonctionne temporairement en capacité réduite jusqu’à la réinitialisation de la limite. Tu peux continuer à l’utiliser, attendre la réinitialisation, passer à Pro pour des limites plus élevées, ou choisir Business pour une utilisation illimitée.
+The runtime may still classify operational conditions internally, for example:
 
-**Dutch**
-
-> Je hebt de [dagelijkse/wekelijkse/maandelijkse] gebruikslimiet van je Standard-pakket bereikt. Je ARC werkt tijdelijk in verminderde capaciteit tot de limiet opnieuw wordt ingesteld. Je kunt je ARC blijven gebruiken, wachten op de reset, upgraden naar Pro voor hogere limieten, of Business kiezen voor onbeperkt gebruik.
-
-### Pro
-
-**English**
-
-> You've reached the [daily/weekly/monthly] usage limit of your Pro plan. Your ARC has been temporarily downgraded until the limit resets. You can continue using your ARC in reduced-capacity mode, wait for the reset, or upgrade to Business for unlimited usage.
-
-**French**
-
-> Tu as atteint la limite d’utilisation [quotidienne/hebdomadaire/mensuelle] de ton forfait Pro. Ton ARC fonctionne temporairement en capacité réduite jusqu’à la réinitialisation de la limite. Tu peux continuer à l’utiliser, attendre la réinitialisation, ou passer à Business pour une utilisation illimitée.
-
-**Dutch**
-
-> Je hebt de [dagelijkse/wekelijkse/maandelijkse] gebruikslimiet van je Pro-pakket bereikt. Je ARC werkt tijdelijk in verminderde capaciteit tot de limiet opnieuw wordt ingesteld. Je kunt je ARC blijven gebruiken, wachten op de reset, of upgraden naar Business voor onbeperkt gebruik.
-
-### Business
-
-Business is unlimited at the Owner-entitlement layer and must never receive a false plan-exhaustion message.
-
-If RYZ3N high-performance infrastructure is temporarily constrained, Business may receive a service-state message such as:
-
-> Your ARC is temporarily running in reduced-capacity mode while high-performance capacity resets. You can continue using it, and full performance will return automatically.
-
-Equivalent FR/NL localization is required. If the exact infrastructure cadence is known and product-appropriate, the ARC may say the current high-performance daily/weekly/monthly capacity has reset timing, but it must not imply that the Business commercial entitlement itself is capped.
-
-## 6. Entitlement exhaustion vs provider/internal capacity exhaustion
-
-The runtime must classify at minimum:
-
-1. `owner_entitlement_exhausted`
-2. `provider_session_limit_exhausted`
-3. `provider_daily_limit_exhausted`
-4. `provider_weekly_limit_exhausted`
-5. `provider_monthly_limit_exhausted`
-6. `provider_concurrency_saturated`
-7. `provider_rate_limited`
-8. `provider_unavailable`
-9. `fallback_active`
-10. `all_authorized_routes_unavailable`
+```text
+local_capacity_busy
+local_queue_saturated
+local_model_unavailable
+external_free_fallback_active
+all_authorized_routes_unavailable
+prime_cloud_session_limit_exhausted
+prime_cloud_weekly_limit_exhausted
+prime_cloud_rate_limited
+```
 
 Rules:
 
-- Owner entitlement exhausted -> show the correct tier/cadence message and use permitted temporary reduced-capacity mode.
-- Provider/internal capacity exhausted while the Owner still has entitlement -> do not blame the Owner and do not falsely upsell; use Founder-authorized fallback internally.
-- All authorized routes unavailable -> sanitized temporary-unavailability message only.
+- ARC local capacity pressure must not be described as "you reached your usage limit".
+- Queueing is preferred over falsely presenting a commercial exhaustion state.
+- If an approved ARC fallback is available, use it internally.
+- If all ARC routes are unavailable, use only a sanitized temporary service-availability message.
+- PRIME cloud-capacity diagnostics are Founder/PRIME-only and do not become Owner messages.
 
-Canonical fallback/downgrade behavior is defined in `ARC-CAPACITY-FALLBACK-TEMPORARY-DOWNGRADE-AND-LOCAL-INFERENCE-STANDARD.md`.
+## 7. Owner-facing service messages
 
-## 7. No provider internals to Owners
+Normal Owner experience should remain silent about inference routing.
+
+If local capacity is temporarily busy but the request can queue, use a neutral product message only when necessary, for example:
+
+**English**
+
+> Your ARC is handling higher activity right now. Your request is queued and will continue automatically.
+
+**French**
+
+> Ton ARC gère actuellement une activité plus élevée. Ta demande est mise en file d’attente et continuera automatiquement.
+
+**Dutch**
+
+> Je ARC verwerkt momenteel meer activiteit. Je verzoek staat in de wachtrij en gaat automatisch verder.
+
+If no authorized route is available:
+
+**English**
+
+> Your ARC is temporarily unavailable. Please try again shortly.
+
+**French**
+
+> Ton ARC est temporairement indisponible. Réessaie dans quelques instants.
+
+**Dutch**
+
+> Je ARC is tijdelijk niet beschikbaar. Probeer het over enkele ogenblikken opnieuw.
+
+No usage-limit, provider, model, billing, credits, reset-window, or infrastructure-internal wording is shown to the Owner.
+
+## 8. No provider internals to Owners
 
 Owners must never receive raw infrastructure/provider diagnostics such as:
 
@@ -133,15 +147,26 @@ Owners must never receive raw infrastructure/provider diagnostics such as:
 - internal `/model` commands;
 - provider request/reference IDs;
 - API/runtime/profile details;
-- credential/authentication details.
+- credential/authentication details;
+- PRIME's Ollama Cloud session/weekly/monthly state.
 
 These are Founder/PRIME telemetry only.
 
-## 8. Founder visibility
+## 9. Founder visibility
 
-The Founder may receive full operational diagnostics through PRIME / Founder dashboards, including provider/model, limit cadence/class, pool exhaustion, fallback status, local inference state, capacity forecasts and billing/cost metadata. This Founder visibility does not alter the Founder role and does not expose Owner-private message content by default.
+The Founder may receive full operational diagnostics through PRIME / Founder dashboards, including:
 
-## 9. Factory inheritance
+- PRIME cloud-provider/model state;
+- local model health;
+- local queue/concurrency pressure;
+- fallback status;
+- capacity forecasts;
+- actual/equivalent costs;
+- per-ARC call/token/load telemetry.
+
+This Founder visibility does not alter the Founder role and does not expose Owner-private message content by default.
+
+## 10. Factory inheritance
 
 Every new Factory-created ARC must inherit:
 
@@ -152,25 +177,29 @@ roles:
   business_titles_are_metadata: true
   legacy_role_aliases_allowed_for_migration_only: true
 
-entitlements:
-  tiers: [Standard, Pro, Business]
-  standard_and_pro_cadence_aware_limits: true
-  business_usage: unlimited
-  temporary_reduced_capacity_supported: true
-  distinguish_owner_limit_from_provider_capacity: true
-  owner_provider_error_leakage_allowed: false
+owner_ai_experience:
+  primary_inference_class: shared_local
+  owner_ai_usage_limit_messages_allowed: false
+  provider_internal_leakage_allowed: false
+  daily_weekly_monthly_ai_reset_messages_allowed: false
+  queue_message_allowed_when_material: true
+  sanitized_unavailable_message_allowed: true
+
+telemetry:
+  internal_usage_measurement_allowed: true
+  owner_visible_model_quota: false
 ```
 
-## 10. Acceptance criteria
+## 11. Acceptance criteria
 
 An ARC passes this standard when:
 
 1. John / Jan resolves as Founder, never Owner;
 2. intended non-Founder users resolve as Owner, regardless of business title;
 3. direct first-contact binds only the armed Owner slot;
-4. Standard/Pro limit UX identifies the correct configured daily/weekly/monthly cadence;
-5. temporary downgrade preserves ARC identity, memory, tools and Owner binding;
-6. Business is represented as unlimited at the Owner-entitlement layer;
-7. provider exhaustion does not falsely consume or blame the Owner's entitlement;
-8. raw provider/runtime errors remain visible only to Founder/PRIME telemetry;
-9. full-performance service returns automatically when high-performance capacity recovers.
+4. the ARC uses the verified shared local inference service as its normal primary route;
+5. the ARC does not consume PRIME's Ollama Cloud MiniMax M3 pool;
+6. no daily/weekly/monthly AI usage-limit message is shown to an Owner;
+7. infrastructure pressure is handled through queueing/fallback or sanitized temporary unavailability;
+8. provider/runtime errors remain visible only to Founder/PRIME telemetry;
+9. internal telemetry remains available for pricing/capacity optimization without becoming an Owner-facing quota.
