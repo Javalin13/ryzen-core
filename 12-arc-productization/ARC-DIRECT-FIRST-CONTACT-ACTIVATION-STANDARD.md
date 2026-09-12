@@ -57,6 +57,25 @@ The following are not valid normal onboarding requirements:
 
 Runtime-private numeric identities may still exist internally because the transport requires them. They are **implementation details only** and must never become an onboarding task for the Owner or Founder.
 
+### 3A. Hermes/default transport pairing precedence rule
+
+A generic transport/runtime pairing middleware must **not** intercept an explicitly armed ARC Owner-activation flow before the ARC can perform its authorized atomic Owner claim.
+
+For an ARC with an armed, unbound Owner slot:
+
+```text
+real inbound
+→ Founder/already-bound-role exclusion
+→ ARC armed-owner atomic claim gate
+→ same-turn Owner onboarding
+```
+
+must take precedence over any generic Hermes/default unknown-user pairing prompt that would ask the human for a code or operator approval.
+
+This does **not** authorize global disabling of access control. Unauthorized, unarmed or ambiguous users remain fail-closed. The requirement is only that the pre-authorized armed Owner path is handled by the ARC's own bounded atomic-claim contract before any human-visible generic pairing ritual.
+
+**Hard release rule:** if an armed intended-Owner path emits a human-visible Hermes/default pairing prompt or pairing code, that ARC is RED for Owner first-contact regardless of source migration, unit-test or process-health status. Release remains blocked until the live ingress path is corrected and reverified.
+
 ## 4. Activation safety model
 
 Direct activation does **not** mean that any random sender can permanently claim an ARC at any time.
@@ -107,6 +126,7 @@ For a migrated ARC where Founder identity is known only from legacy pending stat
 - Keep the Founder identity excluded from the Owner claim.
 - When Narek sends the first eligible inbound while the NARC Owner claim is armed, bind that sender atomically as `owner`, then continue directly into the French red/blue-pill first-contact flow.
 - No screenshot, pairing code, candidate key, PID, chat-ID relay, or manual candidate approval.
+- The live Telegram ingress path must not let generic Hermes pairing middleware pre-empt the armed NARC Owner claim. Any owner-facing pairing prompt/code on the armed Narek path is a hard RED release failure.
 
 ### VONDA
 
@@ -114,6 +134,7 @@ For a migrated ARC where Founder identity is known only from legacy pending stat
 - Normalize Laetitia's canonical authorization role to `owner` rather than legacy `primary_user`.
 - When Laetitia sends the first eligible inbound while the VONDA Owner claim is armed, atomically create/update the protected Owner binding and continue directly into VONDA onboarding.
 - Founder identity remains excluded.
+- Generic transport pairing must not pre-empt the armed VONDA Owner claim.
 
 ### Cargo
 
@@ -122,6 +143,7 @@ For a migrated ARC where Founder identity is known only from legacy pending stat
 - Remove per-candidate manual approval from Maria's first-contact activation.
 - When Maria's Owner slot is explicitly armed and unbound, the first eligible non-Founder inbound atomically binds `owner` and becomes functional immediately.
 - Do not use a permanently open claim window.
+- Generic transport pairing must not pre-empt the armed Cargo Owner claim.
 
 ## 8. Factory inheritance
 
@@ -146,6 +168,8 @@ first_contact_activation:
   atomic_claim_required: true
   founder_excluded: true
   close_after_successful_claim: true
+  generic_pairing_middleware_may_preempt_armed_owner_claim: false
+  owner_facing_pairing_prompt_is_release_failure: true
   ambiguity_policy: fail_closed_without_id_handoff
 ```
 
@@ -160,6 +184,7 @@ They may:
 - arm an explicitly authorized Owner slot;
 - verify runtime readiness;
 - repair activation-state drift;
+- verify ingress ordering between generic runtime access control and ARC Owner-claim logic;
 - verify the resulting binding and lifecycle evidence;
 - escalate ambiguity or runtime faults.
 
@@ -170,6 +195,8 @@ They must not require the Founder to shuttle screenshots, pairing codes, candida
 No transport identifier, pairing secret, activation token, candidate ID, chat ID, user ID, or Owner-private identity record belongs in Git.
 
 Git stores only the **policy, schema, code and non-identifying lifecycle evidence**. Runtime-private identity and activation state remain outside source control.
+
+Pairing codes observed during incidents are ephemeral/sensitive evidence and must not be copied into Git reports; record only that a human-visible pairing prompt/code occurred and when, without the code itself.
 
 ## 11. Maturity and commercial effect
 
@@ -193,7 +220,8 @@ An ARC passes this standard when a pre-authorized intended Owner can:
 3. be internally bound as `owner` without any screenshot/code/PID exchange;
 4. receive the correct Owner-aware onboarding response immediately;
 5. continue normal work on the next turn;
-6. remain isolated from Founder and other ARC-private namespaces.
+6. remain isolated from Founder and other ARC-private namespaces;
+7. never see a generic Hermes/default pairing prompt or pairing code on the armed Owner activation path.
 
 John / Jan must continue to resolve as `founder` throughout this process.
 
