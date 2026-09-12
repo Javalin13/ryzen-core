@@ -1,6 +1,6 @@
 {
-  "factory_contract_version": "1.0",
-  "factory_template_version": "factory-template-v1.0",
+  "factory_contract_version": "1.3",
+  "factory_template_version": "factory-template-v1.3",
   "arc_id": "{{arc_id}}",
   "display_name": "{{display_name}}",
   "production_state": "source_seeded_stewardship_registration_pending",
@@ -29,9 +29,46 @@
     "isolation_required": true,
     "secrets_outside_git": true,
     "unknown_identity_behavior": "fail_closed",
+    "pending_candidate_model": "keyed_multi_candidate_required",
     "model_capacity_pool": null,
     "primary_channel": null,
-    "repository_autonomy": "not_granted"
+    "repository_autonomy": "not_granted",
+    "founder_work_lane": "prime_primary_pre_activation_then_arc_primary_founder_development"
+  },
+  "hermetic_seal": {
+    "status": "inherited_pre_runtime",
+    "contract": "arc/HERMETIC-SEAL.md",
+    "canonical_standard": "Javalin13/ryzen-core/12-arc-productization/ARC-HERMETIC-OPERATIONS-AND-AUTONOMY-STANDARD.md",
+    "golden_blueprint_amendment": "Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT-HERMETIC-OPERATIONS-AMENDMENT.md",
+    "required_before_runtime_ready": [
+      "isolated runtime state and secrets",
+      "fail-closed unknown identity behavior",
+      "no cross-ARC private runtime reads",
+      "versioned runtime source and recovery path",
+      "bounded writer if own-repo autonomy is granted"
+    ],
+    "autonomy_rule": "own_repo_only_after_explicit_grant_and_through_bounded_safe_writer",
+    "safe_shared_writer_required_if_autonomy_granted": true,
+    "maturity_promotion_implied": false
+  },
+  "operator_access": {
+    "founder_operator_role_separate_from_owner": true,
+    "founder_operator_owner_private_memory_access_allowed": false,
+    "founder_operator_cross_arc_private_state_access_allowed": false,
+    "own_repo_write_requires_bounded_safe_writer": true,
+    "direct_arc_work_lane": "arc_primary_founder_development_then_arc_primary_operational",
+    "prime_role": "supervisor_orchestrator_escalation_and_lifecycle_stewardship"
+  },
+  "intelligence_policy": {
+    "free_endpoint_required": true,
+    "paid_model_fallback_allowed": false,
+    "autonomous_billing_changes_allowed": false,
+    "autonomous_credit_purchase_allowed": false,
+    "paid_override_authority": "founder_explicit_only",
+    "deterministic_eol_failover_without_retry_storm": true,
+    "capability_routing_allowed": true,
+    "required_media_capabilities": {},
+    "canonical_standard": "Javalin13/ryzen-core/12-arc-productization/ARC-VARIABLE-COST-AND-API-BOUNDARY.md"
   },
   "visual": {
     "family_standard": "RYZ3N humanoid ARC family",
@@ -60,6 +97,7 @@
     "factory_replication_candidate": true,
     "production_standard": "Javalin13/ryzen-core/12-arc-productization/ARC-REPLICATION-FACTORY-PRODUCTION-STANDARD.md",
     "prime_orchestration_standard": "Javalin13/ryzen-core/12-arc-productization/PRIME-ORCHESTRATION-AND-INSTANCE-HANDOFF-STANDARD.md",
+    "founder_operator_standard": "Javalin13/ryzen-core/12-arc-productization/ARC-FOUNDER-OPERATOR-DIRECT-WORK-LANE-STANDARD.md",
     "birth_manifest_schema": "Javalin13/ryzen-core/12-arc-productization/ARC-FACTORY-BIRTH-MANIFEST-SCHEMA.json"
   },
   "configuration": {},
