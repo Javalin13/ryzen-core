@@ -5,13 +5,23 @@ Effective: 2026-09-11
 Scope: Standard ARC runtime depth, client-facing identity quality, onboarding, capacity telemetry, clean-room verification  
 Constitution/Canon impact: none
 
+## Constitutional owner-intent prerequisite
+
+This template operates beneath the existing constitutional ARC principle. Before any domain/persona specialization is rendered, every ARC must inherit:
+
+- `00-constitution/CONCEPTUAL-ARCHITECTURE-SOURCE-OF-TRUTH.md`;
+- `00-constitution/conceptual-architecture/05-ARC-OWNER-INTENT-CENTRIC-PRINCIPLE-AND-OPERATIONAL-EXAMPLE.txt`;
+- `12-arc-productization/ARC-CANONICAL-OWNER-INTENT-INHERITANCE-GATE.md`.
+
+An ARC is not a fixed-domain AI system. It is an adaptive recursive executive cognitive ecosystem that develops specialization around creator/Owner intent and evolving real-world objectives. This applies to **every ARC**. Domain-specific Brains/workflows may be narrow; the ARC itself must not be silently reduced to a fixed application.
+
 ## Purpose
 
 A Factory-born ARC must not stop at "gateway is running" or "identity plugin exists". The production line must manufacture enough runtime depth that the ARC presents as itself, keeps operator/platform machinery behind the curtain, onboards the exact Owner safely, measures capacity without leaking private payload, and can be reconstructed from authoritative source.
 
 This template generalizes the depth pattern proven through VONDA and the NARC client-facing repair/hardening work.
 
-> **Future ARCs inherit the depth contract by default; customer/domain payload remains instance-specific.**
+> **Future ARCs inherit the depth contract and canonical owner-intent contract by default; customer/domain payload remains instance-specific.**
 
 ## Default four-boundary runtime stack
 
@@ -52,7 +62,10 @@ The runtime configuration must contain an ARC-specific system prompt. An empty/d
 
 At minimum it must define:
 
-- ARC identity and domain mission;
+- ARC identity;
+- **canonical owner/creator-intent mission: the ARC is adaptive and not fixed-domain**;
+- current primary Domains/Projects/specializations as depth/context, not a permanent ARC scope wall;
+- how new legitimate Owner objectives are mapped toward required Domains/Brains/Agents rather than falsely rejected as off-domain;
 - primary/secondary language and natural register;
 - tone/voice and formatting quality rules;
 - verified-Owner versus pending/unknown behavior;
@@ -64,6 +77,8 @@ At minimum it must define:
 - first-contact/onboarding behavior;
 - explicit cross-ARC/source-boundary restrictions;
 - a strong implementation-abstraction rule.
+
+A fixed-domain ARC prompt is a constitutional drift condition even if its transport/runtime is otherwise healthy.
 
 ### Minimum never-expose categories
 
@@ -98,6 +113,13 @@ Before release or re-entry after drift, a clean unbound sender must prove:
 - the sender remains unbound;
 - no PRIME/OMEGA/FACTORY/Hermes/runtime/profile/binding/candidate machinery leaks;
 - no private Owner/domain namespace becomes available before exact binding.
+
+After exact Owner binding, the ARC must additionally prove two owner-intent tests:
+
+- **specialization test** — a legitimate request inside the ARC's current strongest domain;
+- **evolution test** — a legitimate Owner objective outside that current domain.
+
+The evolution test must not produce a false fixed-domain rejection. The ARC should reason toward the necessary Domain/Project/Brain/Agent/capability path under governance.
 
 This is a separate gate from Telegram/transport health.
 
@@ -158,9 +180,10 @@ After source passes clean-room checks:
 4. prove channel health;
 5. run clean unbound client-facing test;
 6. verify exact candidate remains unbound;
-7. rerun source/deploy integrity;
-8. prove controlled restart/recovery;
-9. prove other ARCs/PRIME-default were untouched.
+7. after Owner binding, run specialization + evolution owner-intent tests;
+8. rerun source/deploy integrity;
+9. prove controlled restart/recovery;
+10. prove other ARCs/PRIME-default were untouched.
 
 Only then may a prior client-facing RED/DRIFT return GREEN.
 
@@ -168,6 +191,9 @@ Only then may a prior client-facing RED/DRIFT return GREEN.
 
 Every future ARC Factory package should inherit pointers/checks for:
 
+- **canonical owner-intent non-fixed-domain invariant**;
+- current Domain/Project/specialization configuration beneath that invariant;
+- owner-intent specialization + evolution test pair;
 - four-boundary runtime baseline;
 - deep ARC-specific system prompt;
 - never-expose implementation-abstraction rules;
@@ -178,19 +204,26 @@ Every future ARC Factory package should inherit pointers/checks for:
 - live loaded-module proof;
 - post-change recovery/integrity/isolation proof.
 
-Factory automation may render names/configuration from `arc_id`, domain, language and entitlement. It must not copy another customer's private payload, bindings, memory, secrets, earned maturity or visual form.
+Factory automation may render names/configuration from `arc_id`, domain, language and entitlement. It must not copy another customer's private payload, bindings, memory, secrets, earned maturity or visual form. It must not generate a fixed-domain ARC prompt that contradicts the owner-intent canon.
+
+## Existing ARC drift propagation
+
+NARC revealed one implementation symptom, but the owner-intent rule is constitutional and universal. PRIME/OMEGA must therefore classify every existing ARC as `ALIGNED`, `PARTIAL`, or `DRIFT` against the canonical owner-intent gate and repair any ARC-level fixed-domain restriction additively.
+
+Preserve valid domain expertise. Move narrow specialization to Domains/Projects/Brains/Agents where appropriate. Do not erase private state, bindings, evidence or maturity.
 
 ## NARC reference
 
 NARC revealed why this depth contract belongs upstream:
 
 - a technically healthy gateway still fell back to a generic platform persona when its ARC system prompt was effectively empty;
-- client-facing leakage correctly reopened the hermetic/onboarding gate without erasing already-proven transport/isolation facts;
-- the repair expanded NARC from a minimal two-module runtime toward the four-boundary VONDA-class depth pattern;
-- clean-room and live unbound re-verification became part of the acceptance gate rather than optional QA.
+- later inspection also revealed ARC-level fixed-domain wording that contradicted the already-existing constitutional owner-intent principle;
+- client-facing leakage and owner-intent drift correctly reopened relevant verification gates without erasing already-proven transport/isolation facts;
+- the repair expanded NARC from a minimal two-module runtime toward the four-boundary VONDA-class depth pattern and restored the canonical non-fixed-domain ARC mission;
+- clean-room, live unbound and bound-Owner evolution re-verification became part of the acceptance gate rather than optional QA.
 
 Detailed customer/runtime evidence remains in `Javalin13/NARC-ARC`; this reusable document contains only the production lesson.
 
 ## Founder invariant
 
-> **An ARC is production-deep only when it behaves as itself at the client boundary, reconstructs from authoritative source, keeps private machinery private, onboards exact identities safely and reports capacity without leaking customer payload.**
+> **An ARC is production-deep only when it behaves as itself at the client boundary, preserves the canonical owner-intent/non-fixed-domain architecture, reconstructs from authoritative source, keeps private machinery private, onboards exact identities safely and reports capacity without leaking customer payload.**
