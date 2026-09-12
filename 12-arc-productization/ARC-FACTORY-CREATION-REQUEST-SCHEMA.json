@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ryz3n://arc-factory-creation-request/v1.0",
+  "$id": "ryz3n://arc-factory-creation-request/v1.1",
   "title": "RYZ3N ARC Factory Creation Request",
   "type": "object",
   "required": [
@@ -13,10 +13,11 @@
     "owner",
     "language",
     "commercial",
-    "source_intent"
+    "source_intent",
+    "onboarding"
   ],
   "properties": {
-    "schema_version": {"const":"1.0"},
+    "schema_version": {"const":"1.1"},
     "request_id": {"type":"string","minLength":1},
     "requested_at": {"type":["string","null"]},
     "requester_role": {"enum":["founder","authorized_operator"]},
@@ -40,7 +41,7 @@
       "properties": {
         "entity_class":{"type":"string","minLength":1},
         "display_name":{"type":"string","minLength":1},
-        "binding_state":{"enum":["pending","preverified_reference_only","bound"]}
+        "binding_state":{"enum":["pending_first_contact","bound"]}
       },
       "additionalProperties":false
     },
@@ -76,9 +77,24 @@
     },
     "onboarding": {
       "type":"object",
+      "required":[
+        "activation_mode",
+        "screenshot_required",
+        "pairing_code_required",
+        "candidate_id_handoff_required",
+        "pid_or_pre_id_required"
+      ],
       "properties": {
         "primary_channel_preference":{"type":["string","null"]},
-        "first_contact_configuration":{"type":["string","null"]}
+        "first_contact_configuration":{"type":["string","null"]},
+        "activation_mode":{"const":"armed_first_eligible_inbound_auto_bind"},
+        "screenshot_required":{"const":false},
+        "pairing_code_required":{"const":false},
+        "candidate_id_handoff_required":{"const":false},
+        "pid_or_pre_id_required":{"const":false},
+        "atomic_claim_required":{"const":true},
+        "founder_operator_excluded":{"const":true},
+        "canonical_standard":{"const":"12-arc-productization/ARC-DIRECT-FIRST-CONTACT-ACTIVATION-STANDARD.md"}
       },
       "additionalProperties":true
     },
