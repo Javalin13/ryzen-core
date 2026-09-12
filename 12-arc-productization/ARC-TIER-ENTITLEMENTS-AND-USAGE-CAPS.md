@@ -1,4 +1,4 @@
-# ARC Tier Entitlements & Usage Caps
+# ARC Tier Entitlements & Resource Governance
 
 ```yaml
 ---
@@ -6,18 +6,20 @@ type: commercial-entitlement-standard
 status: founder-directed-current
 created: 2026-09-11
 updated: 2026-09-12
-classification: commercial-pricing + usage-governance
+classification: commercial-pricing + resource-governance
 currency: EUR
-supersedes_conflicting_fair_use_deferral: true
-supersedes_raw-token-au-definition: true
-supersedes_business_30000_au_hard_cap: true
+supersedes_owner_ai_usage_caps: true
+supersedes_owner_ai_limit_messages: true
+local_first_arc_inference: true
 amendable: true-additively
 ---
 ```
 
+> **Legacy filename retained for reference stability. Current policy no longer uses Owner-facing AI usage caps for Standard/Pro/Business ARCs.**
+
 ## Purpose
 
-Define current commercial entitlements for ARC Standard, Pro, Business, Dedicated and Enterprise while keeping Owner-facing entitlement separate from provider/infrastructure capacity.
+Define current commercial entitlements for ARC Standard, Pro, Business, Dedicated and Enterprise while separating customer value from internal model/provider metering.
 
 Billing tier remains separate from ARC maturity V1→V6. Paying for a larger entitlement does not buy maturity or aura.
 
@@ -27,93 +29,79 @@ Canonical companion standards:
 - `ARC-CAPACITY-FALLBACK-TEMPORARY-DOWNGRADE-AND-LOCAL-INFERENCE-STANDARD.md`
 - `ARC-VARIABLE-COST-AND-API-BOUNDARY.md`
 
-## AU definition
+## 1. Current inference principle
 
-AU is cost-normalized, not a raw-token promise.
+- PRIME alone uses Ollama Cloud MiniMax M3 as its normal primary cloud route.
+- Owner-facing ARCs use the verified shared local model as their normal primary route.
+- ARCs may use Founder-authorized verified-free external fallbacks if the local route is unavailable.
+- ARC Owners are not shown daily/weekly/monthly AI usage caps or reset messages.
+- Internal calls/tokens/cost-equivalent telemetry remains available for economics and capacity planning.
 
-> **1 ARC Usage Unit (AU) = €0.001 of provider-list-price-equivalent AI consumption.**
+## 2. AU becomes internal telemetry only
 
-AU remains useful internally for Standard/Pro accounting and telemetry. Efficient routes provide more work per AU; premium routes consume AU faster.
+AU may remain as an internal normalization tool for historical comparison and cost-equivalent telemetry:
 
-## Current tier ladder
+> **1 AU = €0.001 of provider-list-price-equivalent AI consumption.**
 
-| Tier | Current price | Managed ARC storage | Owner high-performance entitlement | Capacity weight | Authorized users | Primary channels | Integrations | Active automations | Infrastructure |
+AU is **not** currently an Owner-facing entitlement, billing meter, hard-stop, or reset counter for local-first ARCs.
+
+Do not show AU balances or AI-consumption reset windows to Owners unless a future explicit Founder decision reintroduces them.
+
+## 3. Current tier ladder
+
+Prices remain the current working launch prices pending Step 17B telemetry refinement.
+
+| Tier | Current price | Managed ARC storage | AI service | Capacity weight | Authorized users | Primary channels | Integrations | Active automations | Infrastructure |
 |---|---:|---:|---|---:|---:|---:|---:|---:|---|
-| **ARC Standard** | **€50/month or €500/year** | **2 GB** | **5,000 AU/month current launch allowance**; cadence controls may also include daily/weekly windows | **1 slot** | **1** | **1** | **2** | **5** | shared |
-| **ARC Pro** | **€120/month or €1,200/year** | **5 GB** | **15,000 AU/month current launch allowance**; cadence controls may also include daily/weekly windows | **3 slots** | **3** | **2** | **5** | **15** | shared / higher allowance |
-| **ARC Business** | **€250/month or €2,500/year** | **15 GB** | **Unlimited Owner usage entitlement**; backend capacity may temporarily downgrade while high-performance capacity resets | **6 slots** | **10** | **3** | **10** | **40** | shared business pool or isolated placement when needed |
-| **ARC Dedicated** | **from €5,000/year** | **50 GB baseline** | **Unlimited or contract-defined Owner entitlement** on dedicated resources | dedicated | **25** | **5** | **20** | **100** | dedicated resources/VPS where required |
+| **ARC Standard** | **€50/month or €500/year** | **2 GB** | shared local inference included; no Owner-facing AI usage cap | **1 slot** | **1** | **1** | **2** | **5** | shared local |
+| **ARC Pro** | **€120/month or €1,200/year** | **5 GB** | shared local inference included; no Owner-facing AI usage cap | **3 slots** | **3** | **2** | **5** | **15** | shared local / higher service allocation to be telemetry-calibrated |
+| **ARC Business** | **€250/month or €2,500/year** | **15 GB** | shared local inference included; no Owner-facing AI usage cap | **6 slots** | **10** | **3** | **10** | **40** | shared business pool or isolated placement when needed |
+| **ARC Dedicated** | **from €5,000/year** | **50 GB baseline** | dedicated/contract-defined inference | dedicated | **25** | **5** | **20** | **100** | dedicated resources/VPS where required |
 | **ARC Enterprise** | **custom; working floor ~€10,000/year** | custom | custom / contract-defined | custom/dedicated | custom | custom | custom | custom | dedicated / multi-ARC / SLA as contracted |
 
-These are commercial/service entitlements, not claims about hard provider or hardware maximums.
+These are commercial/service entitlements, not claims of infinite simultaneous compute.
 
-## Standard and Pro usage windows
+## 4. What tiers can differentiate on
 
-Standard and Pro may have one or more configured high-performance windows:
+Without using Owner-facing model-call quotas, Standard / Pro / Business may differentiate through:
 
-- daily;
-- weekly;
-- monthly.
+- managed storage;
+- authorized users;
+- channels;
+- integrations;
+- automations;
+- support/service level;
+- queue/concurrency priority;
+- advanced features/capabilities;
+- shared vs isolated placement;
+- dedicated compute where contracted;
+- future SLA/availability guarantees.
 
-The current concrete launch allowance remains monthly AU-based until Step 17B telemetry justifies a Founder-approved revision. Daily/weekly windows may be added as protective or productized high-performance limits without changing the canonical role model.
+Exact queue/concurrency/service-priority differences must be based on real telemetry before being promised publicly.
 
-At a real configured limit, the ARC must identify the correct cadence and enter `temporary_reduced_capacity` when a suitable lower-cost/local fallback is available.
+## 5. No AI usage-limit warnings
 
-The Owner must not lose access merely because the high-performance allowance is exhausted if reduced-capacity service is technically available and permitted.
+For local-first Owner ARCs:
 
-## Temporary downgrade behavior
+- no 80% AI-usage warning;
+- no 100% AI hard-stop message;
+- no daily/weekly/monthly AI reset message;
+- no provider-credit or provider-session message;
+- no AI-usage upsell triggered by model consumption.
 
-At a Standard/Pro high-performance limit:
+If shared local capacity is busy, queue safely where possible.
 
-```text
-full_performance
-→ owner_entitlement_exhausted(<cadence>)
-→ temporary_reduced_capacity
-→ limit resets
-→ full_performance
-```
+If all authorized inference routes are unavailable, show only a sanitized temporary service-unavailable message.
 
-The Owner keeps:
+This does not remove security, abuse, safety, or infrastructure-protection controls.
 
-- ARC identity;
-- Owner binding;
-- memory/state;
-- supported tools;
-- form/aura/maturity;
-- normal privacy boundaries.
-
-The downgrade changes only the model/capacity service state.
-
-Canonical customer messaging is defined in `ARC-ROLE-TAXONOMY-AND-ENTITLEMENT-LIMIT-MESSAGING-STANDARD.md`.
-
-## Business unlimited Owner entitlement
-
-ARC Business is **unlimited at the Owner-entitlement layer**.
-
-This supersedes the previous 30,000 AU/month Business hard cap.
-
-Unlimited means RYZ3N does not tell a Business Owner that their commercial ARC usage allowance has been exhausted.
-
-It does **not** mean:
-
-- infinite simultaneous compute;
-- no technical safety controls;
-- unlimited third-party vendor spend funded by RYZ3N;
-- no queueing;
-- guaranteed premium-model availability at every instant;
-- permission to purchase provider capacity autonomously.
-
-If shared high-performance infrastructure is constrained, a Business ARC may temporarily run through a local/approved fallback and tell the Owner that it is temporarily in reduced-capacity mode. Full performance returns automatically when capacity recovers.
-
-Backend capacity/fair-use controls are operational safeguards, not a Business Owner hard usage cap.
-
-## Shared-capacity weight model
+## 6. Shared-capacity weight model
 
 Until telemetry proves another safe ceiling:
 
-> **maximum 10 Standard-equivalent weighted slots per shared model/VPS capacity pool.**
+> **maximum 10 Standard-equivalent weighted slots per shared local inference/VPS capacity pool.**
 
-Weights:
+Weights remain planning values:
 
 - Standard = 1;
 - Pro = 3;
@@ -121,61 +109,37 @@ Weights:
 - Dedicated = separate/dedicated;
 - Enterprise = custom.
 
-Examples:
+The weights are not Owner AI quotas. They help PRIME/OMEGA decide when to split, isolate or expand infrastructure.
 
-- 10 Standard = 10;
-- 3 Pro + 1 Standard = 10;
-- 1 Business + 1 Pro + 1 Standard = 10;
-- 1 Business + 4 Standard = 10.
+Split earlier when actual latency, RAM, disk, queue depth, concurrency or local-model pressure requires it.
 
-This is a planning/safety model. PRIME/OMEGA may split earlier when latency, RAM, disk, local inference pressure, concurrency or provider quota requires it.
+## 7. Internal economics relationship
 
-## Current provider economics relationship
+RYZ3N must still measure the real economics of local-first service:
 
-Provider subscription/credit economics remain infrastructure metadata, not Owner entitlement truth.
+- local CPU/RAM/runtime consumption;
+- VPS allocation;
+- storage;
+- queue/concurrency pressure;
+- calls/tokens per Owner;
+- free external fallback frequency;
+- PRIME cloud cost separately from ARC local cost;
+- support/incident burden;
+- third-party integration spend actually funded by RYZ3N.
 
-RYZ3N must separately measure:
+Step 17B uses this evidence to refine prices and service allocation. Public prices never change automatically.
 
-- actual provider cost;
-- equivalent model cost;
-- fixed subscription allocation;
-- local inference utilization;
-- fallback frequency;
-- session/daily/weekly/monthly capacity pressure;
-- concurrency and queue pressure.
-
-Step 17B uses these real telemetry values to refine prices/limits. Public prices and entitlements never change automatically.
-
-## Managed ARC storage
+## 8. Managed ARC storage
 
 Managed ARC storage is customer-specific persistent storage controlled by the ARC/RYZ3N service, including retained uploads, workspace files, generated retained assets, customer-specific state stored as files/data and persistent caches.
 
 External data remaining in Google Drive, OneDrive/Dropbox, CRM, dispatch or another connected SaaS does not automatically count as ARC storage. Persistent ARC-side copies do count.
 
-The shared VPS baseline must retain OS/log/recovery/model headroom. Logical customer storage entitlement is not a promise that every maximum quota will physically reside on one VPS simultaneously.
+Shared VPS capacity must preserve OS/log/recovery/model headroom. Logical customer storage entitlement is not a promise that every maximum quota will physically reside on one VPS simultaneously.
 
-## Warnings and resets
+## 9. Integration entitlement vs third-party cost
 
-For Standard/Pro:
-
-- warn at approximately 80% of the relevant configured allowance;
-- at 100%, do not silently bill overage;
-- identify whether the reached limit is daily, weekly or monthly;
-- temporarily downgrade when an approved reduced-capacity route is available;
-- automatically restore full performance when the relevant limit resets;
-- the Owner may wait, upgrade, or choose another commercial option where applicable.
-
-For Business:
-
-- do not issue an Owner entitlement-exhausted warning;
-- capacity warnings remain Founder/PRIME operational telemetry;
-- Owner may receive only a temporary reduced-capacity service-state message when required.
-
-No surprise pass-through provider invoice is allowed.
-
-## Integration entitlement vs third-party cost
-
-Integration slots do not create an open third-party wallet.
+Local inference does not create an open wallet for other vendors.
 
 For Standard/Pro/Business:
 
@@ -183,9 +147,9 @@ For Standard/Pro/Business:
 - RYZ3N-funded variable third-party spend is €0 by default unless a written capped allowance exists;
 - free-tier/free-call integrations may operate normally;
 - no ARC/Brain/Agent may autonomously purchase credits, seats, message packs, storage or provider capacity;
-- any RYZ3N-funded external allowance must warn at 80% and hard-stop at 100% unless a higher Founder-approved cap already exists.
+- any RYZ3N-funded external allowance must warn/hard-stop according to that specific external allowance, not according to ARC AI usage.
 
-## Definitions
+## 10. Definitions
 
 ### Integration
 
@@ -199,70 +163,85 @@ A persistent recurring, triggered or condition-based workflow configured to run 
 
 A persistent Owner-facing interface such as Telegram, web chat, WhatsApp, email gateway or later native ARC interface.
 
-## Founding Pilot rule
-
-Free Founding Pilot status does not mean unlimited use unless the Founder explicitly grants Business or another entitlement.
+## 11. Founding Pilot rule
 
 Current direction:
 
 - VONDA ARC: six-month free Founding Pilot on Standard;
 - NARC: six-month free Founding Pilot on Standard;
-- current Standard baseline: 2 GB + 5,000 AU/month + 1 user + 1 channel + 2 integrations + 5 active automations;
-- pilots may upgrade commercial entitlement without affecting evidence-derived V1→V6 maturity.
+- Standard pilot includes 2 GB storage, 1 user, 1 channel, 2 integrations and 5 active automations;
+- local AI interaction is included without an Owner-facing AI usage cap;
+- pilots may upgrade commercial scope without affecting evidence-derived V1→V6 maturity.
 
-## KMS7 Founding Business exception
+A free pilot still does **not** imply unlimited third-party vendor spend, unlimited storage, unlimited users/integrations/automations or infinite simultaneous compute.
+
+## 12. KMS7 Founding Business exception
 
 If Adnan accepts and the Founder authorizes KMS7 ARC creation:
 
 - price: **€170/month**;
 - entitlement: **ARC Business**;
-- Owner usage entitlement: **unlimited**;
 - 15 GB managed ARC storage;
 - up to 10 users;
 - 3 channels;
 - 10 integrations;
 - 40 active automations;
+- local AI interaction included without an Owner-facing AI usage cap;
 - capacity weight: 6 shared slots, with earlier isolation/splitting if telemetry requires it;
 - normal future Business price remains €250/month or €2,500/year.
 
-Founder working direct-operational-cost ceiling for KMS7 remains **≤€50/month**. The unlimited Owner entitlement therefore depends on routing efficiency, local fallback, shared-capacity management and telemetry — not on accepting unlimited provider bills.
+Founder working direct-operational-cost ceiling for KMS7 remains **≤€50/month**.
 
 Third-party variable API/vendor costs remain customer-funded by default unless a specific capped KMS7 vendor allowance is explicitly included.
 
-## Capacity and technical-safety relationship
+## 13. Capacity and technical-safety relationship
 
-Commercial entitlement does not override runtime safety.
+No Owner-facing AI cap does not mean infinite simultaneous compute.
 
-OMEGA/PRIME may move an ARC to a different model-capacity pool, local fallback, VPS or dedicated resource if latency, concurrency, isolation, storage, provider quota or another technical risk requires it.
+OMEGA/PRIME may:
 
-Unused entitlement does not guarantee that every workload shape is safe on shared infrastructure. High-frequency bulk jobs may be queued or isolated even when an Owner has entitlement remaining.
+- queue workloads;
+- prioritize interactive work over background work;
+- isolate heavy workloads;
+- move an ARC to a different local pool/VPS;
+- require Dedicated infrastructure for structurally heavy workloads;
+- apply security/abuse/safety protections.
 
-## Customer-facing presentation
+These are infrastructure/service controls, not "you used too much AI" messages.
+
+## 14. Customer-facing presentation
 
 At minimum, onboarding/account surfaces should show:
 
 - current tier;
 - price/billing arrangement;
 - managed storage included/used;
-- Standard/Pro high-performance allowance and reset cadence where applicable;
-- Business unlimited Owner entitlement where applicable;
 - authorized users;
 - channels;
 - integrations;
 - automations;
 - upgrade options;
-- next reset date for capped high-performance windows;
-- reduced-capacity state if active;
+- relevant service/support level;
 - clear separation of third-party provider fees from the ARC subscription.
 
-Do not expose internal euro-per-AU normalization, provider IDs, local model details, HTTP errors or account billing internals in normal Owner UX.
+Do **not** show:
 
-## Review rule
+- AI token balances;
+- AU balances;
+- daily/weekly/monthly AI reset clocks;
+- provider IDs;
+- local model details;
+- HTTP/provider errors;
+- PRIME's Ollama subscription state.
 
-Review Standard/Pro allowances, Business infrastructure economics and all prices using real telemetry from VONDA, NARC, Cargo, KMS7 and later cohorts.
+## 15. Review rule
 
-A future Founder-approved revision may raise, lower or restructure limits/prices when production evidence justifies it. Existing accepted customer-specific agreements are not silently rewritten.
+Review Standard/Pro/Business economics using real telemetry from VONDA, NARC, Cargo, KMS7 and later cohorts.
+
+A future Founder-approved revision may change prices, service priority, resource allocation or tier structure when production evidence justifies it.
+
+Any future reintroduction of Owner-facing AI quotas requires a new explicit Founder directive; telemetry alone cannot create them.
 
 ## Founder shorthand
 
-> **Standard and Pro have measurable high-performance allowances and may temporarily downgrade after daily/weekly/monthly limits. Business is unlimited at the Owner-entitlement layer. Provider/internal limits are not Owner limits. Local and approved free fallbacks preserve continuity. Telemetry refines the economics; only the Founder changes pricing or entitlements.**
+> **PRIME pays for premium cloud intelligence; ARCs run local-first. Owners do not see AI usage-limit counters or reset messages. Standard/Pro/Business remain commercial tiers differentiated by service scope/resources, while telemetry measures the real economics behind the scenes.**
