@@ -1,0 +1,183 @@
+schema_version: '1.0'
+status: founder_authorized_scale_scenarios
+as_of: '2026-09-12'
+purpose: >-
+  Machine-readable planning scenarios for RYZ3N growth from the current Owner ARC
+  population toward 10, 20, 40, 50 and 100 ARCs. These are planning estimates,
+  not purchased capacity commitments and not measured Owner usage until telemetry replaces them.
+
+empirical_baseline:
+  founder_heavy_equivalent_fhe:
+    definition: one intensive Founder RYZ3N/ARC work pattern
+    observed_fact: founder_reported_legacy_ollama_weekly_allowance_exhausted_within_a_few_hours
+    exact_hours: unknown
+    exact_tokens: unknown
+    exact_provider_units: unknown
+    interpretation: strong_capacity_stress_signal_not_exact_rate_measurement
+  current_owner_arcs: 3
+  worst_case_current_founder_plus_3_heavy_owners_fhe: 4.0
+
+planning_intensity_coefficients:
+  light_owner_fhe: 0.15
+  ordinary_active_owner_fhe: 0.35
+  heavy_owner_fhe: 1.0
+  status: illustrative_until_replaced_by_real_owner_cohort_telemetry
+
+arc_population_scenarios:
+  - arcs: 3
+    light_fhe: 0.45
+    ordinary_fhe: 1.05
+    heavy_fhe: 3.0
+    founder_prime_load_additional: true
+    architecture_stage: current_pilot
+  - arcs: 10
+    light_fhe: 1.5
+    ordinary_fhe: 3.5
+    heavy_fhe: 10.0
+    founder_prime_load_additional: true
+    architecture_stage: stronger_single_node_or_early_inference_split_if_pressure
+  - arcs: 20
+    light_fhe: 3.0
+    ordinary_fhe: 7.0
+    heavy_fhe: 20.0
+    founder_prime_load_additional: true
+    architecture_stage: dedicated_inference_node_serious_candidate
+  - arcs: 40
+    light_fhe: 6.0
+    ordinary_fhe: 14.0
+    heavy_fhe: 40.0
+    founder_prime_load_additional: true
+    architecture_stage: pooled_inference_workers_likely
+  - arcs: 50
+    light_fhe: 7.5
+    ordinary_fhe: 17.5
+    heavy_fhe: 50.0
+    founder_prime_load_additional: true
+    architecture_stage: inference_pool_and_failure_domain_separation
+  - arcs: 100
+    light_fhe: 15.0
+    ordinary_fhe: 35.0
+    heavy_fhe: 100.0
+    founder_prime_load_additional: true
+    architecture_stage: inference_fabric_required
+
+current_architecture:
+  prime:
+    primary: ollama-cloud/minimax-m3:cloud
+    fallback: local-ollama/qwen3:0.6b
+  arcs:
+    primary: local-ollama/qwen3:0.6b
+    fallback: none
+  rationale: preserve_cloud_pool_for_prime_and_remove_arc_cloud_pool_dependence
+
+hetzner_paths:
+  cx23:
+    status: active
+    vcpu: 2
+    ram_gib: 4
+    disk_gb: 40
+    observed_monthly_price_eur_incl_belgian_vat_context: 6.64
+    role: pilot_current
+  cx43:
+    status: future_option
+    vcpu: 8
+    ram_gib: 16
+    official_monthly_eur_ex_vat: 15.99
+    observed_monthly_eur_incl_belgian_vat_context: 19.35
+    role: intermediate_capacity
+  cx53:
+    status: unavailable_in_founder_visible_pool_2026_09_12
+    vcpu: 16
+    ram_gib: 32
+    official_monthly_eur_ex_vat: 29.49
+    observed_monthly_eur_incl_belgian_vat_context: 35.68
+    role: preferred_cost_optimized_32gb_step_when_available
+  cax41:
+    status: future_option_requires_arm_validation
+    vcpu_arm: 16
+    ram_gib: 32
+    official_monthly_eur_ex_vat: 40.99
+    role: arm_alternative
+  cpx52:
+    status: future_premium_option
+    vcpu_amd: 12
+    ram_gib: 24
+    official_monthly_eur_ex_vat: 100.49
+    observed_monthly_eur_incl_belgian_vat_context: 121.59
+    role: only_if_cpu_consistency_latency_justifies_premium
+  dedicated_examples_observed:
+    - cpu: Xeon_E5_1650v3
+      ram_gib: 64
+      drives: 2x480GB_datacenter_ssd
+      monthly_eur_ex_vat: 58.70
+      status: not_purchased
+    - cpu: Ryzen_5_3600
+      ram_gib: 64
+      drives: 2x2TB_enterprise_hdd
+      monthly_eur_ex_vat: 62.70
+      status: not_purchased
+
+ollama_paths:
+  current_legacy_pro:
+    status: active_account_believed_legacy
+    founder_observation: weekly_allowance_hit_within_few_hours_of_heavy_use
+    exact_limit_units: unknown
+    role: prime_primary_current
+  new_pro:
+    monthly_usd: 20
+    annual_usd: 200
+    included_monthly_usage_usd: 60
+    concurrency_requests: 3
+    legacy_weekly_limits: false
+    role: possible_prime_only_future_pricing_model
+  max:
+    monthly_usd: 100
+    included_monthly_usage_usd: 300
+    concurrency_requests: 10
+    role: evaluate_when_prime_concurrency_or_usage_justifies
+  team:
+    monthly_usd: 500
+    included_monthly_usage_usd: 1000
+    concurrency_requests: 10
+    unlimited_users: true
+    centralized_billing: true
+    priority_support: true
+    role: organization_scale_cloud_option_if_local_first_economics_or_support_requirements_change
+  enterprise:
+    price: custom
+    role: evaluate_only_for_contractual_volume_security_support_requirements
+
+required_scenario_dashboard_fields:
+  - arc_population
+  - active_owner_ratio
+  - measured_or_estimated_fhe
+  - peak_concurrency
+  - p50_latency
+  - p95_latency
+  - p50_queue_wait
+  - p95_queue_wait
+  - local_cpu_pressure
+  - local_ram_pressure
+  - swap_pressure
+  - model_quality_escalation_rate
+  - support_minutes_per_owner
+  - incidents_per_owner
+  - hetzner_actual_and_forecast_cost
+  - ollama_actual_and_equivalent_cost
+  - cost_per_active_owner
+  - estimated_contribution_margin
+  - recommended_architecture_stage
+  - confidence_level
+  - assumptions
+
+capacity_purchase_rule:
+  autonomous_purchase_allowed: false
+  decision_inputs:
+    - measured_demand
+    - service_quality
+    - infrastructure_pressure
+    - support_burden
+    - cost_per_active_owner
+    - contribution_margin
+    - next_cohort_forecast
+  principle: buy_the_lowest_cost_capacity_that_restores_safe_headroom_and_required_quality
