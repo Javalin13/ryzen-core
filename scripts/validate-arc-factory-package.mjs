@@ -87,7 +87,27 @@ for (const [name, doc] of Object.entries({ manifest, instance, access, visual, b
 }
 
 if (manifest) {
-  for (const key of ['factory_contract_version', 'arc_id', 'display_name', 'production_state', 'source_boundary', 'owner', 'language', 'commercial', 'runtime', 'visual', 'registries', 'maturity', 'provenance', 'stages']) {
+  const requiredManifestKeys = [
+    'factory_contract_version',
+    'factory_template_version',
+    'arc_id',
+    'display_name',
+    'production_state',
+    'source_boundary',
+    'owner',
+    'language',
+    'commercial',
+    'runtime',
+    'hermetic_seal',
+    'operator_access',
+    'intelligence_policy',
+    'visual',
+    'registries',
+    'maturity',
+    'provenance',
+    'stages'
+  ];
+  for (const key of requiredManifestKeys) {
     if (!(key in manifest)) fail(`manifest: missing required field ${key}`);
   }
 
@@ -103,6 +123,46 @@ if (manifest) {
     fail('manifest.source_boundary: authoritative_repository and arc_root required');
   }
   if (sb.arc_root !== 'arc/') warn(`manifest.source_boundary.arc_root is ${sb.arc_root}, expected canonical arc/ unless explicitly justified`);
+
+  const hermetic = manifest.hermetic_seal || {};
+  if (!['inherited_pre_runtime', 'hardening_in_progress', 'GREEN', 'DRIFT', 'RED'].includes(hermetic.status)) {
+    fail('manifest.hermetic_seal.status: invalid status');
+  }
+  if (hermetic.maturity_promotion_implied !== false) {
+    fail('manifest.hermetic_seal: maturity_promotion_implied must be false');
+  }
+  if (hermetic.safe_shared_writer_required_if_autonomy_granted !== true) {
+    fail('manifest.hermetic_seal: safe shared writer must be required if autonomy is granted');
+  }
+
+  const operator = manifest.operator_access || {};
+  if (operator.founder_operator_role_separate_from_owner !== true) {
+    fail('manifest.operator_access: Founder operator must remain a role separate from Owner');
+  }
+  if (operator.founder_operator_owner_private_memory_access_allowed !== false) {
+    fail('manifest.operator_access: Founder operator must not inherit Owner-private memory access');
+  }
+  if (operator.founder_operator_cross_arc_private_state_access_allowed !== false) {
+    fail('manifest.operator_access: Founder operator must not gain cross-ARC private-state access');
+  }
+  if (operator.own_repo_write_requires_bounded_safe_writer !== true) {
+    fail('manifest.operator_access: autonomous own-repo writes require bounded safe-writer plumbing');
+  }
+
+  const intel = manifest.intelligence_policy || {};
+  const freeOnlyChecks = [
+    ['free_endpoint_required', true],
+    ['paid_model_fallback_allowed', false],
+    ['autonomous_billing_changes_allowed', false],
+    ['autonomous_credit_purchase_allowed', false],
+    ['deterministic_eol_failover_without_retry_storm', true]
+  ];
+  for (const [key, expected] of freeOnlyChecks) {
+    if (intel[key] !== expected) fail(`manifest.intelligence_policy.${key}: expected ${expected}`);
+  }
+  if (intel.paid_override_authority !== 'founder_explicit_only') {
+    fail('manifest.intelligence_policy.paid_override_authority must be founder_explicit_only');
+  }
 
   if (manifest.maturity?.verified === false && manifest.maturity?.earned_aura) {
     fail('manifest.maturity: cannot have earned aura while maturity is unverified');
