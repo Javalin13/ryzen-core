@@ -5,7 +5,7 @@
 type: repository-map
 status: current-navigation
 created: 2026-09-03
-updated: 2026-09-10
+updated: 2026-09-12
 classification: reality
 historical_numbering_preserved: true
 amendable: true-additively
@@ -37,7 +37,8 @@ Legacy files may use `Ryzen`; current project representation is **RYZ3N**.
 | `11-fleet-arc-intake/` | Fleet-specific validated ARC intelligence accumulation |
 | `12-arc-productization/` | Active ARC product/runtime/commercial/capacity/pilot accumulation |
 | `13-implementation-heritage/` | Implementation heritage/recovered continuity material |
-| `CURRENT-REALITY-2026-09.md` | Current operational reality overlay |
+| `CURRENT-REALITY-2026-09-12.md` | Latest post-build operational/convergence overlay |
+| `CURRENT-REALITY-2026-09.md` | Earlier September overlay; historical where superseded by later verified facts |
 | `README.md` | Current repository entrypoint with historical-foundation context |
 | `REPOSITORY-MAP.md` | This current navigation map |
 
@@ -46,21 +47,37 @@ Legacy files may use `Ryzen`; current project representation is **RYZ3N**.
 For current ARC product/runtime/commercial work, read:
 
 1. `README.md`
-2. `CURRENT-REALITY-2026-09.md`
+2. `CURRENT-REALITY-2026-09-12.md`
 3. `12-arc-productization/ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md`
 4. `12-arc-productization/README.md`
 5. `12-arc-productization/ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md`
 6. `12-arc-productization/PRICING.md`
 7. `12-arc-productization/COST-CAPACITY-MODEL.md`
 8. `12-arc-productization/PRIME-RYZ3N-ARC-PROTOTYPE-DOCTRINE.md`
-9. `12-arc-productization/ARC-V1-V6-COMMERCIAL-MATURITY-TUTORIAL.md`
-10. `12-arc-productization/ARC-FORM-AURA-AND-TRANSFER-RESET-STANDARD.md`
+9. `12-arc-productization/ARC-FOUNDER-OPERATOR-DIRECT-WORK-LANE-STANDARD.md`
+10. `12-arc-productization/ARC-HERMETIC-OPERATIONS-AND-AUTONOMY-STANDARD.md`
+11. `12-arc-productization/ARC-VARIABLE-COST-AND-API-BOUNDARY.md`
+12. `12-arc-productization/ARC-V1-V6-COMMERCIAL-MATURITY-TUTORIAL.md`
+13. `12-arc-productization/ARC-FORM-AURA-AND-TRANSFER-RESET-STANDARD.md`
+14. `12-arc-productization/ARC-FACTORY-BIRTH-MANIFEST-SCHEMA.json`
+15. `12-arc-productization/factory-template/README.md`
 
-Then cross-check implementation evidence in `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` and current bridge state where applicable.
+Then cross-check implementation evidence in `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md`, the relevant ARC repository, and current bridge state where applicable.
+
+## Factory contract drift gate
+
+Factory schema/template coherence is now CI-enforced through:
+
+- `scripts/validate-arc-factory-contract.mjs`
+- `.github/workflows/arc-factory-contract.yml`
+
+Generated ARC packages are validated through:
+
+- `scripts/validate-arc-factory-package.mjs`
 
 ## Historical reading rule
 
-Historical runtime/rebuild/migration files remain useful provenance. When their operational wording conflicts with a later Founder-directed current overlay/standard, use the current standard and retain the older file as history rather than deleting it.
+Historical runtime/rebuild/migration files remain useful provenance. When their operational wording conflicts with a later Founder-directed current overlay/standard, use the latest current standard and retain the older file as history rather than deleting it.
 
 ## Rule
 
