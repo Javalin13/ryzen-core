@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ryz3n://arc-factory-birth-manifest/v1.3",
+  "$id": "ryz3n://arc-factory-birth-manifest/v1.4",
   "title": "RYZ3N ARC Factory Birth Manifest",
   "type": "object",
   "required": [
@@ -14,6 +14,7 @@
     "language",
     "commercial",
     "runtime",
+    "first_contact_activation",
     "hermetic_seal",
     "operator_access",
     "intelligence_policy",
@@ -69,12 +70,44 @@
         "isolation_required":{"type":"boolean"},
         "secrets_outside_git":{"type":"boolean"},
         "unknown_identity_behavior":{"type":"string"},
-        "pending_candidate_model":{"type":["string","null"]},
+        "pending_candidate_model":{"const":null},
         "model_capacity_pool":{},
         "primary_channel":{},
         "repository_autonomy":{"type":["string","boolean", "null"]},
         "client_installs_prime":{"type":["boolean","null"]},
         "founder_work_lane":{"type":["string","null"]}
+      },
+      "additionalProperties":true
+    },
+    "first_contact_activation": {
+      "type":"object",
+      "required":[
+        "mode",
+        "target_role",
+        "manual_pairing_code_required",
+        "screenshot_required",
+        "candidate_id_handoff_required",
+        "pid_or_pre_id_required",
+        "runtime_private_identity_allowed",
+        "atomic_claim_required",
+        "founder_operator_excluded",
+        "close_after_successful_claim",
+        "ambiguity_policy"
+      ],
+      "properties": {
+        "mode":{"const":"armed_first_eligible_inbound_auto_bind"},
+        "target_role":{"type":"string","minLength":1},
+        "status":{"enum":["pre_runtime","armed","consumed","closed"]},
+        "manual_pairing_code_required":{"const":false},
+        "screenshot_required":{"const":false},
+        "candidate_id_handoff_required":{"const":false},
+        "pid_or_pre_id_required":{"const":false},
+        "runtime_private_identity_allowed":{"const":true},
+        "atomic_claim_required":{"const":true},
+        "founder_operator_excluded":{"const":true},
+        "close_after_successful_claim":{"const":true},
+        "ambiguity_policy":{"const":"fail_closed_without_id_handoff"},
+        "canonical_standard":{"const":"12-arc-productization/ARC-DIRECT-FIRST-CONTACT-ACTIVATION-STANDARD.md"}
       },
       "additionalProperties":true
     },
