@@ -1,0 +1,30 @@
+name: ARC Factory Contract
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '12-arc-productization/ARC-FACTORY-BIRTH-MANIFEST-SCHEMA.json'
+      - '12-arc-productization/factory-template/**'
+      - 'scripts/validate-arc-factory-contract.mjs'
+      - '.github/workflows/arc-factory-contract.yml'
+  pull_request:
+    paths:
+      - '12-arc-productization/ARC-FACTORY-BIRTH-MANIFEST-SCHEMA.json'
+      - '12-arc-productization/factory-template/**'
+      - 'scripts/validate-arc-factory-contract.mjs'
+      - '.github/workflows/arc-factory-contract.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node scripts/validate-arc-factory-contract.mjs
