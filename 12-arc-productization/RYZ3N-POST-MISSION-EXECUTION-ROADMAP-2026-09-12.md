@@ -5,9 +5,79 @@
 
 ## Sequence
 
+### Step 17A — ARC model fallback + resilience layer
+
+After the core Capacity Dashboard foundation is live, make model/provider fallback a standard ARC capability rather than an emergency operator action.
+
+Goals:
+
+- every ARC has a Founder-authorized primary model route plus an ordered fallback chain;
+- fallbacks are checked for current eligibility/availability before use;
+- provider/session/weekly/model exhaustion is distinguished from Owner entitlement exhaustion;
+- when the primary model/provider is unavailable, an approved fallback activates automatically without exposing provider/model/billing internals to the Owner;
+- when all authorized routes are unavailable, the ARC fails closed with a sanitized service-capacity message rather than raw HTTP/provider/billing output;
+- fallback events are emitted into the Capacity Dashboard with reason, source route, destination route, latency, cost and recovery timing;
+- PRIME supervises ecosystem routing health while each ARC preserves its own runtime/profile/private state boundary;
+- no ARC, PRIME, OMEGA or Factory process may autonomously buy credits, top up, upgrade plans or enable new paid routes;
+- Factory birth standards must include fallback-ready routing so future ARCs inherit resilience automatically;
+- current/future fallback model names remain Founder-controlled routing metadata rather than permanently hard-coded product truth.
+
+Acceptance outcome:
+
+```text
+Owner sends request
+      ↓
+ARC checks Owner entitlement
+      ↓
+primary route healthy? ── yes → serve normally
+      ↓ no
+approved fallback available? ── yes → serve through fallback + log telemetry
+      ↓ no
+sanitized service-capacity message + Founder/PRIME alert
+```
+
+Owner plan-limit messaging is separate from provider-capacity handling. An Owner must never be told to upgrade merely because RYZ3N's shared provider pool has temporarily saturated.
+
+### Step 17B — Refine ARC pricing from real telemetry economics
+
+After telemetry has accumulated enough real usage evidence, refine Standard / Pro / Business pricing and usage limits from observed ARC economics instead of estimates.
+
+Goals:
+
+- calculate real per-ARC and per-Owner request volume, token volume, fallback frequency, latency and attributed model cost;
+- separate fixed subscription cost, included provider allowance, variable-equivalent model cost, marginal paid usage and shared infrastructure cost;
+- measure session-window pressure, weekly-window pressure, concurrency pressure and monthly included-usage consumption because dollar credits alone do not represent usable capacity;
+- establish real cost distributions for light, typical and heavy Owners;
+- calculate contribution margin by ARC/tier;
+- refine Standard allowance, Pro allowance and Business economics from evidence;
+- keep Business positioned as unlimited usage at the Owner entitlement layer while ensuring backend capacity planning, safety/abuse controls and commercial pricing make that promise operationally sustainable;
+- ensure Standard/Pro limit messages are driven by true Owner entitlement counters, never by provider-pool exhaustion;
+- model the impact of fallback usage on unit economics and margins;
+- forecast cost/capacity impact of N additional Owners/ARCs before scaling;
+- use at least an initial 7–14 day real-usage sample where practical before treating pricing as well-calibrated;
+- never change public prices or Owner entitlements automatically: telemetry may recommend, but final pricing/limits remain Founder decisions.
+
+Founder-facing pricing evidence should eventually answer:
+
+```text
+Tier / ARC
+├── Owners
+├── requests per Owner
+├── tokens per Owner
+├── primary-route cost
+├── fallback cost
+├── shared infra allocation
+├── session/weekly capacity pressure
+├── gross revenue
+├── contribution margin
+└── recommended price / allowance adjustment
+```
+
+This step turns the Capacity Dashboard from infrastructure observability into commercial decision support.
+
 ### Step 18 — Continue CargoConnect product development
 
-After Step 17 (RYZ3N Capacity Dashboard implementation), return to CargoConnect as the next primary product workstream.
+After Step 17 (RYZ3N Capacity Dashboard implementation), Step 17A (ARC fallback resilience) and Step 17B (telemetry-backed pricing refinement foundation), return to CargoConnect as the next primary product workstream.
 
 Goals:
 
@@ -90,6 +160,7 @@ Business-direction goals:
 - convert ARC architecture into understandable commercial offers instead of exposing internal technical complexity;
 - cross-check all prior canonical decisions about ARC versions/capability levels, including V1 through later maturity/capability tiers, before publishing a tier model;
 - cross-check prior commercial ladder/tier decisions before final pricing or packaging is presented publicly;
+- use Step 17B telemetry-backed economics to refine Standard / Pro / Business pricing and usage limits before public launch;
 - distinguish personal ARCs, business ARCs, product/domain ARCs, embedded/white-label/API possibilities and future enterprise/intelligence layers where genuinely supported;
 - define pilot, onboarding, setup, recurring subscription, usage/capacity and enterprise economics clearly;
 - use real telemetry and per-ARC cost data from the Capacity Dashboard to validate margins and pricing rather than guessing;
@@ -190,6 +261,8 @@ The project-level sequence is therefore:
 
 16. Current ARC-primary transition **MISSION COMPLETE**
 17. RYZ3N Capacity Dashboard implementation
+17A. **ARC model fallback + resilience layer**
+17B. **Refine Standard / Pro / Business pricing + usage limits from real telemetry economics**
 18. CargoConnect product continuation
 19. FleetConnect continuation
 20. Personal ARC expansion wave — Mia Baby ARC first, then family and friends
@@ -201,14 +274,17 @@ This sequence is directional rather than a permanent ban on urgent maintenance e
 
 ## Capacity gate for ARC expansion
 
-Before scaling the family/friend ARC wave materially, use the Capacity Dashboard to establish:
+Before scaling the family/friend ARC wave materially, use the Capacity Dashboard plus Step 17A/17B evidence to establish:
 
 - real per-ARC request/token/cost profiles;
 - current provider-pool headroom;
 - concurrency pressure;
+- session-window and weekly-window pressure;
 - fallback/rate-limit history;
+- fallback cost impact;
 - projected cost of N additional personal ARCs;
 - whether the current Ollama/provider plan remains sufficient;
-- whether a new authorized capacity tier/provider is justified.
+- whether a new authorized capacity tier/provider is justified;
+- whether Standard / Pro / Business pricing and usage limits still produce sustainable margins under real Owner behavior.
 
-No autonomous plan upgrades, top-ups, additional paid accounts or billing changes are authorized by this roadmap.
+No autonomous plan upgrades, top-ups, additional paid accounts, billing changes, public price changes or entitlement changes are authorized by this roadmap.
