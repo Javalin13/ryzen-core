@@ -5,9 +5,11 @@
 type: commercial-model
 status: founder-directed-current-working-model
 created: 2026-09-03
-updated: 2026-09-11
+updated: 2026-09-12
 classification: strategic-vision + launch-pricing
 currency: EUR
+local_first_arc_inference: true
+owner_ai_usage_caps: false
 amendable: true-additively
 ---
 ```
@@ -20,49 +22,60 @@ Monthly billing is deliberately priced above annual billing to reward commitment
 
 The customer buys a managed ARC service, not raw model tokens or a Hermes installation.
 
-Authoritative commercial usage/cost sources:
+Current architecture principle:
+
+- PRIME uses Founder-authorized Ollama Cloud MiniMax M3 as its premium cloud primary;
+- Owner-facing ARCs run on the verified shared local inference service as their normal primary route;
+- Owners are not billed or messaged through daily/weekly/monthly AI model-usage counters;
+- third-party vendor/API costs remain separate where applicable.
+
+Authoritative commercial/resource sources:
 
 - `ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`
+- `ARC-CAPACITY-FALLBACK-TEMPORARY-DOWNGRADE-AND-LOCAL-INFERENCE-STANDARD.md`
 - `ARC-VARIABLE-COST-AND-API-BOUNDARY.md`
 
 ## Current tier ladder
 
-| Tier | Target customer | Current price | Managed storage | Monthly AI allowance | Capacity weight | Users | Integrations | Active automations |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| **ARC Standard** | Solo entrepreneur / small operator | **€500/year** or **€50/month** | **2 GB** | **5,000 AU** | **1 slot** | **1** | **2** | **5** |
-| **ARC Pro** | Growing entrepreneur / small team | **€1,200/year** or **€120/month** | **5 GB** | **15,000 AU** | **3 slots** | **3** | **5** | **15** |
-| **ARC Business** | Company / operational team | **€2,500/year** or **€250/month** | **15 GB** | **30,000 AU** | **6 slots** | **10** | **10** | **40** |
-| **ARC Dedicated** | Higher-isolation / heavier operational use | **from €5,000/year** | **50 GB baseline** | **100,000 AU baseline** | dedicated | **25** | **20** | **100** |
-| **ARC Enterprise** | Larger organization / multi-ARC deployment | **custom, working floor ~€10,000/year** | custom | custom | custom | custom | custom | custom |
+| Tier | Target customer | Current price | Managed storage | AI service | Capacity weight | Users | Integrations | Active automations |
+|---|---|---:|---:|---|---:|---:|---:|---:|
+| **ARC Standard** | Solo entrepreneur / small operator | **€500/year** or **€50/month** | **2 GB** | shared local inference included; no Owner-facing AI usage cap | **1 slot** | **1** | **2** | **5** |
+| **ARC Pro** | Growing entrepreneur / small team | **€1,200/year** or **€120/month** | **5 GB** | shared local inference included; higher service allocation/priority to be telemetry-calibrated | **3 slots** | **3** | **5** | **15** |
+| **ARC Business** | Company / operational team | **€2,500/year** or **€250/month** | **15 GB** | shared local inference included; stronger business service allocation/possible isolation | **6 slots** | **10** | **10** | **40** |
+| **ARC Dedicated** | Higher-isolation / heavier operational use | **from €5,000/year** | **50 GB baseline** | dedicated/contract-defined inference resources | dedicated | **25** | **20** | **100** |
+| **ARC Enterprise** | Larger organization / multi-ARC deployment | **custom, working floor ~€10,000/year** | custom | custom / dedicated / SLA-defined | custom | custom | custom | custom |
 
-Channels are additionally capped at 1 / 2 / 3 / 5 respectively for Standard / Pro / Business / Dedicated unless a Founder-approved exception applies.
+Channels remain capped at 1 / 2 / 3 / 5 respectively for Standard / Pro / Business / Dedicated unless a Founder-approved exception applies.
 
-## AU definition — corrected 2026-09-11
+## No Owner-facing AI usage cap
 
-AU is **not a fixed token quantity**.
-
-Current internal normalization:
-
-> **1 AU = €0.001 of provider-list-price-equivalent AI consumption.**
+Standard, Pro and Business do not currently expose a daily/weekly/monthly model-usage allowance to the Owner.
 
 Therefore:
 
-- Standard 5,000 AU = **€5 normalized AI capacity**;
-- Pro 15,000 AU = **€15 normalized AI capacity**;
-- Business 30,000 AU = **€30 normalized AI capacity**;
-- Dedicated 100,000 AU = **€100 normalized AI capacity baseline**.
+- no AI usage balance is shown;
+- no 80% AI usage warning is shown;
+- no "you reached your daily/weekly/monthly AI limit" message is shown;
+- no AI-consumption reset clock is shown;
+- no model-usage upsell is triggered by the local model.
 
-This protects both sides. Efficient models can deliver many more tokens/tasks inside the same allowance, while expensive premium-model use consumes the allowance faster rather than creating uncontrolled RYZ3N cost.
+This does **not** promise infinite simultaneous compute. Shared local capacity may queue requests and heavier workloads may require isolation or Dedicated infrastructure.
 
-Do not market a guaranteed fixed raw-token quantity across all models.
+## AU remains internal telemetry only
+
+AU may remain as an internal equivalent-cost normalization for telemetry and historical comparison:
+
+> **1 AU = €0.001 of provider-list-price-equivalent AI consumption.**
+
+AU is not currently marketed as an Owner allowance and is not a hard-stop mechanism for local-first ARCs.
 
 ## Shared capacity weights
 
 Until production evidence proves another safe ceiling:
 
-> **maximum 10 Standard-equivalent weighted slots per shared model/VPS capacity pool.**
+> **maximum 10 Standard-equivalent weighted slots per shared local inference/VPS capacity pool.**
 
-Weights:
+Planning weights:
 
 - Standard = 1;
 - Pro = 3;
@@ -70,42 +83,46 @@ Weights:
 - Dedicated = separate/dedicated;
 - Enterprise = custom.
 
-Examples:
+These weights help capacity planning; they are not customer AI quotas.
 
-- 10 Standard = 10;
-- 3 Pro + 1 Standard = 10;
-- 1 Business + 1 Pro + 1 Standard = 10;
-- 1 Business + 4 Standard = 10.
+Split earlier when concurrency, RAM, disk, queue depth, latency or service quality requires it.
 
-Split earlier when actual concurrency, RAM, disk, provider quota or latency requires it.
+## What plans are paying for
 
-## Current AI-provider economics snapshot — 2026-09-11
+Pricing should increasingly reflect:
 
-Current public Ollama new-plan pricing checked on 2026-09-11:
+- managed ARC storage;
+- authorized users;
+- integrations;
+- automations;
+- channels;
+- support/service level;
+- queue/concurrency priority;
+- shared vs isolated compute placement;
+- advanced capabilities;
+- dedicated infrastructure where required;
+- operational support and maintenance burden.
 
-- Pro: $20/month with $60 monthly usage credits and 3 concurrent requests;
-- Max: $100/month with $300 monthly usage credits and 10 concurrent requests;
-- Team: $500/month with $1,000 monthly shared usage credits.
+Step 17B should refine the exact balance using real telemetry rather than pre-guessing AI token ceilings.
 
-At the exchange rate used for the 2026-09-11 assessment, $60 was approximately €51.72.
+## Local-first economics
 
-The corrected Standard allowance therefore has a deliberate economic relationship to the current Pro pool:
+Even with zero marginal API fees for the normal ARC model route, inference is not economically free.
 
-`10 Standard × €5 normalized AI capacity = €50`
+RYZ3N must measure:
 
-which fits just under the current Pro plan's approximately €51.72 included usage-credit value.
+- VPS/server cost;
+- CPU/RAM utilization;
+- local model storage;
+- queue/concurrency pressure;
+- calls/tokens per Owner;
+- free external fallback frequency;
+- support/incidents;
+- backups/security/monitoring;
+- Founder implementation/configuration time;
+- future hardware expansion needs.
 
-Provider prices and the Founder's actual account/legacy plan may differ. Re-check before changing the real account subscription.
-
-## Usage behavior
-
-- AI allowance resets monthly; unused allowance does not roll over by default.
-- Managed storage persists until files/data are deleted or moved.
-- At ~80% usage, warn the customer.
-- At 100%, do not silently bill AI overage. The customer may wait for reset, upgrade, or agree a separately priced capacity add-on.
-- RYZ3N may route an ordinary task to a lower-cost model when quality remains sufficient.
-- External Google Drive/CRM/dispatch/SaaS data does not count as ARC storage while it stays in the external system; persistent copies mirrored into ARC storage do count.
-- Commercial caps do not override security, provider, latency, isolation or infrastructure-safety limits.
+PRIME's Ollama Cloud MiniMax usage is a separate Founder/control-plane cost and must not be allocated as though every ARC is consuming that cloud pool.
 
 ## Integration/API cost boundary
 
@@ -120,7 +137,6 @@ Default rule for Standard / Pro / Business:
 - free-tier/free-call integrations can operate normally;
 - customer-owned billing is preferred for cost-bearing optional platforms;
 - no ARC/Brain/Agent may purchase provider credits, seats, numbers, message packs, storage or other paid capacity autonomously;
-- if RYZ3N funds a specific external provider allowance, warn at 80% and hard-stop at 100% unless a higher approved cap already exists;
 - there are no surprise pass-through provider bills.
 
 See `ARC-VARIABLE-COST-AND-API-BOUNDARY.md`.
@@ -131,18 +147,18 @@ Working launch offer:
 
 > **Founding ARC — €49/month, founding rate locked while continuously subscribed.**
 
-Founding ARC receives **Standard entitlements** unless another tier is explicitly purchased/authorized.
+Founding ARC receives Standard service scope unless another tier is explicitly purchased/authorized.
 
 ## Founding Pilot rule
 
-A free Founding Pilot is assigned a real commercial entitlement. Free does not mean unlimited.
-
 Current Founder direction:
 
-- **VONDA ARC** — six-month free Founding Pilot on **Standard**: 2 GB, 5,000 AU, 1 user, 1 channel, 2 integrations, 5 automations.
-- **NARC** — six-month free Founding Pilot on **Standard** with the same entitlement.
-- Both should be shown the full Standard / Pro / Business / Dedicated / Enterprise ladder during onboarding.
+- **VONDA ARC** — six-month free Founding Pilot on Standard: 2 GB, 1 user, 1 channel, 2 integrations, 5 automations, shared local AI service included.
+- **NARC** — six-month free Founding Pilot on Standard with the same scope.
+- Both should be shown the commercial tier ladder during onboarding when commercially appropriate.
 - Commercial upgrade does not purchase or fake ARC maturity/aura.
+
+Free pilot status does not mean unlimited third-party vendor spend, unlimited storage, unlimited users/integrations/automations or infinite simultaneous compute.
 
 ## KMS7 Founding Business exception
 
@@ -150,26 +166,29 @@ If Adnan accepts and KMS7 ARC creation is authorized:
 
 - customer-specific price: **€170/month**;
 - entitlement: **ARC Business**;
-- included: **15 GB managed storage, 30,000 AU/month, up to 10 users, 3 channels, 10 integrations and 40 active automations**;
+- included: **15 GB managed storage, up to 10 users, 3 channels, 10 integrations and 40 active automations**;
+- shared local AI service included without an Owner-facing model-usage cap;
 - capacity weight: **6 shared slots**;
-- normal future Business remains **€250/month or €2,500/year**;
-- materially new future scope may still require a change order, Dedicated resources or another explicit arrangement.
+- earlier isolation/splitting may occur if telemetry shows pressure;
+- normal future Business remains **€250/month or €2,500/year**.
 
 Founder direct-operational-cost ceiling target for KMS7 remains **≤€50/month**.
 
-KMS7's 10 integration slots do **not** mean RYZ3N pays unlimited vendor/API costs. Paid third-party platform usage remains customer-funded by default unless the accepted KMS7 agreement explicitly grants a capped included vendor allowance.
+KMS7's integration slots do **not** mean RYZ3N pays unlimited vendor/API costs.
 
-## Customer-facing usage promise
+## Customer-facing promise
 
 Preferred external promise:
 
-> **One predictable subscription with a clear included AI allowance and clear integration limits. Third-party services may have their own provider fees. No surprise pass-through bill and no open-ended provider spending.**
+> **One predictable subscription for your ARC, with local AI service included and clear service/integration scope. Third-party services may have their own provider fees. No surprise pass-through bill.**
+
+Do not market provider/session/token-reset mechanics to Owners.
 
 ## Billing tier ≠ maturity/aura tier
 
 Commercial billing tier and ARC maturity are separate concepts.
 
-- Billing tier defines commercial scope, support, storage/usage allowance, integrations and infrastructure.
+- Billing tier defines commercial scope, support, storage, users, integrations, automations and infrastructure/service allocation.
 - V1→V6 defines verified ARC capability maturity.
 
 A customer cannot purchase a false Gold/Platinum/Sovereign aura merely by paying a higher subscription.
@@ -178,16 +197,16 @@ A customer cannot purchase a false Gold/Platinum/Sovereign aura merely by paying
 
 Revenue should be evaluated against:
 
-- attributable model/provider cost;
-- model-capacity pool subscription/allocation;
-- VPS/platform allocation;
+- shared/dedicated VPS and local inference allocation;
+- model storage/resource consumption;
 - third-party integration spend actually funded by RYZ3N;
 - support time;
-- founder implementation/configuration time;
+- Founder implementation/configuration time;
 - incidents/retries/failure burden;
 - payment/admin overhead;
-- monitoring/backups/security.
+- monitoring/backups/security;
+- future hardware scaling requirements.
 
-The hidden cost to protect against remains human time and uncapped third-party variable spend.
+The hidden costs to protect against remain human time, infrastructure pressure and uncapped third-party variable spend.
 
 See `ARC-TIER-ENTITLEMENTS-AND-USAGE-CAPS.md`, `ARC-VARIABLE-COST-AND-API-BOUNDARY.md`, `ARC-COMMERCIALIZATION-LAUNCH-AND-OPERATING-PLAN.md` and `COST-CAPACITY-MODEL.md`.
