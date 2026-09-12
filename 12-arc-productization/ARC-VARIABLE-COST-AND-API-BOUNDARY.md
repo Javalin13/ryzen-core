@@ -151,3 +151,36 @@ Preferred plain-language explanation:
 ## Founder shorthand
 
 > **Integrations are included; somebody else's API bill is not automatically included. AI is bundled through AU. Every other variable-cost provider is customer-funded or hard-capped before the ARC can spend. No agent gets an open wallet.**
+
+## Founder free-model runtime invariant — 2026-09-12
+
+This section is a binding Founder clarification of the AI/model-provider boundary for **PRIME, Hermes, OMEGA-supervised ARC runtimes, every current ARC, every Brain/Agent that can select a model, and every future ARC produced by the ARC Factory**.
+
+Runtime model selection is **free-only unless the Founder explicitly authorizes a paid route**. "Prefer free" is not sufficient.
+
+Machine-readable operating invariants:
+
+```text
+FREE_ENDPOINT_REQUIRED = true
+PAID_MODEL_FALLBACK_ALLOWED = false
+AUTONOMOUS_BILLING_CHANGES_ALLOWED = false
+AUTONOMOUS_CREDIT_PURCHASE_ALLOWED = false
+PAID_OVERRIDE_AUTHORITY = founder_explicit_only
+```
+
+Required behavior:
+
+- a model/provider route must be verified as a free endpoint/model route at selection time before it is eligible for autonomous use;
+- no ARC, Brain, Agent, PRIME, Hermes or OMEGA process may autonomously enable billing, pay-as-you-go, a paid tier, subscription upgrade, top-up, credit purchase or paid-only endpoint;
+- no automatic fallback chain may cross from a free route into a paid route;
+- a provider's retirement, EOL, HTTP 404/410, loss of free status, quota change or capability loss must trigger selection of another **verified free** route, not paid escalation;
+- deterministic model-retirement/EOL errors should not be repeatedly retried as if transient; move to the next eligible free route or fail closed;
+- if no verified free route can satisfy the required capability, the ARC/runtime must enter a truthful blocked/degraded state and escalate to the Founder; it must **never create cost by itself**;
+- among eligible free routes, selection should maximize the capabilities actually required by the task and then maximize useful context window, reasoning/tool quality and reliability;
+- capability routing is allowed and encouraged: an ARC may use one free model as its primary long-context brain and another free model for a specialist modality such as video, provided both remain inside the same free-only boundary;
+- image/video/multimodal requirements must not be solved by silently purchasing a paid model;
+- model names are replaceable runtime choices, not permanent canon: if a stronger suitable free route appears, it may replace the current free route under normal verification/change control without weakening this financial invariant.
+
+Existing AU, capacity-pool and paid-provider economics in this document remain useful for commercial planning and for any **Founder-explicitly-approved** paid capacity. They do **not** grant autonomous authority to move a runtime onto paid inference. A commercial allowance is not itself permission for an ARC to spend it without an approved provider route.
+
+> **Hard rule: free model routes only by default; maximize capability inside the free boundary; if free cannot do the job, stop and ask the Founder rather than spend.**
