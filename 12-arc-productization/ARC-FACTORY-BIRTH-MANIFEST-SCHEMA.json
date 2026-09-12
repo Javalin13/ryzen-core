@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ryz3n://arc-factory-birth-manifest/v1.2",
+  "$id": "ryz3n://arc-factory-birth-manifest/v1.3",
   "title": "RYZ3N ARC Factory Birth Manifest",
   "type": "object",
   "required": [
@@ -15,6 +15,8 @@
     "commercial",
     "runtime",
     "hermetic_seal",
+    "operator_access",
+    "intelligence_policy",
     "visual",
     "registries",
     "maturity",
@@ -71,7 +73,8 @@
         "model_capacity_pool":{},
         "primary_channel":{},
         "repository_autonomy":{"type":["string","boolean", "null"]},
-        "client_installs_prime":{"type":["boolean","null"]}
+        "client_installs_prime":{"type":["boolean","null"]},
+        "founder_work_lane":{"type":["string","null"]}
       },
       "additionalProperties":true
     },
@@ -94,6 +97,47 @@
         "autonomy_rule":{"type":"string","minLength":1},
         "safe_shared_writer_required_if_autonomy_granted":{"type":"boolean"},
         "maturity_promotion_implied":{"const":false}
+      },
+      "additionalProperties":true
+    },
+    "operator_access": {
+      "type":"object",
+      "required":[
+        "founder_operator_role_separate_from_owner",
+        "founder_operator_owner_private_memory_access_allowed",
+        "founder_operator_cross_arc_private_state_access_allowed",
+        "own_repo_write_requires_bounded_safe_writer"
+      ],
+      "properties": {
+        "founder_operator_role_separate_from_owner":{"const":true},
+        "founder_operator_owner_private_memory_access_allowed":{"const":false},
+        "founder_operator_cross_arc_private_state_access_allowed":{"const":false},
+        "own_repo_write_requires_bounded_safe_writer":{"const":true},
+        "direct_arc_work_lane":{"type":"string"},
+        "prime_role":{"type":"string"}
+      },
+      "additionalProperties":true
+    },
+    "intelligence_policy": {
+      "type":"object",
+      "required":[
+        "free_endpoint_required",
+        "paid_model_fallback_allowed",
+        "autonomous_billing_changes_allowed",
+        "autonomous_credit_purchase_allowed",
+        "paid_override_authority",
+        "deterministic_eol_failover_without_retry_storm"
+      ],
+      "properties": {
+        "free_endpoint_required":{"const":true},
+        "paid_model_fallback_allowed":{"const":false},
+        "autonomous_billing_changes_allowed":{"const":false},
+        "autonomous_credit_purchase_allowed":{"const":false},
+        "paid_override_authority":{"const":"founder_explicit_only"},
+        "deterministic_eol_failover_without_retry_storm":{"const":true},
+        "capability_routing_allowed":{"type":"boolean"},
+        "required_media_capabilities":{"type":"object"},
+        "canonical_standard":{"type":"string"}
       },
       "additionalProperties":true
     },
