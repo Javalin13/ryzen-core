@@ -1,0 +1,159 @@
+schema_version: '1.0'
+status: founder_authorized_current_cost_baseline
+as_of: '2026-09-12'
+purpose: >-
+  Machine-readable commercial and infrastructure baseline for the RYZ3N Capacity,
+  Telemetry & Cost Dashboard. Values are separated into actual observed cost,
+  public reference pricing, estimated/equivalent usage, and non-purchased comparison
+  options. Runtime/provider truth must supersede stale values.
+
+accounting_rules:
+  never_merge_fixed_and_variable_cost_into_one_unlabeled_number: true
+  actual_account_billing_overrides_public_reference_price: true
+  legacy_plan_terms_override_new_public_plan_terms_when_account_is_legacy: true
+  unknown_values_must_remain_unknown: true
+  no_fabricated_consumption: true
+  local_model_marginal_provider_fee_eur: 0
+  local_model_cost_basis:
+    - allocated_hetzner_infrastructure_cost
+    - measured_cpu_ram_runtime_share
+    - queue_and_capacity_pressure
+  owner_private_content_in_telemetry: false
+  autonomous_paid_changes_allowed: false
+
+active_infrastructure:
+  hetzner_cx23:
+    status: active
+    purpose: current PRIME + Cargo + NARC + VONDA production VPS
+    observed_source: founder_hetzner_console_2026-09-12
+    location_class: hetzner_cloud_cost_optimized
+    architecture: x86
+    vcpu: 2
+    ram_gib: 4
+    local_disk_gb: 40
+    gpu: none
+    swap_gib: 4
+    swap_provider_fee: 0
+    displayed_monthly_price_eur: 6.64
+    displayed_hourly_price_eur: 0.011
+    vat_context: founder_console_display_in_belgian_locale_21pct_vat
+    observed_current_usage_eur: 2.49
+    observed_current_usage_at_local: '2026-09-12T20:25:00+02:00'
+    observed_current_usage_semantics: hetzner_console_usage_value_as_displayed_not_reinterpreted
+    public_ipv4_paid_addon_active: false
+    calculation:
+      fixed_monthly_infrastructure_cost_eur: 6.64
+      actual_period_cost: prefer_invoice_or_hetzner_usage_api_when_available
+      arc_allocation_method_preferred: measured_time_weighted_cpu_ram_share
+      arc_allocation_method_fallback: equal_share_across_active_runtimes_marked_estimated
+
+active_model_provider:
+  ollama_cloud:
+    status: active_for_prime_primary
+    account_plan: ollama_pro_existing_subscription
+    account_plan_generation: unknown_may_be_legacy
+    actual_subscription_invoice_value: unknown_until_account_or_invoice_truth_is_ingested
+    public_new_plan_reference_as_of_2026-09-12:
+      monthly_price_usd: 20
+      annual_price_usd: 200
+      included_monthly_usage_credits_usd: 60
+      concurrency_requests: 3
+      source: https://ollama.com/pricing
+      note: existing legacy Pro subscriptions may retain legacy session/weekly-limit terms until switched
+    minimax_m3_public_token_reference_as_of_2026-09-12:
+      model: minimax-m3
+      currency: USD
+      unit: per_1m_tokens
+      input: 0.60
+      cached_input: 0.12
+      output: 2.40
+      source: https://ollama.com/pricing
+    consumption:
+      actual_account_usage_usd: unknown_until_provider_account_truth_is_ingested
+      actual_included_usage_remaining_usd: unknown_until_provider_account_truth_is_ingested
+      actual_reset_date: unknown_until_provider_account_truth_is_ingested
+      per_runtime_token_usage: ingest_from_runtime_telemetry
+      equivalent_cost_formula: >-
+        (input_tokens / 1000000 * 0.60) +
+        (cached_input_tokens / 1000000 * 0.12) +
+        (output_tokens / 1000000 * 2.40)
+      actual_incremental_cost_rule: >-
+        Keep fixed subscription cost, included-credit consumption, equivalent token cost,
+        and any marginal paid overage as separate fields. Do not call equivalent token
+        cost an actual cash charge when usage is covered by the subscription/included pool.
+
+local_inference:
+  provider: local-ollama
+  selected_model: qwen3:0.6b
+  current_target_role:
+    prime: fallback
+    cargo: primary_no_fallback
+    narc: primary_no_fallback
+    vonda: primary_no_fallback
+  marginal_provider_fee: 0
+  actual_cost_components:
+    - hetzner_fixed_infrastructure_allocation
+    - measured_local_cpu_ram_time
+    - queue_pressure_and_capacity_headroom
+  model_download_or_license_fee: 0
+  cost_formula: >-
+    allocated_local_cost = active_hetzner_period_cost * measured_runtime_resource_share;
+    if measured resource share is unavailable, use a clearly labeled estimated allocation.
+  note: local inference is not economically free; it has zero marginal API fee but consumes shared paid VPS capacity.
+
+comparison_options_not_purchased:
+  - name: hetzner_cx43
+    observed_monthly_price_eur: 19.35
+    vcpu: 8
+    ram_gib: 16
+    disk_gb: 160
+    status: not_purchased
+  - name: hetzner_cx53
+    observed_monthly_price_eur: 35.68
+    vcpu: 16
+    ram_gib: 32
+    disk_gb: 320
+    status: unavailable_not_purchased
+  - name: hetzner_server_auction_xeon_e5_1650v3
+    observed_monthly_price_eur_ex_vat: 58.70
+    ram_gib: 64
+    drives: 2x480GB_datacenter_ssd
+    status: not_purchased
+  - name: hetzner_server_auction_ryzen5_3600
+    observed_monthly_price_eur_ex_vat: 62.70
+    ram_gib: 64
+    drives: 2x2TB_enterprise_hdd
+    status: not_purchased
+
+required_dashboard_cost_views:
+  - hetzner_fixed_monthly_cost
+  - hetzner_actual_period_usage
+  - hetzner_cost_allocated_by_runtime
+  - ollama_fixed_subscription_cost
+  - ollama_included_usage_pool
+  - ollama_actual_consumption
+  - ollama_equivalent_token_cost
+  - ollama_marginal_overage_if_any
+  - local_inference_allocated_cost
+  - total_ryz3n_infrastructure_cost
+  - per_arc_estimated_contribution_margin
+
+required_refresh_behavior:
+  hetzner:
+    fixed_price: refresh_on_plan_or_invoice_change
+    actual_usage: refresh_from_provider_or_founder_observed_billing_truth
+  ollama:
+    public_price_table: version_by_effective_date
+    actual_plan: refresh_from_account_or_invoice_truth
+    usage: ingest_actual_provider_usage_when_available
+    token_equivalent_cost: calculate_from_runtime_token_telemetry_and_versioned_price_table
+  local_model:
+    resource_consumption: capture_cpu_ram_latency_queue_time_per_runtime
+
+hard_boundaries:
+  no_secrets_in_git: true
+  no_api_keys_in_git: true
+  no_owner_private_content_in_git: true
+  no_autonomous_credit_purchase: true
+  no_autonomous_plan_upgrade: true
+  no_autonomous_server_purchase: true
