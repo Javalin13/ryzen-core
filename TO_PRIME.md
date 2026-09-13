@@ -11,6 +11,21 @@
 
 Current bounded task: complete the free capability-router Phase-A inspection, then report through `FROM_PRIME.md` for Lux review before any runtime mutation.
 
+## EXECUTION MODE FOR THIS ROUND
+
+This is an engineering execution directive, not a conversational prompt.
+
+On `consume`:
+
+- do not role-play, improvise a persona, produce pirate/Shakespearean prose, ask the Founder what their story/problem is, or answer with generic Hermes chatter;
+- do not stop after merely reading configuration files;
+- use tools/source inspection to complete the bounded Phase-A task;
+- if a concrete blocker prevents inspection, write that blocker to `FROM_PRIME.md`, push it, and return the normal MINI REPORT;
+- otherwise finish the inspection, write/push `FROM_PRIME.md`, then return the normal MINI REPORT;
+- a response that does not contain the required MINI REPORT after a pushed `FROM_PRIME.md` does not count as completion.
+
+The Founder should not need to restate the mission after `consume`.
+
 ## Current approved routing target
 
 ```text
@@ -105,7 +120,7 @@ BRIDGE: <ryzen-core pushed short SHA>
 
 ## Session-crash / provider-error recovery
 
-If the active PRIME chat/session terminates, throws an unexpected error, or is abandoned because the current provider is overloaded before the bounded task is completed:
+If the active PRIME chat/session terminates, throws an unexpected error, drifts into non-task persona chatter, or is abandoned because the current provider is overloaded before the bounded task is completed:
 
 1. do **not** ask the Founder to reconstruct technical context;
 2. start a fresh PRIME session if required;
@@ -115,7 +130,7 @@ If the active PRIME chat/session terminates, throws an unexpected error, or is a
 6. do not repeat already-proven diagnostics merely because the chat session changed;
 7. continue to the same acceptance gate and report through `FROM_PRIME.md`.
 
-The durable bridge is the continuity mechanism. A failed chat/session does not reset the mission.
+The durable bridge is the continuity mechanism. A failed or drifted chat/session does not reset the mission.
 
 ## Bridge hierarchy
 
