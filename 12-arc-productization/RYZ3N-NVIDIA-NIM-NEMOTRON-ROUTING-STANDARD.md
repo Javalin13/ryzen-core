@@ -2,191 +2,252 @@
 
 **Status:** FOUNDER APPROVED — AUTHORITATIVE MODEL ARCHITECTURE  
 **Date:** 2026-09-13  
+**Architecture revision:** 3.0 — free capability router  
 **Scope:** PRIME, Cargo, NARC, VONDA, OMEGA/Factory inheritance, future ARCs
 
-This file is the single canonical model-routing standard. It supersedes older MiniMax-primary, ARC-local-primary, Kimi/DeepSeek normal-fallback, and Ultra→Qwen-only wording where those conflict.
+This is the single canonical model-routing standard. It supersedes conflicting MiniMax-primary, ARC-local-primary, Kimi/DeepSeek normal-fallback, Ultra-always-primary and blind linear fallback wording.
 
-## Canonical model stack
+## 1. Founder objective
 
-The RYZ3N stack is capability-aware, not a blind linear fallback chain.
+RYZ3N must maximize intelligence and responsiveness with **zero new model/server spend unless the Founder explicitly authorizes it**.
+
+The architecture therefore uses each already-authorized free/local model for the work it is best suited to instead of forcing every turn through the largest model.
+
+## 2. Canonical free model fabric
 
 ```text
-CORE BRAIN / NORMAL TEXT + TOOL WORK
-NVIDIA NIM / nvidia/nemotron-3-ultra-550b-a55b
-  -> frontier reasoning, planning, coding, long-context analysis, tool use
-
-SAME-PROVIDER TEXT FALLBACK
+FAST INTERACTIVE BRAIN
 NVIDIA NIM / nvidia/nemotron-3-super-120b-a12b
-  -> use when Ultra has a model-specific availability/compatibility problem
+  -> ordinary conversation, normal planning, tools, structured work,
+     status, routine coding, ARC operations and most interactive turns
+
+DEEP REASONING / ESCALATION BRAIN
+NVIDIA NIM / nvidia/nemotron-3-ultra-550b-a55b
+  -> difficult architecture, complex multi-step reasoning, high-value analysis,
+     hard coding/review, long-context synthesis and explicit deep-think requests
 
 MULTIMODAL PERCEPTION SPECIALIST
 NVIDIA NIM / nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
   -> image, video, audio/speech, OCR, GUI/document perception
-  -> structured perception then handed to Ultra for reasoning/action/conversation
 
-PROVIDER-INDEPENDENT EMERGENCY CONTINUITY
+PROVIDER-INDEPENDENT EMERGENCY / MICRO-INFRA
 local Ollama / qwen3:0.6b
-  -> only when NVIDIA is unavailable/unauthorized/rate-limited/network-failed or all eligible NVIDIA routes fail
-  -> restricted emergency mode, not a full substitute brain
+  -> health checks, bounded routing/triage where safe, queue supervision,
+     emergency continuity and low-risk infrastructure assistance
 ```
 
-## Capability routing
+Ultra remains the strongest reasoning resource. It is **not** the mandatory first hop for every message.
 
-### Normal text / planning / coding / tools / orchestration
+## 3. Evidence that triggered revision 3.0
 
-1. Ultra primary.
-2. If Ultra alone is unavailable or model-specific failure occurs, try Super.
-3. If NVIDIA as a provider/account/network is unavailable or shared rate budget is exhausted, skip other NVIDIA retries and enter local Qwen restricted emergency continuity.
-4. If no safe route remains, fail closed with sanitized user/Owner messaging.
+Production evidence on 2026-09-13 showed repeated NVIDIA Ultra overload during PRIME and Cargo interactive turns.
 
-### Image / video / audio / OCR / GUI / document perception
-
-1. Route the media/perception step to Nano Omni.
-2. Convert the result into a structured internal perception artifact.
-3. Route that artifact to Ultra for reasoning, planning, tool use and final response.
-4. Ultra remains the conversational brain; Nano Omni is a specialist, not the default chat brain.
-5. Nano Omni's current direct language support limitation must not dictate Owner-facing language. The ARC may use Omni for perception and Ultra for multilingual response/synthesis.
-6. If Omni is unavailable and the requested modality cannot be safely processed, fail/degrade gracefully rather than pretending the local text-only emergency model understood the media.
-
-### Why Super is not the provider-outage fallback
-
-Ultra, Super and Nano Omni share NVIDIA NIM/account capacity. Super protects against an Ultra-specific issue, not an NVIDIA-wide outage, credential failure, shared throttle or network failure. Local Qwen is the independent emergency route.
-
-## Active topology for PRIME and all ARCs
-
-PRIME, Cargo, NARC, VONDA and every future Factory-born ARC inherit the same model architecture:
+A direct same-host/same-credential benchmark produced:
 
 ```text
-brain_primary:      nvidia/nemotron-3-ultra-550b-a55b
-brain_fallback:     nvidia/nemotron-3-super-120b-a12b
-multimodal_engine:  nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
-emergency_fallback: local-ollama/qwen3:0.6b
+Ultra: HTTP 503 in ~56.96 s
+Super: HTTP 200 in ~0.68 s
 ```
 
-Individual ARCs may have domain-specific tools, Brains, prompts and workflows, but they do not drift to a different normal model stack without explicit Founder-approved exception.
+Cargo received a Founder turn at ~13:41:34, Ultra returned `Service temporarily overloaded` around 13:42:32, and the final short reply was not sent until ~13:44:14 after retry/recovery behavior.
 
-Kimi, DeepSeek and Ollama Cloud MiniMax are not active normal routes under this decision.
+This is sufficient evidence that blindly making Ultra the interactive first hop creates unacceptable avoidable latency when the free Ultra pool is saturated.
 
-## NVIDIA endpoint and credential
+## 4. Capability-aware routing
 
-NVIDIA NIM base URL:
+### Fast interactive lane — Super
 
-`https://integrate.api.nvidia.com/v1`
+Default to Super for:
 
-Use `NVIDIA_API_KEY` from protected server secret/environment storage. Never print, log, commit, bridge-write or Owner-expose the credential.
+- normal conversation;
+- short/medium questions;
+- routine Owner/Founder requests;
+- ordinary planning and drafting;
+- standard tool/function loops;
+- status checks and confirmations;
+- routine ARC business operations;
+- background reviews unless deep reasoning is explicitly justified;
+- simple/medium coding work.
 
-The working Founder-created NVIDIA credential was manually proven against Ultra with an authenticated HTTP 200 response before PRIME cutover.
+### Deep lane — Ultra
 
-## Shared NVIDIA capacity
+Escalate to Ultra when one or more of these apply:
 
-Current Founder dashboard evidence: **up to 40 requests/minute** for the NVIDIA account.
+- explicit Founder/Owner request for deep reasoning;
+- architecture/governance/system-design decisions;
+- unusually complex multi-step reasoning;
+- hard debugging after normal lane cannot resolve safely;
+- high-stakes or high-value analysis requiring the strongest available reasoning;
+- long-context synthesis where Super quality proves insufficient;
+- complex code design/review where the router has evidence that Super is not enough.
 
-Treat this as one shared portfolio budget across PRIME + all ARCs + all NVIDIA models, not 40 RPM per model or per ARC.
+Routing must be based on task need, not vanity or model size.
 
-Normal scheduling target: about **35 RPM** for headroom.
+### Multimodal lane — Omni
+
+Use Omni only for the perception step where it adds value. The structured perception artifact is then sent to Super for ordinary synthesis/action or Ultra when the reasoning gate is deep.
+
+Do not force text-only traffic through Omni.
+
+### Emergency/local lane — Qwen
+
+Qwen is independent continuity, not the normal full brain. It may support health checks, safe micro-routing, queue supervision and restricted low-risk continuity. It must not autonomously perform broad governance, canon changes, destructive Git, billing, production-wide migrations or pretend to understand unsupported media.
+
+## 5. Ultra circuit breaker — mandatory target behavior
+
+Ultra must not create a portfolio-wide latency storm.
+
+Target control policy:
+
+1. A request eligible for Ultra checks shared Ultra health before dispatch.
+2. On explicit `overloaded`, HTTP 503, repeated provider timeout, or excessive first-token latency, do **not** retry Ultra repeatedly for an interactive turn.
+3. Open a shared Ultra circuit/cooldown for approximately 60–120 seconds.
+4. During cooldown, interactive deep work falls through to the best safe Super strategy unless the user explicitly chooses to wait for Ultra.
+5. After cooldown, allow one half-open probe rather than every ARC probing simultaneously.
+6. A successful healthy probe closes the circuit; another overload reopens it.
+
+The shared circuit contains operational health metadata only. It must never contain Owner-private prompts/responses.
+
+## 6. Retry discipline
+
+For interactive work:
+
+- provider overload/503: **no same-Ultra retry storm**;
+- shared NVIDIA rate throttle: do not bounce repeatedly among NVIDIA models if the whole account budget is the problem;
+- model-specific Ultra overload while Super is healthy: fail over to Super quickly;
+- transport errors may receive only bounded retry behavior when it improves reliability without violating latency budgets;
+- background work may wait longer than interactive work, but may not starve Owner/Founder turns.
+
+## 7. Latency budgets
+
+Initial engineering targets, to be refined by telemetry:
+
+```text
+Super interactive target: seconds, not minutes
+Ultra deep lane: bounded wait; visible long wait only when genuinely justified
+Omni perception: bounded specialist call
+Interactive overload failover: fast enough to avoid multi-minute retry chains
+```
+
+A trivial reply taking multiple minutes is not considered normal acceptable quality merely because it eventually succeeds.
+
+## 8. Background-work policy
+
+Background/system work must not consume scarce Ultra availability by default.
+
+Preferred order:
+
+1. local Qwen for safe infrastructure micro-tasks where quality is sufficient;
+2. Super for normal background reasoning/review;
+3. Ultra only for specifically justified deep background work.
+
+Owner/Founder interactive work outranks routine background work under shared capacity pressure.
+
+## 9. Shared NVIDIA capacity
+
+Observed account capacity is up to approximately 40 RPM. Treat this as one portfolio budget across PRIME + all ARCs + Ultra/Super/Omni.
+
+Operating target remains about 35 RPM for headroom until re-measured.
 
 Required control plane:
 
 - central shared limiter/scheduler;
-- fair ARC queueing;
-- bounded queue;
-- priority for critical PRIME orchestration without permanent Owner starvation;
-- capability-aware dispatch so media calls go to Omni only when needed;
-- avoid retry storms between Ultra/Super/Omni;
-- provider-wide throttle detection must jump to local emergency policy instead of consuming the same NVIDIA limit repeatedly;
-- telemetry for queue latency, throttle events, route/model selection, fallback frequency and concurrency;
-- no provider/rate-limit internals exposed to Owners.
+- bounded/fair queues;
+- priority classes for interactive vs background work;
+- shared Ultra circuit breaker;
+- anti-stampede behavior;
+- capability-aware dispatch;
+- telemetry for latency, queue time, model/lane selection, fallback reason and overload events;
+- no Owner-visible quota/model/provider details.
 
-Re-measure if NVIDIA changes endpoint/account behavior.
+## 10. State-of-the-art router target
 
-## Reasoning / privacy policy
-
-Internal reasoning traces must never be surfaced to Founder/Owner/customer conversational output.
-
-Where supported, disable exposed reasoning content for ordinary user-facing turns. Tool calls and structured internal artifacts may use hidden reasoning internally, but final output must contain only intended answer/tool results.
-
-Owners must never see:
-
-- provider/model names;
-- API/rate-limit figures;
-- raw 429/5xx/provider errors;
-- context-window values;
-- localhost/internal endpoints;
-- Hermes/runtime internals;
-- configuration instructions;
-- billing/credit messages;
-- credentials;
-- fallback diagnostics.
-
-## Local Qwen restricted emergency mode
-
-Local route:
+The desired router classifies each task into one of these internal lanes:
 
 ```text
-provider = local Ollama
-model    = qwen3:0.6b
-endpoint = localhost/private only
+FAST_INTERACTIVE  -> Super
+DEEP_REASONING    -> Ultra when healthy, otherwise bounded Super deep fallback
+MULTIMODAL        -> Omni perception -> Super or Ultra synthesis by reasoning gate
+BACKGROUND_LIGHT  -> Qwen when safe
+BACKGROUND_NORMAL -> Super
+EMERGENCY_LOCAL   -> Qwen restricted continuity
 ```
 
-For PRIME, Qwen may perform health checks, bounded recovery, queue supervision and safe status reporting. It must not autonomously perform broad architecture/governance decisions, canon rewrites, broad refactors, destructive Git operations, financial/billing actions or production-wide migrations.
+The router may use cheap/local heuristics, task metadata, explicit user intent and bounded classification. It must not spend an Ultra request merely to decide whether Ultra is needed.
 
-For ARCs, Qwen may provide reduced-capacity continuity only where the task is safe for the small model. Media understanding must not be fabricated.
+## 11. Privacy / UX
 
-## Direct Owner interaction
+Normal Founder/Owner output must never expose:
 
-PRIME remains supervisory and is not a conversational relay.
+- provider/model names;
+- HTTP status or raw 5xx/429 errors;
+- rate limits/context windows;
+- localhost/internal endpoints;
+- Hermes/runtime internals;
+- API credentials;
+- raw fallback diagnostics;
+- hidden reasoning traces.
 
-- Narek ↔ NARC directly
-- Maria ↔ Cargo directly
-- Laetitia ↔ VONDA directly
+Capacity and routing are infrastructure concerns. User-facing degradation messages remain sanitized.
 
-Founder never consumes an Owner slot. Owner namespaces remain isolated.
+## 12. Direct Owner interaction and sovereignty
 
-## OMEGA / Factory inheritance
+Routing changes do not alter ARC identity, memory, ownership, form, aura, maturity or bridge sovereignty.
 
-OMEGA/Factory must bake into every new ARC:
+PRIME remains supervisory, not a relay. Owners communicate directly with their ARC. Founder never consumes an Owner slot.
 
-- Ultra as core brain primary;
-- Super as same-provider text fallback;
-- Nano Omni as multimodal perception specialist;
-- local Qwen as provider-independent restricted emergency fallback;
-- central shared NVIDIA capacity scheduler;
-- capability-aware dispatch;
-- protected credential use;
-- sanitized Owner UX;
-- no reasoning leakage;
-- direct Owner-to-ARC interaction;
-- no independent model drift without Founder-approved exception.
+## 13. OMEGA / Factory inheritance
 
-## Migration / master execution order
+Every current and future Factory-born ARC inherits the same free capability fabric:
 
-1. PRIME NVIDIA key + Ultra raw API proof.
-2. PRIME source/config points to Ultra primary and local Qwen emergency fallback.
-3. Validate Super and Nano Omni with the same protected NVIDIA account before activating them in routing.
-4. Install capability-aware routing in PRIME: Ultra brain, Super text fallback, Omni specialist, Qwen independent emergency.
-5. Restart/verify PRIME once with exactly one poller, Telegram connected, normal chat and Hermes tool/function tests GREEN.
-6. Only after PRIME is GREEN, migrate Cargo one ARC at a time to the same stack and verify.
-7. Migrate NARC and verify.
-8. Migrate VONDA and verify.
-9. Persist authoritative ARC source/config/manifests through each ARC safe process.
-10. Implement/verify shared ~35/40-RPM scheduling and anti-stampede behavior.
-11. Update OMEGA/Factory inheritance.
-12. Verify direct Owner path + privacy + multimodal dispatch + fallback behavior.
-13. Run final post-cutover A→Z and source/runtime parity.
-14. Remove active Ollama Cloud routing.
-15. Report `OLLAMA CLOUD SAFE TO CANCEL` only when objectively true.
-16. Keep the master mission OPEN until required real Owner proofs are valid.
+```text
+interactive_default: Super
+reasoning_escalation: Ultra
+multimodal_perception: Omni
+independent_emergency: local Qwen
+shared_capacity_control: required
+shared_ultra_circuit_breaker: required
+background_ultra_default: forbidden
+provider_internal_leakage: forbidden
+```
 
-## Ollama Cloud retirement
+ARCs may add domain-specific Brains/tools/workflows but may not independently drift from the routing fabric without explicit Founder approval.
 
-Ollama Cloud MiniMax is not part of the target active topology.
+## 14. Spend boundary
 
-Do not tell Founder to cancel until PRIME/Cargo/NARC/VONDA are GREEN on the new stack, local emergency fallback is proven, gateways/pollers are healthy, Owner paths are intact, active Ollama Cloud routing is removed, and final A→Z is GREEN.
+No autonomous purchase, top-up, subscription change, paid endpoint activation, larger VPS purchase or Ollama Cloud purchase. Paid capacity requires explicit Founder authorization.
 
-## Spend boundary
+## 15. Implementation truth boundary
 
-No autonomous purchase, top-up, subscription change, paid endpoint activation or server purchase.
+This document defines the approved target architecture. Git/runtime must remain truthful about implementation state.
 
-## Completion boundary
+As of the adoption of revision 3.0:
 
-No master-mission completion until model routing, capability routing, fallback proof, direct Owner path and required real Owner proofs are all valid.
+- Ultra, Super and Omni have all passed direct hosted tests at least once;
+- Super has demonstrated sub-second direct response while Ultra was overloaded;
+- PRIME and Cargo have proven NVIDIA runtime connectivity;
+- the **dynamic FAST/DEEP router and shared Ultra circuit breaker still require implementation/verification**;
+- until that router is proven, current Ultra-first config files are transitional runtime state, not the final target topology.
+
+Do not claim the router is live before an actual Hermes/runtime proof.
+
+## 16. Acceptance criteria
+
+Revision 3.0 is production GREEN when:
+
+1. normal interactive turns route to Super;
+2. deep tasks can escalate to Ultra;
+3. Ultra overload causes bounded fast fallback rather than repeated minute-long retries;
+4. shared circuit state prevents PRIME/Cargo/NARC/VONDA from stampeding the same unhealthy Ultra endpoint;
+5. Omni handles perception selectively;
+6. Qwen provides independent restricted continuity;
+7. background work does not consume Ultra by default;
+8. shared ~35/40 RPM protection works;
+9. direct Owner paths remain intact;
+10. model/provider internals are sanitized from user-facing UX;
+11. telemetry proves routing and latency behavior without centralizing private content;
+12. OMEGA/Factory inheritance matches this standard.
+
+## 17. Historical supersession
+
+Where older files still say `Ultra primary for every normal turn`, `ARC local-primary`, or `MiniMax primary`, those routing statements are historical and superseded by this file. Preserve those files as historical evidence unless separately reconciled; do not let stale wording override this standard.
