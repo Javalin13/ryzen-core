@@ -1,12 +1,10 @@
 # RYZ3N NVIDIA NIM / NEMOTRON ROUTING STANDARD
 
-**Status:** FOUNDER APPROVED — AUTHORITATIVE ROUTING SUPERSESSION  
-**Date:** 2026-09-12  
+**Status:** FOUNDER APPROVED — AUTHORITATIVE ROUTING + RECOVERY STANDARD  
+**Date:** 2026-09-13  
 **Scope:** PRIME, Cargo, NARC, VONDA, OMEGA/Factory inheritance, future ARCs
 
-## Founder-approved target
-
-The normal inference topology is now:
+## Final Founder-approved topology
 
 ```text
 PRIME
@@ -31,44 +29,74 @@ Future ARCs
   fallback = local Ollama / qwen3:0.6b
 ```
 
-This supersedes previous active routing in which PRIME used Ollama Cloud MiniMax M3 and current ARCs used local Qwen as normal primary.
+This supersedes MiniMax-primary and ARC-local-primary routing.
+
+## Mandatory recovery gate — NVIDIA FIRST
+
+When PRIME is operating only on the weak local emergency model, it is not trusted for broad architecture/governance work.
+
+Before PRIME handles any other master-mission work, the NVIDIA NIM route must be installed/configured, authenticated, tested and made PRIME's live primary.
+
+The recovery gate is:
+
+1. load the existing protected NVIDIA NIM API key from server secret/environment storage;
+2. test `https://integrate.api.nvidia.com/v1` with `nvidia/nemotron-3-ultra-550b-a55b`;
+3. require HTTP 200 + valid model response;
+4. prove normal response, structured output, Hermes tool/function calling, EN/FR/NL and sanitized errors;
+5. switch PRIME to Nemotron primary;
+6. restart/verify PRIME with exactly one poller, Telegram connected and Nemotron actually serving PRIME.
+
+Until this gate is GREEN, local `qwen3:0.6b` is restricted to bounded recovery/health actions only. It must not autonomously rewrite canon, make architecture/governance decisions, perform broad refactors, migrate all ARCs, execute destructive Git operations, or make financial/billing changes.
 
 ## NVIDIA credential rule
 
-Use the existing protected NVIDIA NIM API key first. The key must remain in protected server environment/secret storage and must never be printed, committed, echoed into logs, or exposed to Owners.
+Reuse the existing protected NVIDIA NIM key first. Never print, echo, log, commit, bridge-write or Owner-expose the credential.
 
-If the existing NVIDIA NIM key returns a successful authenticated Nemotron request, reuse it. Only require Founder to generate a replacement NVIDIA key if the existing key is actually rejected, revoked, or expired.
+Only if the existing key is actually rejected, revoked, expired or unauthorized may PRIME report `NEW NVIDIA KEY REQUIRED`.
 
-## Shared NVIDIA capacity policy
+## Master model build-up sequence
 
-Current Founder operating assumption/evidence: hosted Nemotron free endpoint permits approximately **40 requests per minute**.
+Once PRIME is GREEN on Nemotron, PRIME owns the remaining work in order:
 
-PRIME must treat this as a shared portfolio capacity budget, not as 40 RPM per ARC.
+1. preserve source freshness, Founder/Owner bindings, pairing/access and activation state;
+2. migrate Cargo to Nemotron primary + local Qwen fallback and verify;
+3. migrate NARC likewise and verify;
+4. migrate VONDA likewise and verify;
+5. persist authoritative configs/manifests through each ARC's safe process;
+6. prove local Qwen fallback for PRIME and all three ARCs, including live Hermes context/runtime requirements and no reasoning leakage;
+7. implement shared NVIDIA rate limiting/queueing;
+8. update OMEGA/Factory so all future ARCs inherit the same stack;
+9. verify direct Owner interaction and Owner privacy;
+10. run final post-cutover A→Z + source/runtime parity;
+11. update bridge/state/routing truth and push final commits;
+12. report `OLLAMA CLOUD SAFE TO CANCEL` only when objectively true;
+13. keep the master mission OPEN until required real Owner proofs are valid.
+
+## Shared NVIDIA capacity
+
+Founder operating evidence: hosted Nemotron free endpoint capacity is approximately **40 requests/minute**.
+
+Treat this as one shared portfolio budget across PRIME + all ARCs. Target normal scheduling around **35 RPM** for headroom.
 
 Required control plane:
 
-- central shared rate limiter/scheduler across PRIME + all ARCs;
-- target normal operating ceiling around **35 RPM** to preserve headroom below the observed 40 RPM limit;
-- fair queueing across ARCs;
-- PRIME may receive priority for critical orchestration but must not permanently starve Owner ARCs;
-- short bounded queue before fallback where safe;
-- do not allow a burst of 429/throttle events to stampede all traffic onto the small VPS at once;
-- record throttling, queue latency, fallback frequency, and active concurrency in Founder/PRIME telemetry;
+- central shared rate limiter/scheduler;
+- fair ARC queueing;
+- bounded queue;
+- PRIME priority for critical orchestration without permanent Owner starvation;
+- anti-429 stampede protection;
+- telemetry for throttle events, queue latency, fallback frequency and concurrency;
 - no Owner-facing provider/rate-limit details.
 
-The 40 RPM figure is an operational planning value and must be re-measured if NVIDIA changes endpoint behavior or account policy.
+Re-measure if NVIDIA changes endpoint/account behavior.
 
 ## Compute placement
 
-Under normal operation, Nemotron inference is hosted on NVIDIA infrastructure. The Hetzner VPS therefore should not carry the normal LLM inference CPU burden.
+Normal inference runs on NVIDIA-hosted infrastructure. The Hetzner CX23 is not the normal LLM compute plane.
 
-The local VPS becomes inference-active mainly during fallback events. CPU/RAM/swap congestion is therefore a **fallback-capacity risk**, not the intended steady-state architecture.
-
-PRIME must monitor local fallback pressure and prevent cascading failure. Queue safely, preserve ARC isolation, and fail closed with a sanitized Owner message if both primary and fallback are unavailable/unsafe.
+Local CPU/RAM/swap inference is fallback-only. Local congestion is a fallback-capacity risk, not the steady-state design.
 
 ## Local fallback
-
-Local fallback remains:
 
 ```text
 provider = local Ollama
@@ -76,86 +104,64 @@ model    = qwen3:0.6b
 endpoint = localhost/private only
 ```
 
-No Kimi, DeepSeek, Ollama Cloud, or other provider is a normal fallback under this Founder decision.
+No Kimi, DeepSeek, Ollama Cloud or other provider is a normal fallback.
 
-The local fallback must be proven compatible with the active Hermes runtime. Any context-window/runtime settings required for Hermes must be persisted in authoritative ARC source/config and validated against the live loaded Ollama runtime rather than merely present as config text.
+Fallback must be validated against the live Hermes runtime, not merely config text. Required context/runtime overrides must be persisted in authoritative source/config. Thinking/reasoning traces must never leak to Owners.
 
-Reasoning/thinking traces must never leak to Owner-facing responses.
+For PRIME specifically, local Qwen is emergency continuity, not a trusted full-intelligence replacement for Nemotron.
 
-## Ollama Cloud retirement
+## Direct Owner interaction
 
-Ollama Cloud MiniMax is no longer part of the target active routing topology.
+PRIME remains supervisory and is not a conversational relay.
 
-Do not tell Founder to cancel the paid Ollama Cloud subscription until PRIME has objectively verified:
+- Narek ↔ NARC directly
+- Maria ↔ Cargo directly
+- Laetitia ↔ VONDA directly
 
-1. Nemotron primary works for PRIME;
-2. Nemotron primary works for Cargo, NARC, and VONDA;
-3. normal chat works;
-4. Hermes tool/function calling works;
-5. EN/FR/NL behavior is acceptable;
-6. local Qwen fallback works;
-7. all four gateways remain healthy with exactly one poller each;
-8. no Owner identity/onboarding regression occurs;
-9. old Ollama Cloud routing is removed from active configs;
-10. final post-cutover A→Z is GREEN.
-
-Only then report: `OLLAMA CLOUD SAFE TO CANCEL`.
+Founder never consumes an Owner slot. Owner namespaces remain isolated.
 
 ## Owner UX
 
-Owners must not see:
+Owners must not see provider/model names, API/rate-limit figures, raw 429/5xx errors, context-window values, localhost endpoints, Hermes/runtime internals, configuration instructions, billing/credit messages, credentials or fallback diagnostics.
 
-- provider/model names;
-- API/rate-limit figures;
-- raw 429/5xx errors;
-- context-window values;
-- localhost endpoints;
-- Hermes/runtime internals;
-- configuration instructions;
-- billing/credit messages;
-- fallback diagnostics.
-
-Owner-facing route failures must be sanitized. Provider/runtime details remain Founder/PRIME telemetry only.
+Use sanitized temporary-unavailable messaging only.
 
 ## OMEGA / Factory inheritance
 
-OMEGA/Factory must bake this routing policy into new ARCs by default:
+OMEGA/Factory must bake into every new ARC by default:
 
 - Nemotron primary;
 - local Qwen fallback;
 - no additional normal fallback;
-- shared central NVIDIA capacity scheduler;
+- central NVIDIA capacity scheduler;
 - protected credential use;
 - sanitized Owner UX;
-- local fallback safety controls.
+- local fallback safety controls;
+- direct Owner-to-ARC interaction.
 
-Future Founder supersessions may change the model/provider, but individual ARCs must not drift independently without an explicit approved exception.
+No ARC may drift independently without explicit Founder-approved exception.
 
-## Migration ownership
+## Ollama Cloud retirement
 
-PRIME owns execution of the cutover. Founder/Lux should not manually rewrite every ARC runtime.
+Ollama Cloud MiniMax is not part of the target active topology.
 
-PRIME must:
+Do not tell Founder to cancel until all of the following are GREEN:
 
-1. pull/consume latest canonical source and bridge directives;
-2. test existing protected NVIDIA key against Nemotron;
-3. validate Nemotron normal chat + tools + EN/FR/NL;
-4. cut over PRIME first;
-5. cut over Cargo/NARC/VONDA one at a time;
-6. preserve direct Owner interaction and activation state;
-7. verify exactly one Telegram poller per gateway;
-8. implement shared rate limiting/queueing;
-9. verify local Qwen fallback;
-10. update OMEGA/Factory inheritance and all relevant source/config/bridge truth;
-11. remove active Ollama Cloud routing only after Nemotron is GREEN;
-12. run final A→Z;
-13. report whether Ollama Cloud is safe to cancel.
+1. PRIME Nemotron primary;
+2. Cargo/NARC/VONDA Nemotron primary;
+3. chat + Hermes tools + EN/FR/NL;
+4. local Qwen fallback;
+5. all four gateways healthy, exactly one poller each;
+6. direct Owner interaction intact;
+7. active Ollama Cloud routing removed;
+8. final A→Z GREEN.
 
-## Non-negotiable invariants
+Only then report `OLLAMA CLOUD SAFE TO CANCEL`.
 
-- PRIME remains supervisory; it is not a required conversational relay between an Owner and their ARC.
-- Founder never consumes an Owner slot.
-- Owner private namespaces remain isolated.
-- No credentials in Git, chat, bridge files, or Owner-visible output.
-- No autonomous purchase, top-up, subscription change, or paid provider activation.
-- No master-mission completion until real Owner interaction proofs remain valid after the routing cutover.
+## Spend boundary
+
+No autonomous purchase, top-up, subscription change, paid endpoint activation or server purchase.
+
+## Completion boundary
+
+No master-mission completion until the routing cutover, fallback proof, direct Owner path and required real Owner proofs are all valid.
