@@ -103,6 +103,20 @@ LUX: SYNC NEEDED | NO SYNC NEEDED
 BRIDGE: <ryzen-core pushed short SHA>
 ```
 
+## Session-crash / provider-error recovery
+
+If the active PRIME chat/session terminates, throws an unexpected error, or is abandoned because the current provider is overloaded before the bounded task is completed:
+
+1. do **not** ask the Founder to reconstruct technical context;
+2. start a fresh PRIME session if required;
+3. fetch/pull current `Javalin13/ryzen-core` `origin/main` first;
+4. read repository-root `TO_PRIME.md` and current `FROM_PRIME.md`;
+5. resume from the latest durable bridge state and the last verified source/runtime checkpoint;
+6. do not repeat already-proven diagnostics merely because the chat session changed;
+7. continue to the same acceptance gate and report through `FROM_PRIME.md`.
+
+The durable bridge is the continuity mechanism. A failed chat/session does not reset the mission.
+
 ## Bridge hierarchy
 
 `TO_PRIME.md` / `FROM_PRIME.md` in `ryzen-core` are the canonical Lux <-> PRIME master bridge.
