@@ -1,102 +1,126 @@
 # RYZ3N NVIDIA NIM / NEMOTRON ROUTING STANDARD
 
-**Status:** FOUNDER APPROVED — AUTHORITATIVE ROUTING + RECOVERY STANDARD  
+**Status:** FOUNDER APPROVED — AUTHORITATIVE MODEL ARCHITECTURE  
 **Date:** 2026-09-13  
 **Scope:** PRIME, Cargo, NARC, VONDA, OMEGA/Factory inheritance, future ARCs
 
-## Final Founder-approved topology
+This file is the single canonical model-routing standard. It supersedes older MiniMax-primary, ARC-local-primary, Kimi/DeepSeek normal-fallback, and Ultra→Qwen-only wording where those conflict.
+
+## Canonical model stack
+
+The RYZ3N stack is capability-aware, not a blind linear fallback chain.
 
 ```text
-PRIME
-  primary  = NVIDIA NIM / nvidia/nemotron-3-ultra-550b-a55b
-  fallback = local Ollama / qwen3:0.6b
-  additional normal fallbacks = NONE
+CORE BRAIN / NORMAL TEXT + TOOL WORK
+NVIDIA NIM / nvidia/nemotron-3-ultra-550b-a55b
+  -> frontier reasoning, planning, coding, long-context analysis, tool use
 
-Cargo
-  primary  = NVIDIA NIM / nvidia/nemotron-3-ultra-550b-a55b
-  fallback = local Ollama / qwen3:0.6b
+SAME-PROVIDER TEXT FALLBACK
+NVIDIA NIM / nvidia/nemotron-3-super-120b-a12b
+  -> use when Ultra has a model-specific availability/compatibility problem
 
-NARC
-  primary  = NVIDIA NIM / nvidia/nemotron-3-ultra-550b-a55b
-  fallback = local Ollama / qwen3:0.6b
+MULTIMODAL PERCEPTION SPECIALIST
+NVIDIA NIM / nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+  -> image, video, audio/speech, OCR, GUI/document perception
+  -> structured perception then handed to Ultra for reasoning/action/conversation
 
-VONDA
-  primary  = NVIDIA NIM / nvidia/nemotron-3-ultra-550b-a55b
-  fallback = local Ollama / qwen3:0.6b
-
-Future ARCs
-  primary  = NVIDIA NIM / nvidia/nemotron-3-ultra-550b-a55b
-  fallback = local Ollama / qwen3:0.6b
+PROVIDER-INDEPENDENT EMERGENCY CONTINUITY
+local Ollama / qwen3:0.6b
+  -> only when NVIDIA is unavailable/unauthorized/rate-limited/network-failed or all eligible NVIDIA routes fail
+  -> restricted emergency mode, not a full substitute brain
 ```
 
-This supersedes MiniMax-primary and ARC-local-primary routing.
+## Capability routing
 
-## Mandatory recovery gate — NVIDIA FIRST
+### Normal text / planning / coding / tools / orchestration
 
-When PRIME is operating only on the weak local emergency model, it is not trusted for broad architecture/governance work.
+1. Ultra primary.
+2. If Ultra alone is unavailable or model-specific failure occurs, try Super.
+3. If NVIDIA as a provider/account/network is unavailable or shared rate budget is exhausted, skip other NVIDIA retries and enter local Qwen restricted emergency continuity.
+4. If no safe route remains, fail closed with sanitized user/Owner messaging.
 
-Before PRIME handles any other master-mission work, the NVIDIA NIM route must be installed/configured, authenticated, tested and made PRIME's live primary.
+### Image / video / audio / OCR / GUI / document perception
 
-The recovery gate is:
+1. Route the media/perception step to Nano Omni.
+2. Convert the result into a structured internal perception artifact.
+3. Route that artifact to Ultra for reasoning, planning, tool use and final response.
+4. Ultra remains the conversational brain; Nano Omni is a specialist, not the default chat brain.
+5. Nano Omni's current direct language support limitation must not dictate Owner-facing language. The ARC may use Omni for perception and Ultra for multilingual response/synthesis.
+6. If Omni is unavailable and the requested modality cannot be safely processed, fail/degrade gracefully rather than pretending the local text-only emergency model understood the media.
 
-1. load the existing protected NVIDIA NIM API key from server secret/environment storage;
-2. test `https://integrate.api.nvidia.com/v1` with `nvidia/nemotron-3-ultra-550b-a55b`;
-3. require HTTP 200 + valid model response;
-4. prove normal response, structured output, Hermes tool/function calling, EN/FR/NL and sanitized errors;
-5. switch PRIME to Nemotron primary;
-6. restart/verify PRIME with exactly one poller, Telegram connected and Nemotron actually serving PRIME.
+### Why Super is not the provider-outage fallback
 
-Until this gate is GREEN, local `qwen3:0.6b` is restricted to bounded recovery/health actions only. It must not autonomously rewrite canon, make architecture/governance decisions, perform broad refactors, migrate all ARCs, execute destructive Git operations, or make financial/billing changes.
+Ultra, Super and Nano Omni share NVIDIA NIM/account capacity. Super protects against an Ultra-specific issue, not an NVIDIA-wide outage, credential failure, shared throttle or network failure. Local Qwen is the independent emergency route.
 
-## NVIDIA credential rule
+## Active topology for PRIME and all ARCs
 
-Reuse the existing protected NVIDIA NIM key first. Never print, echo, log, commit, bridge-write or Owner-expose the credential.
+PRIME, Cargo, NARC, VONDA and every future Factory-born ARC inherit the same model architecture:
 
-Only if the existing key is actually rejected, revoked, expired or unauthorized may PRIME report `NEW NVIDIA KEY REQUIRED`.
+```text
+brain_primary:      nvidia/nemotron-3-ultra-550b-a55b
+brain_fallback:     nvidia/nemotron-3-super-120b-a12b
+multimodal_engine:  nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+emergency_fallback: local-ollama/qwen3:0.6b
+```
 
-## Master model build-up sequence
+Individual ARCs may have domain-specific tools, Brains, prompts and workflows, but they do not drift to a different normal model stack without explicit Founder-approved exception.
 
-Once PRIME is GREEN on Nemotron, PRIME owns the remaining work in order:
+Kimi, DeepSeek and Ollama Cloud MiniMax are not active normal routes under this decision.
 
-1. preserve source freshness, Founder/Owner bindings, pairing/access and activation state;
-2. migrate Cargo to Nemotron primary + local Qwen fallback and verify;
-3. migrate NARC likewise and verify;
-4. migrate VONDA likewise and verify;
-5. persist authoritative configs/manifests through each ARC's safe process;
-6. prove local Qwen fallback for PRIME and all three ARCs, including live Hermes context/runtime requirements and no reasoning leakage;
-7. implement shared NVIDIA rate limiting/queueing;
-8. update OMEGA/Factory so all future ARCs inherit the same stack;
-9. verify direct Owner interaction and Owner privacy;
-10. run final post-cutover A→Z + source/runtime parity;
-11. update bridge/state/routing truth and push final commits;
-12. report `OLLAMA CLOUD SAFE TO CANCEL` only when objectively true;
-13. keep the master mission OPEN until required real Owner proofs are valid.
+## NVIDIA endpoint and credential
+
+NVIDIA NIM base URL:
+
+`https://integrate.api.nvidia.com/v1`
+
+Use `NVIDIA_API_KEY` from protected server secret/environment storage. Never print, log, commit, bridge-write or Owner-expose the credential.
+
+The working Founder-created NVIDIA credential was manually proven against Ultra with an authenticated HTTP 200 response before PRIME cutover.
 
 ## Shared NVIDIA capacity
 
-Founder operating evidence: hosted Nemotron free endpoint capacity is approximately **40 requests/minute**.
+Current Founder dashboard evidence: **up to 40 requests/minute** for the NVIDIA account.
 
-Treat this as one shared portfolio budget across PRIME + all ARCs. Target normal scheduling around **35 RPM** for headroom.
+Treat this as one shared portfolio budget across PRIME + all ARCs + all NVIDIA models, not 40 RPM per model or per ARC.
+
+Normal scheduling target: about **35 RPM** for headroom.
 
 Required control plane:
 
-- central shared rate limiter/scheduler;
+- central shared limiter/scheduler;
 - fair ARC queueing;
 - bounded queue;
-- PRIME priority for critical orchestration without permanent Owner starvation;
-- anti-429 stampede protection;
-- telemetry for throttle events, queue latency, fallback frequency and concurrency;
-- no Owner-facing provider/rate-limit details.
+- priority for critical PRIME orchestration without permanent Owner starvation;
+- capability-aware dispatch so media calls go to Omni only when needed;
+- avoid retry storms between Ultra/Super/Omni;
+- provider-wide throttle detection must jump to local emergency policy instead of consuming the same NVIDIA limit repeatedly;
+- telemetry for queue latency, throttle events, route/model selection, fallback frequency and concurrency;
+- no provider/rate-limit internals exposed to Owners.
 
 Re-measure if NVIDIA changes endpoint/account behavior.
 
-## Compute placement
+## Reasoning / privacy policy
 
-Normal inference runs on NVIDIA-hosted infrastructure. The Hetzner CX23 is not the normal LLM compute plane.
+Internal reasoning traces must never be surfaced to Founder/Owner/customer conversational output.
 
-Local CPU/RAM/swap inference is fallback-only. Local congestion is a fallback-capacity risk, not the steady-state design.
+Where supported, disable exposed reasoning content for ordinary user-facing turns. Tool calls and structured internal artifacts may use hidden reasoning internally, but final output must contain only intended answer/tool results.
 
-## Local fallback
+Owners must never see:
+
+- provider/model names;
+- API/rate-limit figures;
+- raw 429/5xx/provider errors;
+- context-window values;
+- localhost/internal endpoints;
+- Hermes/runtime internals;
+- configuration instructions;
+- billing/credit messages;
+- credentials;
+- fallback diagnostics.
+
+## Local Qwen restricted emergency mode
+
+Local route:
 
 ```text
 provider = local Ollama
@@ -104,11 +128,9 @@ model    = qwen3:0.6b
 endpoint = localhost/private only
 ```
 
-No Kimi, DeepSeek, Ollama Cloud or other provider is a normal fallback.
+For PRIME, Qwen may perform health checks, bounded recovery, queue supervision and safe status reporting. It must not autonomously perform broad architecture/governance decisions, canon rewrites, broad refactors, destructive Git operations, financial/billing actions or production-wide migrations.
 
-Fallback must be validated against the live Hermes runtime, not merely config text. Required context/runtime overrides must be persisted in authoritative source/config. Thinking/reasoning traces must never leak to Owners.
-
-For PRIME specifically, local Qwen is emergency continuity, not a trusted full-intelligence replacement for Nemotron.
+For ARCs, Qwen may provide reduced-capacity continuity only where the task is safe for the small model. Media understanding must not be fabricated.
 
 ## Direct Owner interaction
 
@@ -120,43 +142,46 @@ PRIME remains supervisory and is not a conversational relay.
 
 Founder never consumes an Owner slot. Owner namespaces remain isolated.
 
-## Owner UX
-
-Owners must not see provider/model names, API/rate-limit figures, raw 429/5xx errors, context-window values, localhost endpoints, Hermes/runtime internals, configuration instructions, billing/credit messages, credentials or fallback diagnostics.
-
-Use sanitized temporary-unavailable messaging only.
-
 ## OMEGA / Factory inheritance
 
-OMEGA/Factory must bake into every new ARC by default:
+OMEGA/Factory must bake into every new ARC:
 
-- Nemotron primary;
-- local Qwen fallback;
-- no additional normal fallback;
-- central NVIDIA capacity scheduler;
+- Ultra as core brain primary;
+- Super as same-provider text fallback;
+- Nano Omni as multimodal perception specialist;
+- local Qwen as provider-independent restricted emergency fallback;
+- central shared NVIDIA capacity scheduler;
+- capability-aware dispatch;
 - protected credential use;
 - sanitized Owner UX;
-- local fallback safety controls;
-- direct Owner-to-ARC interaction.
+- no reasoning leakage;
+- direct Owner-to-ARC interaction;
+- no independent model drift without Founder-approved exception.
 
-No ARC may drift independently without explicit Founder-approved exception.
+## Migration / master execution order
+
+1. PRIME NVIDIA key + Ultra raw API proof.
+2. PRIME source/config points to Ultra primary and local Qwen emergency fallback.
+3. Validate Super and Nano Omni with the same protected NVIDIA account before activating them in routing.
+4. Install capability-aware routing in PRIME: Ultra brain, Super text fallback, Omni specialist, Qwen independent emergency.
+5. Restart/verify PRIME once with exactly one poller, Telegram connected, normal chat and Hermes tool/function tests GREEN.
+6. Only after PRIME is GREEN, migrate Cargo one ARC at a time to the same stack and verify.
+7. Migrate NARC and verify.
+8. Migrate VONDA and verify.
+9. Persist authoritative ARC source/config/manifests through each ARC safe process.
+10. Implement/verify shared ~35/40-RPM scheduling and anti-stampede behavior.
+11. Update OMEGA/Factory inheritance.
+12. Verify direct Owner path + privacy + multimodal dispatch + fallback behavior.
+13. Run final post-cutover A→Z and source/runtime parity.
+14. Remove active Ollama Cloud routing.
+15. Report `OLLAMA CLOUD SAFE TO CANCEL` only when objectively true.
+16. Keep the master mission OPEN until required real Owner proofs are valid.
 
 ## Ollama Cloud retirement
 
 Ollama Cloud MiniMax is not part of the target active topology.
 
-Do not tell Founder to cancel until all of the following are GREEN:
-
-1. PRIME Nemotron primary;
-2. Cargo/NARC/VONDA Nemotron primary;
-3. chat + Hermes tools + EN/FR/NL;
-4. local Qwen fallback;
-5. all four gateways healthy, exactly one poller each;
-6. direct Owner interaction intact;
-7. active Ollama Cloud routing removed;
-8. final A→Z GREEN.
-
-Only then report `OLLAMA CLOUD SAFE TO CANCEL`.
+Do not tell Founder to cancel until PRIME/Cargo/NARC/VONDA are GREEN on the new stack, local emergency fallback is proven, gateways/pollers are healthy, Owner paths are intact, active Ollama Cloud routing is removed, and final A→Z is GREEN.
 
 ## Spend boundary
 
@@ -164,4 +189,4 @@ No autonomous purchase, top-up, subscription change, paid endpoint activation or
 
 ## Completion boundary
 
-No master-mission completion until the routing cutover, fallback proof, direct Owner path and required real Owner proofs are all valid.
+No master-mission completion until model routing, capability routing, fallback proof, direct Owner path and required real Owner proofs are all valid.
