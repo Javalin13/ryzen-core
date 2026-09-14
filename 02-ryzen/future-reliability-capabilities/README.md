@@ -18,7 +18,7 @@ Heuristics may identify the likely path. Verification determines what the eviden
 
 Read first when asking what excellence should look like for an existing layer or Brain:
 
-`CANON-ROOTED-EXCELLENCE-SKILL-REGISTRY.md`
+`CANON-ROOTED-EXCELLENCE-SKILL-PROFILES.md`
 
 It covers Canon Layers 0–25 plus every explicitly named nested Brain/Steward and defines, without creating new authority:
 
