@@ -136,10 +136,34 @@ Future richer router requirements remain:
 - background work off Ultra by default;
 - provider/model health shared without sharing Owner-private payload.
 
+## Live timing / evidence — 2026-09-14
+
+- ~14:19 CEST — Founder resumed operator-access recovery from Windows PowerShell.
+- ~14:29 CEST — GitHub-authenticated Tailscale SSH path restored to `prime-vps-01`; live tailnet IP verified as `100.83.143.22`.
+- 14:31:01 CEST — E0.1 backup + exact PRIME routing snapshot started; backup `config.yaml.e0-20260914-143101.bak` created.
+- E0.1 proved: Ultra primary, Super automatic fallback, local Qwen emergency fallback, Omni vision, gateway active.
+- E0.2 changed only PRIME ordinary primary Ultra -> Super; YAML remained valid; gateway restarted active.
+- E0.3 removed redundant automatic Super fallback while preserving local Qwen; Omni unchanged; gateway restarted active.
+- 14:35:23 CEST — timing checkpoint captured after E0.3.
+- **Measured E0 configuration execution window:** 14:31:01 -> 14:35:23 = **4m22s**.
+- Access restoration is tracked separately and is not inflated into E0 engineering execution time.
+- E0 runtime restarts during controlled routing work: **2**.
+- Persona-drift / false-completion events during this E0 recovery window: **0**.
+
+Current bootstrap state:
+
+```text
+PRIMARY / FAST_INTERACTIVE -> Nemotron Super
+AUTOMATIC FALLBACK         -> local Qwen 0.6B only
+VISION / PERCEPTION        -> Nemotron Omni
+ULTRA                      -> removed from ordinary automatic route; reserved for later deliberate deep-routing
+GATEWAY                    -> active
+```
+
 ## Today acceptance ledger
 
-- [ ] E0 PRIME configuration backed up
-- [ ] E0 PRIME bootstrap routing applied
+- [x] E0 PRIME configuration backed up
+- [x] E0 PRIME bootstrap routing applied
 - [ ] E1 PRIME simple-response proof
 - [ ] E1 PRIME structured-response proof
 - [ ] E1 PRIME tool/action proof
@@ -152,7 +176,7 @@ Future richer router requirements remain:
 - [ ] E5 PRIME bounded delegated execution restored
 - [ ] ryzen-core current state updated
 - [ ] PRIME/ARC bridges aligned
-- [ ] JohnDough private performance ledger updated
+- [x] JohnDough private performance ledger active
 - [ ] M3 Cargo GREEN durable receipt accepted
 
 ## Time budget
