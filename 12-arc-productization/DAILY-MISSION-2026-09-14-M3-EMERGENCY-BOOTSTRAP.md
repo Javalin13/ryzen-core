@@ -35,7 +35,7 @@ M3 — Cargo ARC GREEN
 ## Current capability target after evidence
 
 ```text
-FAST_INTERACTIVE  -> poolside/laguna-xs-2.1 (candidate proven direct)
+FAST_INTERACTIVE  -> poolside/laguna-xs-2.1 (direct endpoint proven)
 DEEP_REASONING    -> Nemotron Ultra only when explicitly warranted + healthy
 MULTIMODAL        -> Nemotron Omni perception -> fast/deep synthesis lane
 BACKGROUND_LIGHT  -> local Qwen when safe
@@ -80,38 +80,62 @@ Poolside Laguna XS 2.1:
 PRIME was changed to:
 
 ```text
-PRIMARY          -> poolside/laguna-xs-2.1
-PROVIDER         -> nvidia
+PRIMARY            -> poolside/laguna-xs-2.1
+PROVIDER           -> nvidia
 AUTOMATIC FALLBACK -> local qwen3:0.6b only
-VISION           -> nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
-GATEWAY          -> active
+VISION             -> nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+GATEWAY            -> active
 ```
 
 YAML validated and controlled gateway restart completed.
 
 ### E1 Laguna Hermes proof — decisive split
 
-- ~14:57 CEST — Founder sent `PRIME Laguna verification. Reply exactly: PRIME LAGUNA GREEN`.
-- ~14:58 CEST — PRIME again invented a `write_file` action, creating `~/.prime/laguna/verification.txt` despite no file-write request.
-- ~14:59 CEST — PRIME returned narrative verification text rather than the exact requested response.
-- 15:00:07 CEST — evidence checkpoint captured.
+- 14:57:40 CEST — Founder message entered the persisted Telegram session: `PRIME Laguna verification. Reply exactly: PRIME LAGUNA GREEN`.
+- 14:58:57 CEST — Laguna returned a `write_file` tool call targeting `~/.prime/laguna/verification.txt`.
+- 14:58:58 CEST — `write_file` completed successfully.
+- 14:59:11 CEST — final assistant response returned narrative verification text rather than the exact requested reply.
+- Session forensic evidence: model `poolside/laguna-xs-2.1`, provider `nvidia`, provider fallback inactive, 2 Laguna API calls, 40,892 total input tokens across the recorded model-usage entry.
 
-Interpretation:
+### E1.3 root-cause proof
 
-- Laguna direct endpoint is fast and reliable.
-- PRIME/Hermes remains slow and behaviorally wrong even with Laguna.
-- Therefore the remaining active blocker is **inside Hermes/PRIME control flow / tool-selection / mission-control behavior**, not free-model selection.
-- Model search is now paused. Do not keep swapping models unless later evidence proves Laguna cannot satisfy a genuine required capability.
+The persisted PRIME system prompt contains strong execution doctrine, including obligations to exhaust autonomous paths, execute Founder decisions, and produce a working artifact backed by real tool output when asked to build, run, or verify something.
+
+The Founder test contained the word `verification`. Laguna therefore followed the higher-priority execution doctrine and selected `write_file` rather than honoring the local exact-reply constraint as a pure conversational turn.
+
+This proves two distinct defects in the full PRIME path:
+
+1. **capability-selection defect** — trivial/simple chat receives an execution-oriented system prompt and broad tool machinery;
+2. **context-cost defect** — a sub-second direct model call becomes a long turn because PRIME sends a very large supervisory context and may require multiple model/tool rounds.
+
+### E1.4 fast-gate implementation snapshot
+
+At 15:17:14 CEST the live PRIME config showed:
+
+```text
+plugins               -> null
+configured toolsets   -> ["hermes-cli"]
+custom_toolsets       -> null
+hooks                 -> null
+agent.tool_use_enforcement -> auto
+agent.execution_guidance   -> null
+existing PRIME plugin files -> none
+```
+
+Interpretation: there is no existing custom plugin layer to unwind. The clean implementation boundary remains a small versioned RYZ3N pre-agent fast gate / supported Hermes hook or equivalent extension, not a Hermes-core fork.
 
 ## Current acceptance ledger
 
 - [x] E0 PRIME configuration backed up
 - [x] E0 PRIME bootstrap routing applied
 - [x] E0.5 fast free-model candidate found: Laguna direct 5/5, avg 0.46s
-- [ ] E1 PRIME simple-response proof — FAILED through Hermes despite direct Laguna GREEN
+- [ ] E1 PRIME simple-response proof — FAILED through full Hermes path despite direct Laguna GREEN
 - [ ] E1 PRIME structured-response proof
+- [x] E1 root cause isolated to PRIME/Hermes capability/context path
+- [x] E1 plugin/toolset implementation surface inspected
 - [x] Hermes tool execution observed — but unrequested, therefore drift evidence rather than acceptance
 - [x] E1 failed-attempt timing captured
+- [ ] E1 deterministic fast gate implemented/proven
 - [ ] E2 Cargo parity applied
 - [ ] E2 Cargo real-message proof
 - [ ] E2 Cargo latency recorded
@@ -120,16 +144,20 @@ Interpretation:
 - [ ] E5 PRIME bounded delegated execution restored
 - [ ] M3 Cargo GREEN durable receipt accepted
 
-## Immediate next diagnostic
+## Immediate next diagnostic / implementation gate
 
-Inspect only the PRIME gateway/runtime evidence for the 14:57–14:59 Laguna test. Determine where the extra latency and invented `write_file` came from:
+Before writing the RYZ3N fast-gate plugin, inspect the installed Hermes source for the exact supported pre-dispatch hook/plugin contract and one real plugin example. Do not guess hook signatures and do not modify Hermes core.
 
-1. system/persona/tool-policy prompt;
-2. recursive-loop termination policy;
-3. tool-selection / forced-action behavior;
-4. context/history contamination;
-5. gateway retry or model-call sequencing;
-6. mission-state / acceptance logic.
+Target behavior after implementation:
+
+```text
+Founder message
+  -> deterministic RYZ3N pre-agent classifier
+     -> SIMPLE / EXACT CHAT: minimal identity/policy, Laguna, no execution tools/full doctrine
+     -> READ / ANALYZE: read-only relevant capabilities
+     -> EXECUTE / BUILD / CHANGE: full PRIME recursive agent + relevant tools + acceptance guard
+     -> DEEP / MULTIMODAL: explicit capability escalation
+```
 
 Do not reopen networking, credentials or model selection without contradictory new evidence.
 
@@ -137,11 +165,11 @@ Do not reopen networking, credentials or model selection without contradictory n
 
 A candidate model is not production GREEN because a direct API call is fast. Production GREEN requires the full system path to preserve:
 
-**correct intent -> correct tool/no-tool choice -> bounded recursion -> fast completion -> durable acceptance evidence.**
+**correct intent -> smallest sufficient capability lane -> correct tool/no-tool choice -> bounded recursion -> fast completion -> durable acceptance evidence.**
 
 ## Related canonical source
 
 - `MODEL-INDEPENDENT-MISSION-CONTROL-LESSON-2026-09-13.md`
-- full model-independent mission-controller architecture scheme added in commit `a349fb1`
+- `HERMES-FAST-PATH-LESSON-2026-09-14.md`
 - repository-root `TO_PRIME.md` / `FROM_PRIME.md`
 - current M1→M16 master remains authoritative.
