@@ -69,22 +69,7 @@ A document may define what **should** exist while runtime evidence shows what **
 
 ## 3. The anti-inflation rule
 
-Before naming or creating any new:
-
-- layer;
-- Brain;
-- controller;
-- engine;
-- governance function;
-- reliability skill;
-- memory system;
-- alignment system;
-- verification system;
-- truth system;
-- routing system;
-- Factory/OMEGA function;
-
-first ask:
+Before naming or creating any new layer, Brain, controller, engine, governance function, reliability skill, memory/alignment/verification/truth system, routing system or Factory/OMEGA function, first ask:
 
 > **Is this genuinely missing, or am I renaming an existing responsibility/mechanism?**
 
@@ -102,29 +87,40 @@ A new name is not evidence of a new architectural need.
 
 ---
 
-## 4. Capability ≠ mechanism ≠ authority
+## 4. Capability ≠ mechanism ≠ authority ≠ skill profile
 
 Keep these separate:
 
-- **Capability** — what the system must be able to do.
+- **Authority** — which canonical Brain/layer owns the sovereign responsibility.
+- **Capability** — what the ecosystem must be able to do.
 - **Mechanism** — how current architecture supplies or verifies that ability.
-- **Authority** — which Canon / Founder-approved decision establishes the boundary.
+- **Skill profile** — a measurable reasoning/diagnostic technique an existing owner may need to perform its responsibility reliably.
 
-Example:
+A dedicated skill-profile document does **not** create a new Brain, layer or owner.
 
-- `Canonical alignment` is a capability/requirement.
-- Canon load order + Interpretation Protocol + Constitution Compliance Gate are mechanisms/controls.
-- Creating another "Alignment Engine" merely because the capability matters would be duplication unless a distinct unfilled implementation need is proven.
-
-Another example:
-
-- `Outcome verification` is required.
-- Recursive Verification, live-runtime evidence return and Mission Controller acceptance gates already provide mechanisms.
-- A second "Outcome Truth Layer" would normally be inflation, not progress.
+Example: Canonical alignment is already owned by existing Canon/alignment/governance architecture. A new alignment technique may refine that work; it does not justify another sovereign `Alignment Engine`.
 
 ---
 
-## 5. Existing responsibilities that must NOT be casually recreated
+## 5. Canonical owners that reliability work must respect
+
+Before creating reliability/cognition architecture, remember these existing canonical responsibilities:
+
+- **Layer 11 — Cognitive Alignment & Reflective Optimization:** cognitive/alignment drift detection, recursive self-questioning, coherence and necessity validation, identity/memory coherence.
+- **Layer 15 — Recursive Evolution Steward + Specialization Stewardship & Knowledge Lineage:** evolution signals, necessity of new cognition structures, outdated cognition, obsolescence, compatibility and lineage continuity.
+- **Layer 16 — Constitutional Flow Integrity:** validates `Input → Translation → Propagation → Execution → Outcome`; detects implementation/protocol/governance degradation.
+- **Layer 18 — Frontier Research, Model Evaluation & Migration Governance:** evaluates models and cognition architectures, benchmarks models, tracks emerging paradigms, studies post-LLM substrates, governs migration/compatibility/continuity.
+- **Layer 19 — Recursive Adversarial Validation & Failure Simulation:** stress-tests, finds hidden fragility, challenges dangerous assumptions and hardens resilience.
+- **Layer 21 — Cognitive State & Memory Federation:** contextual/historical cognition continuity.
+- **Layer 22 — Emergent Cognition Research & Self-Model Analysis:** scientific investigation of self-modeling/emergent cognition, anomalies, failed assumptions and hypotheses; permanently enforces epistemic humility, scientific rigor and falsifiability.
+
+The Canon also universally inherits reality anchoring, epistemic humility, reflective self-questioning, failure containment, scientific rigor, graceful degradation, operational realism and non-duplicated authority.
+
+**Shared awareness is allowed. Duplicated sovereign responsibility is not.**
+
+---
+
+## 6. Existing responsibilities that must NOT be casually recreated
 
 The following are already substantially owned by existing RYZ3N Canon/architecture/standards. New work should normally strengthen or implement them rather than spawn parallel architecture:
 
@@ -132,254 +128,166 @@ The following are already substantially owned by existing RYZ3N Canon/architectu
 - Creator / Owner intent fidelity;
 - context assembly and bounded context transfer;
 - contradiction/coherence checking;
-- recursive convergence;
-- recursive verification;
-- adversarial validation / failure simulation / pre-mortem challenge;
+- recursive convergence and verification;
+- adversarial validation / failure simulation;
 - outcome verification and upward evidence return;
-- model-output / hallucination containment through evidence and durable control;
-- model/capability routing and provider failover;
+- model-output containment through evidence and durable control;
+- model/substrate evaluation, capability routing and provider failover;
 - mission truth / continuity / acceptance / termination authority;
 - memory continuity and integrity;
 - state reconciliation and recovery;
-- architecture / source / behavioral drift detection;
+- architecture/source/behavioral/cognitive drift detection;
 - bounded autonomy, permissions and fail-closed operation;
 - source provenance, lifecycle history and evidence pointers;
 - ARC/Brain population stewardship;
 - Factory inheritance and reusable defect prevention;
 - observability, recovery and reliability evidence.
 
-Detailed mapping lives in:
+Detailed mapping:
 
 `02-ryzen/future-reliability-capabilities/CAPABILITY-COVERAGE-MATRIX.md`
 
-Read that matrix before creating a new reliability capability.
+---
+
+## 7. Current detailed reliability skill profiles — not new gaps
+
+The dedicated reliability files currently describe **measurable skills beneath existing canonical owners**, not newly discovered sovereign responsibilities:
+
+1. **Heuristic Reasoning** — likely-path discovery; verification still determines truth.
+2. **Epistemic State & Calibration** — operational sharpness for Canon's epistemic humility/reality-grounding requirements; especially relevant to Layer 22 and verification/control mechanisms.
+3. **Temporal Coherence & Evidence Freshness** — a technique serving Layer 15 lineage/obsolescence, Layer 21 continuity, Layer 16 integrity and OMEGA current-vs-historical evidence handling.
+4. **Falsification & Inference-to-Evidence** — a technique rooted in Layer 22 falsifiability/scientific rigor, Layer 19 adversarial challenge and Recursive Verification.
+5. **Cognitive Degradation & Disagreement Detection** — cross-cutting detection technique whose findings route by cause to Layer 11, 18, 19, 22, 21/15, 16 or OMEGA rather than to a new generic Brain.
+
+Do not use the existence of these files as evidence that another Brain/layer should exist.
+
+### Cognition/model degradation routing shorthand
+
+If an LLM/RLM/world-model path becomes less dependable:
+
+- **model/provider/substrate capability issue** → Layer 18;
+- **alignment/coherence/constraint drift** → Layer 11;
+- **hidden fragility/failure-mode issue** → Layer 19;
+- **self-model/emergent/anomalous scientific phenomenon** → Layer 22;
+- **historical/state continuity issue** → Layer 21 and/or Layer 15;
+- **constitutional propagation/outcome-chain issue** → Layer 16;
+- **operational ARC reliability trend** → OMEGA → reusable Factory prevention.
+
+Several existing owners may cooperate on one incident, but authority remains non-duplicated.
 
 ---
 
-## 6. Current genuinely additive reliability-skill gaps
+## 8. Reliable Excellence anti-theater rules
 
-After the documentation-wide review on 2026-09-14, only four distinct capability refinements were judged sufficiently uncovered to deserve dedicated future-skill contracts:
-
-1. **Epistemic State & Calibration**  
-   Explicitly classify whether a proposition is observed, verified, inferred, hypothesized, assumed, predicted, disputed, stale or unknown; calibrate confidence against reality.
-
-2. **Temporal Coherence & Evidence Freshness**  
-   Reason about what was true, what is true now, what changed, what superseded what, and whether evidence remains fresh enough for the present claim.
-
-3. **Falsification & Inference-to-Evidence**  
-   Convert a hypothesis into the smallest decisive tests that can confirm or, critically, disconfirm it; avoid false confidence from correlated evidence.
-
-4. **Cognitive Degradation & Disagreement Detection**  
-   Detect reasoning deterioration such as lost constraints, looping, context collapse, premature completion, contradictions, or materially different independent conclusions.
-
-These are **skills beneath the existing architecture**, not new sovereign layers.
-
-Do not expand this set casually. Use the coverage matrix first.
-
----
-
-## 7. Reliable Excellence anti-theater rules
-
-Never infer reliability from appearance.
-
-The following are **not sufficient evidence** of Reliable Excellence by themselves:
-
-- a document exists;
-- a capability has a name;
-- a model says `done`;
-- a gateway/process started;
-- one test passed;
-- one user interaction succeeded;
-- one historical gate was GREEN;
-- an ARC has a maturity label or aura;
-- a dashboard is green;
-- a deployment uploaded successfully;
-- a high confidence score exists;
-- a command was issued.
+Never infer reliability from appearance. A document, capability name, model `done`, running process, one passed test, one successful user interaction, historical GREEN state, aura/maturity label, green dashboard, uploaded deployment, confidence score or issued command is not sufficient proof by itself.
 
 Materially missing evidence = **UNPROVEN**.
-
-The decisive question remains:
 
 > **Can this technology actually be trusted to fulfill its intended purpose, and what current evidence proves that?**
 
 ---
 
-## 8. Architecture-drift tripwires
+## 9. Architecture-drift tripwires
 
-Stop and re-check authority before proceeding if a proposal does any of the following:
+Stop and re-check authority when a proposal:
 
-- adds a new tier to `Creator → RYZ3N → ARCs → Brains → Agents → Execution`;
-- turns PRIME, OMEGA, FACTORY or Hermes into a new sovereign architectural layer;
-- creates another system to do something already owned by Canon, Mission Controller, Recursive Verification, memory, OMEGA or FACTORY;
+- adds a tier to `Creator → RYZ3N → ARCs → Brains → Agents → Execution`;
+- turns PRIME, OMEGA, FACTORY or Hermes into a sovereign tier;
+- creates another system for work already owned by Canon/Mission Controller/Verification/memory/OMEGA/FACTORY;
+- assigns a reliability skill its own sovereign owner when Canon already owns the responsibility;
 - confuses a stronger model with stronger system truth;
-- lets an LLM/model mark itself `GREEN`, `PROVEN`, `LIVE` or `COMPLETE` without objective gates;
-- turns a capability label into a new service merely because it sounds important;
-- treats strategic vision as implemented reality;
-- treats historical evidence as current evidence;
-- silently broadens ARC/Brain/Agent authority;
-- duplicates private state across ARC boundaries for convenience;
-- changes authoritative source ownership without explicit reconciliation;
-- creates a new ARC/Brain because a one-off activity exists;
-- creates metrics/checklists with no clear reliability decision they support;
-- optimizes recursion/complexity without reducing real operational burden;
-- promotes a Founder-mentioned future concept into Canon without explicit Founder authorization.
+- lets a model mark itself GREEN/PROVEN/LIVE/COMPLETE without objective gates;
+- treats strategic vision as reality or historical evidence as current evidence;
+- silently broadens authority or source ownership;
+- creates a Brain because a one-off activity exists;
+- creates metrics/checklists with no reliability decision they support;
+- optimizes recursion/complexity without reducing operational burden;
+- promotes a Founder-mentioned future concept into Canon without explicit authorization.
 
-When one of these tripwires fires, **do not solve uncertainty by inventing architecture.** Read the specific authoritative source.
+When a tripwire fires, **do not solve uncertainty by inventing architecture. Read the specific authoritative source.**
 
 ---
 
-## 9. Model/substrate rule
+## 10. Model/substrate rule
 
 The architecture must survive replacement of the intelligence substrate.
 
-A model/provider may change:
+A model/provider may alter reasoning depth, latency, style, context handling, tool quality, multimodality and cost/capacity. It must not silently alter Founder authority, Canon, ARC identity/ownership, mission identity, acceptance gates, privacy/isolation, durable truth/evidence, recovery semantics or lifecycle/maturity truth.
 
-- reasoning depth;
-- latency;
-- style;
-- context handling;
-- tool-call quality;
-- multimodal capability;
-- cost/capacity characteristics.
-
-It must not silently change:
-
-- Founder authority;
-- Canon;
-- ARC identity/ownership;
-- mission identity;
-- acceptance gates;
-- privacy/isolation boundaries;
-- durable truth/evidence;
-- recovery semantics;
-- lifecycle/maturity truth.
-
-`Looped World Model` is currently a Founder-mentioned future substrate direction, not a separately proven canonical tier. Existing Canon already anticipates future model/world-model substrate evolution. Do not inflate the ontology around a substrate name.
+`Looped World Model` is currently a Founder-mentioned future substrate direction, not a separately proven canonical tier. Existing Canon already anticipates emerging cognition paradigms and post-LLM substrates through Layer 18. Do not inflate the ontology around a substrate name.
 
 ---
 
-## 10. Embodied / physical ARC rule
+## 11. Embodied / physical ARC rule
 
 Future humanoid/physical ARCs remain **ARCs expressed through a physical embodiment**, not a new canonical species or tier.
 
-The special extension is **Embodied Reliability**:
+**Embodied Reliability:**
 
 `Intent → Perception → Cognition → Decision → Safe Actuation → Physical Verification → Proven Reliability`
 
-The greater the physical power/consequence, the stronger the proof, fail-safe behavior, uncertainty handling and recovery requirements.
+The greater the physical consequence, the stronger the proof, fail-safe behavior, uncertainty handling and recovery requirement.
 
 Detailed strategic vision:
-
 `02-ryzen/EMBODIED-ARC-HUMANOID-ROBOTICS-VISION.md`
 
 ---
 
-## 11. Quick operating protocol for future AI/model/operator work
+## 12. Quick operating protocol
 
 Before proposing architecture:
 
-**STEP A — Orient**  
-Read this file.
-
-**STEP B — Classify**  
-Is the task Canon interpretation, capability design, implementation, runtime diagnosis, ARC-instance work, OMEGA/Factory stewardship, or future strategic vision?
-
-**STEP C — Check duplication**  
-For reliability/cognition additions, read `CAPABILITY-COVERAGE-MATRIX.md`. For other domains, inspect the nearest owning standard/index before inventing a new owner.
-
-**STEP D — Locate authority**  
-Read the *smallest relevant authoritative source set*, not the entire corpus by default.
-
-**STEP E — Separate states**  
-State clearly whether something is:
-
-- Canon / constitutional;
-- Founder-approved architecture;
-- implementation standard;
-- strategic future vision;
-- scaffolded / not implemented;
-- implemented but unverified;
-- current proven runtime reality;
-- historical / superseded.
-
-**STEP F — Prefer surgical evolution**  
-Reuse, cross-link, refine or implement before adding a new abstraction.
-
-**STEP G — Verify**  
-Material claims require current evidence appropriate to the claim.
+**A — Orient:** read this file.  
+**B — Classify:** Canon interpretation, capability/skill refinement, implementation, runtime diagnosis, ARC-instance work, stewardship, or future vision?  
+**C — Check duplication:** read the coverage matrix for reliability/cognition additions.  
+**D — Locate owner:** identify the existing canonical sovereign responsibility before naming anything new.  
+**E — Locate mechanism:** read the smallest relevant implementation/operational source set.  
+**F — Separate states:** Canon / approved architecture / implementation standard / strategic vision / scaffolded / implemented-unverified / proven runtime / historical-superseded.  
+**G — Prefer surgical evolution:** reuse, cross-link, refine or implement before adding abstraction.  
+**H — Verify:** material claims need current evidence appropriate to the claim.
 
 ---
 
-## 12. When a full/deep rescan IS required
+## 13. When a deeper rescan is required
 
-This capsule is intentionally a shortcut, but not an excuse to ignore authority.
+Read deeper sources when Canon may be changed/interpreted materially, authoritative sources conflict, a proposed owner cannot be mapped cleanly, current runtime truth may be stale, cross-ARC/privacy/ownership boundaries change, an irreversible/high-consequence decision is being made, Founder intent conflicts with the summary, a future concept is being promoted into active architecture, or the authoritative owner of a responsibility cannot be identified confidently.
 
-Perform deeper source reading when:
-
-- Canon itself may be changed/interpreted materially;
-- two authoritative-looking sources conflict;
-- a proposed new tier/Brain/controller cannot be cleanly mapped to existing ownership;
-- the coverage matrix says `PARTLY COVERED`, `GAP`, or is silent on a material concern;
-- a source has known supersession history;
-- current runtime truth matters and documentation may be stale;
-- a cross-ARC/privacy/ownership boundary is being altered;
-- an architectural decision has irreversible/high-consequence effects;
-- Founder intent appears to contradict the current summarized model;
-- a future concept is being promoted from vision into active architecture;
-- the assistant/operator cannot confidently identify the authoritative owner of a responsibility.
-
-Otherwise, prefer targeted reads over re-reading the entire documentation universe.
+Otherwise prefer targeted reads over re-reading the entire corpus.
 
 ---
 
-## 13. Minimal fallback reading set
+## 14. Minimal fallback reading set
 
-For most architecture work, this order should be enough to recover safely before opening task-specific sources:
+1. `ARCHITECTURE-ORIENTATION-AND-ANTI-DRIFT.md`
+2. `Javalin13/ryzen-continuity/00-governance/INTERPRETATION-PROTOCOL.md` when materially relevant
+3. `00-constitution/CONCEPTUAL-ARCHITECTURE-SOURCE-OF-TRUTH.md`
+4. `00-foundation/RELIABLE-EXCELLENCE-ARCHITECTURAL-INVARIANT.md`
+5. `02-ryzen/future-reliability-capabilities/CAPABILITY-COVERAGE-MATRIX.md`
+6. the task-specific canonical owner/implementation standards
+7. current runtime/source evidence for reality claims
 
-1. `ARCHITECTURE-ORIENTATION-AND-ANTI-DRIFT.md` — **this capsule**
-2. `Javalin13/ryzen-continuity/00-governance/INTERPRETATION-PROTOCOL.md` — authority/interpretation discipline when material
-3. `00-constitution/CONCEPTUAL-ARCHITECTURE-SOURCE-OF-TRUTH.md` — conceptual-canon bridge/load order
-4. `00-foundation/RELIABLE-EXCELLENCE-ARCHITECTURAL-INVARIANT.md` — universal quality invariant
-5. `02-ryzen/future-reliability-capabilities/CAPABILITY-COVERAGE-MATRIX.md` — before reliability/cognition additions
-6. the **one or few task-specific owning standards**
-7. current authoritative runtime/source evidence if making a reality claim
-
-This is a **navigation sequence**, not a new authority hierarchy.
+This is navigation, not a new authority hierarchy.
 
 ---
 
-## 14. Self-correction rule
+## 15. Self-correction rule
 
-If future analysis starts producing many impressive new layers, Brains or engines quickly, treat that itself as a possible drift signal.
+If future analysis starts producing many impressive new layers, Brains, engines or reliability authorities quickly, treat that itself as a possible drift signal.
 
-Ask:
-
-- Am I decomposing a real uncovered failure, or merely renaming existing architecture?
-- Can this be expressed as a capability inside an existing owner?
-- Does the proposal reduce operational burden or increase it?
-- What existing mechanism would become redundant?
-- What evidence would prove the new construct is necessary?
-- Would RYZ3N become less coherent if this construct did not exist?
-
-If those answers are weak, **do not add it**.
+Ask: **Which existing canonical owner already has this responsibility? Is this only a skill that owner needs? What real uncovered failure remains? Would a new owner violate non-duplicated authority? Can we implement/test the improvement inside the existing owner instead?**
 
 A sophisticated system is not one with the most named parts. It is one whose necessary parts form a coherent, reliable whole.
 
 ---
 
-## 15. Persistent shorthand
+## 16. Persistent shorthand
 
-When context is thin, recover to these five sentences:
-
-> **RYZ3N is the architecture; the canonical ontology is Creator → RYZ3N → ARCs → Brains → Agents → Execution.**  
-> **PRIME supervises, OMEGA verifies ARC quality/population truth, FACTORY builds quality in and remembers lifecycle provenance; none creates a new canonical tier.**  
+> **RYZ3N is the architecture; Creator → RYZ3N → ARCs → Brains → Agents → Execution remains the canonical ontology.**  
+> **Canonical Brains/layers own sovereign responsibilities; reliability skill profiles deepen them but do not compete with them.**  
+> **PRIME supervises, OMEGA verifies ARC quality/population truth, FACTORY builds quality in and preserves lifecycle provenance; none creates a canonical tier.**  
 > **Models supply intelligence; Canon, durable control, evidence and verification determine system truth.**  
-> **Reliable Excellence means know-how → high-quality execution → verification → proven reliability, with missing evidence classified as UNPROVEN.**  
-> **Before adding architecture, reuse what exists; only add a genuinely uncovered capability, and prove why it is needed.**
-
----
+> **Reliable Excellence means know-how → high-quality execution → verification → proven reliability; before adding architecture, find the existing owner and deepen it first.**
 
 ## Governing anti-drift principle
 
-> **Compression before expansion. Reuse before invention. Evidence before promotion. Architecture should become deeper and more reliable — not larger merely because more names can be created.**
+> **Compression before expansion. Reuse before invention. Skill without authority inflation. Evidence before promotion.**
