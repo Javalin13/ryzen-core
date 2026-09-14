@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "ryz3n://arc-factory-birth-manifest/v1.4",
+  "$id": "ryz3n://arc-factory-birth-manifest/v1.5",
   "title": "RYZ3N ARC Factory Birth Manifest",
   "type": "object",
   "required": [
@@ -16,6 +16,7 @@
     "runtime",
     "first_contact_activation",
     "hermetic_seal",
+    "reliable_excellence",
     "operator_access",
     "intelligence_policy",
     "visual",
@@ -130,6 +131,33 @@
         "autonomy_rule":{"type":"string","minLength":1},
         "safe_shared_writer_required_if_autonomy_granted":{"type":"boolean"},
         "maturity_promotion_implied":{"const":false}
+      },
+      "additionalProperties":true
+    },
+    "reliable_excellence": {
+      "type":"object",
+      "required":[
+        "mission_target",
+        "inherited",
+        "constitutional_standard",
+        "architectural_invariant",
+        "red_thread",
+        "evidence_required_for_excellence_claim",
+        "missing_material_evidence_state"
+      ],
+      "properties": {
+        "mission_target":{"const":"RYZ3N_MISSION_TARGET_1_RELIABLE_EXCELLENCE"},
+        "inherited":{"const":true},
+        "constitutional_standard":{"const":"00-constitution/FOUNDER-CONSTITUTIONAL-AMENDMENT-2026-09-14-RELIABLE-EXCELLENCE.md"},
+        "architectural_invariant":{"const":"00-foundation/RELIABLE-EXCELLENCE-ARCHITECTURAL-INVARIANT.md"},
+        "red_thread":{"const":"Know-how -> High-Quality Execution -> Verification -> Proven Reliability -> Reliable Excellence"},
+        "evidence_required_for_excellence_claim":{"const":true},
+        "missing_material_evidence_state":{"const":"UNPROVEN"},
+        "quality_dimensions":{"type":"array","items":{"type":"string","minLength":1},"uniqueItems":true},
+        "current_posture":{"type":["string","null"]},
+        "latest_evidence_pointer":{"type":["string","null"]},
+        "known_reliability_gaps":{"type":"array","items":{"type":"string"}},
+        "stage_appropriate_thresholds":{"type":"object"}
       },
       "additionalProperties":true
     },
