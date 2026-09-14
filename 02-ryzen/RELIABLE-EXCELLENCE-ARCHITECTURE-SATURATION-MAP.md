@@ -99,7 +99,23 @@ The following domains are all first-class reliability domains:
 - tooling/automation;
 - documentation/status truth;
 - customer experience;
-- recursive evolution.
+- recursive evolution;
+- **future physical embodiment / humanoid robotics / Embodied Reliability**.
+
+## Embodied Reliability — future physical ARC extension
+
+If an ARC is ever embodied in a humanoid or other physical robotic form, Reliable Excellence must extend across the complete hardware/software/physical-action chain.
+
+Future governing vision:
+
+`Intent → Perception → Cognition → Decision → Safe Actuation → Physical Verification → Proven Reliability → Embodied Reliable Excellence`
+
+The greater the ARC's ability to affect physical reality, the higher the evidence threshold required before autonomy is granted.
+
+Physical embodiment is not a new canonical tier. It is an execution/interaction substrate of an ARC and therefore inherits the full RYZ3N quality doctrine with a higher real-world safety and reliability bar.
+
+Detailed future architecture:
+`02-ryzen/EMBODIED-ARC-HUMANOID-ROBOTICS-VISION.md`
 
 ## Standing architecture question
 
