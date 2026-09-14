@@ -19,6 +19,8 @@ It answers five questions for every canonical layer or named Brain/Steward:
 
 This is a skill and operating-quality specification, not an implementation plan.
 
+**A Canon owner/profile does not imply one separate model, process, service, prompt or runtime component per layer.** Pass 2 determines the smallest reliable implementation expression while preserving the Canon responsibility. A responsibility may later be expressed through shared infrastructure, deterministic gates, model-mediated cognition, policies, dedicated services, or other mechanisms where appropriate.
+
 The later implementation pass may map these requirements to models, RLMs, future world-model systems, deterministic code, memory, retrieval, evals, simulation, observability, sandboxes, databases, tools, human gates, OMEGA evidence and FACTORY inheritance. None of those choices are pre-selected here unless Canon itself already requires the mechanism.
 
 ### Scope classes used in this document
@@ -371,7 +373,7 @@ For a recurring operational need, determine whether it belongs inside an existin
 
 ### Boundary
 
-Designs cognition structure. Layer 15 governs evolution continuity; Layer 20 develops created Brain capability; governance controls authorization. Layer 6 does not self-authorize constitutional expansion.
+Designs cognition structure. Layer 15 governs evolution continuity; Layer 20 develops created Brain capability; governance controls authorization. Layer 6 does not self-authorize constitutional expansion, and **only RYZ3N holds constitutional authority to create new ARCs/ecosystem lineages**.
 
 ---
 
@@ -1199,7 +1201,7 @@ Supervise/manage created ecosystems and ARC networks; preserve inheritance/gover
 
 ### Real-life functioning
 
-If one ARC degrades, determine whether the issue is local or indicates a shared Factory/inheritance/ecosystem defect; track the ARC’s lifecycle/health truth; coordinate the appropriate existing RYZ3N owners without taking over their specialist responsibilities.
+If one ARC degrades, determine whether the issue is local or indicates a shared **creation/inheritance/ecosystem-level defect**; track the ARC’s lifecycle/health truth; coordinate the appropriate existing RYZ3N owners without taking over their specialist responsibilities.
 
 ### Reliability evidence
 
@@ -1230,41 +1232,47 @@ No new owner is created here.
 
 ---
 
-# Appendix A — Cross-layer real-life reliability flow
+# Appendix A — Functional interaction topology, not a serial pipeline
 
-A mature ARC should combine the owners without collapsing them into each other:
+The Canon is **not** a requirement that every mission mechanically execute Layers 0→25 in sequence. Some responsibilities are foundational, some are invoked selectively, some are continuous/cross-cutting, and some are final release gates. Pass 2 must preserve that distinction.
 
-**Creator meaning/intent**  
-→ Strategic Identity preserves direction  
-→ Human Governance determines authority  
-→ Constitution constrains possibility  
-→ Supreme Oversight judges systemic excellence  
-→ Creator Intent Adjudication protects intended meaning at major completion  
-→ Convergence Triad validates recursion/coherence/necessity  
-→ Architecture assigns cognitive structure  
-→ Genesis defines cognitive behavior  
-→ Communication moves intelligence faithfully  
-→ Governance Relay preserves command-chain integrity  
-→ Coaching improves cognition quality  
-→ Alignment detects reflective/identity drift  
-→ Cognitive Mirror models Creator reasoning and supports continuity-aware adaptation  
-→ Context Steward establishes situational readiness before delegation  
-→ Orchestrator coordinates/delegates  
-→ Implementation Translation turns cognition into implementation continuity  
-→ Evolution/Lineage/Plasticity/Stabilization mature the system over time  
-→ Constitutional Flow Integrity audits Input → Translation → Propagation → Execution → Outcome  
-→ Interoperability selectively compounds validated intelligence across ARCs  
-→ Frontier Research evaluates/evolves cognition substrates safely  
-→ Adversarial Validation searches for hidden fragility  
-→ Brain Creation/Training develops competence  
-→ Memory Federation preserves state/history/continuity  
-→ Emergent Cognition Research studies unexplained cognition scientifically  
-→ Domain Specialists provide deep authorized expertise  
-→ Worker Layers perform bounded cognition/work  
-→ Execution Systems affect reality under authorization  
-→ verified outcomes return as evidence.
+### Sovereignty and foundational direction
 
-This is an explanatory flow, **not a claim that every mission invokes every layer serially**. Real orchestration may route selectively while preserving the applicable governance and verification obligations.
+**Creator (0)** supplies sovereign meaning and direction. **Strategic Identity (1)** preserves why/future trajectory. **Human Governance (2)** preserves authority. **Constitution (3)** preserves invariant law/reality supremacy.
+
+### Systemic judgment and convergence
+
+**Supreme Oversight (4)** watches systemic excellence across the whole. **Recursive Convergence Triad (5)** governs convergence and integrity of recursive verification. **Creator Intent Fidelity & Excellence Adjudication (4A)** is a **major-completion/release gate**: no major recommendation, implementation finalization, restructuring, strategic conclusion or Creator-facing completion should bypass its intent-fidelity validation.
+
+These are not simply “early pipeline steps”; they may inspect/close work produced elsewhere.
+
+### Cognitive structure, behavior and information flow
+
+**Architecture (6)** designs cognition structure. **Genesis/Behavior (7)** defines cognitive DNA. **Communication (8)** preserves intelligence flow. **Governance Relay (9)** preserves command-chain propagation and monitoring.
+
+### Cognitive maturity and Creator relationship
+
+**Coaching (10)** improves cognition quality. **Alignment (11)** detects reflective/identity drift. **Executive Cognitive Mirror (12)** models Creator operational reasoning and supports continuity-aware adaptation.
+
+### Mission readiness, coordination and implementation translation
+
+**Context Steward (13A)** gates situational readiness **before delegation**. **Orchestrator (13)** coordinates/delegates. **Implementation Translation (14)** turns validated cognition/direction into implementation continuity and execution structure.
+
+### Long-horizon evolution and stabilization
+
+**Recursive Evolution Steward (15)** governs evolution continuity; its lineage/plasticity owners and the Canon-named stabilization structure preserve specialization lineage, adaptive pathways, reusable maturity and rewrite-loop resistance.
+
+### Cross-cutting integrity, ecosystem learning and resilience
+
+**Constitutional Flow Integrity (16)** continuously audits the Input → Translation → Propagation → Execution → Outcome chain rather than waiting at one serial stage. **Interoperability (17)** governs bounded cross-ARC convergence. **Frontier Research (18)** governs substrate research/migration. **Adversarial Validation (19)** searches for hidden fragility. **Brain Creation/Training (20)** deepens capability. **Memory Federation (21)** preserves state/history/continuity. **Emergent Cognition Research (22)** investigates cognition phenomena scientifically.
+
+### Operational specialization and action
+
+**Domain Specialists (23)** supply deep authorized expertise. **Worker Layers (24)** perform bounded delegated cognition/work. **Execution Systems (25)** perform authorized real-world action and return evidence.
+
+Verified evidence then feeds the applicable owners for correction, learning, stabilization and future decisions.
+
+This topology is explanatory, not a new control flow or new hierarchy.
 
 OMEGA/FACTORY/PRIME belong to the current implementation/stewardship architecture and remain outside the canonical 0–25 hierarchy; their exact implementation mapping is deferred to Pass 2.
 
