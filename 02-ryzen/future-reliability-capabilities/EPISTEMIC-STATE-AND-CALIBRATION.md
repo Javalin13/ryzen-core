@@ -1,98 +1,68 @@
 # Epistemic State & Calibration for Reliable Excellence
 
-**Status:** Strategic Capability / Future Reliability Skill  
-**Constitution/Canon impact:** none — refines epistemic humility beneath existing architecture
+**Status:** Canon-Rooted Reliability Skill Profile — **NO NEW CANONICAL AUTHORITY**  
+**Constitution/Canon impact:** none
 
 ## Purpose
 
-Epistemic State & Calibration is the capability to represent **how a conclusion is known**, how strong the supporting evidence is, how current it is, and how much confidence the system should place in it before reasoning or acting.
+Epistemic State & Calibration describes a measurable technique for representing **how a conclusion is known**, how strong/current its evidence is, and how much confidence should be placed in it before reasoning or acting.
 
-Canonical RYZ3N architecture already requires epistemic humility, reality grounding, verification and evidence supremacy. This capability does **not** create a new truth layer. It makes those existing principles operationally sharper for probabilistic cognition.
+This is not a new truth layer or Brain. Canon already embeds epistemic humility, reality grounding and scientific rigor across the ecosystem, while **Layer 22 — Emergent Cognition Research & Self-Model Analysis Brain** explicitly preserves hypotheses, failed assumptions and evidence archives and permanently enforces epistemic humility, falsifiability and reality grounding.
+
+## Canonical ownership boundary
+
+This profile operationally sharpens existing responsibilities. It does not own them.
+
+Relevant existing owners/mechanisms include:
+
+- universal Canon principle: epistemic humility / reality anchoring;
+- **Layer 22** for scientific epistemic discipline, hypotheses, failed assumptions and false-certainty prevention;
+- Context Assembly for context sufficiency;
+- Recursive Verification for critique/validation;
+- Mission Controller / Constitution Compliance for durable truth and objective acceptance;
+- OMEGA for operational reliability claims;
+- FACTORY for reusable prevention controls.
 
 ## Core rule
 
 > **Fluency is not certainty. Confidence is not evidence. A model belief is not reality merely because it is expressed coherently.**
 
-The system should preserve a meaningful distinction between states such as:
+Useful epistemic metadata may distinguish:
 
-- **observed** — directly measured/read from an authoritative current source;
-- **verified** — supported by evidence sufficient for the relevant claim;
-- **inferred** — derived from evidence but not directly observed;
-- **hypothesized** — plausible explanation awaiting decisive testing;
-- **assumed** — intentionally accepted premise that remains unverified;
-- **predicted** — expected future state;
-- **disputed / contradictory** — material evidence conflicts;
-- **stale** — once-supported state whose freshness is no longer sufficient;
-- **unknown / insufficient evidence** — no justified conclusion yet.
+- observed;
+- verified;
+- inferred;
+- hypothesized;
+- assumed;
+- predicted;
+- disputed / contradictory;
+- stale;
+- unknown / insufficient evidence.
 
-These are **epistemic metadata**, not new canonical ontology tiers and not substitutes for the existing RYZ3N reality/implementation/evidence classification.
+These are metadata/technique, not new ontology states that outrank existing RYZ3N reality/implementation/evidence classifications.
 
 ## Reliability role
 
-A mature ARC should be able to:
+A mature implementation should avoid silently promoting inference into fact, lower confidence when evidence conflicts or becomes stale, preserve uncertainty through handoffs, increase verification burden with consequence, and escalate when uncertainty exceeds an existing owner's safe operating envelope.
 
-- tell the difference between retrieved fact and model inference;
-- avoid silently promoting an assumption into durable truth;
-- lower confidence when sources conflict or are stale;
-- increase verification requirements as consequence/risk rises;
-- keep uncertainty visible through recursive handoffs;
-- distinguish confidence in a diagnosis from confidence that an action succeeded;
-- refuse or escalate when uncertainty exceeds the safe operating envelope;
-- update confidence when new evidence arrives without rewriting provenance history.
-
-## Calibration requirement
-
-Confidence should be calibrated against repeated outcomes, not generated as decorative prose.
-
-Where confidence is material, the system should eventually compare:
+Where confidence is material, it should be calibrated against repeated outcomes:
 
 `stated confidence ↔ actual correctness / outcome quality`
 
-A system that repeatedly reports high confidence while being wrong is less reliable than a system that accurately reports uncertainty.
+## Failure modes
 
-## Relationship to existing architecture
-
-This capability feeds existing mechanisms rather than replacing them:
-
-- Canonical epistemic humility sets the behavioral principle.
-- Context Assembly determines whether enough relevant context exists.
-- Recursive Verification challenges and validates candidate outputs.
-- The Model-Independent Mission Controller prevents model assertions from becoming mission truth.
-- The Constitution Compliance Gate requires Reality → Implementation → Evidence agreement.
-- OMEGA challenges unsupported maturity/reliability claims.
-- FACTORY should encode proven calibration controls into future ARC inheritance.
-
-## Failure modes to prevent
-
-- model fluency interpreted as certainty;
-- unsupported confidence scores;
-- assumption laundering across recursive passes;
-- inference copied into memory as fact;
-- stale evidence treated as current;
-- consensus among correlated models treated as independent proof;
-- uncertainty disappearing during Brain/Agent handoffs;
-- high-confidence action despite missing decisive context;
-- contradictory evidence averaged away rather than surfaced.
+Prevent model fluency interpreted as certainty, unsupported confidence, assumption laundering across recursive passes, inference written into memory as fact, stale evidence treated as current, correlated-model agreement treated as independent proof, and uncertainty disappearing during handoffs.
 
 ## Verification targets
 
-Future evidence may include:
-
-- calibration error between predicted confidence and actual correctness;
-- rate of unsupported fact promotion;
-- false certainty / overconfidence rate;
-- appropriate escalation under low-confidence high-consequence conditions;
-- correct preservation of epistemic labels through memory and handoffs;
-- stale-state detection rate;
-- contradiction handling quality;
-- rate at which verified evidence correctly updates prior beliefs.
+Possible measurements include calibration error, unsupported fact-promotion rate, false-certainty rate, appropriate escalation under uncertainty, preservation of epistemic labels, stale-state detection and contradiction handling quality.
 
 ## OMEGA / FACTORY relationship
 
-OMEGA should detect systematic miscalibration: recurring confident errors, stale claims, unsupported promotions and contradictions hidden by status language.
+OMEGA can detect recurring operational miscalibration. FACTORY can encode verified recurring failures into reusable truth-state fields, provenance/freshness requirements, tests or risk-sensitive gates.
 
-FACTORY should convert recurring epistemic failures into reusable controls such as truth-state fields, validation gates, provenance requirements, freshness checks and risk-sensitive escalation defaults.
+Neither becomes the scientific owner of epistemic inquiry; canonical ownership remains intact.
 
 ## Governing principle
 
-> **Reliable intelligence does not merely produce answers. It knows the difference between what it observed, what it inferred, what it assumes, what it predicts, what it verified, and what it still does not know.**
+> **This profile makes Canon's epistemic humility measurable. It does not create another epistemic authority.**
