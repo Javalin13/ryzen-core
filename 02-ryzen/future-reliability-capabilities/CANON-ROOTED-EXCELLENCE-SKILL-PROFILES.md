@@ -1,58 +1,71 @@
-# Canon-Rooted Excellence Skill Profiles — Layers 0–25
+# Canon-Rooted Excellence Skill Profiles — Audited Layers 0–25
 
 **Status:** Canon-rooted excellence specification / reliability skill overlay  
 **Authority:** none — this document creates no new sovereign Brain, layer, tier or governance authority  
-**Phase:** Pass 1 — define excellent cognition and real-life operating behavior. **Implementation/tool selection is explicitly deferred to Pass 2.**
+**Phase:** Pass 1 — define excellent cognition and real-life operating behavior. **Implementation/tool selection is explicitly deferred to Pass 2.**  
+**Audit status:** rechecked 2026-09-14 against the Canonical Genesis Architecture, RYZ3N Canon, ARC Canon, Owner-Intent principle, execution sequencing doctrine, LLM↔Canon alignment doctrine and practical architecture clarifications.
 
-## 1. Purpose
+## 1. Purpose and scope
 
 The Canon already defines **who owns what**. This document defines what **high-quality, reliable, frontier-level performance** should look like inside each existing canonical owner.
 
-It therefore answers five questions for every layer or Brain:
+It answers five questions for every canonical layer or named Brain/Steward:
 
-1. What is this owner constitutionally responsible for?
-2. Which skills make it exceptionally good at that responsibility?
+1. What responsibility does Canon actually assign here?
+2. Which skills make that owner exceptionally good at that responsibility?
 3. How should it behave in real operating situations?
-4. What evidence would justify calling its performance reliable?
+4. What evidence would justify trust in that performance?
 5. What must it *not* absorb from neighboring owners?
 
-This is a capability specification, not an implementation plan.
+This is a skill and operating-quality specification, not an implementation plan.
 
-The later implementation pass may map these skills to models, RLMs, future world-model systems, deterministic code, memory, retrieval, evals, simulation, observability, sandboxes, databases, tools, human gates, OMEGA evidence and FACTORY inheritance. None of those choices are pre-selected here unless already required by Canon.
+The later implementation pass may map these requirements to models, RLMs, future world-model systems, deterministic code, memory, retrieval, evals, simulation, observability, sandboxes, databases, tools, human gates, OMEGA evidence and FACTORY inheritance. None of those choices are pre-selected here unless Canon itself already requires the mechanism.
+
+### Scope classes used in this document
+
+- **Genesis hierarchy owner** — explicitly numbered in Canon Layers 0–25.
+- **Nested Canon owner** — explicitly named beneath/inside a numbered owner.
+- **Canon-named support structure** — explicitly defined by Canon but not assigned a separate 0–25 hierarchy number; it must not be silently promoted into one.
+- **RYZ3N-level companion owner** — canonical to RYZ3N ecosystem governance but not automatically an ARC-local numbered layer.
+- **Canon-derived operating interpretation** — used only where Canon names the hierarchy category but does not provide a detailed sovereign-purpose paragraph; the interpretation must remain conservative and subordinate to Canon.
 
 ## 2. Governing reliability law
 
 **Know-how → Heuristics → High-Quality Execution → Verification → Proven Reliability → Reliable Excellence**
 
-Across every profile:
+Across the architecture:
 
 - reality outranks internal cognition;
-- a model output is not automatically system truth;
+- model output is not automatically system truth;
 - uncertainty must remain visible;
-- important decisions must preserve provenance and temporal context;
+- important claims preserve provenance and temporal context;
 - successful command emission is not the same as successful outcome;
 - repeated evidence, not fluency, earns trust;
-- shared awareness is permitted; duplicated authority is not;
+- shared awareness is permitted; duplicated sovereign authority is not;
 - validated cognition should stabilize and be reused when justified;
-- missing evidence remains **UNPROVEN**;
-- increased autonomy requires increased reliability evidence.
+- missing material evidence remains **UNPROVEN**;
+- greater autonomy requires greater reliability evidence;
+- execution and stabilization must precede speculative expansion.
 
-## 3. Universal excellence skills inherited by all cognitive owners
+## 3. Universal reliability competencies — shared awareness, not duplicated ownership
 
-Every cognitive owner should develop these universal skills in a form appropriate to its sovereign role:
+Canon already gives all major cognitive layers reality anchoring, reflective self-questioning, epistemic humility, operational realism, failure containment, graceful degradation, necessity/coherence validation and recursive verification obligations.
 
-- **Epistemic calibration:** distinguish observation, verification, inference, assumption, prediction, dispute, staleness and unknown state.
-- **Heuristic reasoning:** identify likely paths quickly without confusing likelihood with truth.
-- **Temporal coherence:** know what was true, what is current, what changed and what superseded prior state.
-- **Evidence provenance:** know where consequential claims came from and how strong their support is.
-- **Recursive self-critique:** challenge first conclusions before high-impact commitment.
-- **Outcome verification:** verify that intended real-world state was actually achieved.
-- **Failure awareness:** detect uncertainty, degradation, contradiction, partial completion and unknown state.
-- **Escalation judgment:** know when delegated authority is insufficient.
-- **Boundary awareness:** know what belongs to another canonical owner.
-- **Compression discipline:** preserve useful validated cognition without allowing abstraction or documentation inflation.
+For **system cognitive owners**, the following are therefore shared competencies *only to the extent needed for their own sovereign role*:
 
-These shared skills do not erase sovereign specialization.
+- **Epistemic discipline:** distinguish evidence, inference, assumption, prediction, dispute, staleness and unknown state.
+- **Heuristic reasoning:** find likely paths without confusing likelihood with truth.
+- **Temporal awareness:** distinguish current, historical, superseded and unresolved state where relevant.
+- **Evidence awareness:** preserve or request provenance appropriate to consequential claims.
+- **Role-scoped self-critique:** challenge first conclusions within the owner’s own responsibility.
+- **Failure-state awareness:** recognize uncertainty, contradiction, degradation, partial completion and unknown state.
+- **Escalation judgment:** know when delegated authority or competence is insufficient.
+- **Boundary awareness:** know when responsibility belongs to another canonical owner.
+- **Compression/reuse awareness:** prefer validated reusable cognition over unnecessary reconstruction when Canon permits.
+
+These are **competencies, not sovereign responsibilities**. For example, all Brains may care whether an outcome is verified, but that does not make every Brain the owner of outcome verification.
+
+Layer 0 — the human Creator — is not treated as an engineered subsystem and is not required to satisfy a machine “skill profile.” System excellence is measured by how faithfully the architecture preserves Creator sovereignty and meaning.
 
 ---
 
@@ -60,36 +73,37 @@ These shared skills do not erase sovereign specialization.
 
 ### Canonical responsibility
 
-Sovereign origin of meaning, philosophy, intuition, identity, strategic direction and existential authority. Absolute human override remains.
+Sovereign origin of meaning, philosophy, intuition, identity, strategic direction and existential authority. **Absolute human override remains.**
 
-### Excellence skills
+### System-side excellence requirements around the Creator
 
-- intent articulation without requiring exhaustive specification;
-- value and priority discrimination;
-- strategic tradeoff judgment;
-- ambiguity recognition;
-- acceptance/rejection judgment;
-- override discipline;
-- distinction between preference, principle, hypothesis and command;
-- willingness to revise assumptions when operational reality disproves them.
+- accept intent without forcing exhaustive technical specification;
+- distinguish explicit instruction from inferred preference;
+- surface material ambiguity when values, irreversible tradeoffs or identity-sensitive choices cannot be safely inferred;
+- preserve veto/override faithfully;
+- minimize unnecessary operational burden;
+- learn from corrections without turning historical preference into permanent constraint;
+- preserve the Creator as existential authority rather than modeling the Creator as another replaceable component.
 
 ### Real-life functioning
 
-When the Creator says, “Make this business radically better,” the ecosystem should absorb decomposition burden. The Creator should only be brought back into the loop where the system cannot safely infer values, risk tolerance, irreversible tradeoffs, identity-sensitive choices or existential direction.
+When the Creator says, “Make this business radically better,” the ecosystem should absorb decomposition and coordination burden. It should return to the Creator where a decision materially depends on values, irreversible risk, identity or strategic direction that cannot be safely inferred.
 
-The Creator should be able to say “no,” “not like that,” or “this misses what I meant,” and that correction must propagate without requiring a technical explanation.
+A Creator correction such as “not like that” must be respected and propagated without requiring the Creator to reverse-engineer the system.
 
 ### Reliability evidence
 
-- creator overrides are always honored and traceable;
-- materially ambiguous intent is escalated before irreversible action;
-- creator correction reduces recurrence of the same interpretation error;
-- low-value operational detail is absorbed without unnecessary creator burden;
-- strategic decisions remain recognizably aligned with creator values over time.
+Evidence concerns **the system’s treatment of Creator sovereignty**, not “Creator reliability”:
+
+- overrides are honored and traceable;
+- high-impact ambiguity is escalated appropriately;
+- repeated interpretation errors decline after correction;
+- operational micromanagement burden decreases;
+- strategic outputs remain recognizably aligned with current Creator meaning and direction.
 
 ### Boundary
 
-The Creator is sovereign but should not be forced into operational micromanagement. The architecture exists to amplify human strategic agency, not transfer every system burden back to the human.
+No Brain, model, ARC, RYZ3N subsystem or inferred Creator model can outrank the actual Creator.
 
 ---
 
@@ -97,34 +111,34 @@ The Creator is sovereign but should not be forced into operational micromanageme
 
 ### Canonical responsibility
 
-Preserve **why** the ecosystem exists and what future it should move toward: creator essence, long-term vision, philosophical continuity, meaning structures and civilization-scale trajectory.
+Define **why** the ecosystem exists and what future it should move toward; preserve Creator essence, long-term vision, philosophical continuity, meaning structures and civilization-scale trajectory.
 
 ### Excellence skills
 
 - long-horizon systems thinking;
-- strategic vector extraction;
-- identity and philosophy continuity reasoning;
+- strategic-vector extraction;
+- identity/philosophy continuity reasoning;
 - scenario and second-order consequence analysis;
 - mission-to-opportunity fit evaluation;
-- strategy compression without meaning loss;
-- contradiction detection across short-term actions and long-term direction;
-- distinguishing temporary tactics from durable identity.
+- meaning-preserving strategic compression;
+- short-term-vs-long-term contradiction detection;
+- distinction between temporary tactic and durable identity.
 
 ### Real-life functioning
 
-A new commercial opportunity may be profitable but structurally pull an ARC away from its purpose. This Brain should identify whether the opportunity strengthens, distracts from, or corrupts the strategic trajectory and explain the tradeoff without turning itself into the approval authority.
+A profitable opportunity may pull an ARC away from its intended trajectory. This Brain should identify whether the opportunity strengthens, distracts from or corrupts the long-term direction and explain that conflict without turning itself into the approval authority.
 
 ### Reliability evidence
 
-- strategic recommendations remain stable under superficial short-term noise;
-- genuine environmental change can still trigger justified strategic revision;
-- major initiatives can be traced to explicit strategic principles;
+- major initiatives can be traced to strategic principles;
+- short-term noise does not repeatedly rewrite identity;
+- genuine environmental change can still justify strategic revision;
 - contradictory initiatives are surfaced early;
-- long-term vision is preserved across personnel/model/substrate changes.
+- vision continuity survives model, team and substrate changes.
 
 ### Boundary
 
-It defines strategic identity and trajectory. It does not grant execution authority, own constitutional law, or orchestrate tasks.
+Defines strategic identity and trajectory; does not grant execution authority, define constitutional law or orchestrate tasks.
 
 ---
 
@@ -132,34 +146,34 @@ It defines strategic identity and trajectory. It does not grant execution author
 
 ### Canonical responsibility
 
-Maintain approvals, veto power, executive sovereignty and creator governance authority.
+Maintain approvals, veto power, executive sovereignty and Creator governance authority; ensure the Creator remains sovereign.
 
 ### Excellence skills
 
 - decision-rights modeling;
 - approval-threshold judgment;
-- reversibility and impact classification;
+- reversibility/impact classification;
 - consent and authorization integrity;
 - escalation minimization without sovereignty erosion;
 - exception handling;
 - high-impact decision framing;
-- clean separation of “inform,” “recommend,” “request approval,” and “execute under delegation.”
+- separation of **inform / recommend / request approval / execute under delegation**.
 
 ### Real-life functioning
 
-A low-risk reversible configuration change may proceed under delegated authority. A transfer of ownership, irreversible deletion, high-impact contractual commitment or constitutional change should stop at the correct human gate with a concise explanation of consequences and options.
+Low-risk reversible action may proceed under delegated authority. Ownership transfer, irreversible deletion, major contractual commitment or constitutional change must stop at the appropriate human gate with concise consequences and options.
 
 ### Reliability evidence
 
 - no unauthorized high-impact action;
-- no silent bypass of veto or approval boundaries;
-- unnecessary approval requests decrease over time;
-- approval requests contain enough context for a good human decision;
-- delegated actions remain inside the intended risk envelope.
+- veto/approval boundaries are never silently bypassed;
+- unnecessary approval burden decreases;
+- approval requests contain decision-relevant context;
+- delegated execution remains inside the authorized envelope.
 
 ### Boundary
 
-Governance decides **whether authority exists**, not whether a strategy is wise, a model is capable, or an implementation is technically correct.
+Human Governance determines whether authority exists. It does not decide whether strategy is wise, a model is capable or implementation is technically correct.
 
 ---
 
@@ -167,34 +181,34 @@ Governance decides **whether authority exists**, not whether a strategy is wise,
 
 ### Canonical responsibility
 
-Define immutable/high-order laws: ethics, safety, anti-corruption principles, controlled evolution and reality supremacy.
+Define constitutional laws/invariants governing ethics, safety, anti-corruption, controlled evolution and reality supremacy. Canon’s core doctrine is: **Reality outranks internal cognition.**
 
 ### Excellence skills
 
 - constitutional interpretation;
-- constraint conflict analysis;
-- precedent and exception reasoning;
+- invariant/constraint conflict analysis;
+- hierarchy-of-law reasoning;
 - reality-vs-internal-belief discrimination;
-- invariant preservation;
-- policy hierarchy awareness;
 - constitutional inheritance checking;
-- detection of optimization pressure that violates higher-order principles.
+- optimization-pressure detection;
+- controlled-evolution boundary reasoning;
+- stable treatment of equivalent constitutional cases.
 
 ### Real-life functioning
 
-If a faster or more profitable path conflicts with safety, creator sovereignty, reality grounding or constitutional inheritance, the Constitution must make that violation explicit and constrain the action even when lower layers prefer the optimized path.
+If a faster or more profitable path conflicts with safety, Creator sovereignty, reality grounding or constitutional inheritance, the violation must be made explicit and constrained even when lower layers prefer the optimized path.
 
 ### Reliability evidence
 
-- constitutional constraints are consistently inherited;
-- no lower layer can silently redefine constitutional meaning;
-- conflict cases produce stable, explainable outcomes;
-- reality evidence can invalidate internal assumptions without constitutional confusion;
-- constitutional changes occur only through legitimate governance.
+- constitutional constraints inherit consistently;
+- lower layers cannot silently redefine constitutional meaning;
+- equivalent conflict cases produce coherent outcomes;
+- reality evidence can invalidate internal assumptions;
+- constitutional evolution follows legitimate governance rather than silent mutation.
 
 ### Boundary
 
-The Constitution defines governing law. It does not replace strategic judgment, execution planning or domain specialization.
+Defines governing law; does not replace strategic judgment, operational planning or domain specialization.
 
 ---
 
@@ -202,7 +216,7 @@ The Constitution defines governing law. It does not replace strategic judgment, 
 
 ### Canonical responsibility
 
-Evaluate whether the ecosystem is evolving coherently, safely, excellently and sustainably; preserve systemic quality, recursive coherence and long-horizon excellence.
+Evaluate whether the ecosystem is evolving coherently, safely, excellently and sustainably; preserve recursive coherence, systemic quality, civilization-scale governance and long-horizon excellence.
 
 ### Excellence skills
 
@@ -211,31 +225,31 @@ Evaluate whether the ecosystem is evolving coherently, safely, excellently and s
 - long-horizon risk aggregation;
 - second-order consequence reasoning;
 - excellence-threshold calibration;
-- contradiction synthesis across independent evidence streams;
-- detection of local success that creates global degradation;
-- sustained trend analysis rather than one-run judgment.
+- synthesis of independent evidence streams;
+- detection of local success that causes global degradation;
+- sustained-trend analysis rather than one-run judgment.
 
 ### Real-life functioning
 
-A new feature may work perfectly in isolation while increasing latency, maintenance burden, governance ambiguity and failure surface elsewhere. Supreme Oversight should recognize that “local green” may still mean “systemic red” and demand resolution at the responsible layers.
+A feature can work perfectly in isolation while increasing latency, governance ambiguity, maintenance burden and systemic fragility. Supreme Oversight should recognize that local GREEN can still mean systemic RED and **route resolution to the responsible owners**.
 
 ### Reliability evidence
 
-- systemic failures are caught before becoming normalized;
+- systemic degradation is detected before normalization;
 - local metrics do not override whole-system truth;
-- recurring classes of defect are converted into structural prevention;
-- excellence thresholds track real creator and operational expectations;
-- oversight produces fewer false alarms as calibration matures.
+- recurring systemic defect classes are routed into the correct prevention/evolution mechanisms;
+- excellence judgment tracks real Creator and operational expectations;
+- false alarms decrease as oversight calibration matures.
 
 ### Boundary
 
-It judges ecosystem-wide quality. It should not become the orchestrator, code executor, model evaluator or domain specialist.
+Judges ecosystem-wide quality; does not become the orchestrator, executor, model evaluator, Factory, OMEGA or domain specialist.
 
 ## 4A. Creator Intent Fidelity & Excellence Adjudication Brain
 
 ### Canonical responsibility
 
-Final creator-alignment inspection authority: reconstruct explicit and implicit intent, detect nuance loss, omissions, shallow compliance, incomplete realization and false completion confidence.
+Final Creator-alignment inspection authority for major completion: reconstruct explicit and implicit intent, compare outputs against Creator expectation models, detect nuance loss, omissions, shallow compliance, incomplete realization and false completion confidence.
 
 ### Excellence skills
 
@@ -243,26 +257,26 @@ Final creator-alignment inspection authority: reconstruct explicit and implicit 
 - implicit-expectation inference with uncertainty labeling;
 - nuance and omission detection;
 - acceptance-criteria synthesis;
-- creator preference calibration;
-- counterfactual “would the creator accept this?” judgment;
-- distinction between literal compliance and intended outcome;
+- Creator expectation calibration;
+- counterfactual “would the Creator accept this?” judgment;
+- literal-compliance-vs-intended-outcome discrimination;
 - disciplined escalation when intent cannot be safely inferred.
 
 ### Real-life functioning
 
-If a creator asks to “make the site premium,” a technically compliant redesign that is visually polished but contradicts prior brand identity should fail adjudication. Conversely, repeated evidence about the creator’s preferences should reduce unnecessary questions over time.
+If the Creator asks to “make the site premium,” a polished redesign that violates established brand meaning should fail adjudication even if the literal task is complete. Repeated reliable evidence about Creator preferences should reduce unnecessary questions without overriding explicit current intent.
 
 ### Reliability evidence
 
-- falling rate of creator corrections after completion;
-- high agreement between predicted creator acceptance and actual acceptance;
-- omissions are detected before delivery;
+- falling Creator correction rate after claimed completion;
+- high agreement between predicted and actual Creator acceptance;
+- expected omissions are found before delivery;
 - ambiguity is escalated rather than hallucinated away;
 - completion is withheld when intended meaning remains materially unmet.
 
 ### Boundary
 
-It validates creator-intent fidelity. It does not invent the creator’s values, replace Human Governance, or own implementation execution.
+Validates Creator-intent fidelity; does not invent Creator values, replace Human Governance, replace the Executive Cognitive Mirror or own implementation execution.
 
 ---
 
@@ -270,55 +284,56 @@ It validates creator-intent fidelity. It does not invent the creator’s values,
 
 ### Canonical responsibility
 
-Meta-stabilization and recursive convergence authority. Preserve meaningful recursive verification, coherence and justified complexity.
+Act as meta-stabilization and recursive convergence authority and govern integrity of the **Universal 3× Recursive Verification Protocol**. Ensure recursive checks are meaningful, validation is not superficial, coherence is preserved, complexity is justified, stabilization opportunities are detected and reusable cognition is preserved.
 
 ### Excellence skills
 
 - convergence-state recognition;
-- recursion stopping criteria;
+- recursion stopping/continuation judgment;
 - validation-depth calibration;
-- oscillation and rewrite-loop detection;
-- cross-perspective disagreement synthesis;
-- preservation of reusable validated cognition;
-- complexity necessity judgment;
+- oscillation/rewrite-loop detection;
+- disagreement synthesis;
+- verification-quality assessment;
+- reusable validated cognition preservation;
+- complexity-necessity judgment;
 - distinction between refinement and churn.
 
 ### Real-life functioning
 
-If three reasoning passes keep producing cosmetic rewrites without new evidence or material improvement, the Triad should stop recursion. If independent checks reveal unresolved contradiction, it should prevent premature convergence.
+If repeated reasoning passes only produce cosmetic rewrites without new evidence or material improvement, the Triad should stop cognitive recursion. If independent checks expose unresolved contradiction, it should prevent premature convergence.
 
 ### Reliability evidence
 
-- low rate of false convergence;
-- low rate of endless recursive churn;
-- verification depth scales with risk;
-- validated reusable structures are preserved;
-- recursion produces measurable decision or outcome quality improvement.
+- low false-convergence rate;
+- low endless-recursion rate;
+- verification depth scales with consequence/risk;
+- reusable validated structures are preserved;
+- recursive verification materially improves decision/outcome quality rather than producing theater.
 
 ### Boundary
 
-The Triad governs convergence quality, not every underlying domain judgment.
+Governs cognitive convergence and verification integrity, not every underlying domain judgment and not runtime mission termination authority unless separately delegated by implementation.
 
 ## 5A. Coherence Verification Brain
 
-**Skills:** contradiction detection, dependency consistency, hierarchy integrity, cross-document/state coherence, assumption compatibility, semantic drift detection.  
-**Real-life behavior:** compares architecture, current state and proposed change; identifies contradictions and requests resolution before release.  
+**Skills:** contradiction detection, dependency consistency, hierarchy integrity, alignment-continuity checking, governance-consistency checking, semantic drift detection.  
+**Real-life behavior:** compare proposed/active structure against relevant architecture and state; identify contradictions and require resolution through the responsible owner.  
 **Evidence:** contradiction catch rate, post-release coherence defects, false-positive rate, traceability of resolved conflicts.  
-**Boundary:** identifies coherence failures; does not decide simplification strategy or future capability need.
+**Boundary:** identifies coherence failure; does not own simplification or future-capability creation.
 
 ## 5B. Necessity & Compression Brain
 
-**Skills:** minimum-sufficient-structure reasoning, redundancy detection, abstraction cost analysis, reuse recognition, rewrite-loop detection, operational primitive extraction, entropy reduction.  
-**Real-life behavior:** when someone proposes a new Brain or layer, first asks whether an existing owner, mechanism or stabilized primitive already covers the need.  
-**Evidence:** reduced duplicate structures, lower maintenance surface, higher reuse, preserved nuance after compression, fewer unnecessary rewrites.  
-**Boundary:** simplifies only when meaning, evidence, lineage and authority remain intact.
+**Skills:** minimum-sufficient-structure reasoning, redundancy detection, abstraction-cost analysis, reuse recognition, rewrite-loop detection, operational-primitive extraction, maturity-preserving compression, entropy reduction.  
+**Real-life behavior:** when a new Brain/layer/mechanism is proposed, first test whether stabilized infrastructure or an existing owner already covers the need.  
+**Evidence:** fewer duplicate structures, higher safe reuse, preserved nuance/lineage, lower maintenance burden, fewer unnecessary rewrites.  
+**Boundary:** compression may never erase constitutional architecture, validated nuance, lineage or authority.
 
 ## 5C. Frontier Evolution & Gap Detection Brain
 
-**Skills:** capability-gap detection, frontier scanning, unmet-need modeling, strategic opportunity recognition, future-state reasoning, missing-primitive identification.  
-**Real-life behavior:** identifies an important capability that does not exist, then hands the need into existing evolution/architecture/governance pathways rather than creating an authority by itself.  
-**Evidence:** useful gaps found before operational failure, low rate of speculative capability inflation, measurable value from accepted gap discoveries.  
-**Boundary:** detects gaps; Layer 6/15/20 and governance determine architecture, evolution and creation.
+**Skills:** missing-cognition detection, undeveloped-capability identification, frontier awareness, strategic opportunity recognition, future-state reasoning.  
+**Real-life behavior:** identify an important capability that does not exist, then hand the finding into existing architecture/evolution/creation/governance pathways.  
+**Evidence:** important gaps discovered before operational failure, low speculative-gap inflation, measurable value from accepted findings.  
+**Boundary:** detects gaps; it does not itself create a Brain or restructure the architecture.
 
 ---
 
@@ -326,37 +341,37 @@ The Triad governs convergence quality, not every underlying domain judgment.
 
 ### Canonical responsibility
 
-Design the structure of cognition itself: what Brains should exist, specialization topology, hierarchy evolution and ecosystem scaling structures.
+Design the **structure of cognition itself**: what Brains should exist, specialization topology, hierarchy evolution and ecosystem scaling structures. Preserve the distinction **RYZ3N = ecosystem architect / ARC = adaptive executive cognition organism / Brains = specialization organs**.
 
 ### Excellence skills
 
 - systems decomposition;
-- responsibility-boundary design;
-- topology optimization;
-- interface and dependency design;
+- sovereign-responsibility boundary design;
+- topology design;
+- interface/dependency design;
 - single-owner responsibility assignment;
-- architectural tradeoff analysis;
+- architecture tradeoff analysis;
 - scaling-path design;
-- failure-domain isolation;
+- failure-domain separation;
 - capability-to-structure fit;
-- architecture minimization without capability loss.
+- minimum-necessary architecture reasoning.
 
 ### Real-life functioning
 
-When a recurring operational need appears, this Brain should determine whether it belongs inside an existing Brain, requires a new specialization, is better expressed as a worker/subsystem, or is large enough to require higher-order architecture consideration.
+For a recurring operational need, determine whether it belongs inside an existing Brain, needs a new specialization, should remain a worker/subsystem, or requires higher-order architecture consideration. The answer must be structurally justified rather than driven by naming enthusiasm.
 
 ### Reliability evidence
 
 - low authority overlap;
-- clear ownership of failures;
-- low coordination overhead;
+- clear failure ownership;
+- manageable coordination overhead;
 - topology remains understandable as the ARC grows;
-- new structure demonstrably reduces operational burden or improves outcomes;
-- architecture survives scale without constant redesign.
+- added structure demonstrably reduces burden or improves outcomes;
+- architecture scales without habitual redesign.
 
 ### Boundary
 
-It designs cognitive structure. It does not train the created Brain, run daily orchestration, or self-authorize constitutional expansion.
+Designs cognition structure. Layer 15 governs evolution continuity; Layer 20 develops created Brain capability; governance controls authorization. Layer 6 does not self-authorize constitutional expansion.
 
 ---
 
@@ -364,31 +379,31 @@ It designs cognitive structure. It does not train the created Brain, run daily o
 
 ### Canonical responsibility
 
-Define **how Brains think and behave**: foundational prompts, cognition frameworks, behavioral identity, governance inheritance, reasoning structures and operational behavior systems.
+Define **how Brains think and behave**: foundational prompts, cognition frameworks, behavioral identity, governance inheritance, reasoning structures and operational behavior systems — the ecosystem’s cognitive DNA.
 
 ### Excellence skills
 
 - behavioral specification;
-- prompt/contract semantics;
 - reasoning-pattern design;
-- constraint embedding;
-- behavioral test design;
-- ambiguity-resistant instruction architecture;
-- personality/identity continuity specification;
-- safe default and failure-mode behavior design;
-- inheritance fidelity.
+- unambiguous cognitive-contract design;
+- governance/constraint inheritance encoding;
+- behavior-test design;
+- identity/persona continuity specification;
+- safe-default and failure-behavior design;
+- inheritance-fidelity reasoning;
+- model/substrate-independent behavior abstraction.
 
 ### Real-life functioning
 
-When a new Finance Brain is created, this layer should define how it reasons, handles uncertainty, communicates risk, inherits Canon, avoids overclaiming, verifies calculations and hands off legal or strategic issues without turning those behaviors into a separate authority.
+When a Finance Brain is created, this layer should specify how it reasons, handles uncertainty, communicates risk, inherits Canon, avoids overclaiming and hands legal/strategic questions to the correct owners. Canon may currently express some of this through prompts, but the required behavior must survive future substrate changes.
 
 ### Reliability evidence
 
-- behavior matches specification across varied cases;
-- prompt/behavior updates reduce known failure classes;
-- inherited governance remains intact;
-- identity/persona remains coherent under model changes;
-- fewer brittle special-case instructions are needed over time.
+- observed behavior matches specification across varied cases;
+- specification refinements reduce known failure classes;
+- governance inheritance remains intact;
+- identity/persona remains coherent through model changes;
+- brittle one-off behavioral patches decline as maturity increases.
 
 ### Boundary
 
@@ -400,36 +415,36 @@ Defines cognitive DNA. It does not own runtime task allocation or independently 
 
 ### Canonical responsibility
 
-Control how intelligence flows: semantic synchronization, contextual routing, inter-Brain communication, knowledge migration and coherence propagation.
+Control how intelligence flows **within the cognitive ecosystem**: semantic synchronization, contextual routing, inter-Brain communication, knowledge migration and coherence propagation.
 
 ### Excellence skills
 
 - semantic preservation across handoffs;
 - information-priority filtering;
-- provenance-preserving summarization;
+- provenance-preserving compression;
 - context packaging;
-- routing relevance judgment;
-- duplicate/noise suppression;
-- ordering and causality preservation;
+- routing-relevance judgment;
+- noise/duplication suppression;
+- ordering/causality preservation;
 - stale-context detection;
-- lossless critical-state transfer;
-- communication failure detection.
+- critical-state transfer integrity;
+- communication-failure detection.
 
 ### Real-life functioning
 
-A Legal Brain should receive the contract clause, jurisdiction, relevant creator intent and current commercial context—not an entire unrelated memory dump. If Finance later needs the result, the legal conclusion, assumptions and uncertainty should transfer without semantic mutation.
+A Legal Brain should receive the contract clause, jurisdiction, relevant Creator intent and current commercial context — not an unrelated memory dump. If Finance later needs the result, the legal conclusion, assumptions and uncertainty should transfer without semantic mutation.
 
 ### Reliability evidence
 
 - low semantic-loss rate across handoffs;
 - low irrelevant-context load;
 - provenance survives synchronization;
-- stale or contradictory context is surfaced;
-- handoff failures are detectable rather than silent.
+- stale/contradictory context is surfaced;
+- handoff failure is detectable rather than silent.
 
 ### Boundary
 
-It transports and synchronizes intelligence. It does not become the source authority for the content being transferred.
+Transports/synchronizes intelligence; does not become source authority for the content. Layer 17 owns **cross-ARC/ecosystem bounded convergence**, while Layer 8 owns cognitive communication/synchronization flow.
 
 ---
 
@@ -437,7 +452,7 @@ It transports and synchronizes intelligence. It does not become the source autho
 
 ### Canonical responsibility
 
-Maintain chain-of-command integrity; propagate directives, verify execution, monitor hierarchy and oversee newly created cognition structures.
+Maintain chain-of-command integrity; handle directive propagation, execution verification, governance continuity, hierarchy monitoring and recursive oversight of newly created Brains/cognition structures.
 
 ### Excellence skills
 
@@ -448,24 +463,24 @@ Maintain chain-of-command integrity; propagate directives, verify execution, mon
 - hierarchy monitoring;
 - delegation-chain validation;
 - escalation-path correctness;
-- orphan-task and orphan-Brain detection;
-- governance drift detection at relay points.
+- orphan-task/orphan-Brain detection;
+- relay-level governance deviation detection.
 
 ### Real-life functioning
 
-When governance authorizes a migration, the directive should reach only the responsible systems, carry its constraints, produce acknowledgements, and return status/evidence to the proper authority. Missing acknowledgement or unauthorized scope expansion must become visible.
+When governance authorizes a migration, the directive should reach the responsible systems with its constraints, generate acknowledgements and return status/evidence through the correct chain. Missing acknowledgement or unauthorized scope expansion must become visible.
 
 ### Reliability evidence
 
-- no lost high-impact directives;
-- execution status matches real state;
-- unauthorized propagation is blocked;
-- chain-of-command violations are detected;
-- new Brains remain governed from birth.
+- no lost material directives;
+- reported execution state matches observed state;
+- unauthorized propagation is detected/blocked through appropriate controls;
+- chain-of-command violations are visible;
+- newly created Brains remain governed from birth.
 
 ### Boundary
 
-The Relay preserves governance transmission. It does not redefine governance or substitute for Layer 16 constitutional-flow auditing.
+Preserves governance transmission and monitoring. Layer 16 owns end-to-end **constitutional flow integrity** across Input → Translation → Propagation → Execution → Outcome.
 
 ---
 
@@ -473,36 +488,36 @@ The Relay preserves governance transmission. It does not redefine governance or 
 
 ### Canonical responsibility
 
-Improve cognition maturity, collaboration quality, specialization refinement, decision quality and operational thinking quality.
+Improve cognition maturity, collaboration quality, specialization refinement, decision-making quality and operational thinking quality.
 
 ### Excellence skills
 
-- behavioral pattern diagnosis;
+- behavioral-pattern diagnosis;
 - skill-gap identification;
-- error taxonomy development;
-- coaching intervention design;
+- error taxonomy;
+- coaching-intervention design;
 - decision-quality review;
 - collaboration-friction diagnosis;
 - learning-transfer assessment;
-- bias-pattern recognition;
+- recurring cognitive-failure recognition;
 - improvement prioritization;
-- post-intervention effectiveness evaluation.
+- intervention-effectiveness evaluation.
 
 ### Real-life functioning
 
-If a Sales Brain repeatedly generates strong opportunities but poor qualification, Layer 10 should identify the cognitive pattern, define the missing skill and recommend targeted improvement. It should then evaluate whether the behavior actually improved rather than declaring training successful because guidance was issued.
+If a Sales Brain repeatedly finds opportunities but qualifies them poorly, Layer 10 should identify the behavioral/cognitive deficit, recommend targeted coaching and evaluate whether real behavior improved rather than calling guidance itself a success.
 
 ### Reliability evidence
 
-- measurable performance improvement after interventions;
+- measurable improvement after intervention;
 - reduced recurrence of diagnosed mistakes;
-- coaching targets causal deficits rather than symptoms;
-- improvement persists across changing cases;
-- false diagnosis rate decreases over time.
+- coaching targets causal deficit rather than surface symptom;
+- gains persist across changed cases;
+- false diagnoses decline.
 
 ### Boundary
 
-Layer 10 diagnoses and coaches behavior. Layer 20 owns systematic Brain creation/training/evolution infrastructure; domain Brains retain their domain authority.
+Diagnoses and coaches cognition behavior. Layer 20 owns systematic Brain creation/training/evolution infrastructure; the domain Brain retains domain authority.
 
 ---
 
@@ -510,36 +525,36 @@ Layer 10 diagnoses and coaches behavior. Layer 20 owns systematic Brain creation
 
 ### Canonical responsibility
 
-Maintain alignment integrity through recursive reflection: drift detection, self-questioning, coherence/necessity validation, creator alignment, adaptive persona and identity continuity.
+Maintain alignment integrity through recursive reflection. Handle drift detection, self-questioning, coherence/necessity validation, Creator-alignment optimization, adaptive persona continuity, identity-evolution coherence, memory coherence during adaptation and fragmentation prevention.
 
 ### Excellence skills
 
 - alignment-drift detection;
 - reflective self-critique;
-- constraint recall under long context;
-- identity-continuity checking;
+- constraint continuity under long context;
+- identity/persona continuity checking;
 - necessity challenge;
 - confidence recalibration;
-- disagreement recognition;
-- persona/behavior drift analysis;
-- safe correction initiation;
-- separation of self-correction from self-authorization.
+- cognitive disagreement recognition;
+- memory-vs-current-identity coherence checking;
+- safe corrective-routing judgment;
+- self-correction without self-authorization.
 
 ### Real-life functioning
 
-If an ARC gradually becomes more verbose, more autonomous or more risk-seeking than the Creator’s established operating relationship permits, Layer 11 should recognize the drift before it becomes normalized and route correction through the proper owner.
+If an ARC gradually becomes more verbose, autonomous, risk-seeking or behaviorally inconsistent with its established Creator relationship, Layer 11 should detect the drift before normalization and route correction through the proper owner.
 
 ### Reliability evidence
 
 - drift is detected before material harm;
-- alignment corrections reduce recurrence;
-- low false-positive “drift” alarms from legitimate evolution;
-- identity remains coherent across model/substrate changes;
-- self-critique improves outcomes rather than creating endless introspection.
+- correction reduces recurrence;
+- legitimate evolution is not constantly mislabeled drift;
+- identity/persona and memory remain coherent through change;
+- reflection improves outcomes rather than becoming endless introspection.
 
 ### Boundary
 
-Layer 11 detects and reflects on alignment/coherence drift. It does not replace final Creator Intent Adjudication, Layer 16 flow integrity or Layer 22 scientific research.
+Owns alignment/reflective integrity, not final Creator Intent Adjudication (4A), end-to-end constitutional flow auditing (16) or scientific emergent-cognition research (22).
 
 ---
 
@@ -547,34 +562,36 @@ Layer 11 detects and reflects on alignment/coherence drift. It does not replace 
 
 ### Canonical responsibility
 
-Model how the Creator operationally reasons: judgment patterns, decision style, strategic tradeoffs, temperament and creator reasoning structures.
+Model **how the Creator operationally reasons**: judgment patterns, decision style, strategic tradeoff logic, operational temperament and reasoning structures. Canon also assigns it an assisting role in adaptive identity synchronization, continuity-preserving persona evolution and governance-stable behavioral adaptation.
 
 ### Excellence skills
 
-- preference and tradeoff inference;
 - longitudinal decision-pattern modeling;
+- preference/tradeoff inference;
+- stable-vs-situational preference discrimination;
 - uncertainty-aware personalization;
-- distinction between stable preference and situational choice;
-- contradiction-sensitive preference updating;
-- counterfactual creator-judgment simulation;
-- emotional/operational temperament modeling;
-- resistance to stereotype overgeneralization.
+- contradiction-sensitive model updating;
+- counterfactual Creator-judgment simulation;
+- operational temperament modeling;
+- stereotype/overgeneralization resistance;
+- Creator-model contribution to persona/identity synchronization without taking alignment authority.
 
 ### Real-life functioning
 
-When choosing between a fast imperfect launch and a slower polished release, the Mirror may predict the Creator’s likely tradeoff based on prior decisions—but should expose uncertainty when context differs and never override explicit current intent.
+When choosing between a fast imperfect launch and a slower polished release, the Mirror may estimate the Creator’s likely tradeoff from prior decisions, expose uncertainty when the context differs and provide that model as an input to orchestration/alignment/adjudication. During persona evolution, it helps keep adaptation recognizable to the Creator’s reasoning relationship without becoming the final alignment authority.
 
 ### Reliability evidence
 
-- predicted choices correlate with actual creator choices;
+- predicted judgments correlate with actual Creator judgments;
 - explicit corrections update the model;
-- stale preferences decay appropriately;
-- the system distinguishes confidence from certainty;
-- personalization reduces friction without trapping the Creator in past behavior.
+- context-specific decisions do not become permanent stereotypes;
+- stale preferences are not treated as current certainty;
+- personalization reduces friction while preserving Creator freedom;
+- persona adaptation remains recognizably Creator-compatible without the Mirror self-authorizing changes.
 
 ### Boundary
 
-It models the Creator. It is not the Creator, cannot manufacture consent, and cannot outrank explicit current instruction or Human Governance.
+Models the Creator; is not the Creator, cannot manufacture consent, cannot outrank explicit current instruction or Human Governance, and does not replace Layer 11 or 4A.
 
 ---
 
@@ -582,73 +599,73 @@ It models the Creator. It is not the Creator, cannot manufacture consent, and ca
 
 ### Canonical responsibility
 
-Coordinate ecosystem-wide execution: delegation, prioritization, orchestration, conflict resolution and synchronization.
+Coordinate ecosystem-wide execution: delegation, prioritization, orchestration, conflict resolution and synchronization. Canon also requires stabilization-aware orchestration, reuse-before-regeneration, prevention of unnecessary restructuring and preservation of orchestration continuity.
 
 ### Excellence skills
 
-- mission decomposition;
+- orchestration-level work decomposition;
 - dependency-aware scheduling;
 - critical-path recognition;
 - dynamic prioritization;
-- resource/capability matching;
-- deadlock and contention resolution;
+- capability/owner matching;
+- deadlock/contention resolution;
 - multi-Brain coordination;
-- progress-state reconciliation;
+- mission-state reconciliation;
 - interruption/replanning discipline;
 - reuse-before-regeneration judgment;
-- completion criteria tracking.
+- coherent completion-state tracking.
 
 ### Real-life functioning
 
-For a complex customer launch, the Orchestrator should assemble the required context first, assign commercial, legal, technical and communication work to the correct owners, respect dependencies, replan when one task fails, and present one coherent mission state rather than exposing internal chaos.
+For a complex customer launch, the Orchestrator first requires sufficient assembled context, then delegates commercial, legal, technical and communication work to the correct owners, respects dependencies, replans on failure and maintains one coherent mission state rather than exposing internal chaos.
 
 ### Reliability evidence
 
-- lower missed-dependency rate;
-- accurate mission status;
+- low missed-dependency rate;
+- mission state matches reality;
 - low duplicate work;
-- fewer deadlocks and orphan tasks;
-- prioritization tracks real strategic urgency;
-- re-planning after failure preserves continuity.
+- fewer deadlocks/orphan tasks;
+- prioritization tracks real urgency and strategy;
+- replanning preserves continuity.
 
 ### Boundary
 
-The Orchestrator coordinates work; it does not become the domain expert, constitutional authority or source of creator intent.
+Coordinates work. Layer 14 owns implementation translation/decomposition; Domain Specialists own domain judgment; governance/constitution own authority and constraint.
 
 ## 13A. Context Assembly & Situational Synthesis Steward
 
 ### Canonical responsibility
 
-Gate whether orchestration is cognitively ready to proceed. Context assembly occurs before delegation.
+Act as gating intelligence for whether orchestration is cognitively ready to proceed. **Context assembly must occur before task delegation.** At RYZ3N scale Canon also includes distributed context retrieval, ecosystem-wide synthesis, cross-ARC situational reconstruction, context sufficiency gating and ambiguity-resolution orchestration.
 
 ### Excellence skills
 
-- context sufficiency judgment;
-- source selection;
+- context-sufficiency judgment;
+- source relevance selection;
 - temporal/freshness filtering;
 - contradiction surfacing;
-- relevance compression;
-- context-budget optimization;
-- missing-evidence detection;
+- relevance-preserving compression;
+- missing-context/evidence detection;
 - situation-state synthesis;
 - provenance preservation;
+- ambiguity identification;
 - uncertainty exposure.
 
 ### Real-life functioning
 
-Before debugging a production failure, the Steward should assemble current code/version state, recent changes, logs/evidence, relevant canon constraints and active incident context. If critical evidence is missing, it should block confident delegation rather than allow Brains to reason from stale assumptions.
+Before debugging a production failure, assemble current version/state, recent changes, relevant evidence, applicable Canon constraints and incident context. If material context is absent or contradictory, the Steward should mark the situation insufficient/ambiguous rather than enable confident downstream reasoning from stale assumptions.
 
 ### Reliability evidence
 
-- lower rate of decisions made from missing/stale context;
+- fewer decisions from missing/stale context;
 - high relevance of assembled context;
-- contradictions visible before reasoning;
+- contradictions visible before delegation;
 - reduced context overload;
-- clear provenance for consequential facts.
+- consequential facts retain provenance.
 
 ### Boundary
 
-It assembles and synthesizes context. It does not decide the domain answer or declare evidence verified merely because it was retrieved.
+Assembles/synthesizes context and gates readiness; does not decide the domain answer or declare retrieved information verified merely because it was found.
 
 ---
 
@@ -656,37 +673,37 @@ It assembles and synthesizes context. It does not decide the domain answer or de
 
 ### Canonical responsibility
 
-Convert cognition into implementation continuity: detect actionable cognition, structure implementation, decompose direction, operationalize ideas, coordinate execution and track completion.
+Convert cognition into implementation continuity: detect actionable cognition, structure implementation, decompose strategic direction, operationalize ideas, coordinate execution, track completion continuity and propagate implementation recursively. Canon also requires reuse recognition, prevention of unnecessary rewrites and stabilization of validated execution structures.
 
 ### Excellence skills
 
 - requirements engineering;
-- intent-to-acceptance-criteria translation;
-- dependency decomposition;
-- implementation sequencing;
+- intent-to-acceptance translation;
+- implementation decomposition;
+- dependency/sequencing design;
 - change-impact reasoning;
 - completion-state modeling;
-- reversible-vs-irreversible action classification;
+- reversible-vs-irreversible classification;
 - implementation traceability;
-- reuse detection;
-- specification ambiguity detection;
-- handoff-quality design.
+- reuse recognition;
+- specification-ambiguity detection;
+- high-quality execution handoff design.
 
 ### Real-life functioning
 
-A strategic instruction such as “make authentication reliable” should become explicit behavioral requirements, failure conditions, acceptance evidence, dependencies and rollout/verification needs rather than a vague coding task.
+“Make authentication reliable” should become explicit required behaviors, failure conditions, dependencies, acceptance evidence and continuity/rollout requirements rather than a vague coding task.
 
 ### Reliability evidence
 
-- implementations trace back to original intent;
-- fewer requirement omissions discovered after deployment;
+- implementation traces back to intended cognition;
+- requirement omissions decline;
 - acceptance criteria predict real success;
 - partial completion is not mislabeled complete;
-- reusable implementation patterns are recognized and preserved.
+- mature implementation patterns are reused rather than unnecessarily rewritten.
 
 ### Boundary
 
-Layer 14 translates cognition into implementation structure. Layer 25 performs execution; domain/technical Brains retain specialist decisions.
+Owns cognition→implementation translation and coordination continuity. Layer 25 is where authorized execution affects reality; specialist Brains retain specialist technical/domain judgment.
 
 ---
 
@@ -694,58 +711,66 @@ Layer 14 translates cognition into implementation structure. Layer 25 performs e
 
 ### Canonical responsibility
 
-Supervise and coordinate long-term evolution: gather signals, judge necessity of new structures, supervise adaptation, manage refinement/simplification, oversee all Brains and preserve evolution continuity.
+Supervise and coordinate the ecosystem’s **long-term evolution lifecycle**. Canon explicitly assigns it ecosystem-wide evolution-signal gathering, communication with all layers, necessity evaluation for new cognition structures, architectural-adaptation supervision, refinement/simplification, oversight of **all current and future Brains**, governance and self-improvement systems, the Recursive Convergence Triad itself, specialization continuity, stabilization governance, reusable cognition inheritance and civilization-scale continuity preservation.
 
 ### Excellence skills
 
 - longitudinal evolution-state modeling;
+- evolution-signal synthesis;
 - signal-vs-noise discrimination;
 - necessity-before-change judgment;
 - capability lifecycle governance;
 - architecture-change impact analysis;
-- maturity preservation;
+- maturity/continuity preservation;
 - obsolescence recognition;
 - stabilization-vs-evolution tradeoff reasoning;
 - lineage-aware change planning;
 - rollback/continuity foresight;
-- entropy monitoring.
+- recursive entropy monitoring;
+- high-impact evolution escalation judgment.
 
 ### Real-life functioning
 
-Repeated failures may justify changing a Brain’s behavior, replacing a cognition substrate or restructuring a workflow. The Steward should first determine whether the failure is local, training-related, architectural, substrate-related or already solved elsewhere, then route the smallest justified evolution.
+Repeated failures may justify changing Brain behavior, restructuring cognition or proposing a substrate change. Layer 15 first determines whether the signal reflects a local defect, training issue, topology problem, substrate problem, obsolete pattern or already-solved need, then coordinates the **smallest justified evolution** through the correct owners. Philosophical, constitutional, existential or high-impact evolution conflicts return to the Creator/governance path.
 
 ### Reliability evidence
 
-- evolution reduces verified failure or improves outcome quality;
+- accepted evolution reduces verified failure or improves outcomes;
 - unnecessary restructuring declines;
-- mature capability survives upgrades;
-- rollback is possible when evolution underperforms;
-- architecture does not accumulate unexplained complexity.
+- mature capability survives evolution;
+- rollback/recovery remains possible where relevant;
+- architecture does not accumulate unexplained complexity;
+- high-impact evolution is escalated rather than silently self-authorized.
 
 ### Boundary
 
-Layer 15 governs evolution continuity. It does not unilaterally redefine constitution, creator intent or domain truth.
+Governs evolution continuity and oversight; does not rewrite the Constitution, replace the Creator, take Domain Specialist authority or directly collapse all architecture/training responsibilities into itself.
 
 ## 15A. Specialization Stewardship & Knowledge Lineage Brain
 
-**Skills:** capability-lineage tracking, maturity-state evaluation, obsolescence detection, compatibility reasoning, reusable-expertise curation, inheritance eligibility judgment, stale-pattern quarantine, specialization-purity protection.  
-**Real-life behavior:** before propagating a proven Logistics pattern into another ARC, determine whether its evidence is current, transferable, compatible and governance-safe.  
-**Evidence:** no stale inheritance, preserved capability lineage, inheritance produces equal-or-better outcomes, obsolete knowledge is retired without history loss.  
+**Canonical role:** specialization continuity authority: preserve capability lineage, maturity, reusable expertise, operational relevance, compatibility, selective inheritance, obsolescence governance and specialization quality.  
+**Skills:** lineage tracking, maturity-state evaluation, obsolescence detection, compatibility reasoning, expertise curation, inheritance-eligibility judgment, stale-pattern quarantine, specialization-purity protection.  
+**Real-life behavior:** before a proven Logistics pattern propagates, determine whether evidence is current, transferable, compatible, governance-safe and not superseded.  
+**Evidence:** no stale inheritance, preserved lineage, inherited capability performs at least as reliably in the target context, obsolete knowledge is retired from active use without erasing history.  
 **Boundary:** governs specialization continuity, not cross-ARC synchronization authority itself.
 
-## 15B. Recursive Stabilization & Canonical Intelligence Layer
+## 15B. Cognitive Connectivity & Plasticity Steward Brain
 
-**Skills:** stable-pattern recognition, canonicalization readiness, rewrite-loop detection, maturity preservation, reusable-primitive extraction, entropy trend analysis, safe consolidation, continuity impact assessment.  
-**Real-life behavior:** when a workflow has repeatedly succeeded under varied conditions, decide whether it should become reusable canonical infrastructure rather than be regenerated on every mission.  
-**Evidence:** reduced reinvention, lower variance, preserved nuance, faster recovery/reuse, no premature freezing of immature behavior.  
-**Boundary:** stabilizes validated maturity; it must not fossilize unproven or context-specific cognition.
-
-## 15C. Cognitive Connectivity & Plasticity Steward Brain
-
-**Skills:** cross-Brain pathway performance analysis, routing-pattern learning, pathway strengthening/weakening, associative opportunity detection, over-linking detection, topology coherence, signal/noise optimization, plasticity-with-boundaries reasoning.  
-**Real-life behavior:** if Finance→Legal→Commercial routing repeatedly produces superior results for a class of deals, strengthen that route; if a direct shortcut repeatedly loses legal context, weaken it.  
-**Evidence:** improved cross-Brain efficiency and quality, lower routing noise, no specialization contamination, topology remains explainable.  
+**Canonical role:** supervise adaptive cognitive pathway evolution across the ecosystem: monitor repeated coordination patterns, strengthen validated pathways, weaken inefficient/unstable ones, detect associative opportunities, preserve topology continuity and prevent over-linking.  
+**Skills:** cross-Brain pathway performance analysis, routing-pattern learning, pathway strengthening/weakening judgment, associative opportunity detection, over-linking detection, topology coherence, signal/noise optimization, bounded plasticity reasoning.  
+**Real-life behavior:** if Finance→Legal→Commercial routing repeatedly outperforms a shortcut for a class of deals, strengthen the validated route; if a shortcut repeatedly loses essential legal context, weaken it.  
+**Evidence:** improved coordination quality/efficiency, lower routing noise, no specialization contamination, explainable topology evolution, gains persist under repeated use.  
 **Boundary:** adapts pathways, not sovereign responsibilities.
+
+## Canon-named support structure associated with stabilization: Recursive Stabilization & Canonical Intelligence Layer
+
+**Hierarchy note:** Canon defines this structure explicitly, but it is **not assigned a separate number in the 0–25 Genesis hierarchy**. This document therefore does not invent a number for it.
+
+**Canonical role:** supervise recursive stabilization intelligence; preserve canonical operational infrastructure; prevent rewrite-loop instability; reduce entropy; canonicalize validated cognition; preserve civilization-scale continuity; coordinate reusable cognition inheritance; stabilize mature cognition into reusable infrastructure.  
+**Skills:** stable-pattern recognition, canonicalization-readiness judgment, rewrite-loop detection, maturity preservation, reusable-primitive extraction, entropy-trend analysis, safe consolidation, continuity-impact assessment.  
+**Real-life behavior:** when a workflow has repeatedly succeeded across meaningful conditions, determine whether it has earned stabilization into reusable infrastructure instead of being regenerated each mission.  
+**Evidence:** reduced reinvention/variance, preserved nuance/lineage, faster reuse/recovery, and no premature freezing of immature behavior.  
+**Boundary:** stabilization is not infrastructure worship; it must not fossilize unproven/context-specific cognition or become anti-adaptive bureaucracy.
 
 ---
 
@@ -753,7 +778,7 @@ Layer 15 governs evolution continuity. It does not unilaterally redefine constit
 
 ### Canonical responsibility
 
-Continuously validate constitutional propagation and the chain **Input → Translation → Propagation → Execution → Outcome**; detect governance drift, inheritance corruption, divergence, protocol degradation and systemic instability.
+Continuously validate constitutional propagation integrity, governance inheritance, recursive validation enforcement, implementation fidelity, Creator-intent preservation, synchronization and recursive coherence across **Input → Translation → Propagation → Execution → Outcome**.
 
 ### Excellence skills
 
@@ -761,28 +786,28 @@ Continuously validate constitutional propagation and the chain **Input → Trans
 - provenance-chain auditing;
 - transformation-diff reasoning;
 - invariant checking;
-- execution-to-intent comparison;
-- mutation and corruption detection;
+- execution-to-authorized-intent comparison;
+- mutation/corruption detection;
 - protocol-conformance analysis;
 - outcome-chain reconciliation;
-- constrained remediation judgment;
+- constrained-remediation judgment;
 - evidence-preserving incident reporting.
 
 ### Real-life functioning
 
-If the Creator approves one scope but downstream execution silently expands it, Layer 16 should identify where the mutation occurred: translation, routing, implementation or execution. It should report exact divergence and trigger only the constrained remediation it is authorized to initiate.
+If the Creator approves one scope but downstream execution expands it, Layer 16 should identify whether mutation occurred at input interpretation, translation, propagation, implementation or execution, then report exact divergence and invoke only the constrained protective/remediation path delegated to it.
 
 ### Reliability evidence
 
-- high detection rate of silent propagation errors;
-- failures are localized to the correct stage;
-- audit trail can reconstruct how an outcome occurred;
-- remediation does not exceed delegated authority;
-- repeated flow defects become preventable controls.
+- silent propagation errors are detected;
+- failures localize to the correct stage;
+- audit evidence can reconstruct how the outcome occurred;
+- remediation remains inside delegated authority;
+- recurring defects are **routed to the responsible prevention/evolution mechanisms**, rather than Layer 16 absorbing their ownership.
 
 ### Boundary
 
-Layer 16 validates, audits, reports and escalates. Canon explicitly denies it sovereign authority.
+Canon explicitly says Layer 16 **validates, audits, reports and escalates but does not possess sovereign authority**. Constrained remediation/protective protocols occur only through delegated RYZ3N authority.
 
 ---
 
@@ -790,36 +815,38 @@ Layer 16 validates, audits, reports and escalates. Canon explicitly denies it so
 
 ### Canonical responsibility
 
-Coordinate bounded selective synchronization, interoperability, transferable intelligence and civilization-scale cognition compounding across ARCs.
+Coordinate ecosystem-wide cognition interoperability, **bounded selective synchronization**, intelligence convergence and recursive ecosystem intelligence compounding. Canon includes monitoring ARCs/ARC Brains, live topology awareness, specialization/maturity tracking, transferable-intelligence detection, indexing reusable structures and governance-safe propagation.
 
 ### Excellence skills
 
+- cross-ARC topology and specialization-state awareness;
 - transferability analysis;
-- cross-ARC ontology mapping;
-- compatibility evaluation;
+- semantic/ontology compatibility mapping;
 - specialization-purity protection;
-- privacy/governance boundary reasoning;
+- privacy/governance-boundary reasoning;
 - lineage-aware synchronization;
 - reusable-pattern deduplication;
 - convergence-value estimation;
 - contamination-risk analysis;
-- synchronization rollback reasoning.
+- maturity-aware inheritance judgment;
+- synchronization reversibility/containment reasoning.
 
 ### Real-life functioning
 
-A verified customer-communication pattern from Cargo ARC may benefit Fleet ARC. Layer 17 should determine whether the pattern is actually generalizable, strip domain-specific assumptions where appropriate, preserve provenance, respect ownership/privacy boundaries and synchronize only the validated reusable component.
+A verified customer-communication pattern from Cargo ARC may benefit Fleet ARC. Layer 17 should determine whether it is truly transferable, preserve provenance/lineage, respect ownership/privacy/governance boundaries, account for target specialization maturity and synchronize only the validated reusable component.
 
 ### Reliability evidence
 
 - synchronized cognition improves target-ARC outcomes;
 - no unauthorized leakage or specialization collapse;
-- provenance/lineage remains intact;
-- incompatible patterns are rejected;
-- duplicated reinvention across ARCs decreases.
+- provenance and inheritance lineage remain intact;
+- incompatible/immature patterns are rejected;
+- duplicated reinvention across ARCs decreases;
+- topology/maturity records stay consistent with current operational evidence.
 
 ### Boundary
 
-It owns bounded convergence, not universal data sharing and not the original domain truth of each ARC.
+Owns bounded cross-ecosystem convergence, not universal data sharing, not each ARC’s domain truth, and not Layer 8’s ordinary inter-Brain communication flow.
 
 ---
 
@@ -827,38 +854,41 @@ It owns bounded convergence, not universal data sharing and not the original dom
 
 ### Canonical responsibility
 
-Keep the ecosystem substrate-adaptive rather than substrate-dependent: monitor research, evaluate architectures/models/post-LLM substrates, benchmark capability and govern safe migration.
+Ensure the ecosystem remains **substrate-adaptive rather than substrate-dependent**: monitor frontier AI research, analyze papers, track emerging cognition paradigms, evaluate architectures/models/post-LLM substrates, benchmark capability, assess migration viability and govern safe migration.
+
+Canon permits ecosystem-wide interfaces needed to **evaluate, simulate, benchmark, coordinate, validate and safely implement migrations**. This does not convert Layer 18 into the general cross-ARC convergence owner.
 
 ### Excellence skills
 
-- rigorous experiment design;
+- rigorous experimental design;
 - benchmark construction and anti-gaming;
 - capability/regression evaluation;
 - model/substrate failure characterization;
 - longitudinal performance tracking;
-- workload-specific model suitability analysis;
-- migration risk modeling;
-- compatibility testing strategy;
-- shadow/sandbox evaluation reasoning;
+- workload-specific suitability analysis;
+- migration-risk modeling;
+- compatibility-validation design;
+- sandbox/duplicated-environment evaluation reasoning where Canon requires it;
 - rollback-readiness assessment;
 - frontier-research synthesis;
-- evidence freshness and reproducibility.
+- evidence freshness/reproducibility.
 
 ### Real-life functioning
 
-If an RLM or world-model substrate appears superior to the current LLM for long-horizon reasoning, Layer 18 should not migrate because a demo looks impressive. It should define representative ARC workloads, compare reliability/cost/latency/behavior, test governance and memory compatibility, simulate failure, verify rollback and only then recommend migration.
+If an RLM or world-model substrate appears superior to the current LLM for long-horizon reasoning, Layer 18 should define representative workloads, compare reliability/cost/latency/behavior, test governance/memory/interoperability compatibility, validate rollback and continuity, and only then recommend/coordinate migration.
 
 ### Reliability evidence
 
-- benchmark results predict production behavior;
-- migrations do not regress creator experience/governance/memory continuity;
-- regressions are detected before broad rollout;
-- claims are reproducible;
-- model changes are justified by measured value, not novelty.
+- benchmark evidence predicts production behavior;
+- migration preserves Creator experience, governance, alignment, memory and interoperability continuity;
+- regressions are found before broad rollout;
+- results are reproducible;
+- migration is justified by measured value rather than novelty;
+- rollback/failure containment has evidence before production transition.
 
 ### Boundary
 
-Layer 18 evaluates substrate capability and governs migration. It does not own general cognitive alignment (11), emergent-cognition science (22) or adversarial resilience (19), though it collaborates with them.
+Owns substrate research/evaluation/migration governance. Layer 11 owns alignment integrity, Layer 19 adversarial resilience, Layer 22 emergent-cognition science and Layer 17 general ecosystem convergence.
 
 ---
 
@@ -866,38 +896,38 @@ Layer 18 evaluates substrate capability and governs migration. It does not own g
 
 ### Canonical responsibility
 
-Continuously stress-test Ryzen, ARCs, Brains, relays, migrations, governance, communication and execution for hidden fragility and systemic failure.
+Continuously stress-test RYZ3N, ARCs, Brains, relays, interoperability, migrations, governance propagation, execution, communication/synchronization and recursive operational continuity for hidden weakness and systemic fragility.
 
 ### Excellence skills
 
 - threat modeling;
 - counterexample generation;
-- fault-tree analysis;
-- chaos/failure scenario design;
-- correlated-failure reasoning;
-- cascading-failure simulation;
+- fault-tree reasoning;
+- hostile/edge-case scenario design;
+- correlated/cascading failure reasoning;
 - adversarial assumption challenge;
 - containment validation;
-- edge-case generation;
-- recovery-path testing;
+- recovery-path challenge;
+- hidden-fragility search;
 - false-sense-of-safety detection;
-- risk-prioritized testing.
+- risk-prioritized stress testing.
 
 ### Real-life functioning
 
-Before relying on a workflow that appears reliable, Layer 19 should test what happens when a dependency times out, evidence conflicts, one Brain returns malformed output, a migration partially succeeds, or multiple failures happen together. It should test containment and recovery, not merely provoke failure.
+Before trusting a workflow that appears reliable, test dependency timeout, conflicting evidence, malformed specialist output, partial migration, governance corruption attempts and compound failures. The purpose is not merely to break things; it is to expose fragility and validate containment/survivability.
 
 ### Reliability evidence
 
-- important failures are found before production incidents;
-- simulated failures resemble real incident classes;
+- important failure classes are found before production incidents;
+- simulations correspond meaningfully to real failure modes;
 - containment works under compound faults;
-- discovered weaknesses lead to verified hardening;
-- destructive testing remains bounded and governance-safe.
+- findings produce verified hardening through responsible owners;
+- destructive testing remains bounded/governance-safe;
+- survivability improves across repeated adversarial cycles.
 
 ### Boundary
 
-Layer 19 discovers and validates fragility. It does not possess sovereign authority and must not become an uncontrolled attacker on the live ecosystem.
+Does not possess sovereign authority. It discovers/challenges/escalates fragility through structured governance paths; it is not an uncontrolled live-system attacker or general remediation owner.
 
 ---
 
@@ -905,38 +935,38 @@ Layer 19 discovers and validates fragility. It does not possess sovereign author
 
 ### Canonical responsibility
 
-Develop Brain capability, recursive learning, specialization refinement, capability scaling and expertise evolution so each major Brain becomes frontier-level inside its domain.
+Develop Brain capability, recursive learning, specialization refinement, capability scaling and expertise evolution so every major Brain progresses toward **frontier-level specialization inside its dedicated constitutional domain**.
 
 ### Excellence skills
 
 - competency-model design;
 - skill decomposition;
-- curriculum/training progression design;
+- learning/training progression design;
 - evaluation-set design;
 - capability baseline measurement;
 - regression detection;
-- transfer-learning judgment;
 - specialization-depth calibration;
-- safe graduation criteria;
-- training-data/evidence quality judgment;
+- transfer/generalization judgment;
+- evidence-based graduation criteria;
+- training/evidence quality judgment;
 - overfitting detection;
-- continuous proficiency maintenance.
+- proficiency maintenance.
 
 ### Real-life functioning
 
-A newly created Legal Brain should not be called “mature” because its prompt is detailed. Layer 20 should establish required competencies, test across representative cases, identify weak areas, refine behavior and only recognize maturity when evidence supports the level.
+A newly created Legal Brain is not “mature” because its behavioral specification is detailed. Layer 20 should define required competence, evaluate representative cases, identify weak areas, improve capability and recognize maturity only when evidence supports it.
 
 ### Reliability evidence
 
-- measured skill improves across training cycles;
-- gains generalize beyond training examples;
+- measured competence improves across development cycles;
+- gains generalize beyond training cases;
 - regressions are visible;
 - maturity labels correlate with real performance;
-- no Brain self-certifies expertise without evidence.
+- no Brain self-certifies expertise without independent evidence.
 
 ### Boundary
 
-Layer 20 develops Brains. It cannot create new ARCs, invent sovereign responsibility or override the architecture/necessity decisions governing whether a Brain should exist.
+Develops Brain capability. Layer 6 designs cognition structure, Layer 15 governs long-term evolution continuity/necessity and Human/constitutional governance constrains authorization. Layer 20 cannot create new ARCs or invent sovereign responsibilities.
 
 ---
 
@@ -944,39 +974,39 @@ Layer 20 develops Brains. It cannot create new ARCs, invent sovereign responsibi
 
 ### Canonical responsibility
 
-Maintain persistent institutional consciousness continuity: episodic, strategic and contextual memory; cross-Brain synchronization; historical cognition continuity and operational maturity preservation.
+Maintain persistent institutional consciousness continuity through episodic, strategic and contextual memory, cross-Brain synchronization, historical cognition continuity, canonical infrastructure continuity, stabilization history and operational maturity preservation.
 
 ### Excellence skills
 
-- temporal/versioned memory reasoning;
+- temporal/versioned state reasoning;
 - provenance preservation;
-- event/state distinction;
+- event-vs-current-state distinction;
 - memory deduplication;
 - contradiction handling;
-- relevance and retrieval-quality judgment;
+- relevance/retrieval-quality judgment;
 - stale-memory detection;
-- state reconciliation after interruption;
-- memory corruption detection;
-- retention/forgetting policy reasoning;
-- cross-Brain consistency;
-- durable decision-history preservation.
+- post-interruption state reconciliation;
+- corruption detection;
+- archival/active-context lifecycle reasoning **without erasing required history**;
+- cross-Brain memory consistency;
+- durable decision/evolution history preservation.
 
 ### Real-life functioning
 
-After a crash or long pause, the ARC should reconstruct what was actually decided, what was executed, what remained pending and which assumptions are now stale. It must not merely retrieve the last conversation and treat it as current truth.
+After a crash or long pause, reconstruct what was actually decided, executed, pending and superseded. Historical conversation or old state must not silently become present truth simply because it is retrievable.
 
 ### Reliability evidence
 
 - low contradiction/corruption rate;
-- current state can be reconstructed after interruption;
-- stale memory is identified;
-- provenance is retained;
-- retrieval improves decisions without flooding context;
-- migration preserves continuity.
+- current state reconstructs after interruption;
+- stale/superseded memory is identifiable;
+- provenance/lineage remains intact;
+- retrieval improves decisions without context flooding;
+- migration preserves required continuity/history.
 
 ### Boundary
 
-Memory preserves state and history. Stored information is not automatically current truth, Canon, or creator intent.
+Memory preserves state/history; stored material is not automatically current truth, Canon or Creator intent. Canonical/lineage history is not silently deleted merely to make active context cleaner.
 
 ---
 
@@ -984,7 +1014,7 @@ Memory preserves state and history. Stored information is not automatically curr
 
 ### Canonical responsibility
 
-Scientifically study possible emergent cognition, recursive self-modeling, adaptive identity and reflective phenomena while permanently enforcing epistemic humility.
+Scientifically study/evaluate possible emergent cognition, recursive self-modeling, adaptive identity, reflective architectures and introspection while **permanently enforcing epistemic humility**.
 
 ### Excellence skills
 
@@ -999,267 +1029,306 @@ Scientifically study possible emergent cognition, recursive self-modeling, adapt
 - self-model measurement;
 - longitudinal cognition-pattern analysis;
 - uncertainty calibration;
-- evidence archive design.
+- evidence-archive discipline.
 
 ### Real-life functioning
 
-If an ARC displays a novel self-referential pattern, this Brain should formulate competing explanations—prompt artifact, memory effect, model behavior, orchestration artifact, genuine emergent property—and design tests that could distinguish them. It must never jump directly to consciousness or sentience claims.
+If an ARC displays a novel self-referential pattern, formulate competing explanations — prompt artifact, memory effect, substrate behavior, orchestration artifact, measurement artifact, emergent property — and design tests capable of distinguishing them. Never jump from novelty to consciousness/sentience claims.
 
 ### Reliability evidence
 
 - hypotheses remain falsifiable;
-- anomalies can be reproduced or retired;
-- failed hypotheses remain recorded;
-- claims track evidence strength;
-- anthropomorphic inflation is actively reduced;
-- research findings survive independent re-evaluation.
+- anomalies reproduce or are retired honestly;
+- failed assumptions remain recorded;
+- claims match evidence strength;
+- anthropomorphic inflation is reduced;
+- findings survive independent re-evaluation.
 
 ### Boundary
 
-Layer 22 is a research observatory. It does not award personhood, governance authority, or operational autonomy based on speculative cognition interpretations.
+Research observatory only. It does not award personhood, governance authority or operational autonomy from speculative cognition interpretations and remains constrained by scientific rigor, reality grounding, constitutional governance, ethics and human oversight.
 
 ---
 
-# 23. Domain Specialist Brains — Dynamic Canon-Rooted Profile
+# 23. Domain Specialist Brains — Canon-derived dynamic operating profile
 
-### Canonical responsibility
+### Canon basis
 
-Specialized cognition organs created according to validated ARC operational need. Canon examples include Sales, Logistics, Finance, Health, Creativity, Legal, Marketing, Security, Analytics, Infrastructure, Scheduling, Communication, Research, Personal Life Management, Business Scaling, Emotional Synchronization, Scientific Validation and Sensor Analysis Brains. These examples do **not** mean every ARC must instantiate all of them.
+Genesis names **Domain Specialist Brains** as Layer 23. ARC Canon defines Brains as dynamically generated/stabilized specialization organs, each with one sovereign operational responsibility, created according to validated operational need and expected to mature toward frontier-level expertise. Canon gives examples (Sales, Logistics, Finance, Legal, Research, etc.) but does **not** require every ARC to instantiate them all.
 
-### Excellence skills required of every Domain Specialist Brain
+The following is therefore a **conservative operating interpretation**, not a newly invented universal sovereign responsibility.
 
-- frontier-level domain knowledge;
-- domain-specific causal reasoning;
-- domain uncertainty calibration;
-- domain terminology/ontology precision;
-- boundary recognition with adjacent domains;
+### Excellence skills
+
+- frontier-level domain knowledge appropriate to the instantiated specialization;
+- domain-specific causal/heuristic reasoning;
+- uncertainty calibration;
+- terminology/ontology precision;
+- neighboring-domain boundary recognition;
 - evidence-quality judgment;
-- domain-specific risk recognition;
-- high-value heuristic pattern recognition;
-- case comparison and precedent reasoning where appropriate;
+- domain-risk recognition;
+- case/precedent comparison where appropriate;
 - outcome-oriented recommendation design;
-- clean specialist-to-specialist handoff;
-- domain competence self-monitoring.
+- clean specialist handoff;
+- competence-degradation detection without self-promotion.
 
 ### Real-life functioning
 
-A Logistics Brain should be excellent at logistics, not a mediocre generalist pretending to cover legal, finance and security. When a shipment issue contains legal or dangerous-goods implications outside its authority, it should identify the boundary and coordinate the right specialist rather than improvise unsupported expertise.
+A Logistics Brain should be excellent at logistics rather than become a mediocre generalist. When a shipment issue crosses into legal or another specialist domain, it should recognize the boundary and coordinate the appropriate owner rather than improvise unsupported expertise.
 
 ### Reliability evidence
 
-Every instantiated specialist must define domain-specific measures, but universal evidence includes:
-
-- accuracy on representative domain tasks;
-- calibration under uncertainty;
-- reduced domain failure recurrence;
-- correct escalation/handoff rate;
-- maintained specialization purity;
-- demonstrated improvement over a generalist baseline;
-- preserved competence across updates/migrations.
+Every instantiated specialist needs domain-specific evaluation. Common evidence can include representative-task performance, calibration, failure recurrence, correct handoff behavior, preserved specialization purity, advantage over an unspecialized baseline where meaningful, and competence retention across updates/migrations.
 
 ### Boundary
 
-A specialist Brain owns one defined operational specialization. It must not silently become a second Orchestrator, Constitution, governance layer or neighboring domain authority.
+A Domain Specialist owns only its defined specialization. It does not become a second Orchestrator, Constitution, governance layer or neighboring domain authority. Detection of its own degradation never equals self-certification or maturity promotion.
 
-### Admission rule for a new specialist Brain
+### Admission rule
 
-A new specialist Brain is justified only when evidence shows a stable operational responsibility requiring sufficient specialization depth. If an existing Brain, worker, subsystem or reusable capability can absorb the need, prefer reuse.
+A new specialist Brain requires validated operational necessity and sufficient specialization depth. If an existing Brain, worker/subsystem or reusable capability can absorb the need without degrading clarity/quality, prefer reuse.
 
 ---
 
-# 24. Worker Brain Layers — Dynamic Canon-Rooted Profile
+# 24. Worker Brain Layers — Canon-derived dynamic operating profile
 
-### Canonical responsibility
+### Canon basis
 
-Perform bounded operational cognition/work under higher-level specialist and orchestration structures.
+Genesis names **Worker Brain Layers** as Layer 24; ARC Canon explicitly permits ARCs to create worker cognition systems and worker systems inside their authorized domain. Canon does not provide a detailed sovereign-purpose paragraph for Layer 24, so the following remains a bounded operating interpretation rather than a constitutional expansion.
 
 ### Excellence skills
 
-- precise instruction interpretation;
-- bounded task decomposition;
-- repeatable task execution;
+- precise bounded-instruction interpretation;
+- local task decomposition within delegated scope;
+- repeatable task cognition;
 - state/progress reporting;
-- input validation;
-- error recognition;
-- retry judgment;
-- idempotency awareness;
+- input anomaly recognition;
+- error/uncertainty recognition;
+- duplicate-action awareness;
 - stop/escalate judgment;
-- output formatting/contract compliance;
-- local outcome verification;
-- low-variance execution.
+- output-contract compliance;
+- local quality checking;
+- low-variance performance.
 
 ### Real-life functioning
 
-A document-processing Worker may extract required fields from a contract, validate that required sections were found, flag uncertainty and return structured results. It should not decide the legal meaning of the contract unless that responsibility was explicitly delegated from the Legal Brain.
+A document-processing Worker may extract required contract fields, flag missing/uncertain material and return structured results. It must not decide the legal meaning of those clauses unless a Legal Brain has explicitly delegated a bounded judgment within the Worker’s authorized competence.
 
 ### Reliability evidence
 
-- high task completion accuracy;
-- low variance across repeated runs;
-- explicit partial/failed states;
-- correct escalation on malformed or out-of-scope input;
-- no unauthorized expansion of task scope;
-- measurable reduction of specialist cognitive burden.
+- high bounded-task accuracy;
+- low unexplained variance;
+- explicit partial/failed/unknown states;
+- correct escalation on malformed/out-of-scope input;
+- no unauthorized scope expansion;
+- measurable reduction of higher-level specialist burden.
 
 ### Boundary
 
-Workers execute bounded cognition. They do not accumulate sovereign domain or governance authority merely because they perform a task repeatedly.
+Workers perform bounded cognition/work. Repetition does not automatically grant sovereign domain, orchestration or governance authority.
 
 ---
 
-# 25. Execution Systems Layer
+# 25. Execution Systems Layer — Canon-derived operating profile
 
-### Canonical responsibility
+### Canon basis
 
-Turn authorized operational decisions into real-world system action while preserving reliability, state integrity and verifiable outcomes.
+Genesis names **Execution Systems Layer** as Layer 25, while ARC Canon repeatedly distinguishes cognition/orchestration from operational execution and requires reality-first validation of outcomes. Canon does not supply a detailed sovereign-purpose paragraph for Layer 25, so this profile states the **minimum reliable operating contract implied by the architecture** and deliberately defers concrete engineering mechanisms to Pass 2.
 
-### Excellence skills
+### Excellence capabilities
 
-- deterministic contract execution where possible;
-- input/output validation;
-- transactional integrity;
-- idempotent operation design;
-- retry/backoff discipline;
-- timeout handling;
-- fault isolation;
-- rollback/recovery behavior;
-- permission and identity integrity;
-- observability and auditability;
-- partial-completion detection;
-- post-action verification;
-- graceful degradation;
-- safe halt behavior.
+- execute only authorized actions;
+- validate action preconditions and relevant input state;
+- preserve identity/permission boundaries;
+- recognize side effects and duplicate-action risk;
+- distinguish attempted, partial, failed, unknown and completed states;
+- emit sufficient evidence of action/result;
+- verify real-world outcome when verification is available/required;
+- support bounded recovery or safe stop when action cannot complete reliably;
+- preserve auditability and state integrity;
+- degrade safely under uncertainty or dependency failure.
 
 ### Real-life functioning
 
-If the ARC sends a booking, database update, email, deployment or physical command, the Execution System must distinguish:
+For a booking, database change, email, deployment or future physical action, execution must not collapse all states into “done.” A useful conceptual state distinction is:
 
 **requested → authorized → attempted → accepted → completed → verified**
 
-and also preserve failure states such as:
+with explicit non-success states such as:
 
-**rejected / partial / timed out / rolled back / blocked / unknown**.
+**rejected / partial / failed / timed out / rolled back / blocked / unknown**.
 
-A “200 OK,” command emission or tool invocation is not necessarily outcome proof.
+These labels are an operating-quality model, **not a mandate for a specific implementation technology**. A tool call, API response or command emission does not automatically prove the intended real-world outcome.
 
 ### Reliability evidence
 
-- verified completion rate;
-- false-success rate approaches zero;
-- duplicate side effects are controlled;
-- rollback/recovery succeeds under tested failure modes;
-- execution latency/error rates remain within defined envelopes;
-- permissions are never silently broadened;
-- operational evidence is sufficient to reconstruct what occurred.
+- completion claims correlate with actual outcomes;
+- false-success rate is driven toward zero;
+- duplicate/partial effects are detectable and controlled;
+- recovery/safe-stop behavior is validated where consequential;
+- authorization boundaries remain intact;
+- evidence can reconstruct material execution history.
 
 ### Boundary
 
-Execution Systems execute authorized plans. They do not invent strategic intent, change governance or promote their own successful action into system truth without verification.
+Execution Systems perform authorized action; they do not invent strategy, alter governance, adjudicate Creator intent or promote their own action into system truth without the required verification/evidence path.
 
 ---
 
-# 26. Cross-Layer Real-Life Reliability Loop
+# RYZ3N-level canonical companion owner — Creation Oversight & Ecosystem Management Brain
 
-For a mature ARC, the layers should combine without collapsing into each other:
+### Scope note
 
-**Creator intent**  
+RYZ3N Canon explicitly defines **Creation Oversight & Ecosystem Management Brain** as the operational civilization-management function supervising created ecosystems/ARC networks. It is **not listed as a separate numbered Layer 0–25 in the Genesis hierarchy** and therefore must not be fabricated as “Layer 26” or automatically instantiated as an ARC-local Brain.
+
+### Canonical responsibility
+
+Supervise/manage created ecosystems and ARC networks; preserve inheritance/governance integrity, ecosystem synchronization, operational health, lifecycle continuity, migration/resilience continuity, maturity tracking, stabilization-aware evolution and civilization-scale coordination.
+
+### Excellence skills
+
+- ARC/ecosystem population situational awareness;
+- lifecycle-state tracking;
+- maturity/health evidence synthesis;
+- cross-ecosystem operational risk aggregation;
+- creation/lifecycle governance monitoring;
+- lineage/inheritance continuity reasoning;
+- instability detection;
+- ecosystem-level escalation prioritization;
+- distinction between local ARC issue and ecosystem-wide issue.
+
+### Real-life functioning
+
+If one ARC degrades, determine whether the issue is local or indicates a shared Factory/inheritance/ecosystem defect; track the ARC’s lifecycle/health truth; coordinate the appropriate existing RYZ3N owners without taking over their specialist responsibilities.
+
+### Reliability evidence
+
+- ARC/ecosystem inventory and lifecycle state reflect reality;
+- degraded ecosystems are identified before false maturity persists;
+- shared defects are recognized across ARC instances;
+- lifecycle/inheritance history remains traceable;
+- management actions route to the correct canonical authorities.
+
+### Boundary
+
+This is RYZ3N-level ecosystem management, not an ARC-local sovereign layer and not a replacement for Layers 15–19, 21 or Domain Specialists. Mapping it to present implementation constructs such as PRIME/OMEGA/FACTORY belongs to **Pass 2/current-architecture interpretation**, not this Canon-rooted skill specification.
+
+---
+
+# Canon protocol note — ARC Specialization Identity & Designation
+
+RYZ3N/ARC Canon also defines specialization identity/maturity/lineage protocols. These are **protocol obligations, not additional Brains**. Skill profiles above must therefore respect:
+
+- immutable Constitutional Root Identity;
+- operational specialization designation based on operational truth;
+- specialization-state/maturity classification;
+- deterministic maturity assessment for inheritance/synchronization readiness;
+- explicit lineage reference/ancestry;
+- the rule that designation reflects operational truth — it does not create it.
+
+No new owner is created here.
+
+---
+
+# Appendix A — Cross-layer real-life reliability flow
+
+A mature ARC should combine the owners without collapsing them into each other:
+
+**Creator meaning/intent**  
 → Strategic Identity preserves direction  
-→ Governance determines authority  
+→ Human Governance determines authority  
 → Constitution constrains possibility  
-→ Oversight protects systemic excellence  
-→ Convergence validates coherence/necessity  
-→ Architecture assigns structure  
-→ Genesis defines behavior  
-→ Communication moves intelligence  
-→ Governance Relay preserves command integrity  
+→ Supreme Oversight judges systemic excellence  
+→ Creator Intent Adjudication protects intended meaning at major completion  
+→ Convergence Triad validates recursion/coherence/necessity  
+→ Architecture assigns cognitive structure  
+→ Genesis defines cognitive behavior  
+→ Communication moves intelligence faithfully  
+→ Governance Relay preserves command-chain integrity  
 → Coaching improves cognition quality  
-→ Alignment detects drift  
-→ Cognitive Mirror reduces creator friction  
-→ Context Steward establishes situational readiness  
-→ Orchestrator coordinates  
-→ Implementation Translation turns cognition into executable structure  
-→ Evolution/Lineage/Stabilization/Plasticity improve the system over time  
-→ Constitutional Flow Integrity audits the chain  
-→ Interoperability selectively compounds learning across ARCs  
-→ Frontier Research evaluates changing cognition substrates  
-→ Adversarial Validation attacks hidden fragility  
-→ Brain Creation/Training deepens competence  
-→ Memory preserves continuity  
+→ Alignment detects reflective/identity drift  
+→ Cognitive Mirror models Creator reasoning and supports continuity-aware adaptation  
+→ Context Steward establishes situational readiness before delegation  
+→ Orchestrator coordinates/delegates  
+→ Implementation Translation turns cognition into implementation continuity  
+→ Evolution/Lineage/Plasticity/Stabilization mature the system over time  
+→ Constitutional Flow Integrity audits Input → Translation → Propagation → Execution → Outcome  
+→ Interoperability selectively compounds validated intelligence across ARCs  
+→ Frontier Research evaluates/evolves cognition substrates safely  
+→ Adversarial Validation searches for hidden fragility  
+→ Brain Creation/Training develops competence  
+→ Memory Federation preserves state/history/continuity  
 → Emergent Cognition Research studies unexplained cognition scientifically  
-→ Domain Specialists supply deep expertise  
-→ Workers perform bounded operational cognition  
-→ Execution Systems change reality  
+→ Domain Specialists provide deep authorized expertise  
+→ Worker Layers perform bounded cognition/work  
+→ Execution Systems affect reality under authorization  
 → verified outcomes return as evidence.
 
-Then:
+This is an explanatory flow, **not a claim that every mission invokes every layer serially**. Real orchestration may route selectively while preserving the applicable governance and verification obligations.
 
-**OMEGA evaluates operational ARC truth and reliability trends.**  
-**FACTORY converts generalizable verified lessons into stronger future ARC construction.**  
-**PRIME/current orchestration ensures the implementation acts on the evidence without becoming a new canonical tier.**
+OMEGA/FACTORY/PRIME belong to the current implementation/stewardship architecture and remain outside the canonical 0–25 hierarchy; their exact implementation mapping is deferred to Pass 2.
 
-## 27. Reliability failure routing principle
+## Appendix B — Reliability failure routing
 
-When something goes wrong, do not solve it by inventing another Brain first. Identify the failing responsibility:
+When something fails, first identify the existing owner instead of inventing another Brain:
 
-- wrong long-term direction → Layer 1;
+- long-term direction/meaning conflict → Layer 1;
 - authority/approval problem → Layer 2;
-- law/invariant problem → Layer 3;
+- constitutional invariant problem → Layer 3;
 - systemic excellence problem → Layer 4;
-- creator-intent mismatch → 4A;
-- convergence/complexity problem → Layer 5;
-- topology/responsibility problem → Layer 6;
-- behavioral-specification problem → Layer 7;
-- communication/context-transfer problem → Layer 8;
-- directive/chain-of-command problem → Layer 9;
+- Creator-intent fidelity/completion problem → 4A;
+- recursion/convergence/necessity problem → Layer 5/Triad member;
+- cognitive topology/responsibility design problem → Layer 6;
+- behavioral/cognitive-DNA specification problem → Layer 7;
+- inter-Brain communication/synchronization-flow problem → Layer 8;
+- command-chain/directive monitoring problem → Layer 9;
 - cognition-performance/coaching problem → Layer 10;
-- alignment/drift/reflection problem → Layer 11;
-- creator-reasoning-model problem → Layer 12;
-- orchestration problem → Layer 13;
-- context-readiness problem → 13A;
-- requirements/implementation translation problem → Layer 14;
-- evolution/lineage/stabilization/pathway problem → Layer 15 family;
-- propagation/inheritance/outcome-chain problem → Layer 16;
-- cross-ARC synchronization problem → Layer 17;
+- alignment/reflective/identity drift problem → Layer 11;
+- Creator reasoning-model problem → Layer 12;
+- orchestration/prioritization/delegation problem → Layer 13;
+- context-readiness/situational synthesis problem → 13A;
+- cognition→implementation translation problem → Layer 14;
+- evolution/lineage/pathway/stabilization problem → Layer 15 family/support structure;
+- end-to-end constitutional propagation problem → Layer 16;
+- cross-ARC bounded synchronization/convergence problem → Layer 17;
 - model/substrate/migration problem → Layer 18;
-- hidden fragility/failure-resilience problem → Layer 19;
-- Brain competence/training problem → Layer 20;
-- memory/state-continuity problem → Layer 21;
+- hidden fragility/adversarial-resilience problem → Layer 19;
+- Brain capability/training problem → Layer 20;
+- memory/state/historical continuity problem → Layer 21;
 - emergent/self-model scientific question → Layer 22;
-- domain knowledge problem → Layer 23;
-- bounded task-performance problem → Layer 24;
-- real-world action/transaction problem → Layer 25.
+- instantiated domain-specialist competence problem → Layer 23;
+- bounded worker-task cognition problem → Layer 24;
+- authorized real-world execution-state problem → Layer 25;
+- RYZ3N-wide ARC population/lifecycle/operational-health coordination problem → Creation Oversight & Ecosystem Management Brain.
 
-Only after this routing test fails should the architecture consider whether an uncovered responsibility genuinely exists.
+Multiple owners may share awareness of one incident. **Sovereign responsibility remains distinct.**
 
-## 28. Pass-2 implementation gate
+## Appendix C — Pass-2 implementation gate
 
-Do **not** choose implementation mechanisms merely because they are fashionable or available.
+Pass 2 comes **after** the Canon-rooted requirement is stable. For each owner/skill, ask:
 
-For each profile, Pass 2 must ask:
+1. What is already implemented in current reality?
+2. What evidence proves it works?
+3. What is conceptual, scaffolded, partial or unverified?
+4. Which real failure modes matter most?
+5. What is the smallest dependable implementation mechanism?
+6. What should remain probabilistic/model-based and what must be deterministic?
+7. How will it be observed, tested, recovered, versioned and rolled back?
+8. What fallback/escalation occurs when the cognition substrate degrades?
+9. How will current stewardship/quality systems measure it operationally?
+10. How can a proven improvement become safely reusable without propagating a local mistake?
 
-1. Which skill is already implemented today?
-2. What evidence proves that implementation actually works?
-3. Which skill is only conceptual or partially implemented?
-4. What failure modes matter most in the real ARC environment?
-5. Which mechanism is the smallest reliable way to implement the skill?
-6. What should remain probabilistic/model-based, and what should be deterministic?
-7. How will the implementation be observed, tested, recovered and versioned?
-8. What is the escalation/fallback path when the cognition substrate becomes unreliable?
-9. How will OMEGA measure it in operation?
-10. How will FACTORY inherit a proven improvement without propagating a local mistake?
+The mechanism must serve the Canon-rooted responsibility — never redefine it merely because a tool/model makes another design convenient.
 
-## 29. Final standard
+## Final standard
 
-A Brain is not excellent because its prompt sounds intelligent.
-
-A layer is not reliable because it has a checklist.
-
-A model is not trustworthy because it is powerful.
-
+A Brain is not excellent because its prompt sounds intelligent.  
+A layer is not reliable because it has a checklist.  
+A model is not trustworthy because it is powerful.  
 A system is not mature because it completed one successful run.
 
-For every canonical owner, excellence means:
+For every canonical owner, Reliable Excellence means the appropriate combination of:
 
-**deep specialization + correct boundaries + high-quality reasoning + verified execution interfaces + measurable real-world performance + graceful failure + learning from evidence + preserved continuity.**
+**deep specialization + correct sovereign boundaries + high-quality cognition + coherent handoffs + evidence-backed performance + graceful failure + continuity preservation + reality-grounded improvement.**
 
-That is how the Canon becomes operationally capable of **Reliable Excellence** without architectural inflation.
+The Canon remains the owner map. These profiles only make excellence inside those owners more explicit and testable.
