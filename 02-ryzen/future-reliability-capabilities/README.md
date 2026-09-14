@@ -14,6 +14,28 @@ It is **not a new architecture layer, governance authority, Brain family, or rep
 
 Heuristics may identify the likely path. Verification determines what the evidence justifies.
 
+## Primary Canon-rooted operating registry
+
+Read first when asking what excellence should look like for an existing layer or Brain:
+
+`CANON-ROOTED-EXCELLENCE-SKILL-REGISTRY.md`
+
+It covers Canon Layers 0–25 plus every explicitly named nested Brain/Steward and defines, without creating new authority:
+
+- Canon responsibility;
+- excellence skills;
+- real-life operating behavior;
+- evidence of reliability;
+- escalation triggers where appropriate;
+- hard responsibility boundaries;
+- the later handoff from skill specification to implementation engineering.
+
+The required sequence is:
+
+**Canon responsibility → Excellence skill profile → Real-world behavior → Evidence target → Implementation mechanism → Verification → Proven reliability**
+
+Implementation/tool selection comes later. Do not reverse the sequence by selecting technology first and then reshaping Canon around it.
+
 ## Canon-first ownership rule
 
 Before using or extending any profile in this folder, identify the canonical owner of the underlying responsibility.
