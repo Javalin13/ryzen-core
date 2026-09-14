@@ -108,21 +108,23 @@ This proves two distinct defects in the full PRIME path:
 1. **capability-selection defect** — trivial/simple chat receives an execution-oriented system prompt and broad tool machinery;
 2. **context-cost defect** — a sub-second direct model call becomes a long turn because PRIME sends a very large supervisory context and may require multiple model/tool rounds.
 
-### E1.4 fast-gate implementation snapshot
+### E1.4 implementation surface
 
-At 15:17:14 CEST the live PRIME config showed:
+The live PRIME config showed no custom plugin/hook layer, `toolsets=["hermes-cli"]`, `tool_use_enforcement=auto`, and no custom execution guidance. Installed Hermes source confirms a supported `pre_gateway_dispatch` extension surface exists, but implementation is intentionally on HOLD pending regression archaeology.
 
-```text
-plugins               -> null
-configured toolsets   -> ["hermes-cli"]
-custom_toolsets       -> null
-hooks                 -> null
-agent.tool_use_enforcement -> auto
-agent.execution_guidance   -> null
-existing PRIME plugin files -> none
-```
+### E1.5 PRIME regression timeline — new breakpoint
 
-Interpretation: there is no existing custom plugin layer to unwind. The clean implementation boundary remains a small versioned RYZ3N pre-agent fast gate / supported Hermes hook or equivalent extension, not a Hermes-core fork.
+At ~15:22 CEST the persisted session timeline showed that PRIME's system prompt did **not** become larger after the old MiniMax era:
+
+- 2026-08-28 through 2026-09-10 MiniMax sessions: roughly **35.3k–35.6k prompt characters**;
+- 2026-09-12/early 2026-09-13 Qwen sessions: roughly **35.65k characters**;
+- **2026-09-13 09:49** Ultra session: prompt abruptly dropped to **31,819 characters**;
+- later 2026-09-13/14 sessions: roughly **31.6k characters**;
+- current Laguna session: **31,640 characters**.
+
+This rules out simple prompt-size growth as the regression. A structural prompt-composition change occurred around **2026-09-13 09:49 CEST**. The prompt became smaller, yet behavior became more execution-heavy. Current hypothesis: an older block was removed/replaced while autonomy/execution doctrine gained stronger relative influence or scope. The doctrine may have originated from Lux/Founder/PRIME efforts to stop the Founder acting as terminal relay; attribution is not yet proven.
+
+**Decision:** do not build the fast-gate workaround yet. First compare the last working MiniMax prompt to the current Laguna prompt and identify the exact content change at source.
 
 ## Current acceptance ledger
 
@@ -133,9 +135,9 @@ Interpretation: there is no existing custom plugin layer to unwind. The clean im
 - [ ] E1 PRIME structured-response proof
 - [x] E1 root cause isolated to PRIME/Hermes capability/context path
 - [x] E1 plugin/toolset implementation surface inspected
-- [x] Hermes tool execution observed — but unrequested, therefore drift evidence rather than acceptance
-- [x] E1 failed-attempt timing captured
-- [ ] E1 deterministic fast gate implemented/proven
+- [x] E1 prompt-regression breakpoint identified around 2026-09-13 09:49
+- [ ] E1 old-vs-current prompt composition diff completed
+- [ ] E1 deterministic fast gate implemented/proven — HOLD until prompt regression is understood
 - [ ] E2 Cargo parity applied
 - [ ] E2 Cargo real-message proof
 - [ ] E2 Cargo latency recorded
@@ -144,28 +146,19 @@ Interpretation: there is no existing custom plugin layer to unwind. The clean im
 - [ ] E5 PRIME bounded delegated execution restored
 - [ ] M3 Cargo GREEN durable receipt accepted
 
-## Immediate next diagnostic / implementation gate
+## Immediate next diagnostic
 
-Before writing the RYZ3N fast-gate plugin, inspect the installed Hermes source for the exact supported pre-dispatch hook/plugin contract and one real plugin example. Do not guess hook signatures and do not modify Hermes core.
+Compare the last working MiniMax system prompt against the current Laguna system prompt from `state.db`. Determine which custom PRIME doctrine, skills, memories, or runtime prompt blocks were added, removed, or replaced around the 2026-09-13 breakpoint.
 
-Target behavior after implementation:
-
-```text
-Founder message
-  -> deterministic RYZ3N pre-agent classifier
-     -> SIMPLE / EXACT CHAT: minimal identity/policy, Laguna, no execution tools/full doctrine
-     -> READ / ANALYZE: read-only relevant capabilities
-     -> EXECUTE / BUILD / CHANGE: full PRIME recursive agent + relevant tools + acceptance guard
-     -> DEEP / MULTIMODAL: explicit capability escalation
-```
-
-Do not reopen networking, credentials or model selection without contradictory new evidence.
+Do not reopen networking, credentials or model selection without contradictory new evidence. Do not implement the fast-gate plugin until the regression source is understood.
 
 ## Reliable Excellence rule
 
 A candidate model is not production GREEN because a direct API call is fast. Production GREEN requires the full system path to preserve:
 
 **correct intent -> smallest sufficient capability lane -> correct tool/no-tool choice -> bounded recursion -> fast completion -> durable acceptance evidence.**
+
+And regression fixes must repair the source defect before layering compensating architecture on top.
 
 ## Related canonical source
 
