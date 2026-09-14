@@ -5,7 +5,7 @@
 type: repository-entrypoint
 status: current-reading-layer
 foundation_created: 2026-06-15
-current_overlay: 2026-09-10
+current_overlay: 2026-09-14
 canonical_doctrine_repo: Javalin13/ryzen-continuity
 current_reference_arc: Javalin13/VONDA-Corporation
 current_prototype_steward: PRIME
@@ -18,7 +18,7 @@ amendable: true-additively
 
 This repository began in June 2026 as a **continuity + accumulation foundation** for a future RYZ3N runtime. That historical foundation remains valid provenance, but the project has materially advanced since then.
 
-As of **2026-09-10**, this repository is also the active accumulation/productization layer for the ARC system being proven through PRIME and the VONDA reference ARC.
+As of **2026-09-14**, this repository is also the active accumulation/productization/reliability layer for the ARC system being proven through PRIME and current reference ARCs.
 
 Do not interpret the original June statement “no implementation begins today” as the current operational state. It described the June foundation milestone. The present reality is recorded in:
 
@@ -54,6 +54,32 @@ Legacy canonical documents may use the spelling `Ryzen`; current project represe
 
 PRIME is **not** inserted into this canonical hierarchy. PRIME currently acts as the Founder-facing execution/operator/steward layer that prototypes capabilities RYZ3N is intended to inherit natively later.
 
+### How to read the Canon layers
+
+The 0–25 Canon is an **interconnected cognitive topology**, not 26 isolated boxes and not a mandatory serial `0 → 1 → 2 → ... → 25` pipeline.
+
+A canonical owner can interact with many others through vertical hierarchy, horizontal collaboration, cross-cutting validation, feedback, lifecycle and completion-gate relationships while retaining its own sovereign responsibility.
+
+Standing interpretation rules:
+
+- **interconnection does not imply duplicated authority;**
+- **shared awareness does not imply shared sovereignty;**
+- some functions are foundational, some selective, some continuous and some gated;
+- RYZ3N-level owners must not be silently converted into ARC-local numbered layers;
+- **conceptual separation does not imply physical implementation separation;**
+- one Canon layer does **not** automatically mean one LLM, prompt, process, service or microservice;
+- implementation topology is a later engineering decision and must preserve Canon semantics with the smallest dependable complexity.
+
+The difficult part of the architecture is therefore not simply layer count. It is preserving correct ownership, information flow, continuity, evidence and reliable interaction across the whole graph as it evolves.
+
+Fast architecture recovery / anti-drift reference:
+
+`ARCHITECTURE-ORIENTATION-AND-ANTI-DRIFT.md`
+
+Audited Canon-rooted layer/Brain excellence profiles:
+
+`02-ryzen/future-reliability-capabilities/CANON-ROOTED-EXCELLENCE-SKILL-PROFILES.md`
+
 ---
 
 ## Current operational reality — September 2026
@@ -73,11 +99,31 @@ Domain / Project → Intent → Activity → Brain → Agents / Tools → Execut
 
 This is an implementation/steward view, not a competing ecosystem ontology.
 
-**VONDA ARC is ARC #1 and the reference/tutorial proving node.** The VONDA repository now contains the frozen current **v1.1** `arc/GOLDEN-ARC-BLUEPRINT.md`, capturing the reusable implementation contracts proven through the reference work and aligned to canonical RYZ3N maturity doctrine.
-
-`VONDA_CAPACITY_TELEMETRY = GREEN` is evidence-backed. The full VONDA reference completion gate still depends on the real primary-user cycle and must not be faked through additional Founder simulations.
+**VONDA ARC is ARC #1 and the reference/tutorial proving node.** The VONDA repository contains the current frozen Golden ARC Blueprint capturing reusable implementation contracts proven through the reference work and aligned to canonical RYZ3N maturity doctrine.
 
 RYZ3N native orchestration/runtime is **not** thereby declared complete. The present PRIME + ARC system is a bounded operational prototype whose proven patterns are being converted into RYZ3N-readable standards.
+
+---
+
+## Reliable Excellence
+
+**RYZ3N Mission Target #1 = Reliable Excellence.**
+
+The governing red thread is:
+
+**Know-how → High-Quality Execution → Verification → Proven Reliability → Reliable Excellence**
+
+The current maturation priority is:
+
+**Engineering Maturity → Proven Reliability → Reliable Excellence**
+
+Important operating rule:
+
+> **A named capability, intelligent output, passed checklist, green dashboard or successful command is not proof of reliability. Material evidence must support the claim. Missing material evidence remains UNPROVEN.**
+
+Reliability skill work must deepen the existing Canon rather than create competing architecture:
+
+`02-ryzen/future-reliability-capabilities/README.md`
 
 ---
 
@@ -94,9 +140,9 @@ Initial target customer: solo/starting entrepreneurs and very small business own
 Current launch model:
 
 ```text
-VONDA reference proof
+reference proof
   ↓
-Founding 20 paid validation cohort
+paid validation cohort
   ↓
 repeatable onboarding + retained usage + measurable economics
   ↓
@@ -107,13 +153,7 @@ small paid acquisition experiments
 scale only when retention, support, capacity and unit economics justify it
 ```
 
-Current pricing truth:
-
-- Founding 20: **€49/month**, founding rate locked while continuously subscribed, within Standard scope/fair use.
-- ARC Standard: **€50/month or €500/year**.
-- Higher tiers remain working commercial hypotheses until validated.
-
-Standard promises predictable included normal AI usage, not “unlimited AI” and not surprise pass-through provider bills.
+Current pricing/productization truth belongs to `12-arc-productization/` and current commercial overlays; do not promote stale historical pricing assumptions into current truth without checking the authoritative source.
 
 Canonical commercial plan:
 
@@ -158,11 +198,7 @@ Each ARC requires isolated identity, memory/state, permissions, secrets, runtime
 
 ## Capacity and economics
 
-Founder safety rule:
-
-> **Maximum 10 Standard ARCs per Ollama/Hermes model-capacity pool until production telemetry proves another ceiling preserves service quality.**
-
-Split earlier when real telemetry shows recurring throttling, retries, latency degradation, concurrency pressure, provider headroom risk, incidents or disproportionate consumption.
+Capacity ceilings and commercial economics are implementation/current-reality matters, not Canon. Use current productization and telemetry documents rather than old assumptions.
 
 Every paying ARC must become measurable on model usage, runtime health, provisioning time, support burden, direct cost and contribution margin before broad scale.
 
@@ -179,24 +215,28 @@ See:
 Use the following reading order when files appear to conflict:
 
 1. Founder decisions + canonical doctrine/history in `Javalin13/ryzen-continuity`.
-2. `CURRENT-REALITY-2026-09.md` and `12-arc-productization/ARC-A2Z-ALIGNMENT-MAP-2026-09-10.md` for current interpretation.
-3. Current Founder-directed standards under `12-arc-productization/`.
-4. `Javalin13/VONDA-Corporation/arc/GOLDEN-ARC-BLUEPRINT.md` **v1.1 or later** for the frozen current reference implementation contract.
-5. Active VONDA bridge evidence/directives for the current reference-ARC execution round.
+2. `CURRENT-REALITY-2026-09.md` and current alignment overlays for present interpretation.
+3. Current Founder-directed standards under `12-arc-productization/` and other approved architecture folders.
+4. Current reference implementation contracts in authoritative ARC repositories.
+5. Active bridge/runtime evidence/directives for the current execution round.
 6. PRIME current SOUL/comms/ARCS documents for prototype execution/stewardship behavior.
 7. Historical June foundation/rebuild/migration material as provenance.
 
 A historical file is not automatically wrong. It becomes wrong only if someone treats an explicitly superseded operational statement as present reality.
 
+For architecture recovery before deeper scanning, read:
+
+`ARCHITECTURE-ORIENTATION-AND-ANTI-DRIFT.md`
+
 ---
 
 ## What is proven vs not yet proven
 
-Proven today includes the reference ARC runtime/isolation patterns, fail-closed user binding, durable operational state patterns, live privacy-safe capacity telemetry and a frozen reusable Golden ARC Blueprint.
+Do not infer current proof from architectural ambition, roadmap maturity, historical GREEN state or a scaffold existing in Git.
 
-Not yet proven includes automated bulk provisioning for ARC #2+, real 5–10 ARC concurrent density, paid-cohort retention/support economics, CAC/payback at scale, broad compliance operations and native RYZ3N orchestration replacing PRIME.
+For any material reality claim, use current runtime evidence and the appropriate productization/verification source.
 
-Do not inflate roadmap maturity into implementation evidence.
+> **Strategic Vision ≠ Approved Architecture ≠ Implemented ≠ Verified ≠ Proven Reliable.**
 
 ---
 
@@ -204,19 +244,20 @@ Do not inflate roadmap maturity into implementation evidence.
 
 > **Build once, instantiate many. Customize by configuration, not by architectural fork.**
 
-> **Standard ARC should become approximately 80–90% repeatable platform and 10–20% customer configuration.**
-
 > **Every ARC grows individually while the legion learns collectively through reusable, privacy-safe capability.**
 
 > **Proof before scale. Product promise must match runtime evidence.**
+
+> **Reliable Excellence deepens existing canonical owners; it does not justify architecture inflation.**
 
 ---
 
 ## Repository areas
 
 - `00-foundation/` — foundation/governance interpretation.
+- `00-constitution/` — Founder-approved constitutional evolution/clarification overlays.
 - `01-founder/` — mappings/integration to Founder canon.
-- `02-ryzen/` — RYZ3N canonical mappings.
+- `02-ryzen/` — RYZ3N architecture mappings, strategic architecture and Canon-rooted reliability skill work.
 - `03-recovery-integration/` — recovery-archive integration.
 - `04-rebuild-integration/` — rebuild-spec integration.
 - `05-adrs/` — architectural decisions.
@@ -236,9 +277,9 @@ The duplicated numeric prefixes are historical/additive and should not be “cle
 
 ## Current mission
 
-Keep VONDA reference-ready while awaiting its real primary-user cycle; prepare repeatable commercial provisioning/onboarding from the current Golden Blueprint; recruit real Founding customers deliberately; measure everything that matters; automate repeated work; scale distribution only when evidence says the machine is healthy; continuously promote generalized proof back into RYZ3N Core.
+Raise engineering maturity and proven reliability while preserving the Canon; make current ARCs genuinely useful, reliable, repeatable and commercially real; convert generalized proof into reusable RYZ3N infrastructure; automate only what is understood; scale only when evidence says the system is healthy.
 
-Do not spawn 20 empty ARCs merely because the commercial cohort is named Founding 20.
+Do not solve complexity by inventing more architecture. First identify the existing canonical owner, then deepen or implement it.
 
 ## License
 
