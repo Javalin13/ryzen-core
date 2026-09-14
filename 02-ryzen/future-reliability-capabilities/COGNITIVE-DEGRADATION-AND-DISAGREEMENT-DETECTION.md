@@ -1,119 +1,68 @@
 # Cognitive Degradation & Disagreement Detection for Reliable Excellence
 
-**Status:** Strategic Capability / Future Reliability Skill  
-**Constitution/Canon impact:** none — strengthens existing drift, routing, verification and mission-control architecture
+**Status:** Cross-Cutting Reliability Skill Profile — **NO NEW CANONICAL AUTHORITY**  
+**Constitution/Canon impact:** none
 
 ## Purpose
 
-Cognitive Degradation & Disagreement Detection is the capability to recognize when the quality of reasoning is becoming less trustworthy **before** fluent output, task completion language or continued recursion hides the degradation.
+This profile describes techniques for recognizing when cognition is becoming less dependable before fluent output, completion language or continued recursion hides the degradation.
 
-The RYZ3N architecture already contains drift detection, provider/model health, recursive critique, adversarial validation, evidence gates and model-independent mission truth. This capability focuses narrowly on the **quality of the cognitive process/output itself** across time, context and independent reasoning paths.
+It does **not** create a generic Cognitive Degradation Brain. Canon already assigns the relevant sovereign responsibilities to several layers depending on the cause of degradation.
+
+## Canonical ownership routing
+
+Route the finding by cause:
+
+- **Layer 18 — Frontier Research, Model Evaluation & Migration Governance:** model/provider/substrate capability degradation, model benchmarking, architecture suitability, emerging/post-LLM substrate issues and migration viability.
+- **Layer 11 — Cognitive Alignment & Reflective Optimization:** alignment/coherence drift, recursive self-questioning, constraint/identity/memory coherence issues.
+- **Layer 19 — Recursive Adversarial Validation & Failure Simulation:** hidden fragility, edge-case and failure-mode discovery, dangerous assumptions and resilience challenge.
+- **Layer 22 — Emergent Cognition Research & Self-Model Analysis:** anomalous self-modeling/emergent-cognition phenomena, hypotheses, failed assumptions and scientific investigation under epistemic humility.
+- **Layer 21 / Layer 15:** state-history, memory-continuity, outdated cognition, obsolescence, compatibility and lineage problems.
+- **Layer 16 — Constitutional Flow Integrity:** protocol, implementation and `Input → Translation → Propagation → Execution → Outcome` degradation.
+- **OMEGA:** sustained operational ARC reliability/degradation evidence, with reusable lessons feeding FACTORY.
+
+Several owners may share awareness of one incident. **The symptom does not justify a fifth sovereign owner.**
 
 ## Core rule
 
-> **A model can remain articulate while becoming less reliable. Cognitive quality must therefore be inferred from behavior and evidence, not style.**
+> **A model can remain articulate while becoming less reliable. Detect the signal, then route it to the existing canonical owner responsible for the cause.**
 
 ## Degradation signals
 
-A mature system should be able to notice patterns such as:
+Potential signals include forgotten/mutated constraints, repeated rediscovery, circular/non-converging reasoning, unexplained conclusion reversals, contradiction with Canon/current evidence, context pressure, tool-result misreading, generic output replacing prior precision, premature completion while objective gates remain open, repeated failed strategies, provider/model degradation, persona drift, mission/correlation loss and material disagreement among meaningfully independent reasoning paths.
 
-- forgotten or mutated constraints;
-- repeated rediscovery of already-settled facts;
-- circular or non-converging reasoning;
-- unexplained reversal of a conclusion;
-- increasing contradiction with Canon, source truth or earlier verified state;
-- context-window pressure causing loss of relevant information;
-- tool/result misreading;
-- increasingly generic answers after previously precise reasoning;
-- premature completion language while objective gates remain open;
-- repeated failed tool strategies without adaptation;
-- latency/provider degradation materially harming reasoning or execution quality;
-- model/persona drift;
-- loss of correlation, mission or identity context;
-- disagreement between independent cognitive passes on material conclusions.
+No single signal proves cognitive failure. Signals should trigger proportionate existing-owner investigation, context reconstruction, verification, rerouting or escalation.
 
-No single signal automatically proves cognitive failure. Signals should trigger proportionate re-checking, rerouting, context reconstruction or escalation.
+## Disagreement as information
 
-## Disagreement as a reliability signal
+Material disagreement should not be silently averaged away. It may be investigated using reconstructed context, another appropriate model/capability lane, specialist Brain review, deterministic/tool checks, authoritative source inspection, runtime evidence or Layer 19 adversarial critique.
 
-When materially independent reasoning paths disagree, the disagreement should become **information**, not be silently averaged away.
+Ask whether the disagreement comes from missing context, ambiguous/stale evidence, different assumptions, source-authority differences, model capability limits or genuine unresolved uncertainty.
 
-Potential independent checks include:
+Agreement is not independent proof when paths share the same source, prompt defect, model family, retrieval error or assumption.
 
-- alternate reasoning pass with intentionally reconstructed context;
-- different model/capability lane where justified;
-- specialist Brain review;
-- deterministic/tool-based check;
-- authoritative source inspection;
-- runtime observation;
-- adversarial critique.
+## Response pattern
 
-The system should ask whether disagreement is caused by:
+A safe response may follow:
 
-- missing context;
-- ambiguous evidence;
-- stale evidence;
-- different assumptions;
-- different source authority;
-- model capability limits;
-- genuine unresolved uncertainty.
+`detect signal → classify likely cause → route to existing canonical owner → rebuild/check context/evidence → verify → reroute/repair/narrow/escalate as appropriate`
 
-Agreement is not proof when the paths share the same source, prompt defect, model family, retrieval error or assumption.
+Do not default to inventing another Brain or merely escalating to the largest model.
 
-## Relationship to existing architecture
+## Failure modes
 
-This capability feeds existing controls:
-
-- Canonical LLM alignment detects coherence and constitutional drift.
-- Context Assembly can rebuild insufficient or fragmented context.
-- Recursive Verification critiques and validates candidate outputs.
-- Capability routing can select a more appropriate model/lane.
-- Mission control prevents degraded model prose from closing objective work.
-- OMEGA monitors sustained quality/reliability drift.
-- FACTORY should encode recurring cognitive degradation patterns into reusable detection or fallback controls.
-
-It does **not** create a new orchestrator, model authority or governance layer.
-
-## Response hierarchy
-
-When degradation is suspected, the system should use the least disruptive safe response that restores trustworthy cognition, for example:
-
-`re-read authoritative state → reconstruct context → retry bounded reasoning → independent cross-check → reroute capability/model → narrow scope → escalate / require human decision`
-
-The response must remain consequence-sensitive. Low-risk ambiguity may justify another reasoning pass; high-risk disagreement may require stopping execution.
-
-## Failure modes to prevent
-
-- fluent degradation going unnoticed;
-- recursive loops mistaken for depth;
-- repeated identical model calls mistaken for independent verification;
-- majority vote among correlated failures;
-- context loss hidden by plausible completion;
-- model/provider failure treated as domain truth;
-- endless self-review with no evidence gain;
-- automatic escalation to the largest model without diagnosing the actual problem;
-- exposing hidden reasoning traces as a user-facing requirement.
+Prevent fluent degradation going unnoticed, recursive loops mistaken for depth, repeated identical calls mistaken for independent verification, majority voting among correlated failures, context loss hidden by plausible completion, provider failure treated as domain truth, endless self-review and generic degradation responsibility that competes with canonical owners.
 
 ## Verification targets
 
-Future evidence may include:
-
-- detection rate for induced constraint loss / context loss;
-- false-positive degradation alarms;
-- successful recovery after context reconstruction;
-- material disagreement detection rate;
-- percentage of disagreements resolved by evidence rather than arbitrary selection;
-- loop/oscillation detection time;
-- premature-closure prevention;
-- quality improvement after rerouting;
-- recurring degradation patterns converted into Factory prevention.
+Possible measurements include detection of induced constraint/context loss, false-positive alarms, recovery after context reconstruction, disagreement resolution by evidence, loop/oscillation detection time, premature-closure prevention and quality improvement after correct owner routing/model rerouting.
 
 ## OMEGA / FACTORY relationship
 
-OMEGA should track whether particular ARCs, Brains, models or task classes exhibit recurring cognitive degradation or miscalibration and whether fallback actually restores dependable behavior.
+OMEGA can track recurring operational degradation patterns across ARCs/models/task classes. FACTORY can convert proven recurring patterns into safeguards, tests, context checks or fallback rules.
 
-FACTORY should turn stable findings into reusable safeguards: context checks, bounded retry rules, disagreement triggers, routing policies, negative tests and acceptance gates.
+Neither replaces Layers 11, 18, 19, 22, 21/15 or 16 in their canonical domains.
 
 ## Governing principle
 
-> **Reliable cognition must recognize not only external failure, but also when its own reasoning is becoming less dependable — and respond before degraded cognition becomes degraded reality.**
+> **Detect broadly; assign responsibility precisely. Cognitive degradation is a cross-cutting signal, not a new sovereign layer.**
