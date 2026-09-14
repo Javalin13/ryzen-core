@@ -4,6 +4,16 @@
 **Date:** 2026-09-14  
 **Constitution/Canon impact:** none — this document maps existing authority and identifies capability gaps; it creates no new canonical tier
 
+## Quick orientation
+
+Before using this matrix in a new session/model/context, read the repo-root recovery capsule first:
+
+`ARCHITECTURE-ORIENTATION-AND-ANTI-DRIFT.md`
+
+That capsule restores the canonical ontology, role boundaries, authority/truth order, Reliable Excellence doctrine, anti-inflation decision rule and the conditions that require a deeper rescan. This matrix is then the specialized anti-duplication control for reliability/cognition additions.
+
+Neither file replaces Canon or task-specific authoritative sources.
+
 ## Purpose
 
 This matrix exists so RYZ3N does **not** create a second architecture merely because a reliability concern can be given a new name.
