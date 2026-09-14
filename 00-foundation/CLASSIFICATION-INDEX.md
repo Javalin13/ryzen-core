@@ -42,6 +42,7 @@ Standing red thread:
 | `00-foundation/` | Approved architecture / governance integration | Active constraints for this repository; Reliable Excellence architectural invariant applies across all descendants |
 | `01-founder/` | Maps to canonical reality | Navigation, not duplicated canonical |
 | `02-ryzen/` | Approved architecture / strategic mapping | Architecture map; Reliable Excellence saturation map applies horizontally across all tiers; not proof of runtime implementation |
+| `02-ryzen/EMBODIED-ARC-HUMANOID-ROBOTICS-VISION.md` | Strategic Vision / Future Architecture | Long-horizon physical ARC embodiment direction; defines Embodied Reliability; not implemented, scheduled or commercially promised |
 | `03-recovery-integration/` | Historical evidence integration | Recovered concepts, not current runtime proof; recovery lessons should raise future reliability standards |
 | `04-rebuild-integration/` | Planning/rebuild integration | Historical/planned rebuild guidance interpreted through Reliable Excellence quality requirements |
 | `05-adrs/` | Approved decisions | Per-ADR status controls authority; architecture decisions should state material reliability tradeoffs |
@@ -70,6 +71,7 @@ Standing red thread:
 - `REPOSITORY-MAP.md` — current navigation map.
 - `00-foundation/RELIABLE-EXCELLENCE-ARCHITECTURAL-INVARIANT.md` — universal RYZ3N quality inheritance.
 - `02-ryzen/RELIABLE-EXCELLENCE-ARCHITECTURE-SATURATION-MAP.md` — hierarchy/layer saturation map.
+- `02-ryzen/EMBODIED-ARC-HUMANOID-ROBOTICS-VISION.md` — future humanoid/physical ARC vision and Embodied Reliability doctrine.
 - `07-runtime-scaffolding/RELIABLE-EXCELLENCE-INHERITANCE.md` — future runtime inheritance contract.
 - `12-arc-productization/prototype-experience/UX-FEED-CONTRACT.md` — evidence path into final ARC UX/system.
 
