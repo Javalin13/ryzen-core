@@ -1,102 +1,53 @@
 # Temporal Coherence & Evidence Freshness for Reliable Excellence
 
-**Status:** Strategic Capability / Future Reliability Skill  
-**Constitution/Canon impact:** none — deepens existing continuity, provenance and source-freshness requirements
+**Status:** Canon-Rooted Reliability Skill Profile — **NO NEW CANONICAL AUTHORITY**  
+**Constitution/Canon impact:** none
 
 ## Purpose
 
-Temporal Coherence is the capability to reason correctly about **when** a fact, state, decision, capability, configuration or piece of evidence was valid, what has changed since, and which newer evidence supersedes older evidence.
+Temporal Coherence describes a reasoning technique for determining **when** a fact/state/evidence item was valid, what changed, what superseded it, and whether it remains fresh enough for the present claim.
 
-RYZ3N already requires continuity, evidence freshness, source freshness, historical/current distinction and truthful state. This capability turns those existing requirements into a deliberate cognitive skill.
+RYZ3N already owns the underlying responsibility through existing continuity, lineage, memory, flow-integrity and stewardship architecture. This profile does not create a Temporal Brain or new truth layer.
+
+## Canonical ownership boundary
+
+Relevant existing owners include:
+
+- **Layer 15 — Recursive Evolution Steward / Specialization Stewardship & Knowledge Lineage** for outdated cognition, obsolescence, compatibility and lineage continuity;
+- **Layer 16 — Constitutional Flow Integrity** for implementation/protocol/outcome-chain integrity and degradation;
+- **Layer 21 — Cognitive State & Memory Federation** for contextual and historical cognition continuity;
+- OMEGA for distinguishing current operational evidence from historical evidence;
+- FACTORY for provenance/lifecycle history;
+- Mission Controller/source-freshness mechanisms for current mission/source reconciliation.
+
+This profile is a shared technique serving those owners. **Shared temporal awareness does not create duplicated temporal authority.**
 
 ## Core rule
 
 > **A statement can have been true and still be false now. Historical truth must never silently become current truth.**
 
-A reliable system should be able to distinguish:
-
-- historical state;
-- last-known state;
-- current observed state;
-- current unverified state;
-- superseded state;
-- future planned state;
-- predicted state;
-- expired/stale evidence;
-- unknown state after an interruption or evidence gap.
+Useful distinctions include historical state, last-known state, current observed state, current unverified state, superseded state, planned/predicted state, stale evidence and unknown state after evidence gaps.
 
 ## Reliability role
 
-A mature ARC should be able to:
+A mature implementation should determine whether evidence remains fresh enough for the claim; preserve sequences of material change; identify supersession correctly; prevent old GREEN/proven states from masking current degradation; distinguish event/observation/deployment/report time when material; and reconcile interrupted work from the newest authoritative state.
 
-- determine whether evidence remains fresh enough for the claim being made;
-- reconstruct the sequence of material changes rather than collapsing them into one summary;
-- identify which decision or evidence superseded an older one;
-- prevent old GREEN/proven states from masking present degradation;
-- detect when a source was recently modified but the relevant content is still old;
-- distinguish deployment time, observation time, event time and report time where material;
-- reconcile interrupted missions after restart using the newest authoritative state;
-- carry temporal context through memory, Brain handoffs and evidence chains;
-- require fresh proof when risk or elapsed time makes old proof insufficient.
+Freshness is claim-dependent: constitutional decisions may remain valid until amended, repository state may require immediate re-read before concurrent writes, and runtime health may become stale rapidly.
 
-## Freshness is claim-dependent
+## Failure modes
 
-Evidence does not have one universal expiration period.
-
-Examples:
-
-- a constitutional Founder decision may remain valid until amended;
-- a repository HEAD must be re-read before a concurrent write;
-- runtime health can become stale within seconds or minutes;
-- a recovery drill may remain useful evidence longer but cannot prove present runtime health forever;
-- a maturity claim may require sustained evidence over time rather than one point-in-time success.
-
-Therefore freshness must be evaluated against the **claim, consequence and volatility of the underlying state**.
-
-## Relationship to existing architecture
-
-This capability strengthens existing mechanisms:
-
-- OMEGA already distinguishes historical evidence from current evidence.
-- Reliable Excellence requires evidence freshness and truthful current reporting.
-- Enhancement Propagation requires source-freshness checks before changes.
-- Mission control uses durable checkpoints and current authoritative source revisions.
-- FACTORY preserves provenance/history rather than overwriting it.
-- Memory Federation provides continuity substrate but must not flatten time.
-
-Temporal Coherence is the reasoning skill that helps those mechanisms answer: **which state is authoritative now, and why?**
-
-## Failure modes to prevent
-
-- stale GREEN state;
-- old configuration treated as current deployment truth;
-- historical success used as proof of current reliability;
-- planned work reported as implemented;
-- recently copied old documents treated as new because metadata is recent;
-- restart recovery from a stale checkpoint while newer state exists;
-- conflicting timelines silently merged;
-- evidence without event/observation time;
-- superseded policy continuing to route decisions.
+Prevent stale GREEN state, historical success used as present proof, planned work reported as implemented, recent metadata disguising old content, stale-checkpoint recovery, conflicting timelines silently merged, evidence without relevant timestamps and superseded policy continuing to control decisions.
 
 ## Verification targets
 
-Future evidence may include:
-
-- stale-state detection precision/recall;
-- correct supersession resolution;
-- correct reconstruction after interrupted missions;
-- rate of historical/current state confusion;
-- source-freshness violations caught before writes;
-- percentage of material evidence carrying sufficient temporal metadata;
-- false GREEN prevention attributable to freshness checks;
-- correct re-verification triggers after material elapsed time or change.
+Possible measurements include stale-state detection, correct supersession resolution, interrupted-mission reconstruction, historical/current confusion rate, source-freshness violations caught before writes and appropriate re-verification triggers.
 
 ## OMEGA / FACTORY relationship
 
-OMEGA should challenge claims whose proof is too old, temporally ambiguous or contradicted by newer evidence.
+OMEGA challenges operational claims whose proof is stale or contradicted by newer evidence. FACTORY can encode timestamps, revision pointers, provenance fields and re-verification triggers into future ARC manufacturing where useful.
 
-FACTORY should increasingly build temporal integrity in through timestamps, revision pointers, evidence freshness policies, supersession fields, current-state checks and re-verification triggers appropriate to each ARC capability.
+Those mechanisms remain subordinate to the canonical owners above.
 
 ## Governing principle
 
-> **Reliability is not only knowing what is true. It is knowing what is true now, what used to be true, what changed, and what evidence justifies the transition.**
+> **Temporal coherence sharpens existing lineage, continuity and integrity responsibilities; it does not create a new owner of time or truth.**
