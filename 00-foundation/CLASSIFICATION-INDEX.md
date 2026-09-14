@@ -38,6 +38,7 @@ Standing red thread:
 | Area / artifact | Classification | Current reading |
 |---|---|---|
 | `Javalin13/ryzen-continuity` | Reality / canonical continuity | Canonical doctrine/history sibling |
+| `ARCHITECTURE-ORIENTATION-AND-ANTI-DRIFT.md` | Navigation / architecture-recovery aid | Fast orientation, authority pointers, anti-inflation rules and rescan triggers; **not Canon and not a new layer** |
 | `00-constitution/` | Reality / Founder-approved constitutional evolution | Contains current constitutional source of truth and Reliable Excellence amendments |
 | `00-foundation/` | Approved architecture / governance integration | Active constraints for this repository; Reliable Excellence architectural invariant applies across all descendants |
 | `01-founder/` | Maps to canonical reality | Navigation, not duplicated canonical |
@@ -67,11 +68,13 @@ Standing red thread:
 
 ## Current reference overlays
 
+- `ARCHITECTURE-ORIENTATION-AND-ANTI-DRIFT.md` — fast architecture recovery point; navigation only, never a replacement for Canon or task-specific authority.
 - `CURRENT-REALITY-2026-09.md` — current operational reality reconciliation.
 - `REPOSITORY-MAP.md` — current navigation map.
 - `00-foundation/RELIABLE-EXCELLENCE-ARCHITECTURAL-INVARIANT.md` — universal RYZ3N quality inheritance.
 - `02-ryzen/RELIABLE-EXCELLENCE-ARCHITECTURE-SATURATION-MAP.md` — hierarchy/layer saturation map.
 - `02-ryzen/EMBODIED-ARC-HUMANOID-ROBOTICS-VISION.md` — future humanoid/physical ARC vision and Embodied Reliability doctrine.
+- `02-ryzen/future-reliability-capabilities/CAPABILITY-COVERAGE-MATRIX.md` — anti-duplication map for future reliability/cognition capabilities.
 - `07-runtime-scaffolding/RELIABLE-EXCELLENCE-INHERITANCE.md` — future runtime inheritance contract.
 - `12-arc-productization/prototype-experience/UX-FEED-CONTRACT.md` — evidence path into final ARC UX/system.
 
