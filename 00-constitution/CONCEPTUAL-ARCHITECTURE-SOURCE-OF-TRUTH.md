@@ -83,6 +83,28 @@ Examples:
 - Brains remain the specialization structures. The ARC self-provisions/stabilizes Brains according to real need; no fixed Brain catalog is required merely because an old example listed one.
 - Cross-ARC Brain interaction remains allowed when bounded, selective, governance-supervised and non-contaminating. PRIME BRAIN STEWARD is a current implementation mechanism, not a new canonical tier.
 
+## Founder-approved constitutional evolution — Reliable Excellence
+
+On 2026-09-14 the Founder elevated **Reliable Excellence** to **RYZ3N Mission Target #1** and a binding constitutional quality principle.
+
+Authoritative additive amendment:
+
+`00-constitution/FOUNDER-CONSTITUTIONAL-AMENDMENT-2026-09-14-RELIABLE-EXCELLENCE.md`
+
+The amendment does not create a new canonical tier and does not silently rewrite preserved canonical history. It makes explicit the common quality objective served by existing constitutional mechanisms such as excellence governance, recursive validation, adversarial validation, implementation alignment, evidence gates, drift detection, continuity and truthful final-state claims.
+
+The standing constitutional red thread is:
+
+**Know-how → High-Quality Execution → Verification → Proven Reliability → Reliable Excellence**
+
+Reliable Excellence must be inherited across RYZ3N, PRIME-era implementation, OMEGA, ARC Factory, every current and future ARC, Brains, Agents, execution systems, infrastructure, oversight, reporting and future native RYZ3N systems.
+
+Reliability is measurable, not merely aspirational. Correctness, responsiveness/performance, consistency/predictability, availability, graceful failure, recovery/rollback, backups/continuity, validation/testing, observability/diagnostics, security/integrity, evidence freshness and operational truthfulness must be evaluated where applicable.
+
+No system may be described as excellent merely because it works once, exists, is sophisticated, or is feature-rich. Material claims of maturity, readiness, GREEN state, compliance or excellence require evidence appropriate to the claim. Missing material evidence means **UNPROVEN**.
+
+The current constitutional maturation priority is to raise **engineering maturity and proven system reliability** until they approach the strength of RYZ3N's vision, architecture and strategic direction. Quality should progressively become system-enforced rather than dependent on the Founder manually discovering defects.
+
 ## Key constitutional hierarchy from Canonical Genesis Architecture
 
 The complete hierarchy contains Layers 0–25:
