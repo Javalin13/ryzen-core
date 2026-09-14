@@ -44,6 +44,23 @@ The required sequence is:
 
 Implementation/tool selection comes later. Do not reverse the sequence by selecting technology first and then reshaping Canon around it.
 
+## Topological interaction rule
+
+The Canon must be read as an **interconnected cognitive topology**, not as 26 isolated boxes and not as a mandatory `0 → 1 → 2 → ... → 25` execution pipeline.
+
+Each owner can interact with multiple other owners through vertical hierarchy, horizontal collaboration, cross-cutting validation, feedback, lifecycle and completion-gate relationships while preserving its own sovereign responsibility.
+
+Therefore:
+
+- shared awareness does not create shared authority;
+- interdependence does not justify responsibility duplication;
+- a cross-layer concern should be routed to its canonical owner rather than converted into a new Brain;
+- some functions are foundational, some selective, some continuous and some gated;
+- conceptual separation does **not** require one LLM, prompt, process, service or microservice per Canon layer;
+- implementation topology is deferred to Pass 2 and must minimize engineering complexity while preserving Canon semantics and reliability.
+
+The difficulty of RYZ3N is therefore primarily **relationship/interaction complexity**, not merely component count. Reliable Excellence requires the whole graph to remain coherent as individual owners specialize and evolve.
+
 ## Canon-first ownership rule
 
 Before using or extending any profile in this folder, identify the canonical owner of the underlying responsibility.
