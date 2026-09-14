@@ -20,9 +20,17 @@ Read first when asking what excellence should look like for an existing layer or
 
 `CANON-ROOTED-EXCELLENCE-SKILL-PROFILES.md`
 
-It covers Canon Layers 0–25 plus every explicitly named nested Brain/Steward and defines, without creating new authority:
+The registry has now been formally re-audited against the Genesis, RYZ3N, ARC, Owner-Intent, sequencing and Canon-alignment sources. It distinguishes:
 
-- Canon responsibility;
+- Genesis Layers **0–25**;
+- explicitly named nested Canon Brains/Stewards;
+- Canon-named support structures that are **not** assigned a new hierarchy number;
+- RYZ3N-level companion owners that must **not** be mistaken for ARC-local numbered layers;
+- conservative operating interpretations for Layers 23–25 where Canon names the category but does not provide a detailed sovereign-purpose paragraph.
+
+It defines, without creating new authority:
+
+- Canon responsibility or Canon basis;
 - excellence skills;
 - real-life operating behavior;
 - evidence of reliability;
@@ -43,12 +51,13 @@ Before using or extending any profile in this folder, identify the canonical own
 Important examples:
 
 - **Layer 11 — Cognitive Alignment & Reflective Optimization:** cognitive/alignment drift, self-questioning, coherence validation.
-- **Layer 15 — Recursive Evolution Steward / Knowledge Lineage:** evolution signals, outdated cognition, obsolescence, compatibility and lineage.
+- **Layer 15 — Recursive Evolution Steward / Knowledge Lineage / Plasticity + Canon-named stabilization support:** evolution signals, necessity, lineage, obsolescence, compatibility, pathway maturation and stabilization continuity.
 - **Layer 16 — Constitutional Flow Integrity:** Input → Translation → Propagation → Execution → Outcome integrity and protocol/implementation degradation.
 - **Layer 18 — Frontier Research, Model Evaluation & Migration Governance:** model and cognition-architecture evaluation, benchmarking, emerging paradigms, post-LLM substrates, migration and compatibility.
 - **Layer 19 — Recursive Adversarial Validation & Failure Simulation:** hidden fragility, hostile conditions, dangerous assumptions and resilience hardening.
 - **Layer 21 — Cognitive State & Memory Federation:** contextual/historical cognition continuity.
 - **Layer 22 — Emergent Cognition Research & Self-Model Analysis:** scientific self-model/emergent-cognition research, anomalies, failed assumptions, hypotheses, falsifiability and epistemic humility.
+- **RYZ3N-level Creation Oversight & Ecosystem Management Brain:** ecosystem/ARC population health, lifecycle and management scope; canonical to RYZ3N but not a fabricated Layer 26 and not automatically an ARC-local Brain.
 
 Universal Canon principles already include epistemic humility, reality anchoring, scientific rigor, reflective self-questioning, failure containment, graceful degradation, operational realism and non-duplicated authority.
 
