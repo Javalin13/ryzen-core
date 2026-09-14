@@ -42,6 +42,27 @@ Core quality loop:
 
 **FACTORY builds reliability in → OMEGA proves/protects it in reality → PRIME ensures the system acts on the truth → reusable lessons return to FACTORY.**
 
+### Topological complexity rule
+
+RYZ3N/ARC complexity is **topological, not merely layered**.
+
+The 0–25 Canon must be understood as an interconnected cognitive system containing vertical relationships, horizontal relationships, cross-cutting safeguards, feedback loops, lifecycle functions and completion/release gates. A Brain/layer may consume context from several other owners, influence several others, share awareness of the same event and participate in the same mission while still retaining its own sovereign responsibility.
+
+Therefore:
+
+- **interconnection does not imply duplicated authority;**
+- **shared awareness does not imply shared sovereignty;**
+- **the architecture is not a literal 0→1→2→…→25 serial pipeline;**
+- some owners are foundational, some selective, some continuous and some gated;
+- RYZ3N-level owners must not be silently turned into ARC-local layers;
+- **conceptual separation does not imply physical implementation separation.**
+
+A Canon owner/profile does **not** require one separate LLM, prompt, process, service or microservice. Pass 2 determines the smallest reliable implementation topology that preserves the Canon responsibilities and boundaries.
+
+The practical engineering challenge is not the number of boxes; it is preserving correct ownership, meaning, evidence, continuity and reliable interaction across the graph as the system evolves.
+
+**Non-canonical complexity assessment used for orientation:** conceptual comprehension ≈ **9.4/10**, correct cross-layer reasoning ≈ **9.6/10**, mature implementation while preserving boundaries/reliability ≈ **9.9/10**, and long-horizon coherent evolution is **10/10-class systems engineering**. These ratings are descriptive orientation only, not architecture doctrine.
+
 ---
 
 ## 2. Authority and truth order
@@ -283,6 +304,8 @@ A sophisticated system is not one with the most named parts. It is one whose nec
 ## 16. Persistent shorthand
 
 > **RYZ3N is the architecture; Creator → RYZ3N → ARCs → Brains → Agents → Execution remains the canonical ontology.**  
+> **The architecture is a topological cognitive system, not 26 isolated boxes or a mandatory serial pipeline; interconnection must preserve distinct sovereign responsibility.**  
+> **Conceptual separation does not imply one model/service/process per layer; Pass 2 chooses the smallest reliable physical implementation.**  
 > **Canonical Brains/layers own sovereign responsibilities; reliability skill profiles deepen them but do not compete with them.**  
 > **PRIME supervises, OMEGA verifies ARC quality/population truth, FACTORY builds quality in and preserves lifecycle provenance; none creates a canonical tier.**  
 > **Models supply intelligence; Canon, durable control, evidence and verification determine system truth.**  
