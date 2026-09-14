@@ -13,7 +13,7 @@ Complete the current PRIME/Cargo stabilization without repeating the bootstrap p
 The current problem is not the broad RYZ3N architecture, Hetzner networking, Telegram credentials, NVIDIA credentials, or ARC identity. The active defect is the control/intelligence boundary after the model replacement:
 
 - NVIDIA Ultra is too unreliable/slow to serve as the ordinary interactive lane.
-- Super is proven dramatically faster for ordinary interactive work.
+- Super is proven dramatically faster for ordinary interactive work when the hosted/provider path is healthy.
 - Hermes remains recursive, but mission continuity and mission closure were still too dependent on model interpretation.
 - PRIME therefore became a poor candidate to supervise the repair of its own unstable control plane.
 
@@ -149,6 +149,13 @@ Future richer router requirements remain:
 - Access restoration is tracked separately and is not inflated into E0 engineering execution time.
 - E0 runtime restarts during controlled routing work: **2**.
 - Persona-drift / false-completion events during this E0 recovery window: **0**.
+- ~14:37 CEST — E1.1 Founder sent exact-response test: `PRIME E1.1 live fast-path verification. Reply exactly: PRIME FAST GREEN`.
+- ~14:40 CEST — PRIME was still working and unexpectedly executed a `write_file` action to `/home/prime/.prime/1.1/fast-path.txt` instead of simply returning the requested exact text.
+- ~14:42 CEST — Telegram displayed provider fallback notice: Super via NVIDIA unavailable/provider failure; PRIME fell back to local `qwen3:0.6b`.
+- 14:43:14 CEST — failure checkpoint captured.
+- **E1.1 visible Telegram wall-clock:** approximately **5 minutes** from request to final visible outcome; exact journal timestamps still pending.
+- E1.1 acceptance: **FAILED** — wrong behavior, wrong latency, Super live provider path failed.
+- Important split: this test exposed **two independent issues**: (1) live Super provider-path failure; (2) control/mission drift causing an unnecessary file write on a trivial exact-response request.
 
 Current bootstrap state:
 
@@ -158,16 +165,17 @@ AUTOMATIC FALLBACK         -> local Qwen 0.6B only
 VISION / PERCEPTION        -> Nemotron Omni
 ULTRA                      -> removed from ordinary automatic route; reserved for later deliberate deep-routing
 GATEWAY                    -> active
+E1.1                       -> FAILED; inspect exact Super provider error before another live retry
 ```
 
 ## Today acceptance ledger
 
 - [x] E0 PRIME configuration backed up
 - [x] E0 PRIME bootstrap routing applied
-- [ ] E1 PRIME simple-response proof
+- [ ] E1 PRIME simple-response proof — first attempt failed
 - [ ] E1 PRIME structured-response proof
-- [ ] E1 PRIME tool/action proof
-- [ ] E1 latency recorded
+- [x] E1 PRIME tool/action path observed — tool worked, but was **unrequested** and therefore counts as drift evidence, not acceptance
+- [x] E1 failed-attempt latency recorded (~5 min visible; exact journal pending)
 - [ ] E2 Cargo parity applied
 - [ ] E2 Cargo real-message proof
 - [ ] E2 Cargo latency recorded
@@ -179,9 +187,17 @@ GATEWAY                    -> active
 - [x] JohnDough private performance ledger active
 - [ ] M3 Cargo GREEN durable receipt accepted
 
+## Immediate next diagnostic
+
+Do **not** repeat the Telegram test blindly.
+
+Inspect the exact `hermes-gateway.service` journal for the E1.1 interval first, limited to the relevant time window. Determine whether the Super failure was 5xx/overload, timeout, authentication/config, rate-limit/capacity, or another concrete provider/runtime class. Keep the mission-controller defect separate from the provider defect.
+
 ## Time budget
 
-Target technical completion from restart of this mission: **~60–90 minutes if no new external blocker appears.**
+Original target technical completion from restart: **~60–90 minutes if no new external blocker appears.**
+
+E1.1 has now surfaced a real external/runtime blocker, so the ETA must be revised after the exact provider error is classified. Do not pretend the original ETA remains valid without evidence.
 
 Operational timing discipline:
 
