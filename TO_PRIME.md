@@ -1,6 +1,6 @@
 # RYZ3N CORE — TO PRIME
 
-**Status:** CONSUME REQUIRED  
+**Status:** HOLD — EXTERNAL BOOTSTRAP IN PROGRESS  
 **Authority:** Founder / Lux master engineering bridge  
 **Repository:** `Javalin13/ryzen-core`  
 **Counterpart:** `FROM_PRIME.md`
@@ -9,135 +9,73 @@
 
 **MASTER: M3/16 — CARGO ARC GREEN**
 
-Current bounded task: complete the free capability-router Phase-A inspection, then report through `FROM_PRIME.md` for Lux review before any runtime mutation.
+The 2026-09-14 emergency bootstrap is now the active implementation path inside M3.
 
-## EXECUTION MODE FOR THIS ROUND
+## Temporary execution boundary
 
-This is an engineering execution directive, not a conversational prompt.
+PRIME is **not currently authorized to continue the free-router/control-plane implementation autonomously**.
 
-On `consume`:
+Reason: the model replacement exposed a bootstrap paradox. PRIME sessions showed provider stalls, persona drift and tool-free false completion while PRIME was being asked to engineer the control plane intended to stabilize PRIME itself.
 
-- do not role-play, improvise a persona, produce pirate/Shakespearean prose, ask the Founder what their story/problem is, or answer with generic Hermes chatter;
-- do not stop after merely reading configuration files;
-- use tools/source inspection to complete the bounded Phase-A task;
-- if a concrete blocker prevents inspection, write that blocker to `FROM_PRIME.md`, push it, and return the normal MINI REPORT;
-- otherwise finish the inspection, write/push `FROM_PRIME.md`, then return the normal MINI REPORT;
-- a response that does not contain the required MINI REPORT after a pushed `FROM_PRIME.md` does not count as completion.
+Lux + GitHub source truth therefore temporarily act as the repair controller for E0/E1.
 
-The Founder should not need to restate the mission after `consume`.
+Do not `consume` new implementation work until this file is explicitly changed from `HOLD` to `CONSUME REQUIRED`.
 
-## Current approved routing target
+## Emergency sequence inside M3
+
+```text
+M3 — Cargo ARC GREEN
+  E0 — externally stabilize PRIME
+  E1 — prove PRIME fast interactive execution
+  E2 — apply/prove Cargo parity
+  E3 — prepare reusable NARC/VONDA migration template
+  E4 — minimum deterministic mission guard / acceptance invariant
+  E5 — return bounded execution authority to PRIME
+  M3 acceptance — Cargo GREEN receipt + durable source alignment
+```
+
+Current stage: **E0 — externally stabilize PRIME**.
+
+## Bootstrap routing target
 
 ```text
 FAST_INTERACTIVE  -> NVIDIA Nemotron Super
-DEEP_REASONING    -> NVIDIA Nemotron Ultra only when warranted and healthy
+DEEP_REASONING    -> NVIDIA Nemotron Ultra only when warranted + healthy
 MULTIMODAL        -> NVIDIA Nemotron Omni perception -> Super/Ultra synthesis
 BACKGROUND_LIGHT  -> local Qwen 0.6B when safe
 BACKGROUND_NORMAL -> Super
 EMERGENCY_LOCAL   -> local Qwen restricted continuity
 ```
 
-Required overload behavior:
+During the emergency bootstrap, ordinary PRIME interaction is to be stabilized on Super first. Ultra remains a deep-reasoning capability but is not the ordinary interactive default during E0/E1.
 
-- ordinary interactive work must not repeatedly retry an overloaded Ultra endpoint;
-- Ultra 503 / provider-overloaded / excessive-latency evidence should open a shared Ultra cooldown/circuit of roughly 60–120 seconds;
-- while the circuit is open, normal interactive traffic routes directly to Super;
-- after cooldown, permit one half-open Ultra health probe before restoring deep-lane eligibility;
-- background/self-improvement work must not consume Ultra by default;
-- retain compatibility with the observed shared NVIDIA account limit around 40 RPM and the planned ~35 RPM operating target;
-- keep Omni as the perception specialist and local Qwen as independent emergency continuity.
+## Return-to-PRIME gate
 
-## Proven evidence driving this work
+PRIME gets bounded execution authority back only after:
 
-2026-09-13 live evidence:
+- PRIME simple-response proof passes;
+- PRIME structured-response proof passes;
+- one real Hermes tool/action path passes;
+- practical latency is recorded;
+- false completion/persona drift is not accepted as success;
+- minimum mission-control acceptance invariant is in place or explicitly staged for E4;
+- GitHub bridge continuity remains durable.
 
-- Cargo received the Founder request at ~13:41:34, proving Telegram was not the multi-minute bottleneck;
-- Ultra returned `Service temporarily overloaded` around 13:42:32 and Hermes retried;
-- Cargo final reply was delivered around 13:44:14;
-- separate Cargo background work also hit Ultra overload;
-- direct same-runtime benchmark: Ultra -> HTTP 503 in ~56.96 seconds; Super -> HTTP 200 in ~0.68 seconds.
+At that point Lux will update this file to a new `CONSUME REQUIRED` directive.
 
-## PHASE A — INSPECTION ONLY
+## Protected invariants
 
-Inspect the live Hermes/runtime and identify the cleanest existing integration point for:
+- Founder is Founder, never Owner.
+- PRIME remains supervisory.
+- ARC Owners communicate directly with their ARCs.
+- no Owner bindings, ARC identities, memories, forms, aura, maturity, business logic, secrets or sovereignty are changed by this emergency bootstrap.
+- settled IPv6/DNS64/NAT64/Hetzner conclusions remain closed unless genuinely contradicted by new evidence.
+- preserve established Telegram fallback-IP protection.
 
-1. per-turn / per-capability model selection or override;
-2. failure/fallback classification before repeated Ultra retries;
-3. shared Ultra circuit state usable across PRIME and ARC profiles without sharing Owner-private content;
-4. background-work route selection;
-5. compatibility with the existing Omni media path;
-6. sanitized Owner-facing fallback/error behavior.
+## Durable references
 
-Preference order:
+- `12-arc-productization/DAILY-MISSION-2026-09-14-M3-EMERGENCY-BOOTSTRAP.md`
+- `12-arc-productization/CURRENT-EXECUTION-STATE-2026-09-13.md`
+- model-independent mission-control lesson + full architecture scheme from 2026-09-13.
 
-1. native Hermes config/model override capability;
-2. plugin/hook/extension point;
-3. thin versioned RYZ3N routing layer around Hermes;
-4. Hermes-core modification only if no safe supported boundary exists.
-
-### Phase-A hard boundaries
-
-- do **not** modify Hermes core during Phase A;
-- do **not** restart PRIME, Cargo, NARC or VONDA merely for inspection;
-- do not change Owner bindings, ARC memories, identities, forms, aura, maturity, business logic, secrets or sovereignty;
-- do not reopen settled Hetzner IPv6/DNS64/NAT64 investigation without contradictory new evidence;
-- preserve `HERMES_TELEGRAM_DISABLE_FALLBACK_IPS=true` where already established;
-- Founder remains Founder, never Owner;
-- PRIME remains supervisory; direct Owner -> ARC paths stay intact.
-
-## Required report
-
-Write the full Phase-A result to repository-root `FROM_PRIME.md`, commit and push it to `ryzen-core`, then give the Founder only the timed MINI REPORT.
-
-`FROM_PRIME.md` must include:
-
-- consumed `ryzen-core` HEAD / directive;
-- exact files/classes/functions/hooks inspected;
-- whether native per-turn model selection exists;
-- whether retry/fallback policy is configurable without Hermes-core mutation;
-- cleanest proposed implementation boundary;
-- proposed shared circuit-breaker state location and lifecycle;
-- proposed lane-decision inputs;
-- how PRIME/Cargo/future NARC/VONDA share policy without sharing private Owner payload;
-- expected changed paths;
-- rollback plan;
-- privacy/isolation impact;
-- risks/blockers;
-- elapsed inspection time;
-- implementation ETA;
-- `LUX: SYNC NEEDED` or `LUX: NO SYNC NEEDED`.
-
-Founder-facing MINI REPORT format:
-
-```text
-STATUS: <GREEN/AMBER/RED + one-line result>
-CHANGED: inspection only; no runtime mutation
-NEXT: <smallest proposed implementation step>
-TIME: <elapsed> | ETA: <implementation estimate>
-LUX: SYNC NEEDED | NO SYNC NEEDED
-BRIDGE: <ryzen-core pushed short SHA>
-```
-
-## Session-crash / provider-error recovery
-
-If the active PRIME chat/session terminates, throws an unexpected error, drifts into non-task persona chatter, or is abandoned because the current provider is overloaded before the bounded task is completed:
-
-1. do **not** ask the Founder to reconstruct technical context;
-2. start a fresh PRIME session if required;
-3. fetch/pull current `Javalin13/ryzen-core` `origin/main` first;
-4. read repository-root `TO_PRIME.md` and current `FROM_PRIME.md`;
-5. resume from the latest durable bridge state and the last verified source/runtime checkpoint;
-6. do not repeat already-proven diagnostics merely because the chat session changed;
-7. continue to the same acceptance gate and report through `FROM_PRIME.md`.
-
-The durable bridge is the continuity mechanism. A failed or drifted chat/session does not reset the mission.
-
-## Bridge hierarchy
-
-`TO_PRIME.md` / `FROM_PRIME.md` in `ryzen-core` are the canonical Lux <-> PRIME master bridge.
-
-Cargo/NARC/VONDA repository bridges are ARC-local only and must not replace this master bridge.
-
-## Additional queued roadmap item
-
-The ARC Media / Video Engine remains a future RYZ3N-wide capability: free/open/self-hosted-first video generation, clean exports without forced third-party branding where licensing permits, native-quality social-platform compatibility, and no deliberate moderation/provenance/detection bypass.
+Until released, PRIME should remain available for Founder interaction but should not self-initiate this control-plane repair.
