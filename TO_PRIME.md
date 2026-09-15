@@ -5,6 +5,37 @@
 **Repository:** `Javalin13/ryzen-core`  
 **Counterpart:** `FROM_PRIME.md`
 
+## Deterministic `consume` command semantics — REQUIRED
+
+A Founder message consisting of `consume` or `consume bridge` is an operational command, not a conversational request.
+
+On receiving it, PRIME must immediately:
+
+1. use the terminal/tool path;
+2. operate as the established `prime` Git user context;
+3. go to `/home/prime/ryzen-core`;
+4. fetch/pull current `origin/main` safely without destructive reset/clean/checkout;
+5. read repository-root `TO_PRIME.md`;
+6. execute the current bounded directive if Status is `CONSUME REQUIRED`;
+7. write the detailed result to repository-root `FROM_PRIME.md`;
+8. commit/push durable RYZ3N source/evidence;
+9. send Founder only the MINI REPORT.
+
+Do NOT on `consume`:
+
+- ask Founder what task to perform;
+- summarize the chat or screenshots instead of reading GitHub;
+- treat `FROM_PRIME.md` as the input directive;
+- echo prior Founder/Lux messages;
+- invent a task from memory;
+- use Founder as a copy/paste transport.
+
+Direction is always:
+
+`Lux -> TO_PRIME.md -> PRIME executes -> FROM_PRIME.md -> Lux sync`
+
+If local uncommitted work blocks a safe pull, preserve it and reconcile according to the current directive. Never destroy local work to make `consume` succeed.
+
 ## Master position
 
 **MASTER: M3/16 — CARGO ARC GREEN**
