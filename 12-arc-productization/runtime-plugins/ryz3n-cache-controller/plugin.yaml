@@ -1,0 +1,7 @@
+name: ryz3n-cache-controller
+version: 0.1.0
+description: RYZ3N provider-independent cache/controller telemetry shadow layer for PRIME and ARC runtimes.
+provides_hooks:
+  - pre_api_request
+  - post_api_request
+  - api_request_error
