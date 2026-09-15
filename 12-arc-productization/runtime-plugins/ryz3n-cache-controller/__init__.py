@@ -1,12 +1,18 @@
-"""RYZ3N Cache Controller v0.1 — shadow telemetry only.
+"""RYZ3N Cache Controller v0.1.1 — shadow telemetry only.
 
 E1.19 contract:
 - NEVER mutates an LLM request.
 - NEVER short-circuits provider execution.
 - NEVER persists prompt/response content, credentials, chat/user ids, or private memory.
 - Emits content-free operational telemetry and deterministic hashes needed to measure
-  prefix stability, provider cache behavior, concurrency, retries, errors, and later
-  cache/dedup efficiency.
+  stable-prefix continuity, request identity, provider cache behavior, concurrency,
+  retries, errors, and later cache/dedup efficiency.
+
+Privacy invariant:
+Hermes exposes ``request_messages`` as a high-sensitivity/raw observer field. This
+plugin may use that value transiently in-process as SHA-256 input, but MUST NEVER
+persist, log, print, or return the raw value. Only deterministic hashes and counts
+cross the telemetry boundary.
 """
 
 from __future__ import annotations
@@ -69,36 +75,70 @@ def _session_hash(value: Any) -> str | None:
     return _hash(str(value))[:20]
 
 
-def _request_fingerprints(request: Any) -> tuple[str | None, str | None]:
-    if not isinstance(request, Mapping):
-        return None, None
+def _leading_stable_messages(messages: list[Any]) -> list[Any]:
+    """Return the leading non-user wire prefix (normally system/developer rows).
 
-    # Deliberately exclude credentials/network headers. Content is used transiently only
-    # as hash input and is never written to telemetry.
-    structural: dict[str, Any] = {}
-    for key in (
-        "model", "messages", "input", "tools", "tool_choice", "max_tokens",
-        "max_completion_tokens", "temperature", "top_p", "response_format",
-    ):
-        if key in request:
-            structural[key] = request[key]
+    This measures the canonical stable prefix independently from growing conversation
+    history. It is intentionally role-based and backend-neutral. If role information is
+    unavailable, no raw material is persisted and an empty leading prefix is returned.
+    """
+    stable: list[Any] = []
+    for item in messages:
+        role = None
+        if isinstance(item, Mapping):
+            role = item.get("role")
+        else:
+            try:
+                role = getattr(item, "role", None)
+            except Exception:
+                role = None
+        if str(role or "").lower() in {"user"}:
+            break
+        stable.append(item)
+    return stable
 
-    full = _hash(structural)
 
-    prefix_material: dict[str, Any] = {k: v for k, v in structural.items() if k not in ("messages", "input")}
-    seq = structural.get("messages")
-    seq_key = "messages"
-    if not isinstance(seq, list):
-        seq = structural.get("input")
-        seq_key = "input"
-    if isinstance(seq, list):
-        # Generic stable-prefix measurement: exclude the most recent wire item. This is
-        # intentionally observational; it does not assert provider-specific KV boundaries.
-        prefix_material[seq_key] = seq[:-1] if seq else []
-    elif seq is not None:
-        prefix_material[seq_key] = seq
+def _request_fingerprints(kwargs: Mapping[str, Any]) -> tuple[str | None, str | None, str | None, str]:
+    """Return full-request, history-prefix and stable-prefix fingerprints.
 
-    return full, _hash(prefix_material)
+    ``request_messages`` is the canonical source because Hermes documents it as the raw
+    provider message sequence for pre_api_request observers. The raw sequence exists only
+    transiently as hash input and is never persisted.
+
+    The sanitized ``request`` field is used only as a last-resort fallback because it may
+    be size-capped/redacted and therefore is not suitable for cache-prefix fidelity.
+    """
+    context = {
+        "provider": kwargs.get("provider"),
+        "model": kwargs.get("model"),
+        "api_mode": kwargs.get("api_mode"),
+        "tool_count": kwargs.get("tool_count"),
+        "max_tokens": kwargs.get("max_tokens"),
+    }
+
+    raw_messages = kwargs.get("request_messages")
+    if isinstance(raw_messages, list):
+        full = _hash({"context": context, "messages": raw_messages})
+        history = _hash({"context": context, "messages": raw_messages[:-1] if raw_messages else []})
+        stable = _hash({"context": context, "messages": _leading_stable_messages(raw_messages)})
+        return full, history, stable, "request_messages"
+
+    request = kwargs.get("request")
+    if isinstance(request, Mapping):
+        # Fallback only: sanitized request may omit or truncate content. This still gives
+        # us a non-content operational fingerprint, but it is explicitly labeled so the
+        # dashboard never treats it as provider-cache-grade evidence.
+        structural: dict[str, Any] = {}
+        for key in (
+            "model", "messages", "input", "tools", "tool_choice", "max_tokens",
+            "max_completion_tokens", "temperature", "top_p", "response_format",
+        ):
+            if key in request:
+                structural[key] = request[key]
+        if structural:
+            return _hash({"context": context, "request": structural}), None, None, "sanitized_request"
+
+    return None, None, None, "unavailable"
 
 
 def _get(obj: Any, *names: str, default: int = 0) -> int:
@@ -210,8 +250,7 @@ def _base(kwargs: Mapping[str, Any], event_type: str) -> dict[str, Any]:
 def on_pre_api_request(**kwargs: Any) -> None:
     global _ACTIVE
     rid = str(kwargs.get("api_request_id") or "")
-    request = kwargs.get("request")
-    request_fp, prefix_fp = _request_fingerprints(request)
+    request_fp, history_fp, stable_fp, fingerprint_source = _request_fingerprints(kwargs)
 
     with _LOCK:
         _ACTIVE += 1
@@ -227,7 +266,9 @@ def on_pre_api_request(**kwargs: Any) -> None:
         "tool_count": kwargs.get("tool_count"),
         "active_concurrency_at_start": active,
         "request_fingerprint": request_fp,
-        "prefix_fingerprint": prefix_fp,
+        "history_prefix_fingerprint": history_fp,
+        "stable_prefix_fingerprint": stable_fp,
+        "fingerprint_source": fingerprint_source,
         "middleware_trace_count": len(kwargs.get("middleware_trace") or []),
     })
     _write(event)
