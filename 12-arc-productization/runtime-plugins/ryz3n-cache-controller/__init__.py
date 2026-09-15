@@ -1,11 +1,13 @@
-"""RYZ3N Cache Controller v0.1.2 — shadow telemetry only.
+"""RYZ3N Cache Controller v0.1.3 — shadow telemetry only.
 
-E1.21 contract:
+E1.22 contract:
 - NEVER mutates an LLM request.
 - NEVER short-circuits provider execution.
 - NEVER persists prompt/response content, credentials, chat/user ids, or private memory.
-- Measures stable-prefix continuity, repeated-context share, provider cache behavior,
-  concurrency, latency, retries, errors, and token-estimate calibration.
+- Measures the provider-facing repeated prefix separately from Hermes' own
+  registered cross-session-stable system-prompt prefix.
+- Measures provider cache behavior, concurrency, latency, retries, errors,
+  and token-estimate calibration.
 
 Privacy invariant:
 Hermes exposes ``request_messages`` as a high-sensitivity/raw observer field. This
@@ -67,6 +69,10 @@ def _hash(value: Any) -> str:
     return hashlib.sha256(_stable_json(value).encode("utf-8", errors="replace")).hexdigest()
 
 
+def _hash_text(value: str) -> str:
+    return hashlib.sha256(value.encode("utf-8", errors="replace")).hexdigest()
+
+
 def _serialized_chars(value: Any) -> int:
     return len(_stable_json(value))
 
@@ -99,14 +105,97 @@ def _role(item: Any) -> str:
     return str(value or "").lower()
 
 
+def _message_content(item: Any) -> Any:
+    if isinstance(item, Mapping):
+        return item.get("content")
+    try:
+        return getattr(item, "content", None)
+    except Exception:
+        return None
+
+
+def _content_text(content: Any) -> str | None:
+    """Return text transiently for measurement; callers must never persist it."""
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        chunks: list[str] = []
+        for block in content:
+            if isinstance(block, Mapping):
+                text = block.get("text")
+                if isinstance(text, str):
+                    chunks.append(text)
+            else:
+                text = getattr(block, "text", None)
+                if isinstance(text, str):
+                    chunks.append(text)
+        if chunks:
+            return "".join(chunks)
+    return None
+
+
 def _leading_stable_messages(messages: list[Any]) -> list[Any]:
-    """Leading non-user provider messages, normally system/developer material."""
+    """Legacy provider-facing prefix: leading messages before the first user turn."""
     stable: list[Any] = []
     for item in messages:
         if _role(item) == "user":
             break
         stable.append(item)
     return stable
+
+
+def _hermes_registered_prefix_measurements(messages: list[Any]) -> dict[str, Any]:
+    """Measure Hermes' own registered stable system-prefix boundary.
+
+    ``agent.prompt_cache_boundary.find_stable_prefix`` returns a prefix already
+    registered by Hermes' prompt builder/cache machinery.  We use the returned
+    text only transiently to count/hash it; no prompt text is persisted.
+    """
+    system_text: str | None = None
+    for item in messages:
+        if _role(item) == "system":
+            system_text = _content_text(_message_content(item))
+            break
+
+    if not system_text:
+        return {
+            "hermes_system_message_char_count": None,
+            "hermes_registered_stable_prefix_found": False,
+            "hermes_registered_stable_prefix_char_count": None,
+            "hermes_registered_stable_prefix_fingerprint": None,
+            "hermes_nonstable_system_tail_char_count": None,
+            "hermes_registered_stable_share_of_system_message": None,
+        }
+
+    found: str | None = None
+    try:
+        from agent.prompt_cache_boundary import find_stable_prefix
+        candidate = find_stable_prefix(system_text)
+        if isinstance(candidate, str) and candidate and system_text.startswith(candidate):
+            found = candidate
+    except Exception:
+        found = None
+
+    system_chars = len(system_text)
+    if found is None:
+        return {
+            "hermes_system_message_char_count": system_chars,
+            "hermes_registered_stable_prefix_found": False,
+            "hermes_registered_stable_prefix_char_count": None,
+            "hermes_registered_stable_prefix_fingerprint": None,
+            "hermes_nonstable_system_tail_char_count": None,
+            "hermes_registered_stable_share_of_system_message": None,
+        }
+
+    stable_chars = len(found)
+    return {
+        "hermes_system_message_char_count": system_chars,
+        "hermes_registered_stable_prefix_found": True,
+        "hermes_registered_stable_prefix_char_count": stable_chars,
+        "hermes_registered_stable_prefix_fingerprint": _hash_text(found),
+        "hermes_nonstable_system_tail_char_count": max(0, system_chars - stable_chars),
+        "hermes_registered_stable_share_of_system_message": _ratio(stable_chars, system_chars),
+    }
 
 
 def _request_measurements(kwargs: Mapping[str, Any]) -> dict[str, Any]:
@@ -122,31 +211,39 @@ def _request_measurements(kwargs: Mapping[str, Any]) -> dict[str, Any]:
     raw = kwargs.get("request_messages")
     if isinstance(raw, list):
         history = raw[:-1] if raw else []
-        stable = _leading_stable_messages(raw)
+        provider_prefix = _leading_stable_messages(raw)
         latest = raw[-1:] if raw else []
 
         total_chars = _serialized_chars(raw)
         history_chars = _serialized_chars(history)
-        stable_chars = _serialized_chars(stable)
+        provider_prefix_chars = _serialized_chars(provider_prefix)
         latest_chars = _serialized_chars(latest)
         request_chars = kwargs.get("request_char_count")
+
+        hermes_boundary = _hermes_registered_prefix_measurements(raw)
 
         return {
             "request_fingerprint": _hash({"context": context, "messages": raw}),
             "history_prefix_fingerprint": _hash({"context": context, "messages": history}),
-            # Lane-specific identity: useful for provider/model cache compatibility.
-            "stable_prefix_fingerprint": _hash({"context": context, "messages": stable}),
-            # Provider-independent identity: useful for cross-lane context reuse decisions.
-            "stable_content_fingerprint": _hash({"messages": stable}),
+            # Legacy field retained for evidence continuity. Semantics are the
+            # provider-facing leading pre-user message prefix, not Hermes' own
+            # internal cross-session stable tier.
+            "stable_prefix_fingerprint": _hash({"context": context, "messages": provider_prefix}),
+            "stable_content_fingerprint": _hash({"messages": provider_prefix}),
             "fingerprint_source": "request_messages",
             "message_payload_char_count": total_chars,
             "history_prefix_char_count": history_chars,
-            "stable_prefix_char_count": stable_chars,
+            "stable_prefix_char_count": provider_prefix_chars,
             "latest_wire_item_char_count": latest_chars,
-            "stable_prefix_message_count": len(stable),
-            "dynamic_message_count": max(0, len(raw) - len(stable)),
-            "stable_prefix_share_of_message_payload": _ratio(stable_chars, total_chars),
-            "stable_prefix_share_of_request_chars": _ratio(stable_chars, request_chars),
+            "stable_prefix_message_count": len(provider_prefix),
+            "dynamic_message_count": max(0, len(raw) - len(provider_prefix)),
+            "stable_prefix_share_of_message_payload": _ratio(provider_prefix_chars, total_chars),
+            "stable_prefix_share_of_request_chars": _ratio(provider_prefix_chars, request_chars),
+            # Explicit names remove ambiguity introduced by the original field.
+            "provider_leading_prefix_char_count": provider_prefix_chars,
+            "provider_leading_prefix_share_of_message_payload": _ratio(provider_prefix_chars, total_chars),
+            "provider_leading_prefix_share_of_request_chars": _ratio(provider_prefix_chars, request_chars),
+            **hermes_boundary,
         }
 
     request = kwargs.get("request")
