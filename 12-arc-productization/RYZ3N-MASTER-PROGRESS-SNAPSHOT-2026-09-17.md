@@ -3,7 +3,7 @@
 Status: **EXECUTIVE PROGRESS SNAPSHOT — directional, not a GREEN claim**  
 Authority: **Founder-directed master tracking**  
 Current master: **M3/16 — Cargo ARC GREEN**  
-Current execution block: **E1.23C — activate and prove RYZ3N Cognitive Connection v0.1.0 on PRIME**
+Current execution block: **E1.23C — prove RYZ3N Cognitive Connection v0.1.0 on PRIME through representative T0–T6 acceptance**
 
 ## Purpose
 
@@ -25,7 +25,7 @@ Interpretation: RYZ3N is much further ahead in vision, Canon and architecture th
 - Vision / Canon / architecture: **~80–90%**
 - Core/source/governance foundation: **~70–80%**
 - PRIME runtime foundation: **~70%** — transport/runtime is proven; full reasoning/cognition acceptance is not yet GREEN
-- Cognitive Connection Layer: **~40%** — architecture, hook contracts, v0.1.0 source deployment and Hermes Plugin Doctor validation are complete; live activation and T0–T6 acceptance remain
+- Cognitive Connection Layer: **~45%** — architecture, hook contracts, v0.1.0 deployment, Doctor validation, live PRIME activation and T0 exact/direct acceptance are proven; T1–T6 remain
 - Cargo ARC production GREEN: **~25–35%**
 - Reusable ARC Factory / OMEGA / inheritance: **~15–20%**
 - Full 16-step operational ecosystem: **~15% overall**
@@ -82,41 +82,31 @@ Contract proof     ██████████ 100%
 v0.1.0 source      ██████████ 100%
 Deployment         ██████████ 100%  GREEN — source present + syntax valid
 Doctor validation  ██████████ 100%  GREEN — discovery/manifest/import/registration passed
-Activation         ░░░░░░░░░░   0%  ← CURRENT
-T0–T6 acceptance   ░░░░░░░░░░   0%
+Activation         ██████████ 100%  GREEN — PRIME gateway restarted active with plugin installed
+T0 exact/direct    ██████████ 100%  GREEN — exact output, no visible tool/reasoning leakage
+T1–T6 acceptance   ░░░░░░░░░░   0%  ← CURRENT
 PRIME cognition    ░░░░░░░░░░   NOT GREEN YET
 ```
 
-## Current deployment and validation truth
+## Current deployment, validation and T0 truth
 
 The initial permission blocker was isolated to `/home/prime/.hermes/plugins` being owned by `root:root` while PRIME runs as `prime`. Ownership of that directory only was corrected to `prime:prime`; no recursive permission mutation was performed.
 
-`ryz3n-cognitive-connection` v0.1.0 was then deployed into:
+`ryz3n-cognitive-connection` v0.1.0 was deployed into `/home/prime/.hermes/plugins/ryz3n-cognitive-connection`. Source presence, syntax compilation and SHA256 evidence were produced.
 
-`/home/prime/.hermes/plugins/ryz3n-cognitive-connection`
+Plugin Doctor then passed under PRIME's actual Hermes interpreter `/home/prime/hermes-agent/venv/bin/python` with runtime discovery, manifest parsing, import and registration all GREEN and `0 tool(s), 4 hook(s)` registered.
 
-Observed source-deployment evidence:
+PRIME gateway was restarted in isolation and returned `active`.
 
-- manifest present;
-- `__init__.py` present;
-- `python3 -m py_compile` completed successfully;
-- manifest declares the four intended hooks: `pre_gateway_dispatch`, `pre_llm_call`, `pre_tool_call`, `transform_llm_output`;
-- SHA256 evidence was emitted for both deployed files.
+At approximately **14:55 CEST**, the Founder sent the live T0 request through the real Telegram path:
 
-Runtime contract validation then passed using PRIME's actual Hermes virtualenv interpreter:
+`Reply exactly: COGNITIVE GREEN`
 
-`/home/prime/hermes-agent/venv/bin/python`
+PRIME returned exactly:
 
-Observed Plugin Doctor result:
+`COGNITIVE GREEN`
 
-- manifest: `ryz3n-cognitive-connection 0.1.0 (standalone)`;
-- runtime discovery passed;
-- manifest parsing passed;
-- import passed;
-- registration passed;
-- registrations: `0 tool(s), 4 hook(s)`.
-
-This closes source deployment and static runtime registration validation. Live gateway activation and behavioral acceptance remain unproven.
+with no visible `/think`, explanation, tool chatter, audio or extra public output. This proves the first live exact/direct lane behavior. It does **not** prove general reasoning cognition; T1–T6 remain required.
 
 ## 5-percent progress update protocol
 
@@ -135,7 +125,7 @@ Current notification baselines:
 
 - **Full RYZ3N master:** ~15% → next small update at ~20%.
 - **PRIME foundation:** ~70% → next update at ~75%.
-- **Cognitive Connection Layer:** **~40%** → next small update at ~45%.
+- **Cognitive Connection Layer:** **~45%** → next small update at ~50%.
 - **Cargo ARC GREEN:** ~25–35% directional range → tighten the baseline as E2 evidence becomes concrete, then report each +5-point advancement.
 - **OMEGA / ARC Factory inheritance:** ~15–20% → next update after verified +5-point advancement.
 
