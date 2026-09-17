@@ -25,7 +25,7 @@ Interpretation: RYZ3N is much further ahead in vision, Canon and architecture th
 - Vision / Canon / architecture: **~80–90%**
 - Core/source/governance foundation: **~70–80%**
 - PRIME runtime foundation: **~70%** — transport/runtime is proven; full reasoning/cognition acceptance is not yet GREEN
-- Cognitive Connection Layer: **~20–25%** — architecture and hook contracts proven; v0.1.0 source exists; deployment/activation/acceptance remain
+- Cognitive Connection Layer: **~35%** — architecture, hook contracts, v0.1.0 source and PRIME-local source deployment are now complete; runtime validation, activation and acceptance remain
 - Cargo ARC production GREEN: **~25–35%**
 - Reusable ARC Factory / OMEGA / inheritance: **~15–20%**
 - Full 16-step operational ecosystem: **~15% overall**
@@ -80,19 +80,29 @@ Architecture       ██████████ 100%
 Hook discovery     ██████████ 100%
 Contract proof     ██████████ 100%
 v0.1.0 source      ██████████ 100%
-Deployment         ██░░░░░░░░  20%  ← CURRENT
-Activation         ░░░░░░░░░░   0%
+Deployment         ██████████ 100%  GREEN — source present + syntax valid
+Activation         ░░░░░░░░░░   0%  ← CURRENT
 T0–T6 acceptance   ░░░░░░░░░░   0%
 PRIME cognition    ░░░░░░░░░░   NOT GREEN YET
 ```
 
 ## Current deployment truth
 
-The first PRIME deployment attempt stopped safely because the `prime` user could not create:
+The initial permission blocker was isolated to `/home/prime/.hermes/plugins` being owned by `root:root` while PRIME runs as `prime`. Ownership of that directory only was corrected to `prime:prime`; no recursive permission mutation was performed.
+
+`ryz3n-cognitive-connection` v0.1.0 was then deployed into:
 
 `/home/prime/.hermes/plugins/ryz3n-cognitive-connection`
 
-The command used `set -e`, so execution stopped at the permission error before source copy, activation or runtime mutation. No production breakage is implied by this failure.
+Observed deployment evidence:
+
+- manifest present;
+- `__init__.py` present;
+- `python3 -m py_compile` completed successfully;
+- manifest declares the four intended hooks: `pre_gateway_dispatch`, `pre_llm_call`, `pre_tool_call`, `transform_llm_output`;
+- SHA256 evidence was emitted for both deployed files.
+
+This closes source deployment only. Runtime registration/activation and behavioral acceptance remain unproven.
 
 ## 5-percent progress update protocol
 
@@ -111,7 +121,7 @@ Current notification baselines:
 
 - **Full RYZ3N master:** ~15% → next small update at ~20%.
 - **PRIME foundation:** ~70% → next update at ~75%.
-- **Cognitive Connection Layer:** ~20–25% → next material threshold is the next verified +5-point advancement from the current accepted baseline.
+- **Cognitive Connection Layer:** **~35%** → next small update at ~40%.
 - **Cargo ARC GREEN:** ~25–35% directional range → tighten the baseline as E2 evidence becomes concrete, then report each +5-point advancement.
 - **OMEGA / ARC Factory inheritance:** ~15–20% → next update after verified +5-point advancement.
 
