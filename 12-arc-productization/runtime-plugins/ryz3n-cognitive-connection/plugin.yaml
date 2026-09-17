@@ -1,6 +1,6 @@
 name: ryz3n-cognitive-connection
-version: 0.3.0
-description: RYZ3N model-independent cognitive connection layer for intent, reasoning-mode, request-local tool discipline, and public-output control.
+version: 0.3.1
+description: RYZ3N model-independent cognitive connection layer for intent, reasoning-mode, request-local tool discipline, epistemic integrity, and public-output control.
 provides_hooks:
   - pre_gateway_dispatch
   - pre_llm_call
