@@ -1,13 +1,14 @@
-"""RYZ3N Cognitive Connection v0.2.0.
+"""RYZ3N Cognitive Connection v0.3.0.
 
 Minimum viable, model-independent cognition/control layer.
 
-Scope of v0.2.0:
+Scope of v0.3.0:
 - preserve a generic pre-gateway control seam without channel-specific behavior;
 - recognize explicit exact-response requests as R0_DIRECT_EXACT;
 - recognize explicit no-tool requests as R1_DIRECT_NO_TOOL;
 - inject narrow direct-response policy before the LLM call;
 - block tool execution for exact/no-tool turns;
+- remove provider tool schemas from request-local R0/R1 payloads;
 - enforce exact public response for R0 turns;
 - collapse runaway repetitive output for bounded R1 direct/no-tool turns.
 
@@ -19,7 +20,8 @@ Non-goals:
 - no broad heuristic classification of ordinary conversation yet.
 
 The plugin keeps only short-lived process-local turn policy state and persists no
-private message content.
+private message content. Request-local tool suppression never mutates agent.tools
+or the canonical Hermes tool registry.
 """
 
 from __future__ import annotations
@@ -31,7 +33,7 @@ import time
 from difflib import SequenceMatcher
 from typing import Any
 
-_VERSION = "0.2.0"
+_VERSION = "0.3.0"
 _ENABLED_ENV = "RYZ3N_COGNITIVE_CONNECTION_ENABLED"
 _TTL_SECONDS = 900.0
 _MAX_SESSIONS = 256
@@ -43,6 +45,13 @@ _NO_TOOL_RE = re.compile(
     re.IGNORECASE,
 )
 _BRIEF_RE = re.compile(r"\b(?:brief|briefly|short|concise|concisely)\b", re.IGNORECASE)
+_TOOL_REQUEST_KEYS = (
+    "tools",
+    "tool_choice",
+    "parallel_tool_calls",
+    "functions",
+    "function_call",
+)
 
 _LOCK = threading.RLock()
 _SESSION_STATE: dict[str, dict[str, Any]] = {}
@@ -184,10 +193,19 @@ def _truncate_brief_output(text: str) -> str:
     return candidate.rstrip() + "…"
 
 
+def _state_for_turn(session_id: str, turn_id: str) -> dict[str, Any] | None:
+    state = _get_session_state(session_id)
+    if not state:
+        return None
+    if state.get("turn_id") != turn_id:
+        return None
+    return state
+
+
 def on_pre_gateway_dispatch(**kwargs: Any) -> None:
     """Reserved generic ingress/control seam.
 
-    v0.2.0 deliberately performs no privileged action here. This hook fires
+    v0.3.0 deliberately performs no privileged action here. This hook fires
     before Hermes authorization, so Owner-only control commands must not be
     executed from this callback until an explicit authenticated contract is
     added.
@@ -260,6 +278,47 @@ def on_pre_llm_call(**kwargs: Any) -> dict[str, str] | None:
     return None
 
 
+def on_llm_request_middleware(**kwargs: Any) -> dict[str, Any] | None:
+    """Remove tool schemas from request-local payloads for R0/R1 turns only.
+
+    Hermes passes a copy of the final provider kwargs into request middleware.
+    Returning a replacement request changes only this provider call; the agent's
+    canonical tool registry remains available for later R2+ turns.
+    """
+    if not _enabled():
+        return None
+
+    session_id = str(kwargs.get("session_id") or "")
+    turn_id = str(kwargs.get("turn_id") or "")
+    state = _state_for_turn(session_id, turn_id)
+    if not state or state.get("lane") not in {"R0_DIRECT_EXACT", "R1_DIRECT_NO_TOOL"}:
+        return None
+
+    request = kwargs.get("request")
+    if not isinstance(request, dict):
+        return None
+
+    if not any(key in request for key in _TOOL_REQUEST_KEYS):
+        return None
+
+    narrowed = dict(request)
+    removed: list[str] = []
+    for key in _TOOL_REQUEST_KEYS:
+        if key in narrowed:
+            narrowed.pop(key, None)
+            removed.append(key)
+
+    return {
+        "request": narrowed,
+        "action": "strip_tool_schemas",
+        "reason": "RYZ3N selected a direct no-tool lane for this turn.",
+        "metadata": {
+            "lane": state.get("lane"),
+            "removed_request_keys": removed,
+        },
+    }
+
+
 def on_pre_tool_call(**kwargs: Any) -> dict[str, str] | None:
     """Block tools for the same turn when the selected lane forbids them."""
     if not _enabled():
@@ -267,10 +326,8 @@ def on_pre_tool_call(**kwargs: Any) -> dict[str, str] | None:
 
     session_id = str(kwargs.get("session_id") or "")
     turn_id = str(kwargs.get("turn_id") or "")
-    state = _get_session_state(session_id)
+    state = _state_for_turn(session_id, turn_id)
     if not state:
-        return None
-    if state.get("turn_id") != turn_id:
         return None
     if state.get("lane") not in {"R0_DIRECT_EXACT", "R1_DIRECT_NO_TOOL"}:
         return None
@@ -319,3 +376,4 @@ def register(ctx: Any) -> None:
     ctx.register_hook("pre_llm_call", on_pre_llm_call)
     ctx.register_hook("pre_tool_call", on_pre_tool_call)
     ctx.register_hook("transform_llm_output", on_transform_llm_output)
+    ctx.register_middleware("llm_request", on_llm_request_middleware)
