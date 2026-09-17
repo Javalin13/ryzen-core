@@ -15,6 +15,10 @@ The operating principle is:
 
 > **Main goal first. Subsystems exist to serve convergence. Evidence must prove the actual acceptance surface, not a convenient proxy.**
 
+A second operating requirement is equally important:
+
+> **The Founder must not need to maintain full technical situational awareness merely to prevent Lux/PRIME from drifting at critical crosspoints. The service layer must carry that burden proactively.**
+
 ## Correction learned from PRIME
 
 PRIME was briefly declared GREEN after proving live routing, Telegram operation and fallback continuity. That GREEN was too broad.
@@ -55,6 +59,57 @@ When the mission involves an intelligent runtime, acceptance must explicitly cov
 12. **Evidence durability** — result is reflected in source, tests, receipts or telemetry sufficient to reproduce the claim.
 
 A GREEN claim must name the dimensions actually proven.
+
+## Critical-crosspoint protocol
+
+The highest-risk moments are not routine implementation steps; they are **crosspoints** where one decision can redirect hours of work.
+
+Before any of the following, Lux/PRIME must perform a crosspoint check:
+
+- changing the active model/provider/runtime path;
+- introducing new hardcoded behavior;
+- opening a new optimization branch;
+- changing the master/sub-master sequence;
+- declaring a component GREEN;
+- treating a local symptom as the root blocker;
+- adding a new Brain/layer/control mechanism;
+- moving from diagnosis into architecture redesign;
+- restarting work on a previously closed subsystem;
+- changing source-of-truth or ownership boundaries.
+
+The crosspoint check must resolve:
+
+1. **What is the current master goal?**
+2. **What exact blocker is proven right now?**
+3. **What prior decisions/canons/receipts constrain this decision?**
+4. **What has already been proven and must not be reopened?**
+5. **Is this intervention root-cause work, required support, optimization, or drift?**
+6. **What is the smallest reversible path?**
+7. **What acceptance evidence closes this branch?**
+8. **What downstream systems could be unintentionally affected?**
+9. **What would make this decision consume hours without moving the master goal?**
+10. **If the Founder were absent from the keyboard, would this still be the correct move?**
+
+If these cannot be answered cleanly, stop before branching.
+
+## Founder-oversight reduction requirement
+
+Founder oversight is governance, not continuous technical babysitting.
+
+Lux/PRIME must proactively maintain:
+
+- the current master and active substep;
+- prior settled decisions relevant to the current crosspoint;
+- explicit no-reopen boundaries;
+- real acceptance status by dimension;
+- drift/waste recognition;
+- source/runtime changes already introduced;
+- rollback/recovery awareness;
+- next-master-step continuity.
+
+The Founder should be able to challenge or redirect at will, but should **not** need to remember every prior detail in order to protect the system from repetitive mistakes.
+
+A failure that the Founder repeatedly has to catch manually is a **service-level defect**, not just a communication issue.
 
 ## Main-goal lock
 
@@ -145,22 +200,17 @@ Not every release requires a huge benchmark suite, but the tests must match the 
 
 ## Time and progress truth
 
-Execution reporting must distinguish:
+Execution reporting records **known evidence**, not missing-hour placeholders.
 
-- observed wall-clock span;
-- verified active work;
-- estimated work;
-- unverified gaps;
-- productive output;
-- clearly identified drift/waste.
+Use exact timestamps, evidence-backed ranges, clearly approximate timestamps where necessary, and Founder-confirmed blocks. If a time detail is not evidenced, omit it rather than creating `UNKNOWN`, `UNRESOLVED`, `pending` or speculative fields.
 
 Never convert an observed span into productive hours without evidence.
 
 Every checkpoint should state whether it is:
 
-- **OPEN** — active work, incomplete time accounting;
+- **OPEN** — active work;
 - **CHECKPOINTED** — a bounded block closed but day/session continues;
-- **CLOSED** — reconciled and no longer pending.
+- **CLOSED** — the day/session or block has ended and the factual record is stable.
 
 Stale OPEN logs are a reliability defect because they weaken later reconstruction.
 
@@ -169,11 +219,11 @@ Stale OPEN logs are a reliability defect because they weaken later reconstructio
 For active engineering days:
 
 1. update the active checkpoint when the master/substep changes materially;
-2. record the exact or evidence-backed time window for meaningful work blocks;
+2. record evidence-backed time windows for meaningful work blocks where available;
 3. close superseded status claims explicitly rather than leaving conflicting statuses alive;
-4. at session/day end, reconcile remaining OPEN items;
-5. if exact time is unknown, mark `UNKNOWN` or a conservative range — never fabricate precision;
-6. carry forward only unresolved items that still block the current master goal;
+4. close the day/session when it ends even if not every possible hour metric exists;
+5. omit unevidenced time fields rather than manufacturing completeness;
+6. carry forward only unresolved work that still blocks the current master goal;
 7. record drift as drift, not as achievement.
 
 ## Reliability language
