@@ -1,4 +1,4 @@
-"""RYZ3N Cache Controller v0.1.6 — shadow telemetry only.
+"""RYZ3N Cache Controller v0.1.7 — shadow telemetry only.
 
 E1.22 contract:
 - NEVER mutates an LLM request.
@@ -433,11 +433,36 @@ def on_pre_api_request(**kwargs: Any) -> None:
     global _ACTIVE
     rid = str(kwargs.get("api_request_id") or "")
     measurements = _request_measurements(kwargs)
+
+    request = kwargs.get("request")
+    body = request.get("body") if isinstance(request, Mapping) else None
+    if not isinstance(body, Mapping) and isinstance(request, Mapping):
+        body = request
+
+    tools = body.get("tools") if isinstance(body, Mapping) else None
+
+    effective_tool_count = (
+        len(tools)
+        if isinstance(tools, list)
+        else (0 if isinstance(body, Mapping) and tools is None else None)
+    )
+    effective_tool_payload_present = (
+        bool(tools) if isinstance(body, Mapping) else None
+    )
+    effective_tool_payload_char_count = (
+        _serialized_chars(tools)
+        if isinstance(tools, list)
+        else (0 if isinstance(body, Mapping) and tools is None else None)
+    )
+
     pre = {
         "approx_input_tokens": kwargs.get("approx_input_tokens"),
         "request_char_count": kwargs.get("request_char_count"),
         "message_count": kwargs.get("message_count"),
         "tool_count": kwargs.get("tool_count"),
+        "effective_tool_count": effective_tool_count,
+        "effective_tool_payload_present": effective_tool_payload_present,
+        "effective_tool_payload_char_count": effective_tool_payload_char_count,
         **measurements,
         **_builder_tier_measurements(kwargs),
     }
