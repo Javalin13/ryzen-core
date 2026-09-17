@@ -3,7 +3,7 @@
 Status: **EXECUTIVE PROGRESS SNAPSHOT — directional, not a GREEN claim**  
 Authority: **Founder-directed master tracking**  
 Current master: **M3/16 — Cargo ARC GREEN**  
-Current execution block: **E1.23C — deploy and prove RYZ3N Cognitive Connection v0.1.0 on PRIME**
+Current execution block: **E1.23C — activate and prove RYZ3N Cognitive Connection v0.1.0 on PRIME**
 
 ## Purpose
 
@@ -25,7 +25,7 @@ Interpretation: RYZ3N is much further ahead in vision, Canon and architecture th
 - Vision / Canon / architecture: **~80–90%**
 - Core/source/governance foundation: **~70–80%**
 - PRIME runtime foundation: **~70%** — transport/runtime is proven; full reasoning/cognition acceptance is not yet GREEN
-- Cognitive Connection Layer: **~35%** — architecture, hook contracts, v0.1.0 source and PRIME-local source deployment are now complete; runtime validation, activation and acceptance remain
+- Cognitive Connection Layer: **~40%** — architecture, hook contracts, v0.1.0 source deployment and Hermes Plugin Doctor validation are complete; live activation and T0–T6 acceptance remain
 - Cargo ARC production GREEN: **~25–35%**
 - Reusable ARC Factory / OMEGA / inheritance: **~15–20%**
 - Full 16-step operational ecosystem: **~15% overall**
@@ -81,12 +81,13 @@ Hook discovery     ██████████ 100%
 Contract proof     ██████████ 100%
 v0.1.0 source      ██████████ 100%
 Deployment         ██████████ 100%  GREEN — source present + syntax valid
+Doctor validation  ██████████ 100%  GREEN — discovery/manifest/import/registration passed
 Activation         ░░░░░░░░░░   0%  ← CURRENT
 T0–T6 acceptance   ░░░░░░░░░░   0%
 PRIME cognition    ░░░░░░░░░░   NOT GREEN YET
 ```
 
-## Current deployment truth
+## Current deployment and validation truth
 
 The initial permission blocker was isolated to `/home/prime/.hermes/plugins` being owned by `root:root` while PRIME runs as `prime`. Ownership of that directory only was corrected to `prime:prime`; no recursive permission mutation was performed.
 
@@ -94,7 +95,7 @@ The initial permission blocker was isolated to `/home/prime/.hermes/plugins` bei
 
 `/home/prime/.hermes/plugins/ryz3n-cognitive-connection`
 
-Observed deployment evidence:
+Observed source-deployment evidence:
 
 - manifest present;
 - `__init__.py` present;
@@ -102,7 +103,20 @@ Observed deployment evidence:
 - manifest declares the four intended hooks: `pre_gateway_dispatch`, `pre_llm_call`, `pre_tool_call`, `transform_llm_output`;
 - SHA256 evidence was emitted for both deployed files.
 
-This closes source deployment only. Runtime registration/activation and behavioral acceptance remain unproven.
+Runtime contract validation then passed using PRIME's actual Hermes virtualenv interpreter:
+
+`/home/prime/hermes-agent/venv/bin/python`
+
+Observed Plugin Doctor result:
+
+- manifest: `ryz3n-cognitive-connection 0.1.0 (standalone)`;
+- runtime discovery passed;
+- manifest parsing passed;
+- import passed;
+- registration passed;
+- registrations: `0 tool(s), 4 hook(s)`.
+
+This closes source deployment and static runtime registration validation. Live gateway activation and behavioral acceptance remain unproven.
 
 ## 5-percent progress update protocol
 
@@ -121,7 +135,7 @@ Current notification baselines:
 
 - **Full RYZ3N master:** ~15% → next small update at ~20%.
 - **PRIME foundation:** ~70% → next update at ~75%.
-- **Cognitive Connection Layer:** **~35%** → next small update at ~40%.
+- **Cognitive Connection Layer:** **~40%** → next small update at ~45%.
 - **Cargo ARC GREEN:** ~25–35% directional range → tighten the baseline as E2 evidence becomes concrete, then report each +5-point advancement.
 - **OMEGA / ARC Factory inheritance:** ~15–20% → next update after verified +5-point advancement.
 
