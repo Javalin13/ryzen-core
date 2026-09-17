@@ -1,4 +1,4 @@
-"""RYZ3N Cache Controller v0.1.3 — shadow telemetry only.
+"""RYZ3N Cache Controller v0.1.6 — shadow telemetry only.
 
 E1.22 contract:
 - NEVER mutates an LLM request.
@@ -273,6 +273,66 @@ def _request_measurements(kwargs: Mapping[str, Any]) -> dict[str, Any]:
     }
 
 
+
+def _builder_tier_measurements(kwargs: Mapping[str, Any]) -> dict[str, Any]:
+    """Consume provider-independent content-free system-prompt builder metrics."""
+    raw = kwargs.get("system_prompt_builder_tier_metrics")
+    full = kwargs.get("system_prompt")
+
+    full_chars = len(full) if isinstance(full, str) else None
+
+    if not isinstance(raw, Mapping):
+        return {
+            "builder_tier_metrics_available": False,
+            "builder_stable_char_count": None,
+            "builder_context_char_count": None,
+            "builder_volatile_char_count": None,
+            "builder_separator_char_count": None,
+            "builder_total_char_count": None,
+            "builder_total_matches_system_prompt": None,
+            "builder_stable_share": None,
+            "builder_context_share": None,
+            "builder_volatile_share": None,
+        }
+
+    def as_int(name: str) -> int | None:
+        try:
+            value = raw.get(name)
+            return int(value) if value is not None else None
+        except Exception:
+            return None
+
+    stable = as_int("stable_chars")
+    context = as_int("context_chars")
+    volatile = as_int("volatile_chars")
+    separators = as_int("separator_chars")
+    total = as_int("total_chars")
+
+    matches = (
+        total == full_chars
+        if total is not None and full_chars is not None
+        else None
+    )
+
+    active_chars = as_int("active_prompt_chars")
+
+    return {
+        "builder_tier_metrics_available": True,
+        "builder_tier_metric_source": raw.get("source"),
+        "builder_stable_char_count": stable,
+        "builder_context_char_count": context,
+        "builder_volatile_char_count": volatile,
+        "builder_separator_char_count": separators,
+        "builder_total_char_count": total,
+        "builder_active_prompt_char_count": active_chars,
+        "builder_candidate_matches_active_prompt":
+            raw.get("candidate_matches_active_prompt"),
+        "builder_total_matches_system_prompt": matches,
+        "builder_stable_share": _ratio(stable, total),
+        "builder_context_share": _ratio(context, total),
+        "builder_volatile_share": _ratio(volatile, total),
+    }
+
 def _get(obj: Any, *names: str, default: int = 0) -> int:
     for name in names:
         try:
@@ -379,6 +439,7 @@ def on_pre_api_request(**kwargs: Any) -> None:
         "message_count": kwargs.get("message_count"),
         "tool_count": kwargs.get("tool_count"),
         **measurements,
+        **_builder_tier_measurements(kwargs),
     }
 
     with _LOCK:
