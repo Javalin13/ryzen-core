@@ -94,6 +94,29 @@ The first PRIME deployment attempt stopped safely because the `prime` user could
 
 The command used `set -e`, so execution stopped at the permission error before source copy, activation or runtime mutation. No production breakage is implied by this failure.
 
+## 5-percent progress update protocol
+
+Founder wants the loading bars actively maintained, not recreated from memory later.
+
+Tracking rule:
+
+- preserve a current baseline for the **full RYZ3N master**, the **active master step**, and the **active leverage layer**;
+- when any tracked bar increases by **5 percentage points or more** from its last reported checkpoint, update this record and give the Founder a **small loading-bar progress note** in the active conversation;
+- default thresholds are 20%, 25%, 30%, 35%, and so on through 100%;
+- do not spam updates for sub-5% movement;
+- never advance a percentage merely because time was spent — movement must correspond to durable implementation, verification, acceptance, or inheritance progress;
+- percentages remain executive orientation only and never replace scoped GREEN evidence.
+
+Current notification baselines:
+
+- **Full RYZ3N master:** ~15% → next small update at ~20%.
+- **PRIME foundation:** ~70% → next update at ~75%.
+- **Cognitive Connection Layer:** ~20–25% → next material threshold is the next verified +5-point advancement from the current accepted baseline.
+- **Cargo ARC GREEN:** ~25–35% directional range → tighten the baseline as E2 evidence becomes concrete, then report each +5-point advancement.
+- **OMEGA / ARC Factory inheritance:** ~15–20% → next update after verified +5-point advancement.
+
+Every 5% progress note should be compact: **what moved, new percentage, why it moved, and the next blocker**.
+
 ## Progress-governance rule
 
 This loading-bar view must never become a proxy for acceptance. Percentages are for executive orientation only.
