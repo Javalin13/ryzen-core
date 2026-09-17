@@ -31,12 +31,12 @@ from typing import Any
 _VERSION = "0.1.0"
 _ENABLED_ENV = "RYZ3N_COGNITIVE_CONNECTION_ENABLED"
 _TTL_SECONDS = 900.0
-_MAX_STATES = 256
+_MAX_SESSIONS = 256
 
 _EXACT_REPLY_RE = re.compile(r"^\s*reply\s+exactly\s*:\s*(.+?)\s*$", re.IGNORECASE | re.DOTALL)
 
 _LOCK = threading.RLock()
-_TURN_STATE: dict[tuple[str, str], dict[str, Any]] = {}
+_SESSION_STATE: dict[str, dict[str, Any]] = {}
 
 
 def _enabled() -> bool:
@@ -51,56 +51,42 @@ def _now() -> float:
 def _purge_locked(now: float | None = None) -> None:
     current = _now() if now is None else now
     stale = [
-        key
-        for key, state in _TURN_STATE.items()
+        session_id
+        for session_id, state in _SESSION_STATE.items()
         if current - float(state.get("created_at", current)) > _TTL_SECONDS
     ]
-    for key in stale:
-        _TURN_STATE.pop(key, None)
+    for session_id in stale:
+        _SESSION_STATE.pop(session_id, None)
 
-    while len(_TURN_STATE) > _MAX_STATES:
+    while len(_SESSION_STATE) > _MAX_SESSIONS:
         oldest = min(
-            _TURN_STATE,
-            key=lambda key: float(_TURN_STATE[key].get("created_at", current)),
+            _SESSION_STATE,
+            key=lambda session_id: float(
+                _SESSION_STATE[session_id].get("created_at", current)
+            ),
         )
-        _TURN_STATE.pop(oldest, None)
+        _SESSION_STATE.pop(oldest, None)
 
 
-def _store_turn_state(session_id: str, turn_id: str, state: dict[str, Any]) -> None:
-    if not session_id or not turn_id:
+def _store_session_state(session_id: str, state: dict[str, Any]) -> None:
+    if not session_id:
         return
     with _LOCK:
         _purge_locked()
-        _TURN_STATE[(session_id, turn_id)] = {
+        _SESSION_STATE[session_id] = {
             **state,
             "created_at": _now(),
         }
         _purge_locked()
 
 
-def _get_turn_state(session_id: str, turn_id: str) -> dict[str, Any] | None:
-    if not session_id or not turn_id:
-        return None
-    with _LOCK:
-        _purge_locked()
-        state = _TURN_STATE.get((session_id, turn_id))
-        return dict(state) if isinstance(state, dict) else None
-
-
-def _latest_session_state(session_id: str) -> dict[str, Any] | None:
+def _get_session_state(session_id: str) -> dict[str, Any] | None:
     if not session_id:
         return None
     with _LOCK:
         _purge_locked()
-        candidates = [
-            state
-            for (sid, _turn_id), state in _TURN_STATE.items()
-            if sid == session_id
-        ]
-        if not candidates:
-            return None
-        latest = max(candidates, key=lambda state: float(state.get("created_at", 0.0)))
-        return dict(latest)
+        state = _SESSION_STATE.get(session_id)
+        return dict(state) if isinstance(state, dict) else None
 
 
 def _classify_exact(user_message: Any) -> str | None:
@@ -125,20 +111,31 @@ def on_pre_gateway_dispatch(**kwargs: Any) -> None:
 
 
 def on_pre_llm_call(**kwargs: Any) -> dict[str, str] | None:
-    """Classify only explicit exact-response requests into R0_DIRECT."""
+    """Classify the current turn and constrain explicit exact responses."""
     if not _enabled():
-        return None
-
-    exact_output = _classify_exact(kwargs.get("user_message"))
-    if exact_output is None:
         return None
 
     session_id = str(kwargs.get("session_id") or "")
     turn_id = str(kwargs.get("turn_id") or "")
-    _store_turn_state(
+    exact_output = _classify_exact(kwargs.get("user_message"))
+
+    # Always overwrite session state for the new turn so an old exact-response
+    # policy can never bleed into a later ordinary turn.
+    if exact_output is None:
+        _store_session_state(
+            session_id,
+            {
+                "turn_id": turn_id,
+                "lane": "DEFAULT",
+                "exact_output": None,
+            },
+        )
+        return None
+
+    _store_session_state(
         session_id,
-        turn_id,
         {
+            "turn_id": turn_id,
             "lane": "R0_DIRECT_EXACT",
             "exact_output": exact_output,
         },
@@ -155,14 +152,18 @@ def on_pre_llm_call(**kwargs: Any) -> dict[str, str] | None:
 
 
 def on_pre_tool_call(**kwargs: Any) -> dict[str, str] | None:
-    """Block tools for a turn already classified as R0_DIRECT_EXACT."""
+    """Block tools for the same turn when classified as R0_DIRECT_EXACT."""
     if not _enabled():
         return None
 
     session_id = str(kwargs.get("session_id") or "")
     turn_id = str(kwargs.get("turn_id") or "")
-    state = _get_turn_state(session_id, turn_id)
-    if not state or state.get("lane") != "R0_DIRECT_EXACT":
+    state = _get_session_state(session_id)
+    if not state:
+        return None
+    if state.get("turn_id") != turn_id:
+        return None
+    if state.get("lane") != "R0_DIRECT_EXACT":
         return None
 
     return {
@@ -172,12 +173,12 @@ def on_pre_tool_call(**kwargs: Any) -> dict[str, str] | None:
 
 
 def on_transform_llm_output(**kwargs: Any) -> str | None:
-    """Enforce the exact public response for the current exact/direct turn."""
+    """Enforce exact public output only for the current session's exact lane."""
     if not _enabled():
         return None
 
     session_id = str(kwargs.get("session_id") or "")
-    state = _latest_session_state(session_id)
+    state = _get_session_state(session_id)
     if not state or state.get("lane") != "R0_DIRECT_EXACT":
         return None
 
