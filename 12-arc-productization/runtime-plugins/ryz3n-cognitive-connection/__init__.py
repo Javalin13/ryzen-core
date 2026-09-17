@@ -1,12 +1,13 @@
-"""RYZ3N Cognitive Connection v0.3.0.
+"""RYZ3N Cognitive Connection v0.3.1.
 
 Minimum viable, model-independent cognition/control layer.
 
-Scope of v0.3.0:
+Scope of v0.3.1:
 - preserve a generic pre-gateway control seam without channel-specific behavior;
 - recognize explicit exact-response requests as R0_DIRECT_EXACT;
 - recognize explicit no-tool requests as R1_DIRECT_NO_TOOL;
 - inject narrow direct-response policy before the LLM call;
+- enforce generic epistemic integrity for no-tool turns;
 - block tool execution for exact/no-tool turns;
 - remove provider tool schemas from request-local R0/R1 payloads;
 - enforce exact public response for R0 turns;
@@ -33,7 +34,7 @@ import time
 from difflib import SequenceMatcher
 from typing import Any
 
-_VERSION = "0.3.0"
+_VERSION = "0.3.1"
 _ENABLED_ENV = "RYZ3N_COGNITIVE_CONNECTION_ENABLED"
 _TTL_SECONDS = 900.0
 _MAX_SESSIONS = 256
@@ -205,7 +206,7 @@ def _state_for_turn(session_id: str, turn_id: str) -> dict[str, Any] | None:
 def on_pre_gateway_dispatch(**kwargs: Any) -> None:
     """Reserved generic ingress/control seam.
 
-    v0.3.0 deliberately performs no privileged action here. This hook fires
+    v0.3.1 deliberately performs no privileged action here. This hook fires
     before Hermes authorization, so Owner-only control commands must not be
     executed from this callback until an explicit authenticated contract is
     added.
@@ -258,6 +259,13 @@ def on_pre_llm_call(**kwargs: Any) -> dict[str, str] | None:
                 "RYZ3N COGNITIVE CONNECTION — R1_DIRECT_NO_TOOL. "
                 "The user explicitly forbids tool use for this turn. "
                 "Answer once, directly and sufficiently from available knowledge. "
+                "Maintain epistemic integrity: never present a time-sensitive, live, current, "
+                "or externally changing fact as known unless it is explicitly supported by "
+                "evidence already available in the current conversation/runtime context. "
+                "If the answer depends on fresh external state and tools are forbidden, say "
+                "that it cannot be known or verified with certainty from the current evidence "
+                "and identify the kind of live source or evidence required. Do not guess, "
+                "fabricate, or present an unsupported current value as fact. "
                 "Do not restate the same conclusion in alternate wording. "
                 "Stop when the answer is complete. "
                 + ("The user asked for a brief answer, so keep it compact." if brief else "")
