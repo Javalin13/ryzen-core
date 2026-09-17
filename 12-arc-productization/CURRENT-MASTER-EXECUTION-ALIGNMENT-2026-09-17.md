@@ -3,13 +3,17 @@
 Status: **ACTIVE**  
 Authority: **Founder-directed execution alignment**  
 Current master: **M3/16 — Cargo ARC GREEN**  
-Current subline: **E1.23B — define/prove smallest RYZ3N Cognitive Connection seam**
+Current subline: **E1.23C — deploy/prove RYZ3N Cognitive Connection v0.1.0 on PRIME**
 
 ## Why this file exists
 
 The older 2026-09-13 master crosswalk reflects an earlier M2 PRIME-GREEN checkpoint and is now historical. The 2026-09-15 M3 Performance System Completion Lock and the 2026-09-17 Founder architecture correction are the active execution basis.
 
 This file does not rewrite Canon. It records the current operational sequence.
+
+Executive loading-bar snapshot:
+
+`12-arc-productization/RYZ3N-MASTER-PROGRESS-SNAPSHOT-2026-09-17.md`
 
 ## Current 16-step master
 
@@ -63,8 +67,8 @@ This correction is governed by:
 ```text
 M3/16 — Cargo ARC GREEN
   → E1.23A audit accumulated PRIME/Hermes cognition/control modifications — CLOSED
-  → E1.23B define/prove smallest RYZ3N Cognitive Connection seam — CURRENT
-  → E1.23C restore fast + correct PRIME behavior through that seam
+  → E1.23B define/prove smallest RYZ3N Cognitive Connection seam — CLOSED
+  → E1.23C deploy/prove RYZ3N Cognitive Connection v0.1.0 on PRIME — CURRENT
   → representative PRIME reasoning/tool/Owner-context acceptance
   → E1.24 verified context reduction / pressure reduction only where still necessary
   → E1.25 bounded health-aware fallback / circuit behavior
@@ -89,9 +93,28 @@ The local `ryz3n-cache-controller` v0.1.6 diff is also telemetry/measurement onl
 
 No tracked current Hermes diff shown in the audit contains `/think` cognition hardcoding, unsolicited tool-selection logic or response-shaping logic. Do not continue broad archaeology there without new contradictory evidence.
 
-## E1.23 architectural correction
+## E1.23B closure evidence
 
-The immediate goal is no longer “patch `consume` in Telegram.”
+The supported Hermes lifecycle seams required for the first RYZ3N Cognitive Connection implementation are now proven:
+
+- `pre_gateway_dispatch` — ingress/control gate with skip/rewrite/allow behavior;
+- `pre_llm_call` — per-turn cognition/context policy injection;
+- `pre_tool_call` — enforceable tool-policy gate with block/modify contract;
+- `transform_llm_output` — final public-output transformation gate.
+
+This is sufficient for the first minimal model-independent implementation without Hermes-core mutation.
+
+## E1.23C current state
+
+`ryz3n-cognitive-connection` v0.1.0 source now exists in `ryzen-core`.
+
+The first PRIME deployment attempt stopped safely at a filesystem permission boundary when `prime` could not create:
+
+`/home/prime/.hermes/plugins/ryz3n-cognitive-connection`
+
+Because the deployment command used `set -e`, no subsequent copy/activation/runtime steps executed. The current blocker is therefore a narrow deployment-permission issue, not a new architecture/runtime investigation.
+
+## E1.23 architectural correction
 
 The target is a generic, model-independent RYZ3N Cognitive Connection Layer that owns:
 
@@ -118,7 +141,7 @@ Every current sub-block must explicitly retain:
 
 No closed subsystem is reopened without new contradictory evidence. No endpoint/transport/cache metric may substitute for the actual reasoning/Owner outcome being claimed.
 
-The immediate acceptance ladder for PRIME after E1.23B/C must include:
+The immediate acceptance ladder for PRIME after E1.23C must include:
 
 1. exact/direct no-tool instruction;
 2. simple conversational no-tool response;
@@ -130,7 +153,7 @@ The immediate acceptance ladder for PRIME after E1.23B/C must include:
 
 ## Immediate bounded action
 
-**E1.23B only.** Identify the smallest existing generic seam capable of hosting the RYZ3N Cognitive Connection behavior. Do not reopen model hunting, cache optimization, Telegram networking or broad instrumentation unless this bounded seam proof directly fails because of one of those layers.
+Resolve only the plugin deployment permission boundary, deploy/activate v0.1.0 on PRIME, then run the first acceptance test. Do not reopen model hunting, cache optimization, Telegram networking or broad instrumentation unless direct acceptance evidence proves one of those layers is the blocker.
 
 ## Reliable Excellence acceptance
 
