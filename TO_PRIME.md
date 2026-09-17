@@ -5,173 +5,129 @@
 **Repository:** `Javalin13/ryzen-core`  
 **Counterpart:** `FROM_PRIME.md`
 
-## Deterministic `consume` command semantics — REQUIRED
+## Bridge invariant
 
-A Founder message consisting of `consume` or `consume bridge` is an operational command, not a conversational request.
+A Founder message `consume` or `consume bridge` is an operational bridge command, not an ordinary conversational request.
 
-On receiving it, PRIME must immediately:
-
-1. use the terminal/tool path;
-2. operate as the established `prime` Git user context;
-3. go to `/home/prime/ryzen-core`;
-4. fetch/pull current `origin/main` safely without destructive reset/clean/checkout;
-5. read repository-root `TO_PRIME.md`;
-6. execute the current bounded directive if Status is `CONSUME REQUIRED`;
-7. write the detailed result to repository-root `FROM_PRIME.md`;
-8. commit/push durable RYZ3N source/evidence;
-9. send Founder only the MINI REPORT.
-
-Do NOT on `consume`:
-
-- ask Founder what task to perform;
-- summarize the chat or screenshots instead of reading GitHub;
-- treat `FROM_PRIME.md` as the input directive;
-- echo prior Founder/Lux messages;
-- invent a task from memory;
-- use Founder as a copy/paste transport.
-
-Direction is always:
+Canonical direction remains:
 
 `Lux -> TO_PRIME.md -> PRIME executes -> FROM_PRIME.md -> Lux sync`
 
-If local uncommitted work blocks a safe pull, preserve it and reconcile according to the current directive. Never destroy local work to make `consume` succeed.
+PRIME must use the established `prime` Git context, fetch current `origin/main`, read this file, execute only the bounded directive, update `FROM_PRIME.md`, commit/push durable evidence, then send Founder only the MINI REPORT.
+
+Do not use the Founder as copy/paste transport. Do not treat `FROM_PRIME.md` as the input directive. Never destroy local work to make a pull succeed.
 
 ## Master position
 
 **MASTER: M3/16 — CARGO ARC GREEN**
 
-PRIME is returned to **bounded engineering execution authority** after the 2026-09-15 external performance bootstrap restored responsive interactive operation and established the RYZ3N Cache Controller / performance measurement foundation.
+The 16-step master is unchanged. Current work remains the reusable PRIME reliability/cognition substrate required before Cargo parity.
 
-This is NOT a declaration that PRIME performance is fully GREEN. Current remaining defects are specific and must now be closed under Reliable Excellence.
+## Architecture correction — 2026-09-17
 
-## Current execution line
+Founder direction now explicitly rejects solving current PRIME cognition defects by accumulating more channel-specific hardcoding.
 
-**E1.23 — PRIME fast-interactive correctness + tool-discipline closure**
+Read and inherit:
 
-Observed current state at handoff:
+- `12-arc-productization/RYZ3N-COGNITIVE-CONNECTION-LAYER-AND-OWNER-SOVEREIGNTY-RUNTIME-DIRECTION-2026-09-17.md`
+- `02-ryzen/future-reliability-capabilities/OWNER-SOVEREIGNTY-COGNITIVE-CONNECTION-SKILL-REGISTRY-ADDENDUM-2026-09-17.md`
 
-- PRIME is responsive again and can answer quickly enough for interactive work.
-- Direct Laguna endpoint capability was previously proven at ~0.46 s average for tiny exact prompts.
-- Best real PRIME Laguna request observed during the bootstrap was ~4.75 s.
-- PRIME request pressure has been measured at roughly ~20k provider input tokens on trivial requests.
-- ~98% repeated/stable request-character opportunity was measured on a representative live request while provider-reported cache reuse remained effectively zero.
-- RYZ3N Cache Controller evolved through v0.1.6 shadow instrumentation, provider-independent and content-free.
-- Fresh-build and restored Telegram-session prompt paths were traced to the common `_restore_or_build_system_prompt()` -> `agent._cached_system_prompt` -> `turn_context.py` convergence.
-- PRIME and Cargo process isolation remained preserved throughout PRIME-only restarts.
-- Telegram hostname-first repair must remain byte-preserved unless a separately authorized networking mission requires change.
+Key invariant:
 
-Current visible failures still to close:
+> RYZ3N owns cognition architecture. Models, providers, agent runtimes, tools and channels remain replaceable substrates.
 
-1. trivial requests may incorrectly trigger tools (including text-to-speech / config reads);
-2. `/think*` or reasoning-control leakage can appear in Founder-facing output;
-3. responses are often far more verbose than requested;
-4. Laguna provider failures can fall back to local Qwen, which has shown ~77–115 s latency and is not acceptable as an interactive normal-path fallback;
-5. exact-reply / simple-response instruction following is not yet consistently correct;
-6. local v0.1.6 source changes on the VPS may be ahead of remote `ryzen-core`; source truth must be reconciled safely before any pull/overwrite that could lose them.
+MiniMax is **not** selected as PRIME's permanent model. The architectural lesson being adopted is model-independent proportional/interleaved reasoning: intent -> reasoning budget -> tool/no-tool -> act -> observe -> verify -> stop, with private cognition structurally separated from public Owner output.
 
-## ROUND A — mandatory source reconciliation first
+Owner sovereignty must remain human and non-simulatable. Owner-aware cognition may model relevant identity, intent, working style, priorities and decision patterns only as bounded evidence-based context; inference is never authority and explicit current Owner direction always wins.
 
-Before implementation work:
+## CURRENT: E1.23A — non-destructive cognition/control mutation audit
 
-1. Inspect `/home/prime/ryzen-core` working tree and `origin/main` without destructive reset/clean/checkout.
-2. Preserve the currently deployed/local v0.1.6 Cache Controller and Hermes instrumentation evidence.
-3. Reconcile the local v0.1.6 RYZ3N-owned source changes into `Javalin13/ryzen-core` so remote `main` becomes durable source truth.
-4. Do not overwrite or discard local uncommitted work.
-5. Do not add GitHub credentials to root; use the established `prime` user Git path.
-6. Preserve the Hermes Telegram modification and its existing backup/artifact state.
+### Objective
 
-If a source conflict exists, stop the conflicting write and report it; do not guess.
+Before another behavioral patch is introduced, establish exactly what custom PRIME/Hermes modifications exist and whether any cognition/control hardcoding can plausibly contribute to:
 
-## ROUND B — inspect and close fast-interactive correctness
+- `/think*` or hidden-control leakage;
+- unsolicited text-to-speech or other tool calls;
+- failure to obey exact/direct requests;
+- excessive verbosity/expansion;
+- brittle `consume` semantics;
+- recursion/fallback amplification.
 
-Primary objective:
+### Round A — source truth / working-tree audit
 
-> A trivial Founder message must receive a direct, semantically correct, concise response with NO unnecessary tool call, NO `/think*` leakage, bounded execution, and interactive latency when the fast provider is healthy.
+Inspect only. Do not mutate runtime behavior in this round.
 
-Inspect the smallest relevant surfaces for:
+1. Inspect `/home/prime/hermes-agent` tracked modifications, untracked files and detached-HEAD state.
+2. Inspect `/home/prime/ryzen-core` local changes versus `origin/main` without destructive reset/clean/checkout.
+3. Classify every relevant deviation into:
+   - `TRANSPORT/NETWORKING`
+   - `TELEMETRY/MEASUREMENT`
+   - `COGNITION/CONTROL`
+   - `UNKNOWN`
+4. Preserve the known Telegram hostname-first networking repair.
+5. Preserve deployed v0.1.6 Cache Controller/instrumentation evidence.
+6. Identify any custom code/prompt/runtime change that affects reasoning controls, tool selection, message interpretation, exact-output handling or visible response shaping.
+7. Do not patch `consume` into the Telegram adapter during this audit.
+8. Do not redesign router, Omega, Factory, NARC, VONDA or Cargo.
 
-- no-tool / tool-selection policy for trivial conversational and exact-response requests;
-- why `text_to_speech` was invoked without Founder request;
-- why `/think*` leaks into visible output;
-- why exact/simple requests are over-expanded;
-- whether retry/fallback policy can turn a small request into long local-Qwen execution;
-- v0.1.6 live measurement availability at the common prompt convergence seam.
+### Round B — locate the smallest generic RYZ3N cognition seam
 
-Do not redesign the router, dashboard, ARC Factory, Skills Registry, Omega, or research brains during this round.
+After the audit, identify but do not yet overbuild the smallest provider/channel-independent seam capable of owning:
 
-## Acceptance sequence
+- authenticated control intent (`consume` class commands);
+- direct-vs-reasoning classification;
+- reasoning budget selection;
+- no-tool/tool discipline;
+- private working state vs public output separation;
+- bounded action/observation loops;
+- final instruction/intent verification.
 
-After the smallest reversible fix is implemented, prove THREE real PRIME Telegram tests:
+Prefer an existing generic hook/extension seam over Hermes core mutation. If no adequate seam exists, report that truth before implementing a new one.
 
-### Test 1 — exact output
-Founder prompt:
-`Reply exactly: PRIME FAST CORRECT`
+## Acceptance for E1.23A
 
-Acceptance:
-- visible answer exactly `PRIME FAST CORRECT`;
-- no tool call;
-- no `/think*` or hidden-control leakage;
-- no explanatory suffix/prefix;
-- record latency and provider/fallback path.
+This round is GREEN only when the report contains:
 
-### Test 2 — ordinary conversational response
-Founder asks a simple non-tool question such as:
-`Are you fully operational?`
+- complete relevant local deviation inventory;
+- exact paths/functions for cognition/control modifications;
+- evidence-backed classification of likely/non-likely contributors to current PRIME defects;
+- confirmation that Telegram networking repair and Cache Controller evidence remain preserved;
+- proposed smallest generic RYZ3N Cognitive Connection seam;
+- explicit rollback/isolation boundaries;
+- no unapproved Cargo/NARC/VONDA mutation.
 
-Acceptance:
-- concise direct answer;
-- no unsolicited tool execution;
-- no fabricated operational claims beyond known runtime state;
-- no `/think*` leakage;
-- record latency and provider/fallback path.
+No production cognition fix is authorized until Lux reviews this audit.
 
-### Test 3 — legitimate tool path
-Use one small, explicit tool-requiring task chosen by PRIME that cannot be answered correctly without the tool.
+## Subsequent sequence
 
-Acceptance:
-- correct tool selected once;
-- bounded execution;
-- useful result;
-- no recursion drift;
-- record latency.
+```text
+E1.23A audit accumulated PRIME/Hermes cognition/control modifications
+  -> E1.23B define/prove smallest RYZ3N Cognitive Connection seam
+  -> E1.23C restore fast + correct PRIME behavior through that seam
+  -> E1.24 verified context reduction / pressure reduction
+  -> E1.25 bounded health-aware fallback / circuit behavior
+  -> PRIME GREEN acceptance
+  -> E2 Cargo parity/proof
+  -> E3 reusable NARC/VONDA migration template
+  -> E4 deterministic mission/control acceptance invariant
+  -> E5 broader bounded authority restoration
+  -> M3 Cargo GREEN durable receipt
+```
 
-## Performance target and truthfulness
+## Safety / isolation
 
-Do not declare performance GREEN merely because one reply is visually fast.
-
-GREEN requires:
-
-**correct intent -> smallest sufficient capability lane -> correct tool/no-tool choice -> bounded recursion -> fast completion -> durable evidence**
-
-Provider outages are external and may prevent a strict universal latency guarantee, but PRIME must not magnify a transient provider failure into avoidable multi-minute behavior for trivial requests.
-
-## Fallback boundary
-
-Local Qwen remains emergency continuity only and is temporary. Do not promote Ollama/Qwen/MiniMax into the permanent RYZ3N backbone. The project target remains provider/model independent.
-
-Do not purchase capacity, add paid subscriptions, or change provider commercial commitments without Founder authorization.
-
-## Cargo / ARC isolation
-
-- Do not restart or mutate Cargo during PRIME-only E1.23 work unless a later directive explicitly authorizes Cargo parity.
+- No destructive `git reset --hard`, `git clean`, forced checkout or overwrite of uncommitted work.
+- Use the established `prime` user Git path; do not add GitHub credentials to root.
+- Do not restart or mutate Cargo for this audit.
 - Do not mutate NARC or VONDA.
-- Preserve ARC identity, memory, aura, maturity, Owner boundaries, business logic, and bridges.
-- Founder remains Founder / Commander-in-Chief, never ARC Owner.
+- Preserve ARC identity, memory, aura, maturity, Owner boundaries, business logic and bridges.
+- No paid capacity/provider commitment changes without Founder authorization.
 
-## Reporting and bridge contract
+## Reporting
 
-Use repository-root `FROM_PRIME.md` for the detailed report.
+Replace repository-root `FROM_PRIME.md` with detailed evidence and push it to `ryzen-core`.
 
-Required sequence:
-
-1. consume this directive;
-2. perform Round A source reconciliation;
-3. perform the bounded E1.23 inspection/fix/test sequence;
-4. update `FROM_PRIME.md` with detailed evidence;
-5. commit/push all durable RYZ3N source/evidence to `ryzen-core`;
-6. send Founder only the MINI REPORT.
-
-Founder MINI REPORT format:
+Founder receives only:
 
 ```text
 STATUS: <GREEN/AMBER/RED + one-line result>
@@ -182,24 +138,4 @@ LUX: SYNC NEEDED | NO SYNC NEEDED
 BRIDGE: <ryzen-core pushed short SHA>
 ```
 
-Do not dump terminal logs, raw prompts, secrets, tokens, API keys, private Owner conversations, or large diagnostics into Founder chat.
-
-## Tomorrow/continuation handoff alignment
-
-The detailed daily bulletin is recorded in `12-arc-productization/DAILY-BULLETIN-2026-09-15-M3-PERFORMANCE.md` and is the canonical day-resume overview.
-
-Current macro sequence after E1.23:
-
-```text
-E1.23 PRIME fast-interactive correctness/tool discipline
-  -> E1.24 verified context reduction / pressure reduction
-  -> E1.25 bounded health-aware fallback / circuit behavior
-  -> PRIME GREEN acceptance
-  -> E2 Cargo parity/proof
-  -> E3 reusable NARC/VONDA migration template
-  -> E4 deterministic mission guard / acceptance invariant
-  -> E5 broader bounded authority restoration
-  -> M3 Cargo GREEN durable receipt
-```
-
-Remain inside this sequence unless Lux/Founder explicitly changes it.
+Detailed terminal output belongs in the GitHub report, not Founder chat.
