@@ -83,3 +83,33 @@ Reliable Excellence is the verification and recovery discipline that prevents de
 The ambition may be state-of-the-art architectural depth and implementation quality, but the label is **earned through evidence**, not architecture diagrams or document count. Deep architecture becomes dependable infrastructure only when it executes correctly, survives realistic failure, recovers predictably, preserves truthful state/evidence, respects authority/security boundaries, produces dependable outputs repeatedly and remains operable as it scales.
 
 This amendment deepens the existing Canon. It does not create a new Canon layer, ARC type, Prime, Brain or competing architecture.
+
+
+## Synthesis Principle · 2026-09-19
+
+Synthesis is a foundational architectural movement: **understand and preserve the individual part, understand the whole, then connect them where the relationship creates meaning without erasing either identity.**
+
+> **See each thing completely. Preserve what makes it distinct. See the whole completely. Connect the parts where connection creates meaning. Allow the whole and its parts to strengthen one another without erasing identity, sovereignty, provenance or purpose.**
+
+Synthesis is therefore not indiscriminate integration, centralization or assimilation. It is a twofold discipline:
+
+1. **Differentiation / inward understanding** — identify the entity's purpose, identity, authority, boundaries, data, capabilities, relationships, strengths and weaknesses.
+2. **Synthesis / outward understanding** — determine where the entity belongs in the larger system, what it should connect to, what it contributes, what it receives and how the relationship strengthens both part and whole.
+
+The recursive movement is:
+
+> **Part → Whole → Part**
+
+The whole may strengthen the individual without absorbing it. The individual may strengthen the whole without becoming the whole.
+
+Standing synthesis invariants:
+
+> **Individuality without isolation.**  
+> **Unity without assimilation.**  
+> **Specialization without fragmentation.**  
+> **Interconnection without loss of identity.**  
+> **Synthesis without collapse.**
+
+Synthesis must preserve explicit authority, privacy, provenance, least privilege, domain ownership and canonical truth. A connection that destroys necessary identity or boundaries is not successful synthesis.
+
+Within Reliable Excellence, synthesis is verified rather than assumed: each meaningful connection must demonstrate why it exists, what information or capability may cross it, what remains isolated, how failure is contained, how evidence is preserved and whether the connection improves the reliability and usefulness of both the part and the whole.
