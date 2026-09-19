@@ -125,6 +125,8 @@ Reliability skill work must deepen the existing Canon rather than create competi
 
 `02-ryzen/future-reliability-capabilities/README.md`
 
+Deep-woven Reliable Excellence now also treats purposeful interconnection as a quality property: **maximum meaningful depth internally, minimum necessary complexity externally**, with verification/recovery/evidence running through every meaningful architectural knot. See `RELIABLE-EXCELLENCE.md`.
+
 ---
 
 ## ARC productization
